@@ -1,0 +1,80 @@
+windows下配置文件.emacs在 C:\Users\Administrator.AXX3DX8ZNMSGU5B\AppData\Roaming 下
+C-x C-f 可以知道emacs安装路径
+
+C-p C-n C-b C-f - 上下左右 (vim : k j h l)
+C-l - 当前行移动到 中间 （继续按移动到顶端，低端，中间反复）( vim : zz )
+C-v M-v - 前后翻页(vim : C-f C-b)
+M-b M-f - 前后移动一个单词(vim : w b e ge )
+C-a C-e - 行首 行尾( vim : ^ $ )
+M-a M-e - 句首 句尾
+M-< M-> - 文件开头 文件结尾( gg G )
+C-u 8 C-f - 执行8次C-f （也可以M-8 C-f,但是通用性不强）
+
+C-g - 中断执行（可以多按几次直到出现Quit为止）
+<ESC><ESC> - 取消按错的ESC
+
+C-x 1 - 只保留当前窗格（只保留一个）( vim : ctrl + w 切换, :q!关闭 )
+
+C-h k C-f - 显示C-f命令的文档( vim :  :help xxx )
+C-x u 
+C-/
+C-_
+ - 以上三个都是 Undo ( vim : u )
+
+C-d - delete
+M-d - delete
+C-k - 删除光标到行尾之间的内容
+M-k - 删除光标到句尾之间的内容（用的比较少吧）
+
+C-@ - mark set
+ - mark set 之后不能用C-d删除选择的内容，可以使用剪切达到删除的目的( vim : v / C-v（块插入））
+
+C-w - cut
+M-w - copy
+C-y - paste
+M-y - paste在很多个剪切板的内容之间切换
+( vim : d(剪切) )
+
+
+C-x C-f - 打开文件( vim :  :open filename)
+C-x C-s - 存储文件( vim :  :w )
+C-x s - 存储所有被修改过的文件（逐一询问是否）
+C-x C-b - 列出已经打开的文件（buffer）
+C-x b - 输入buffer名字切换过去
+
+M-x repl（补全）s（补全）- M-x replace-string - 替换字符串（被选中的部分进行，没有选中的话则对光标之后的部分进行）
+M-x fund（补全） - M-x fundamental-mode - 返回主模式
+
+
+C-x f - 设置行宽
+M-q - 以新的行宽刷新buffer
+
+C-s - 向后搜索
+C-r - 向前搜索
+ - 匹配成功后 使用C-s C-r来前后跳转
+ - 回车停在搜索到的地方，C-g则会跳回到之前发起搜索的地方
+( vim :  /str回车，然后nb来前后跳转）
+
+C-x 2 分割出一个窗格
+C-M-v 对新的窗格向后翻页
+C-M-S-v 对新的窗格向前翻页
+C-x o 切换到其他(other)窗格
+C-x 4 C-f 在新的窗格中打开文件
+( vim : vs / sp / C-w )
+
+M-x make-frame - 创建新的窗口（但是新的字体设置并没有被导入）
+M-x delete-frame - 删除（关闭）当前窗口（只剩下一个窗口的时候失效）
+
+C-h c - 相当于 C-h k ( 查看key的帮助文档）
+C-h f previous-line - 查看函数(function)的帮助文档
+C-h v 查看变量(variable)的帮助文档
+C-h a - 输入关键字来查找帮助文档
+
+C-h i 阅读手册（进去之后按?)
+
+( vim : :help xxx )
+
+
+C-x k - kill buffer
+C-x 2 - ( vim : :sp )
+C-x 3 - ( vim : :vs )

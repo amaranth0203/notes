@@ -1,0 +1,13 @@
+/list - 列出channel
+/join - 加入channel
+/part - 离开channel
+
+加入channel之后
+   /who * 查看所有人
+   /ip xxx.xxx.xxx.xxx 查看ip详细信息
+   /msg xxx "message" 给xxx发"message"
+
+'pia XXX
+ -  (╯°Д°)╯┻━┻ XXX
+'echo 割一下
+ - 小段子

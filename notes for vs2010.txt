@@ -1,0 +1,5 @@
+调试的时候用TRACE();代替printf();
+
+打开3l8.raw的时候使用GRBG，10bit，(Hsize,Vsize)= 4208 , 3120 
+
+

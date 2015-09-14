@@ -1,0 +1,91 @@
+坚持使用===不使用==的原则
+
+NaN===NaA是false，NaN只能用isNaN()函数判断
+
+浮点数不能直接判等（设计缺陷） - Math.abs(1 / 3 - (1 - 2 / 3)) < 0.0000001; // true
+
+大多数情况下，我们都应该用null。undefined仅仅在判断函数参数是否传递的情况下有用。
+
+变量最好先用var声明了再用，但是一个变量只能声明一次
+ - 使用var声明之后就不是全局变量，多文件引用的时候比较可靠 → 'use strict';
+
+字符串不可变，var s = "test" , s[1]="k" 不会引起任何错误，但是不会有任何效果
+
+数组常用方法:slice(substring), push&pop, unshift&shift, sort, reverse, splice（万能方法）, concat, join
+
+xiaohong的属性名middle-school不是一个有效的变量，就需要用''括起来。访问这个属性也无法使用.操作符，必须用['xxx']来访问
+
+删除对象属性： delete xiaoming.school
+
+检测对象是否拥有属性： 'school' in xiaoming
+ - 不包括继承得到的： xiaoming.hasOwnProperty( 'school' )
+    - 遍历的时候可以用来过滤掉对象继承的属性
+
+for in VS for of 
+ - for in 用来遍历key, for of 用来添加value
+ - 在动态添加key-value的时候for in能遍历到添加进来的key但是length却没增加
+ - for of 在动态添key-value之后只能遍历到之前的value
+
+function abs(x) = {}
+var abs = function(x) {} ;
+ - 注意第二种写法结尾的分号
+
+arguments.length结合arguments[i]可以获得被传进来但是没有声明的参数
+
+var MyApp = {} ;
+MyApp.name = 'MyApp' ;
+MyApp.version = 1.0 ;
+MyApp.foo = function( x ) {} ;
+ - 此时MyApp相当于一个全局变量
+ - 把自己的代码全部放入唯一的名字空间MYAPP中，会大大减少全局变量冲突的可能。许多著名的JavaScript库都是这么干的：jQuery，YUI，underscore等等。
+
+charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。
+
+Array.map(func) - 对每个元素一一应用func
+Array.reduce(func) - 取前两个元素应用func，结果作为第一个元素，再取前两个元素应用func，依次迭代
+Array.filter(func) - 对每个元素进行过滤，留下的元素取决于func的返回值
+Array.sort（func） - func返回值大于/等于/小于零
+
+Generator概念（关键字是yield）
+ - 类比python，返回函数的状态
+ - function* get_id(){ var id = 0 ; for(;;) yield id++ ; }
+
+ - 不使用new 创建包装类
+ - 转到数字用 parseInt()/parseFloat()
+ - 转到字符串用 String() 或者直接调用toString()
+    - 123.toString() // SyntaxError
+    - 123..toString() // "123"
+    - (123).toString() // "123"
+ - 判断类型 : typeof , 可以判断出 number,boolean,string,function和undefined
+    - 使用 Array.isArray( arr ) ; 判断是不是Array
+    - 使用 testVar === null 判断是不是 null
+ - 判断全局变量是否存在 : typeof window.myVar === 'undefined' ;
+ - 判断内部变量是否存在 : typeof myVar === 'undefined' ;
+
+ - Date 对象的 getMonth()方法返回的是月份数减一（一月表示为0）
+ - 对象里边加入一个 toJSON 方法可以控制JSON序列化的返回结果
+
+ - xiaoming.__proto = Student() ; 实现继承但是不持之老版本
+    - 再去翻书看prototype链比较好
+
+
+function Student(props) {
+    this.name = props.name || '匿名'; // 默认值为'匿名'
+    this.grade = props.grade || 1; // 默认值为1
+}
+ - 类的属性
+Student.prototype.hello = function () {
+    alert('Hello, ' + this.name + '!');
+};
+ - 类的方法
+function createStudent(props) {
+    return new Student(props || {})
+}
+ - 类的创建方法（为了放置忘记用new所以把new封装起来）
+
+
+
+
+AJAX : 前后端交互，不刷新当前页面
+jQuery : 选择元素使用 jQuery 是一个函数， $也是一个函数，他们两个相同，可以使用jQuery.noConflict()释放对$的占用
+ - 选择器 $('#test')
