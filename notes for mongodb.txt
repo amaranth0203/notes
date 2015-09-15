@@ -1,0 +1,61 @@
+/etc/init.d/mongodb start
+mongo 127.1:27017/admin
+mongo admin
+
+use foobar
+ -- 创建数据库
+show dbs
+ -- 查看数据库
+db.persons.insert( {name:"uspcat"} )
+ -- 如果没有person表则创建person表并
+ -- 在person表中插入一条数据（document),此时db指代foobar
+show collections / show tables
+ -- 查看已经存在的集合(list)(对应之前的表格)
+db.system.index.find()
+ -- 查看集合system.index里边所有的内容
+db.persons.find()
+ -- 查看集合person里边所有的内容
+db.persons.findOne()
+ -- 查看集合里边第一个内容
+ -- Case sensitive
+db.persons.update( {name:"extjs4.0"} , {$set:{name:"extjs4.1"}} )
+ -- 更新
+ -- 第一个参数是查询器，第二个参数是修改器
+ -- 使用set的时候若key不同就会新建一个（而不是覆盖之前的）
+db.persons.remove( {name:"extjs4.1"} )
+ -- 删除
+ -- 删除和查询器匹配的document
+ -- 数据被删除之后索引还在
+db.persons.drop()
+ -- 和 drop table xxx 类似
+ -- collection（表）被删除之后索引不存在了
+db.dropDatabase()
+ -- 删除之后使用 show dbs看不到了但使用  db  仍然可以看到
+ -- 也可以使用db.person.insert继续插入数据
+ -- 当插入一条之后，show dbs就可以看到数据库又回来了
+db.help()
+db.persons.help()
+db.persons.find().help()
+ -- 都可以使用help方法来查看具体可行的操作
+
+
+> for( var i = 0 ; i < 10 ; i ++ ) {
+... db.persons.insert({name:i})
+... }
+ -- 批量插入
+> db.persons.insert({_id:"001",name:10})
+> db.persons.insert({_id:"001",name:11}) -- 报错
+> db.persons.save({_id:"001",name:11}) -- 更新id为"001"的document
+
+> db.persons.insert({_id:001,name:001})
+> db.persons.insert({_id:002,name:002})
+> db.persons.remove({_id:1})
+ -- 删除id为1的记录
+
+update第三个参数是true的时候
+  若查询器查询到了符合的记录，则更新
+  若查询器查询不到符合的记录，则插入
+update第四个参数是true的时候
+  所有符合条件的都更新
+  （没有这个参数的话就只更新第一个符合条件的记录）
+

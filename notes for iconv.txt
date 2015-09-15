@@ -1,0 +1,16 @@
+使用
+find . -name "*.*" -print -exec iconv -f gbk -t utf8 {} -o {} --verbose \;
+批量转换编码的时候
+有时会输出说 ivalid character 之类的
+然后打开是中文乱码。。（假设是a.sql）
+
+单独针对a.sql使用下边两个命令：
+iconv -t gbk a.sql -o a.sql
+//命令使用成功
+iconv -t utf8 a.sql -o a.sql
+//会提示iconv: incomplete character or shift sequence at end of buffer
+之后编码就正常了
+×但是在这句话之后的内容已经丢失
+
+
+出现原因：a.sql之前已经是utf8编码的文件

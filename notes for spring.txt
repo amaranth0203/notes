@@ -1,0 +1,45 @@
+IoC有两种实现方式 ： 依赖注入( DI )( 常用 ) 依赖查找( DL )( 主动去找，对方不提供服务的时候就很被动，所以不常用 ）
+Dependency Injection & Dependency Lookup
+
+
+tomcat(它实现了j2ee的servlet)中webserver把request和respons形成好
+通过doGet和doPost等方法给我们注入过来使用
+
+map用到的entry里边的value可以在其中再指定一个bean：
+			<map>
+				<entry key="java.util.Date">
+					<bean class="test.spring.UtilDatePropertyEditor">
+						<property name="format" value="yyyy/MM/dd"/>
+					</bean>
+				</entry>
+			</map>
+
+bean的scope: singleton | prototype
+    singleton : 每次返回都是同一个实例
+    prototype : 每次返回的是不同的实例（线程用）
+beans的default-autowire可以取 no | byName | byType
+
+
+代理模式(proxy)
+	其实就是有一个wrapper类……
+
+AOP术语：
+    Pointcut(过滤要被包住的方法） JoinPoint（被包装的方法） Advice（用这个来包住其他方法）
+
+@Service("aaa") -- 定义一个名称为aaa的bean
+@Resource( name = "aaa" ) -- 注入一个名字为aaa的bean
+
+Spring 2.5 中除了提供 @Component 注释外，还定义了几个拥有特殊语义的注释，它们分别是：
+@Repository、@Service 和 @Controller。
+在目前的 Spring 版本中，这 3 个注释和 @Component 是等效的，
+但是从注释类的命名上，很容易看出这 3 个注释分别和持久层、业务层和控制层（Web 层）相对应。
+虽然目前这 3 个注释和 @Component 相比没有什么新意，
+但 Spring 将在以后的版本中为它们添加特殊的功能。
+所以，如果 Web 应用程序采用了经典的三层分层结构的话，
+最好在持久层、业务层和控制层分别采用 @Repository、@Service 和 @Controller 
+对分层中的类进行注释，而用 @Component 对那些比较中立的类进行注释。
+
+简而言之：@Controller -- 控制层（Action?)
+        @Service    -- 业务层( Service )
+        @Repository -- 持久层( DAO )
+然后使用  @Resource( name = ".." )来注入它们

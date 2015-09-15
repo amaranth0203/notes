@@ -1,98 +1,18 @@
- - Ğ¡ÃüÁîºó±ß¼Ó-h¿ÉÒÔ²é¿´¼òÒ×°ïÖúÒ³Ãæ
- - Ğ¡ÃüÁîºó±ß¼Ó--help»á´ò¿ªÍøÒ³²é¿´ÏêÏ¸ÊÖ²á
 
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
- - Ö´ĞĞÕâÁ½¸öÃüÁîÖ®ºó²ÅÄÜcommit
- - ¿ÉÒÔÊ¹ÓÃ git config --list ²é¿´ËùÓĞÅäÖÃ
+æŸ¥çœ‹è¿œç¨‹åº“ä¿¡æ¯ï¼Œä½¿ç”¨git remote -vï¼›
 
-git init - ´´½¨repo
+æœ¬åœ°æ–°å»ºçš„åˆ†æ”¯å¦‚æœä¸æ¨é€åˆ°è¿œç¨‹ï¼Œå¯¹å…¶ä»–äººå°±æ˜¯ä¸å¯è§çš„ï¼›
 
-git add a.txt
-git add b.txt c.txt
-git commit -m "add 3 files."
- - Ìí¼ÓÖ®ºóÌá½»
+ä»æœ¬åœ°æ¨é€åˆ†æ”¯ï¼Œä½¿ç”¨git push origin branch-nameï¼Œå¦‚æœæ¨é€å¤±è´¥ï¼Œå…ˆç”¨git pullæŠ“å–è¿œç¨‹çš„æ–°æäº¤ï¼›
 
-git status - ²é¿´repo×´Ì¬
-	git status -s/--short
-	git status -v/--verbose
+åœ¨æœ¬åœ°åˆ›å»ºå’Œè¿œç¨‹åˆ†æ”¯å¯¹åº”çš„åˆ†æ”¯ï¼Œä½¿ç”¨git checkout -b branch-name origin/branch-nameï¼Œæœ¬åœ°å’Œè¿œç¨‹åˆ†æ”¯çš„åç§°æœ€å¥½ä¸€è‡´ï¼›
 
-git diff readme.txt - ²é¿´ĞŞ¸ÄÇ°ºóÇø±ğ
+å»ºç«‹æœ¬åœ°åˆ†æ”¯å’Œè¿œç¨‹åˆ†æ”¯çš„å…³è”ï¼Œä½¿ç”¨git branch --set-upstream branch-name origin/branch-nameï¼›
 
-ÎÄ¼şÈıÖÖ×´Ì¬£º
-modified --(git add)--> staged --(git commit)--> committed
- - modifiedºÍstaged¶¼ÊÇºìÉ«¸ĞÌ¾ºÅ£¬committedÊÇÂÌÉ«¹´
+ä»è¿œç¨‹æŠ“å–åˆ†æ”¯ï¼Œä½¿ç”¨git pullï¼Œå¦‚æœæœ‰å†²çªï¼Œè¦å…ˆå¤„ç†å†²çªã€‚
 
-git log --pretty=oneline
-git log --oneline
- - ²é¿´µ±Ç°°æ±¾Ö®Ç°µÄ°æ±¾£¨»ØÍËÖ®ºó²»ÄÜ¿´µ½ºó±ßµÄ°æ±¾£©
 
-git reflog
- - ²é¿´HEADÖ¸ÕëµÄÀúÊ·¼ÇÂ¼£¨²é¿´ÃüÁîÀúÊ·£©
 
-git reset --hard HEAD^ - »ØÍËÒ»¸ö°æ±¾
-git reset --hard HEAD^^ - »ØÍËÁ½¸ö°æ±¾
-git reset --hard HEAD~4 - »ØÍË4¸ö°æ±¾£¨HEAD~0»ØÍËµ½µ±Ç°°æ±¾£©
-git reset --hard xxxxxx - »ØÍËµ½ÌØ¶¨°æ±¾
-
-git checkout -- readme.txt
- - ÓÃÀ´³·Ïúmodify£¨»Øµ½ÉÏÒ»´Î git add »òÕß git commit×´Ì¬£©
- - The special "option" -- means "treat every argument after this point as a file name, no matter what it looks like." This is not Git-specific, it's a general Unix command line convention. Normally you use it to clarify that an argument is a file name rather than an option, e.g.
- - rm -f      # does nothing
- - rm -- -f   # deletes a file named "-f"
-git reset HEAD readme.txt
- - ÓÃÀ´³·Ïúgit add£¨unstage£©
-
-ÎÄ¼şÈıÖÖ×´Ì¬£º
-raw(committed)  --(modify)--> modified  --(git add)--> staged  --(git commit)--> committed
-raw(committed) <--(git checkout --)--  modified <--(git reset HEAD)-- staged 
-
-git rm test.txt - É¾³ıÎÄ¼ş
- - ×¢Òâgit rm Ö®ºó»áÖ±½ÓÉ¾³ı×ÊÔ´¹ÜÀíÆ÷ÖĞµÄÎÄ¼ş£¬ºóĞø²Ù×÷(commit/reset/checkout --)¿ÉÒÔ°´ÌáÊ¾À´½øĞĞ£¨ºÍgit add£©Àà±È
-
-git remote add origin_self git@github.com:amaranth0203/learning.vivo.git - Ìí¼ÓÔ¶³Ì²Ö¿âamaranth0203/learning.vivo.git,²¢ÇÒÃüÃûÎªorigin_self
-git push -u origin_self master - µÚÒ»´ÎÍÆËÍ·ÖÖ§Ê±¼ÓÉÏu£¨--set-upstream)¿ÉÒÔ¹ØÁª±¾µØºÍÔ¶³Ì·ÖÖ§£¬Ìá¸ßºó±ßÍÆËÍÊ±µÄËÙ¶È
-git push origin_self master - Ö®ºóÍÆËÍ×îĞÂĞŞ¸Ä
-
-git clone git@github.com:amaranth0203/gitskills.git
- - ¿ËÂ¡Ô¶³Ì²Ö¿â£¬»á×Ô¼º´´½¨Ò»¸öÃûÎªgitskillsµÄÎÄ¼ş¼Ğ£¬ËùÒÔ²»ÓÃÌáÇ°´´½¨Ò»¸ö¿ÕÎÄ¼ş¼ĞÀ´·ÅÖÃÄÚÈİ
-
-git branch - ²é¿´ËùÓĞ·ÖÖ§ºÍµ±Ç°ËùÔÚ·ÖÖ§
-git branch dev - ´´½¨dev·ÖÖ§
-git checkout dev - ÇĞ»»µ½dev·ÖÖ§
-git checkout -b dev - ´´½¨&ÇĞ»»µ½dev·ÖÖ§
-
-git checkout master
-git merge dev - ºÏ²¢dev·ÖÖ§µ½µ±Ç°·ÖÖ§£¨master£©ÉÏ£¨ÈôÃ»ÓĞ³åÍ»µÄ»°£©
- - ³É¹¦ºÏ²¢µÄÊ±ºòÁ½¸ö°æ±¾»á¹²ÓÃ£¬ÔÚmergeµÄÊ±ºò¼ÓÉÏ²ÎÊı --no-ff£¬»á±£Áôdev±»ºÏ²¢µôµÄ°æ±¾£¨ÓÃgit log --pretty --oneline¿ÉÒÔ²é¿´£©
-
-git branch -d dev - É¾³ıdev£¨ÒÑ¾­ºÏ²¢£©·ÖÖ§
-git branch -D <name> - Ç¿ÖÆÉ¾³ı·ÖÖ§£¨²»¹ÜÊÇ·ñºÏ²¢¹ı£©
-git log --oneline --graph
- - mergeÖ®ºóÄÜ¿´µ½ºÏ²¢Â·¾¶
-
-git stash
- - ±£´æ¹¤×÷ÏÖ³¡£¨Ã»commit£¬µ«ÊÇÓÖĞèÒªÇĞ»»µ½ÆäËû·ÖÖ§£©
- - (save local changes)±£´æ·Çcommitted×´Ì¬µÄÏÖ³¡£¨±£´æĞòºÅ¹æÔò£ºÖ®Ç°ÒÑ¾­´æºÃµÄÏÖ³¡ĞòºÅ+1£¬±»±£´æµÄÏÖ³¡ĞòºÅÎª0£©
-git stash list
- - ²é¿´ÒÑ¾­±£´æµÄÏÖ³¡
-git stash apply
- - Ïàµ±ÓÚgit stash apply stash@{0}
- - »Ö¸´µ½ÉÏÒ»¸öÏÖ³¡£¬ÈôÊ¹ÓÃstash@{1}ÔòÊÇÉÏÉÏ¸ö
- - ²»»áÉ¾³ıÏÖ³¡£¬±ØĞëÅäºÏgit stash dropÊ¹ÓÃ
-git stash drop
- - É¾³ıstash@{0}
- - ²»ÄÜÉ¾³ı±È0´óµÄÏÖ³¡
-git stash pop
- - Ïàµ±ÓÚ git stash apply stash@{0} & git stash drop
-
-git push origin branch-name
-1 - success
-2 - failed : git pull
-    2.1 - fix conflict : git push origin branch-name
-    2.2 - no tracking infomation : git branch --set-upstream branch-name origin/branch-name Ö®ºó git pull
-
-git tag test - ´´½¨±êÇ©
-git tag - ²é¿´ÒÑ¾­´´½¨µÄ±êÇ©
-git show test - ²é¿´±êÇ©µÄÏêÏ¸ĞÅÏ¢
-git tag -d test - É¾³ıĞÅÏ¢
+æäº¤é”™äº†â€¦â€¦å¦‚æœæ­¤åˆ»æäº¤çš„äººä¸å¤šï¼ˆåªæœ‰æˆ‘ä¸€ä¸ªåœ¨æ“ä½œâ€¦â€¦ï¼‰å¯ä»¥é…±ç´«â€¦â€¦
+git push -f origin d72c:master
+æŠŠæœåŠ¡å™¨ä¸Šçš„masterå›æ»šåˆ°d72cä¸Šè¾¹æ¥â€¦â€¦

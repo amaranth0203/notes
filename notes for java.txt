@@ -1,0 +1,13 @@
+原始编码		hex dump
+(unicode)	utf-8
+(内存中的样子）	(硬盘上的样子）
+0000 - 007f	0xxxxxxx
+0080 - 07ff	110xxxxx 10xxxxxx
+0800 - ffff	1110xxxx 10xxxxxx 10xxxxxx
+从而FileReader就能依据每一字节开头1的位数来判断之后
+成功地按字(字符)（双字节）读取文件了
+
+BufferedReader br =
+    new BufferedReader(
+        new InputStreamReader( System.in ) ) ;
+String s = br.readLine( ) ;

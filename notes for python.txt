@@ -1,0 +1,191 @@
+>>> from ctypes.util import find_library
+>>> find_library( 'tar' )
+'libtar.so.0'
+>>> find_library( 'perl' )
+'libperl.so.5.14'
+>>> find_library( 'm' )
+'libm.so.6'
+>>> find_library( 'c' )
+'libc.so.6'
+>>> import ctypes
+>>> handle = ctypes.CDLL( 'libc.so.6' )
+>>> handle.printf( ...
+>>> handle.sleep( ...
+>>> handle.usleep( ...
+>>> handle.fflush( ...
+
+
+name = raw_input( 'please input your name' )
+
+>>> print r'\\\n\\'
+\\\n\\
+
+>>> print r'''\\\n\\
+... second line'''
+\\\n\\
+second line
+
+>>> ord( 'A' )
+65
+
+>>> chr( 65 )
+'A'
+
+>>> u'中'
+u'\u4e2d'
+
+>>> print u'中\u4e2d'
+中中
+
+>>> u'中'.encode( 'utf-8' )		Unicode	> utf-8
+'\xe4\xb8\xad'
+>>> '\xe4\xb8\xad'.decode( 'utf-8' )	utf-8 > Unicode
+u'\u4e2d'
+>>> print '\xe4\xb8\xad'.decode( 'utf-8' )
+中
+
+>>> len( 'A' )
+1
+>>> len( u'中' )
+1
+>>> len( '中' )
+3
+
+list :
+>>> L = [ 'a' , 'b' ]
+tuple :
+>>> T = ( 'a' , 'b' )
+dict :
+>>> D = { 'name' : 'Pinkman' , 'age' : 30 }
+set :
+>>> S = set( [] )
+
+>>> def test( ) :
+...    return 1 , 2
+...
+>>> a , b = test( )
+>>> a
+1
+>>> b
+2
+>>> print test( )
+>>> (1, 2)
+
+>>> t = ( 'a' )
+'a'
+>>> t = ( 'a' , )
+('a',)
+
+
+>>> range( 4 )
+[0, 1, 2, 3]
+
+>>> def func( name ) :
+>>> def func( name = 'Michael' ) :	（默认参数)
+>>> def add_end( L = [] ) : 
+ vs def add_end( L = None ) :
+>>> def func( * classmates ) :		(可变参数(个数可变))
+    >>> func( * tuple/list )
+    >>> func( 'Mike' , 'Pinkman' )
+>>> def func( ** kw ) :			(关键字参数(字典))
+    >>> func( ** dict )
+    >>> func( 'name' = 'Pinkman' )
+
+组合顺序: 必选 , 默认 , 可变 , 关键字
+其中必选可延伸至可变之中，可变可以回退到必选里边
+
+切片:
+>>> L = [ 'a' , 'b' , 'c' , 'd' , 'e' ]
+>>> L[ 1 : 3 ]
+['b', 'c']
+>>> L[ 0 : 2 ]
+['a', 'b']
+>>> L[ : 2 ]
+['a', 'b']
+>>> L[ -3 : -1 ]
+['c', 'd']
+>>> L[ -3 : ]
+['c', 'd', 'e']
+>>> L = range( 20 )
+>>> L[ : : 4 ]
+[0, 4, 8, 12, 16]
+>>> L[ 1 : : 4 ]
+[1, 5, 9, 13, 17]
+>>> (1,2,3,4,5,6,7,8,9)[:3]
+[1, 2, 3]
+>>> 'ABCDEF'[::2]
+'ACE'
+
+列表生成式:
+>>> [ x*x for x in range( 1 , 11 ) ]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+>>> [ x*x for x in range( 1 , 11 ) if x % 2 == 0 ]   ***
+[4, 16, 36, 64, 100]
+>>> [ m+n for m in 'ABC' for n in 'XYZ' ]
+['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
+
+生成器:
+>>> g = (x * x for x in range(10))
+>>> def fib( max ) :
+...     n , a , b = 0 , 0 , 1
+...     while n < max :
+...             yield b
+...             a , b = b , a + b
+...             n = n + 1
+... 
+>>> fib( 6 )
+<generator object fib at 0x1b88410>
+>>> a = fib( 6 )
+>>> a.next()
+1
+>>> a.next( )
+1
+>>> a.next( )
+2
+>>> for tmp in a :
+...     print tmp
+... 
+3
+5
+8
+
+高阶函数:
+map( f , list )
+reduce( f , list )
+sorted( list , f )
+
+>>> import types
+>>> types.MethodType( 
+or
+>>> from types import MethodType
+>>> MethodType(
+
+>>> class Student( object ) :
+...     pass
+...
+>>> s = Student( )
+>>> from types import MethodType
+>>> def test( self ) :
+...     print 'wass up'
+...
+>>> Student.test = MethodType( test , None , Student )
+>>> s.test( )
+wass up
+
+>>> class Student( object ) :
+...     __slots__ = ( name , score )
+...
+>>> a = Student( )
+>>> a.name = 'aaa'
+>>> a.score = 99
+>>> a.gender = 'F'
+Traceback( ......
+>>> class Student_( Student ) :
+...     __slots__ = ( )
+...
+>>> b = Student_( )
+>>> b.name = 'bbb'
+>>> b.score = 99
+>>> b.gender = 'F'
+Traceback( ......
+

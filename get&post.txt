@@ -1,0 +1,14 @@
+http://blog.csdn.net/alextiger0/article/details/5836572
+根据HTTP规范：
+×Get用于查询，安全的，幂等的，其中
+	安全：只查询，不修改，不影响状态
+	幂等：多个请求返回同样结果
+×Post可能会修改服务器上的资源的请求，例如评论
+但是实际中。。。。
+×为了方便get用于更新资源（之前的deleteAction）
+×GET/Post可以完成PUT和DELETE的功能于是。。
+×早期MVC框架（没有有意识地将URL当作抽象资源来看待和设计）基本都只支持GET和POST两种HTTP方法，不支持PUT和DELETE方法
+导致了现在这种情况
+
+get得到的页面方便收藏（后退键方便），但是长度有限制（导致数据丢失
+post大容量，安全，（后退键会触发是否重新提交）

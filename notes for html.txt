@@ -1,0 +1,8 @@
+<html>
+    <head>
+        <meta http-equiv="expires" context="0">
+        <!-- 设置不缓存（0秒后立即过期） -->
+        <meta http-equiv="pragma" context="no-cache">
+        <!-- 不使用proxy的catch -->
+    </head>
+</html>

@@ -1,0 +1,20 @@
+git config --global user.name "QiYunhu"
+git config --global user.email "357628953@qq.com"
+mkdir & cd
+git init
+vim readme.txt
+git add readme.txt
+git commit readme.txt
+git status ( changed , stage , commited )
+git diff readme.txt
+git log ( commit log )
+        --pretty=oneline
+git reset --hard HEAD^|HEAD^^|HEAD^^^|HEAD~5
+git relog
+git remote add origin git@github.com:spmfine/spm.git
+git push -u origin master
+git checkout -b dev
+    git branch dev + git checkout dev
+git checkout master
+git merge dev
+git branch -d dev

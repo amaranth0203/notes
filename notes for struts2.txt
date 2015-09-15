@@ -1,0 +1,38 @@
+<%
+	String path = request.getContextPath( ) ;
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" request.getServerPort() + path +"/" ;
+%>
+可以再在head标签里边加入base标签
+<base href="<%=basePath%>">
+后边就可以把<a href="<%=basePath%>index.jsp">index</a>
+
+struts2.3之后要在struct.xml里边加入
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+才能用DMI
+
+通配符匹配的时候，最精确的（没有*）最先匹配，有*的，谁在前边调哪个
+
+传给action的参数个数和Domain属性个数匹配不了的时候可以引入一个DTO（Data Transfer Object）
+
+三种传参给action的方法
+	属性传参，DomainModel，ModelDriven
+
+
+一次request只有一个valuestack, 在多次的forward,,action都是共用一个valuestack
+
+<struts>
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+</struts>
+之后，jsp里边:
+    <s:property value="@className@staticMethodAccess">就可以访问值栈里边的静态方法静态成员变量了
+    @@就只能访问Math的方法，比如
+    <s:property value="@@max(1,2)">
+    可以直接访问构造方法，比如 value="new User(8)"
+    用{}可以构造出一个数组..（用得很少）
+OGNL转字符串：  "'valuename'"
+字符串转OGNL:   "%{#valuename}"
+
+
+Bean(Model)(表示层)
+Service(Manager)(业务层)(业务逻辑)
+Dao(持久化)

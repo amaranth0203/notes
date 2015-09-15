@@ -1,0 +1,98 @@
+下插件一定要对应eclipse的版本号
+插件目录有两个
+/usr/share/eclipse/plugins/
+                 `/dropins/
+/usr/lib/eclipse/plugins/
+               `/dropins/
+实际是在lib里边（符号文件指向share）
+
+-  - aptitude install eclipse 太乱。。。卸掉去官网下。。
+
+( ldd --version 可以查看版本。。是 2.13 )
+Debian-7.6下eclipse-4.4 crash的原因是当前的glibc库的版本低于2.14，而很多软件都需要glibc >= 2.14才能运行。悲剧的是Debian的仓库里只有2.13版本的glibc，所以无法通过apt-get 升级。不过还有其它方法让eclipse运行：
+1. 在 eclipse.ini 中 -vmargs 之前添加参数（两行,第二行只有一个2）
+--launcher.GTK_version
+2
+2. 将 SWT_GTK 环境变量设为0.
+注意，如果你把eclipse添加进了 dash 快捷启动，那必须修改系统级别的环境变量才能生效，只改 ~/.bashrc 的话只有通过命令行才能正常启动 eclipse。推荐直接修改 /etc/profile，添加：
+export SWT_GTK3=0
+至此 eclipse 又可以愉快地运行了，大笑。
+
+用apt卸载重装eclipse的时候记得一同处理libequinox-osgi-java
+
+eclipse 里边的git 似乎不支持创建远程仓库。。
+（命令行好像也不可以……）
+
+eclipse根目录下( apt-get 之后是在 /usr/lib/eclipse )的links文件夹(没有的话可以自己建一个)里边的.link文件
+写入内容(文件名随意，比如tomcat.link):
+path=/root/package/eclipse_plugins/
+指向一个目录，
+只要那个目录下边有plugins目录和（或）features目录，
+那么在指向目录里边的plugins和features下的插件，都会被导入到eclipse当中
+( /root/package/eclipse_plugins/plugins下边有个文件夹 : com.sysdeo.eclipse.tomcat_3.3.0/ 是针对当前版本的tomcat插件 )
+
+插件指向的目录还是加个eclipse比较好，比如上边的就变成
+path=/root/package/eclipse_plugins/eclipse
+因为很多zip包里边自带了eclipse文件夹，然后在eclipse_plugin下边解压就好
+
+...为了管理多个插件。。。还是建多个分支的目录比较好
+比如
+/root/package/eclipse_plugins/
+                             |--/tomcat/eclipse/
+                             |                 |--plugins/
+                             |                 |--features/
+                             |--/wtp/eclipse/
+                                            |--plugins/
+                                            |--features/
+然后一个.link指向tomcat,一个.link指向wtp
+
+- -最后还是下了一个j2ee的eplipse4.4.1
+
+
+
+
+
+jsp第一行就报错：The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build Path
+原因：Javaweb工程类中没有添加Tomcat运行时相关类导致。
+解决：
+     Build Path -> 
+     Java Build Path -> 
+     Libraries -> 
+     Add Libray... -> 
+     Server Runtime -> 
+     Tomcat Server
+
+只要是eclipse能识别的文件,
+    C+S+c是多行的单行注释( 类似notepad++里边的ctrl+q )再按一次取消
+    C+S+/是块注释，C+S+\是取消块注释
+
+Windows -> Show View -> Navigator
+会在之前左边Package视图那里打开一个Navigator视图，里边显示一个工程下边真正的目录结构（和系统的资源管理器类似）
+
+拷贝web项目之后记得把 context root 改成新的项目名字（tomcat部署的时候会用这个application名）
+（eclipse j2ee在properties 的 Web Project Settings里边）
+
+F2( quick fix ) :
+C+S+m导入包
+A+S+z异常try块（或者dowhile之类的wrapper)
+
+A+/是联想。。联想。。。。联想自己编辑的一些类和java的基础类型（spring其中一部分也可以）
+
+xml catalog配置之后，例如spring的<bean ></bean>
+光标放在上边的空格和>之间按
+C+S+,就会出现常用的属性(C+space速度块一些)
+
+    <bean id="aaa" class="test.classnameclassname"/>
+    --  id 和 class 可以用 C+space联想并补全，但引号里边的只能用A+/来补全
+
+
+
+
+C+d 删除选中（当前）行
+Alt+上/下 移动选中（当前）行
+
+部署的时候如果出现
+Error configuring application listener of class org.springframework.web.context.ContextLoaderListener 
+java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener 
+而类明明又已经放在WEB-INF/lib里边了
+可以试试停止服务器，接着把server里边已经部署了的都删掉，然后右键tomcat-> clean再重新部署

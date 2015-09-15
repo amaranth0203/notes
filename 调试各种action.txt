@@ -1,0 +1,4 @@
+需要构造请求的时候，可以用curl命令
+例如parknshop里边commodity的删除可以使用
+curl -d 'commodityId=1007&commodityId=1027' http://127.1:8080/parknshop/commodity\!delete.action
+结果若输出一个true说明删除成功（配合前端的ajax）

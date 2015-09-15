@@ -1,0 +1,70 @@
+mysql> show fields from Customers ; > desc Persons ;
+mysql> select * from Customers order by ContactName ;
+mysql> select * from Customers order by ContactName desc ;
+mysql> insert into Customers( CompanyName , ContactName ) valuse ( 'Huangao' , 'Ending' ) ;
+mysql> update Customers
+    -> set CustomerID = '0805' , City = 'City of Star'
+    -> where ContactName = 'Ending' ;
+mysql> delete from Customers
+    -> where ContactName = 'Ending' AND CustomerID = '0805' AND City = 'City of Star' ;
+>>>>>> update delete 如果没加where 则表中所有记录都会受到影响
+
+use information_schema;
+查询所有表的记录数
+select table_schema,table_name,table_rows from tables order by table_rows desc; 
+查看指定数据库大小： 
+SELECT sum(DATA_LENGTH)+sum(INDEX_LENGTH) FROM information_schema.TABLES where  TABLE_SCHEMA='数据库名'; 
+得到的结果是以字节为单位，除1024为K，除1048576(=1024*1024)为M
+
+
+
+mysql> select * from Orders
+    -> order by Freight DESC
+    -> limit 5 ;		( oracle : where ROUNUM <= 5 )
+
+mysql> select * from Customers where City  Like '%s' ;
+     -- 所有包含以s结尾城市的记录
+mysql> select * from Customers where City not Like '%land%' ;
+     -- 不包含land
+
+     -- like 数量 + not like 数量 + = 总数量 - NULL 的数量
+     -- 只支持四种通配符
+     -- %0或多个  _一个  [abc] [^abc]
+
+mysql> select * from Customers where City in ( 'Paris' , 'London' ) ;
+     -- 否定: ...  where NOT City in ...
+
+mysql> select * from user
+    -> inner join orders
+    -> on user.user_id = orders.user_id ;
+     -- 取user表和orders表的交集（user_id在两个表都出现的才会被选中）
+mysql> select * from user
+    -> left join orders
+    -> on user.user_id = orders.user_id ;
+     -- 取user表和orders表的交集并上user（user_id在两个表都出现的才会被选中并上user中剩下的特有记录）
+mysql> select * from user
+    -> right join orders
+    -> on user.user_id = orders.user_id ;
+     -- 取user表和orders表的交集并上orders（user_id在两个表都出现的才会被选中并上orders中剩下的特有记录）
+mysql> select * from user
+    -> full outer join orders
+    -> on user.user_id = orders.user_id ;
+     -- mysql 没有实现
+     -- 取user表和orders表的并集
+     -- 可以用union实现:
+mysql> select * from user
+    -> left join orders on user.user_id = orders.user_id
+    -> union
+    -> select * from user
+    -> right join orders on user.user_id = orders.user_id ;
+     -- union : 列数相同的结果简单拼接，列名取union左边的，数值完全重复的只保留一个
+mysql> select * from user , orders ;
+     -- 笛卡尔积
+
+mysql> ALTER TABLE Persons ADD PRIMARY KEY( PersonID ) ;
+mysql> ALTER TABLE Persons DROP PRIMARY KEY ;
+
+mysql> ALTER TABLE Persons ADD CONSTRAINT pk___PersonID PRIMARY KEY ( PersonID , LastName ) ;
+
+
+    

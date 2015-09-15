@@ -1,0 +1,131 @@
+linux下tomcat的./startup.sh是不会有后台输出的（比如doGet方法里边的System.out.println）（也不会输出到log文件里边）
+要用./catalina.sh run 来启动tomcat才能看到后台输出
+
+Servlet生命周期:
+Classloader（java程序）
+new（构造函数）
+init（httpServlet是父类的GenericServlet里边的方法）
+然后不停地调用service()（HTTP里边是doGet或者do其他方法）来处理请求
+期间只有一个对象，再次访问不会再new或者init了
+退出tomcat的时候才会destroy()（也是GenericServlet）
+
+cookie:
+	1.写入文件的（设置存活时间）（多个窗口（没有父子关系）或者同一窗口其他标签可以共同享有）
+	2.Session_cookie（没设存活时间）（类似metasploit的session，窗口一关就没有了）
+	（
+		重新打开一个chrome时会提示：
+		Created new window in existing browser session.
+	）
+
+
+/servlet/SetCookies
+/ShowCookies		->读不到
+
+/SetCookies
+/servlet/ShowCookies	->能读到
+
+->路径指的是url（web.xml里边配置的mapping）
+->即当前目录或者子目录能读到（servlet/jsp），父目录读不到
+->Session没有这样的限制（同一WebApplication共用一个Session）
+
+
+session和cookie类似，但是数据保存在服务器端（分配不同的SessionID给浏览器）
+实现方式有两种：
+	通过cookie实现(若浏览器支持Cookie)（放在Session_Cookie里边）
+	通过URL重写实现（编程。。在新的链接加上response.encodeURL()）
+
+WebApplication可以有多个servlet,包含一个上下文(Context)
+
+Bean（广义）..理解成普通的类，包含：
+	小写字母开头的私有属性： private productID ;
+	具有访问器和设置器：getter和setter
+	(想一下在Energy里边看到的各种Bean)
+
+JSP会自动编译之后保存在%TOMCAT_HOME%/work/目录下边，生成一个
+HttpJspBase的一个子类（所以它也是一个Servlet）（第一次要编译所以比较慢，之后就块了）
+
+JSP语法：
+	1.传统：<% %>嵌套java
+		Declaration
+			<% %>  : 局部变量（Service方法的局部变量）（不能声明方法，因为是在Service方法内部）
+			<%! %> : 成员变量（Servlet类变量）
+		Scriptlet
+			<% %>  : 可以和Action拼凑（用这里写if，if的运行体用action写）
+		Expression
+			<%= %> : 变量/表达式 直接输出到网页
+		Comment
+				注释方法三种 
+					<%-- --%> 
+					// 
+					/* */
+					若用<!-- -->客户端是可以看见的
+		Directives（编译期间）（compiletime）
+				<%@ include file="fileURL" %>	原封不动地先放到这里再编译，效率比较高（编译指令，不能传参数，所以用于包含非动态代码）（即file="fileURL?user=aaa"什么的）
+				<%@ page ... %>		定义页面的依赖属性，比如脚本语言、error页面、缓存需求等等
+					<%@page import="java.util.*" %>
+					<%= new Date() %>
+					<%@page errorPage="ErrPage.jsp"%>
+						<%@page isErrorPage="true"%>
+				<%@ taglib ... %>	引入标签库的定义，可以是自定义标签
+		Action动作指令（运行期间）（runtime）  <jsp:action_name attribute="value" />
+				<jsp:include page="URLSpec" flush="true"/>(通过request拿不到之前的参数)
+				<jsp:include page="URLSpec" flush="true">
+					<jsp:param name="ParamName" value="paramValue"/>
+				</jsp:include>
+
+				<jsp:forward page="urlSpec" flush="true"/>(通过request能拿到之前的参数)
+				<jsp:forward page="urlSpec" flush="true">
+					<jsp:param name="ParamName" value="paramValue"/>
+				</jsp:forward>
+				<jsp:forward>使用共同一个requrest(在服务器跳转，浏览器地址栏不改变）
+				response.sendRedirect使用不同的request（在浏览器跳转，浏览器地址改变了）（通过request拿不到之前的参数因为浏览器跳转的时候request改变了）
+
+				不要使用裸体类（要放在包里边）
+				<jsp:useBean id="beanName" scope="page（默认）|request|session|application" class="package.BeanClass" type="typeName" />
+				( id是引用 class类名称 type实例类型 )
+				<jsp:useBean>
+					<jsp:setProperty name = 'beanName' property="count_" value="23">
+					<jsp:getProperty name = 'beanName' property="count_">
+					( 这两个标签是根据property的值去找对应的设置器和访问器 getCount_（会自动把第一个字母转成大写） ）
+					<jsp:setProperty ... value="<%=request.getParameter("itemID")%>"/>
+					<jsp:setProperty ... param="itemID"/>效果是一样的（jsp会自动转型）
+					<jsp:setProperty ... property="*" /> => 之前的页面提交到这个页面，那么之前的所有属性都会自动设置
+				</jsp:useBean>
+		内置对象(九个自动定义的变量，江湖人称隐含对象。)
+				request		HttpServletRequest类的实例
+					getParameter() getParameterNames() getMethod() getRequestURI() getRemoteAddr() getRemoteHost() getServerName() getServletName() getServerPort()
+				response	HttpServletResponse类的实例
+					addCookie() addHeader() sendError(404/403/500等等) sendRedirect() setContentType()
+				out		PrintWriter类的实例，用于把结果输出至网页上
+					println() write() newLine() close() flush() clearBuffer() clear() getBufferSize() ...
+				session		HttpSession类的实例
+					setAttribute() getAttribute() isNew() ...
+				application	ServletContext类的实例，与应用上下文有关
+					对应类：ServletContext
+					setAttribute() getAttribute()
+				Exception	Exception类的对象，代表发生错误的JSP页面中对应的异常对象
+					<%= exception.getMessage( ) %>
+			以下三个比较少用：
+				config		ServletConfig类的实例
+				pageContext	PageContext类的实例，提供对JSP页面所有对象以及命名空间的访问
+				page		类似于Java类中的this关键字
+	2.JSTL：想都用标签
+	3.JSF想替代JSTL
+	4.其他taglib（如struts）
+
+JSP跳转到其他Servlet：
+	<jsp:forward page="url.." />  或者  response.sendRedirect
+Servlet跳转到其他JSP :
+	(父类HttpServlet里边的方法)getServletConfig().getServletContext().getRequestDispatcher("url...").forward( request , response ) ;(forward也可以换成include)
+
+
+
+
+eclipse中，删除不用的parknshop之后，启动tomcat失败：
+java.lang.IllegalArgumentException: Document base /media/Data/workspace_eclipse4.4/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/parknshop does not exist or is not a readable directory
+原因是 tmp0\conf\server.xml 中<Context>节点配置了很多已经移除的项目； 
+删除无用的 tmp0\conf\server.xml 中的  <Context>  节点； 
+删除 tmp0\work\Catalina\localhost 下的所有文件夹； 
+
+
+

