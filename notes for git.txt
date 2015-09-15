@@ -1,4 +1,4 @@
-
+﻿
 查看远程库信息，使用git remote -v；
 
 本地新建的分支如果不推送到远程，对其他人就是不可见的；
@@ -16,3 +16,108 @@
 提交错了……如果此刻提交的人不多（只有我一个在操作……）可以酱紫……
 git push -f origin d72c:master
 把服务器上的master回滚到d72c上边来……
+
+
+ - 小命令后边加-h可以查看简易帮助页面
+ - 小命令后边加--help会打开网页查看详细手册
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+ - 执行这两个命令之后才能commit
+ - 可以使用 git config --list 查看所有配置
+
+git init - 创建repo
+
+git add a.txt
+git add b.txt c.txt
+git commit -m "add 3 files."
+ - 添加之后提交
+
+git status - 查看repo状态
+	git status -s/--short
+	git status -v/--verbose
+
+git diff readme.txt - 查看修改前后区别
+
+文件三种状态：
+modified --(git add)--> staged --(git commit)--> committed
+ - modified和staged都是红色感叹号，committed是绿色勾
+
+git log --pretty=oneline
+git log --oneline
+ - 查看当前版本之前的版本（回退之后不能看到后边的版本）
+
+git reflog
+ - 查看HEAD指针的历史记录（查看命令历史）
+
+git reset --hard HEAD^ - 回退一个版本
+git reset --hard HEAD^^ - 回退两个版本
+git reset --hard HEAD~4 - 回退4个版本（HEAD~0回退到当前版本）
+git reset --hard xxxxxx - 回退到特定版本
+
+git checkout -- readme.txt
+ - 用来撤销modify（回到上一次 git add 或者 git commit状态）
+ - The special "option" -- means "treat every argument after this point as a file name, no matter what it looks like." This is not Git-specific, it's a general Unix command line convention. Normally you use it to clarify that an argument is a file name rather than an option, e.g.
+ - rm -f      # does nothing
+ - rm -- -f   # deletes a file named "-f"
+git reset HEAD readme.txt
+ - 用来撤销git add（unstage）
+
+文件三种状态：
+raw(committed)  --(modify)--> modified  --(git add)--> staged  --(git commit)--> committed
+raw(committed) <--(git checkout --)--  modified <--(git reset HEAD)-- staged 
+
+git rm test.txt - 删除文件
+ - 注意git rm 之后会直接删除资源管理器中的文件，后续操作(commit/reset/checkout --)可以按提示来进行（和git add）类比
+
+git remote add origin_self git@github.com:amaranth0203/learning.vivo.git - 添加远程仓库amaranth0203/learning.vivo.git,并且命名为origin_self
+git push -u origin_self master - 第一次推送分支时加上u（--set-upstream)可以关联本地和远程分支，提高后边推送时的速度
+git push origin_self master - 之后推送最新修改
+
+git clone git@github.com:amaranth0203/gitskills.git
+ - 克隆远程仓库，会自己创建一个名为gitskills的文件夹，所以不用提前创建一个空文件夹来放置内容
+
+git branch - 查看所有分支和当前所在分支
+git branch dev - 创建dev分支
+git checkout dev - 切换到dev分支
+git checkout -b dev - 创建&切换到dev分支
+
+git checkout master
+git merge dev - 合并dev分支到当前分支（master）上（若没有冲突的话）
+ - 成功合并的时候两个版本会共用，在merge的时候加上参数 --no-ff，会保留dev被合并掉的版本（用git log --pretty --oneline可以查看）
+
+git branch -d dev - 删除dev（已经合并）分支
+git branch -D <name> - 强制删除分支（不管是否合并过）
+git log --oneline --graph
+ - merge之后能看到合并路径
+
+git stash
+ - 保存工作现场（没commit，但是又需要切换到其他分支）
+ - (save local changes)保存非committed状态的现场（保存序号规则：之前已经存好的现场序号+1，被保存的现场序号为0）
+git stash list
+ - 查看已经保存的现场
+git stash apply
+ - 相当于git stash apply stash@{0}
+ - 恢复到上一个现场，若使用stash@{1}则是上上个
+ - 不会删除现场，必须配合git stash drop使用
+git stash drop
+ - 删除stash@{0}
+ - 不能删除比0大的现场
+git stash pop
+ - 相当于 git stash apply stash@{0} & git stash drop
+
+git push origin branch-name
+1 - success
+2 - failed : git pull
+    2.1 - fix conflict : git push origin branch-name
+    2.2 - no tracking infomation : git branch --set-upstream branch-name origin/branch-name 之后 git pull
+
+git tag test - 创建标签
+git tag - 查看已经创建的标签
+git show test - 查看标签的详细信息
+git tag -d test - 删除信息
+
+
+https://help.github.com/articles/remove-sensitive-data/
+ - remove sensitive data
+
