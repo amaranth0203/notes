@@ -1,0 +1,24 @@
+字符串操作：
+char * buffer = malloc( sizeof( char ) * SIZE ) ; //之后可以进行 buffer = "test"; 之类的赋值
+char buffer[SIZE] ; // 之后不能进行 buffer = "test"之类的赋值，只能现在直接初始化
+于是字符串操作统一使用 memset 和 memcpy 来进行初始化和赋值 :
+memset( buffer , 0 , SIZE ) ; //以0填充
+memcpy( buffer , "wassup" , 6 ) ; //赋值wassup，长度为6（结尾的'\0'被砍掉）
+
+文件操作
+尽量使用 fseek fread fwrite （打开方式直接使用 "rwb+" 比较省事)
+fread或者fwrite之前，一定要用fseek定位
+File* fp ;
+fp = fopen( "filename" , "rwb+" ) ;
+fseek( fp , 2L , SEEK_SET ) ; //从偏移为2的地方开始读/写（第三个字节）（2L换成0L则从文件开头）
+fread(  &buffer[1] , sizeof( unsigned char ) , 3 , fp ) ; //从上边fseek定位的位置，读取3个sizeof的大小，写入buffer[1]之后的地址之中
+fseek( fp , 2L , SEEK_SET ) ; //从偏移为2的地方开始读/写（第三个字节）（2L换成0L则从文件开头）
+fwrite( &buffer[1] , sizeof( unsigned char ) , 3 , fp ) ; //把buffer[1]之后的地址中3个sizeof的大小的内容，写入文件被fseek定位的位置中
+fclose( fp ) ;
+
+fprintf( stdout , "%s" , "wassup" ) ;
+printf( "%s" , "wassup" ) ;
+ - 以上两句代码等同效果
+
+sprintf( buffer , "%x" , 256 ) ; //格式化输出到字符串之中
+ - 可以读取文件信息修改之后先sprintf到buffer中，再逆序（大小字节序不同）写入文件中，用来修改文件头信息
