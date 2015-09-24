@@ -18,3 +18,4 @@ map! <s-tab> <BS><BS><BS><BS>
 
 set nobackup
 set nowritebackup
+set noswapfile
