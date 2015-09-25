@@ -1,12 +1,38 @@
 CC=gcc
 CXX=g++
 RM=rm -f
+CCFLAGS=-g 
+CPPFLAGS=-g
 ifeq ($(OS),Windows_NT)
+    ifeq ($(PROCESSOR_ARCHITECTURE),AMD64)
+        CCFLAGS += -D AMD64
+    endif
+    ifeq ($(PROCESSOR_ARCHITECTURE),x86)
+        CCFLAGS += -D IA32
+    endif
 else
-	CPPFLAGS=-g $(shell root-config --cflags)
-	LDFLAGS=-g $(shell root-config --ldflags)
-	LDLIBS=$(shell root-config --libs)
+    UNAME_S := $(shell uname -s)
+    ifeq ($(UNAME_S),Linux)
+        CCFLAGS += -D LINUX
+    endif
+    ifeq ($(UNAME_S),Darwin)
+        CCFLAGS += -D OSX
+    endif
+    UNAME_P := $(shell uname -p)
+    ifeq ($(UNAME_P),x86_64)
+        CCFLAGS += -D AMD64
+    endif
+    ifneq ($(filter %86,$(UNAME_P)),)
+        CCFLAGS += -D IA32
+    endif
+    ifneq ($(filter arm%,$(UNAME_P)),)
+        CCFLAGS += -D ARM
+    endif
+	CPPFLAGS+= $(shell root-config --cflags)
+	LDFLAGS+= $(shell root-config --ldflags)
+	LDLIBS+= $(shell root-config --libs)
 endif
+
 
 SRCS=services.c
 OBJS=$(subst .c,.o,$(SRCS))
@@ -30,5 +56,7 @@ dist-clean: clean
 
 include .depend
 
+show :
+	@echo "PROCESSOR_ARCHITECTURE=$(PROCESSOR_ARCHITECTURE)"
 
 # from http://stackoverflow.com/questions/2481269/how-to-make-simple-c-makefile
