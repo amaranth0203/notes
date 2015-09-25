@@ -1,0 +1,5 @@
+权限使用400
+ssh -T git@github.com
+ - 检测可用性
+.ssh/config里边加入IdentityFile xxx/.ssh/id_rsa
+ - 添加其他目录的key

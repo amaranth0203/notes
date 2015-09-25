@@ -15,6 +15,7 @@ set shiftwidth=4
 set tabstop=4
 set autochdir
 map! <s-tab> <BS><BS><BS><BS>
+set ruler
 
 set nobackup
 set nowritebackup
