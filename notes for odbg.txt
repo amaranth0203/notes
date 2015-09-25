@@ -1,4 +1,4 @@
-C -- Carry (进位(无符号运算
+﻿C -- Carry (进位(无符号运算
 P -- Parity (二进制偶数个1
 A -- 辅助进位
 Z -- Zero (为零
@@ -6,3 +6,11 @@ S -- Signed (负数
 T
 D
 O -- Overflow (溢出
+
+
+bit -- 0 或者 1
+byte -- 字节(8bit)
+word -- 字(2byte)(16bit)
+DWORD -- 双字(2word)(4bit)(32bit) 也可以理解成一个字
+
+odbg里边的操作默认都是DWORD（因为数据总线是32位）
