@@ -1,0 +1,8 @@
+C -- Carry (进位(无符号运算
+P -- Parity (二进制偶数个1
+A -- 辅助进位
+Z -- Zero (为零
+S -- Signed (负数
+T
+D
+O -- Overflow (溢出
