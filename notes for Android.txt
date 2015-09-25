@@ -1,4 +1,4 @@
-http://developer.android.com/training/basics/firstapp/building-ui.html#LinearLayout
+ï»¿http://developer.android.com/training/basics/firstapp/building-ui.html#LinearLayout
 
-C-f - ËÑË÷
-C-S-f - ËÑË÷
+C-f - æœç´¢
+C-S-f - æœç´¢
