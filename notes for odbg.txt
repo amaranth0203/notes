@@ -14,3 +14,33 @@ word -- 字(2byte)(16bit)
 DWORD -- 双字(2word)(4bit)(32bit) 也可以理解成一个字
 
 odbg里边的操作默认都是DWORD（因为数据总线是32位）
+
+ADD BYTE  PTR DS:[75000011] , 1
+ADD WORD  PTR DS:[75000011] , 1
+ADD DWORD PTR DS:[75000011] , 1
+ - 所加到的位置都相同
+ - 不同：当75000011为0ff的时候
+    - BYTE直接溢出，变0,WORD和DWORD可以进位再变零
+
+ADD , ADC
+SUB , SBB
+ - 不带符号，带符号
+
+CMP EAX,ECX
+	if( eax == ecx ) z = 1 else z = 0 ;//即eax-ecx=0,为零位置1
+	if( eax < ecx )  s = 1 else s = 0 ;//即eax-ecx<0,负数位置1
+
+TEST EAX,EAX
+	if( eax && eax ) z = 0 else z = 1 ;//检测是否所有位上都为0
+	当eax从一个大于零的数递减到0的时候，Z为 0 0 0 0 0 0 0 0 0 0 1
+
+XOR EAX , EAX ， 置0
+
+在call的地方右键/Enter→follow可以进去看看附近的内容并不执行，接着：
+1 F8直接执行到call的下一条
+2 按-回到call
+
+LOOP命令使用ECX寄存器
+
+CTRL+N能看到所有被引用进来可以直接调用的函数
+ - API的名称列表
