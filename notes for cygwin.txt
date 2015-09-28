@@ -1,0 +1,4 @@
+clear 命令 :
+ - 安装ncurses
+右键打开 :
+ - 安装chere 然后 chere -i -t mintty
