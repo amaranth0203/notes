@@ -5,6 +5,8 @@ set guioptions-=m
 set guioptions-=T
 
 
+au BufWritePre * :set binary | set noeol
+au BufWritePost * :set nobinary | set eol
 colo morning
 set nocompatible
 set expandtab
