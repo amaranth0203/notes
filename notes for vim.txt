@@ -31,3 +31,8 @@ ctrl+g		显示当前行所在位置
 
 
 set guifont=*	可以打开字体选择界面，之后再查看修改到配置文件里边
+
+vim -b (以binary模式打开(看得到^M))
+
+:write ++enc=utf-8 filename
+ - 把filename的编码格式转换成utf-8（不加filename）转换当前文件
