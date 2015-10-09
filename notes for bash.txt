@@ -1,0 +1,6 @@
+删除目录下边所有文件但保留a.txt
+   rm -rvf !(a.txt)
+   ls | grep -v a.txt | xargs rm -rvf
+删除文件名为 '-r' 的文件
+   rm ./-r
+   rm -- -r ( -- 后边全部作为字符串处理 )
