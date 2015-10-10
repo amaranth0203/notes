@@ -1,0 +1,12 @@
+adb vivoroot会先去ping OA服务器，ping通了才会起作用
+ - 创建一个虚拟的可ping通的服务器
+ - 修改二进制代码为127.000.0.001
+
+adb shell之后，/的权限为只读，无法进行创建目录等操作
+   # mount → 会看到 rootfs / rootfs ro 0 0  接着
+   # mount -o remount -o rw / → 再执行 # mount 会看到rootfs / rootfs rw 0 0
+   然后就可以创建目录了
+   
+去官网下载busybox对应的架构后push到/system/xbin下（记得先修改system挂载方式为rw）
+之后 busybox --install /system/xbin 就可以了
+

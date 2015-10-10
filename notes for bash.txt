@@ -4,3 +4,15 @@
 删除文件名为 '-r' 的文件
    rm ./-r
    rm -- -r ( -- 后边全部作为字符串处理 )
+ls -F 会出现很多的文件分类，如何查看具体是怎么分的：
+   info ls
+
+sed 是和vim的 s///g差不多
+awk 是和cut差不多，分隔(使用-F）之后放到$1,$2里边
+假设using_busybox里边全是命令,则使用
+   awk          '{print  "alias ",$1,"=\"/system/xbin/",$1,"\""}' using_busybox的结果是
+   alias  ls ="/system/xbin/ ls "（多出一个额外的空格）
+   awk -vOFS='' '{print  "alias ",$1,"=\"/system/xbin/",$1,"\""}' using_busybox的结果是
+   alias ls="/system/xbin/ls"（正解）
+或者直接使用printf（熟悉的C语言！）
+   awk '{printf "alias %s=\"/system/xbin/%s\"\n",$1,$1}' using_busybox
