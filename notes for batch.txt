@@ -1,0 +1,21 @@
+替换字符串
+set str=abc ::等号两边不能有空格
+echo %str:a=d%
+结果:    dbc
+
+等待程序执行完毕再继续执行:
+echo before ping
+start /wait ping www.baidu.com -n 2 
+echo after ping
+
+根据程序执行返回的结果来进行分支:
+
+echo before ping
+start /wait ping aaa -n 2
+IF ERRORLEVEL 1 GOTO errorHandling
+echo after ping
+pause > nul
+goto :EOF
+:errorHandling
+echo ping failed
+pause > nul
