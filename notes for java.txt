@@ -1,4 +1,4 @@
-原始编码		hex dump
+﻿原始编码		hex dump
 (unicode)	utf-8
 (内存中的样子）	(硬盘上的样子）
 0000 - 007f	0xxxxxxx
@@ -11,3 +11,16 @@ BufferedReader br =
     new BufferedReader(
         new InputStreamReader( System.in ) ) ;
 String s = br.readLine( ) ;
+
+tar -xvf ~/Downloads/jdk-7u3-linux-i586.tar.gz
+sudo mkdir -p /usr/lib/jvm/jdk1.7.0
+sudo mv jdk1.7.0_03/* /usr/lib/jvm/jdk1.7.0/
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.7.0/bin/java" 1
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.7.0/bin/javac" 1
+sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/jdk1.7.0/bin/javaws" 1
+
+JAVA_HOME=/usr/lib/jvm/jdk1.7.0
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+export JAVA_HOME
+export JRE_HOME
+export PATH
