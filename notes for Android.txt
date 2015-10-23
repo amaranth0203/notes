@@ -1,4 +1,44 @@
-﻿http://developer.android.com/training/basics/firstapp/building-ui.html#LinearLayout
+﻿installing
+/etc/bash.bashrc
+~/.bashrc
+root login & nautilus-open-terminal & vmtools & network
+/root/.profile
+mesg -n   --->   tty -s && mesg -n
+reboot
+aptitude & curl & vim & samba & ssh
+.vimrc .ssh 
+git & openjdk7(check version first) & repo
+xlrd
+sudo apt-get install git gnupg flex bison gperf build-essential \
+  zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
+  libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
+  libgl1-mesa-dev g++-multilib mingw32 tofrodos \
+  python-markdown libxml2-utils xsltproc zlib1g-dev:i386
+其中libgl1-mesa-glx:i386如装不了就装libgl1-mesa-glx
+
+auto eth0
+iface eth0 inet static
+address 192.168.137.44
+netmask 255.255.255.0
+gateway 192.168.137.1
+dns-nameservers 8.8.8.8 192.168.1.1
+
+if [ $(id -u) -eq 0 ] then ;
+    PS1="\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n# "
+else
+    PS1="\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
+fi
+
+
+ubuntu下启动sdk manager，修改 ~/.android/androidxxx.cfg添加proxy无效之后，使用ps aux 过滤 manager 得到以下命令
+java -Xmx256M -Dcom.android.sdkmanager.toolsdir=/home/qiyunhu/tools/adt-bundle-linux-x86_64-20140702/sdk/tools -classpath /home/qiyunhu/tools/adt-bundle-linux-x86_64-20140702/sdk/tools/lib/sdkmanager.jar:/home/qiyunhu/tools/adt-bundle-linux-x86_64-20140702/sdk/tools/lib/swtmenubar.jar:/home/qiyunhu/tools/adt-bundle-linux-x86_64-20140702/sdk/tools/lib/x86_64/swt.jar com.android.sdkmanager.Main sdk
+之后在参数里边添加 -Dhttp.proxyHost=192.168.3.152 -Dhttp.proxyPort=2333 -Dhttps.proxyHost=192.168.3.152 -Dhttps.proxyPort=2333 
+即可使用proxy
+
+
+
+
+http://developer.android.com/training/basics/firstapp/building-ui.html#LinearLayout
 
 C-f - 搜索
 C-S-f - 搜索

@@ -65,3 +65,14 @@ CTRL+N能看到所有被引用进来可以直接调用的函数
     - 在C中相当于 EAX = *(&(EBP-8)) , 即EAX = EBP - 8
     - 可以理解成 MOV EAX , EBP - 8，而实际中这条指令无法执行起来
     - LEA可以用于对齐代码
+
+XOR 异或 ， 于是
+XOR ECX , ECX 将ECX置零
+
+SEH结点的结构：前4个字节指向下一个SEH结点的地址，后四个字节为当前的异常处理程序入口
+安装SEH的语句：
+PUSH &HANDLE
+MOV EAX,DWORD PRT FS:[0]
+PUSH EAX
+MOVE DWORD PTR FS:[0],ESP // FS:[0]指向当前SEH结点
+

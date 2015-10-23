@@ -1,2 +1,15 @@
 apt-get install或aptitude install 不会自动补全的时候
 修改/etc/bash.bashrc，去掉# enable bash completion in interactive shells后边代码段的注释
+
+当目录下边的文件确实存在，但运行起来却说file or directore not exist的时候
+很大可能是在64架构下运行了32位的可执行文件（可以使用 file exec_file_name 来查看）
+解决方法：
+dpkg --add-architecture i386
+apt-get update
+apt-get install libc6:386 libstdc++6:i386
+之后再用 ldd exec_file_name 就可以看到所使用的库文件了
+
+当某个程序需要一个环境变量字符串的时候（比如开发安卓的eclipse需要ANDROID_SDK_HOME）
+一定要在/etc/environment里边写 export ANDROID_SDK_HOME="......"
+不能写在/etc/bash.bashrc不能写在~/.bashrc也不能用source 引其他写好的文件
+（最好在配置之后重启然后试试echo $ANDROID_SDK_HOME 看看输出的结果是否理想

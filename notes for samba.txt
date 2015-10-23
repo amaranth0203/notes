@@ -1,0 +1,16 @@
+aptitude install samba
+chmod 777 /home/qiyunhu
+
+/etc/samba/smb.conf
+[share]	
+    path = /home/qiyunhu
+    available = yes
+    browseable = yes
+    public = yes
+    writable = yes
+
+touch /etc/samba/smbpasswd
+smbpasswd -a qiyunhu
+services smbd restart
+smbclient -L //localhost/share	//这里用的share是上边配置文件中括号里边的名字
+连接成功就可以在windows下边映射\\$(ip)\share了
