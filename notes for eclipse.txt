@@ -1,4 +1,4 @@
-下插件一定要对应eclipse的版本号
+﻿下插件一定要对应eclipse的版本号
 插件目录有两个
 /usr/share/eclipse/plugins/
                  `/dropins/
@@ -96,3 +96,7 @@ Error configuring application listener of class org.springframework.web.context.
 java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener 
 而类明明又已经放在WEB-INF/lib里边了
 可以试试停止服务器，接着把server里边已经部署了的都删掉，然后右键tomcat-> clean再重新部署
+
+
+
+C+m 最大化/还原（双击当前标签）

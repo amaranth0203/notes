@@ -35,6 +35,13 @@ java -Xmx256M -Dcom.android.sdkmanager.toolsdir=/home/qiyunhu/tools/adt-bundle-l
 之后在参数里边添加 -Dhttp.proxyHost=192.168.3.152 -Dhttp.proxyPort=2333 -Dhttps.proxyHost=192.168.3.152 -Dhttps.proxyPort=2333 
 即可使用proxy
 
+eclipse下编译安卓项目出现the container 'android dependencies' references non existing library appcompat_v7.jar的时候
+先清理appcompat_v7项目，编译appcompat_v7项目
+然后再清理依赖于appcompat_v7的项目即可
+
+smali文件里边分号一定要紧跟前边的字符，中间不可以有空格
+
+
 
 
 
