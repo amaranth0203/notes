@@ -1,3 +1,5 @@
+去掉options->preferences->display->trim long path names with cllipses之后显示完整路径名
+
 先新建一个项目
 然后project -> add and remove project files...
 就可以往项目里边添加文件了
