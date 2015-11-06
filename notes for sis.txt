@@ -1,0 +1,52 @@
+去掉options->preferences->display->trim long path names with cllipses之后显示完整路径名
+
+先新建一个项目
+然后project -> add and remove project files...
+就可以往项目里边添加文件了
+
+新建项目的时候（或者建好之后选project -> project settings）
+里边修改project source directory 到源代码路径
+之后就可以在project window的project file browse项下看到项目源代码的树形目录了
+
+同样的project settings下
+勾选Store function-local symboles in database.
+牺牲一些本地磁盘的存储空间但是可以提高查找速度
+
+sis并不认识设备树源文件dts和dtsi，需要自己添加：
+options -> Document Options
+之后Add Type并且设置File filter
+最后记得打勾 Include when adding to projects
+然后，重要的一步，把Document Type选回default之后再确定，不然还是识别不到，然后就要删掉重来
+ps
+  在确定之前可以选一下默认的语言为C语言
+  勾选Allow intelligent paste,Show line numbers,Symble Window等等
+
+C + m
+ - 书签( 窗口关闭之后书签消失 )
+C + del/ins
+ - 打开剪切板
+C + o
+ - 打开project窗口
+M + l
+ - 切换到symbol window
+M , W
+ - window菜单，加数字可以切换到打开的代码
+
+F2
+ - 在打开的窗口(page)之间切换
+C + = / C + 左键
+ - 跳到定义(之后可以用M + , 跳回来)
+C + f 之后 F3 / F4
+ - 向前/向后搜索,使用F12则循环向前
+C + h
+ - 替换
+C + S + f
+ - 在一个目录下被选中的文件中搜索字符串,相当于编译服务器上的grep.sh
+C + /
+ - 搜索索引（范围比C + S + f 大)
+F5 / C + g
+ - odbg的 C + g
+F9 / F10
+ - 左右缩进选中（当前）行
+C + S + [   /   C + S + ]
+ - vim的%

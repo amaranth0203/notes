@@ -1,4 +1,10 @@
-﻿
+﻿git revert commit-id : 撤销commit-id那一次的提交，然后作为一个新的commit来提交
+
+
+
+
+
+
 查看远程库信息，使用git remote -v；
 
 本地新建的分支如果不推送到远程，对其他人就是不可见的；

@@ -22,3 +22,32 @@ printf( "%s" , "wassup" ) ;
 
 sprintf( buffer , "%x" , 256 ) ; //格式化输出到字符串之中
  - 可以读取文件信息修改之后先sprintf到buffer中，再逆序（大小字节序不同）写入文件中，用来修改文件头信息
+
+函数指针:
+void fun( ){ puts( "aaa" ) ; }
+void (*fptr)( ) ;
+fptr = fun ;
+fptr() ;
+可以嵌套在结构体里边( C++类的实现 ):
+struct st
+{
+    int (*output)() ;
+    char name[15] ;
+}
+int aa( char* st ){ printf( "%s" , st ) ; }
+int main()
+{
+    struct st* test ;
+    test = ( struct st* )malloc( sizeof( struct st ) ) ;
+    test->output = aa ;
+    memcpy( test->name , "qiyunhu" , sizeof( "qiyunhu" ) ) ;
+    test->output( test->name ) ;
+    return 0 ;
+}
+
+结构体指针(引用上边的例子):
+test->output = aa ;
+可以写成
+(*test).output = aa ;
+
+

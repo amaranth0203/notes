@@ -24,3 +24,13 @@ PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export JAVA_HOME
 export JRE_HOME
 export PATH
+
+Java 不支持泛型数组，例如：
+    LinkedList<String>[] al = new LinkedList<String>[2] ;
+但是可以嵌套泛型，例如：
+    LinkedList<LinkedList<String>> ll = new LinkedList<LinkedList<String>>() ;
+接着要这样初始化和使用：
+    ll.add( new LinkedList<String>() ) ;
+    ll.get(0).add( "hello" ) ;
+    System.out.println( ll.get(0).get(0) ) ;
+

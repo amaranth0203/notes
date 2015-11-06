@@ -1,4 +1,11 @@
-clear 命令 :
+﻿clear 命令 :
  - 安装ncurses
 右键打开 :
  - 安装chere 然后 chere -i -t mintty
+
+
+打开mintty没反应，然后在当前目录下多出个crash记录文件
+从命令行使用mintty的命令比如clear之类的之后提示too many environment variables错误
+并不是因为环境变量太多（05年的bug）
+而是新添加的环境变量里边含有中文名（非ascii编码？）
+修改一下即可
