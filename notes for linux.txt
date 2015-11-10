@@ -17,3 +17,6 @@ apt-get install libc6:386 libstdc++6:i386
 gsettings set com.canonical.desktop.interface scrollbar-mode normal - 禁用ubuntu鸡肋的滚动条
 
 echo ${0%/*} 可以获得脚本所在的目录（区别与pwd）
+
+find 查找目录的时候使用
+    find . -name "*vendor*" -type d
