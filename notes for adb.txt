@@ -10,3 +10,8 @@ adb shell之后，/的权限为只读，无法进行创建目录等操作
 去官网下载busybox对应的架构后push到/system/xbin下（记得先修改system挂载方式为rw）
 之后 busybox --install /system/xbin 就可以了
 
+安装SnapdragonCamera_chenchaoxin_16M.apk冲突的时候
+先打开来源不明软件限制
+接着删除/system/app下边的snapdragoncamera文件夹
+接着pm set-install-location 1
+然后就可以安装了
