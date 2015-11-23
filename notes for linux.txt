@@ -28,3 +28,11 @@ find 查找目录的时候使用
 	str = aaa
 	str= aaa
 	str =aaa
+
+readlink -f .  能获取.的绝对路径
+
+cygwin环境下使用 
+adb logcat | grep mm-camera | tee log.log
+adb logcat | grep mm-camera >> log.log
+都输出不了的时候，记得给grep加参数--line-buffered即
+adb logcat | grep --line-buffered mm-camera | tee log.log

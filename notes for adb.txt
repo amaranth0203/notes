@@ -15,3 +15,6 @@ adb shell之后，/的权限为只读，无法进行创建目录等操作
 接着删除/system/app下边的snapdragoncamera文件夹
 接着pm set-install-location 1
 然后就可以安装了
+
+adb shell 下面执行chmod a+x 可能会出现bad mode
+这个时候可以使用 chmod 777 来改变权限

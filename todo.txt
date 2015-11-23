@@ -13,3 +13,9 @@ Rutracker上认识的一个peer
 
 
 pediy合集
+
+const char* str = "a" ;
+char* s_des = "b " ;
+strcat( s_des , str ) ;
+引起的segmentation fault
+（为何使用 char s_des[] = "b "就不会）

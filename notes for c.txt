@@ -51,3 +51,4 @@ test->output = aa ;
 (*test).output = aa ;
 
 
+多次出现redefinition错误的时候记得看看有没有加上#ifndef _HEADER_FILE_H_宏
