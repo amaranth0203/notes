@@ -1,3 +1,14 @@
 在 HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics 下
 创建字符串值 "MinWidth" 然后设为30/54（对应大/小图标）
 重启电脑之后任务栏的图标就只隐藏标签，但从不合并了
+
+我的电脑上后台运行着一个我自己写的程序，类似Windows的计划任务，可以提醒我该做什么事情或者定时运行程序。
+有一项就是下午下班以后开机则自动运行一个命令：
+shutdown /s /t 60 /c "这么晚了，你开我电脑干什么？"
+接着是这个：
+rundll32.exe user32.dll,LockWorkStation
+对了，我的电脑是有密码的，但是设置成了自动登录。
+
+HKEY_CLASSES_ROOT\Directory\Background\shell\
+下边有右键弹出选项的设置，包括弹出项的名字，快捷键，执行的命令等
+可以参考cmd，例如包含字符串Extended的时候则要按住Shift右键才能弹出来等
