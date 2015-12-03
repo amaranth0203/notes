@@ -1,14 +1,14 @@
 要同时对比kernel的log和logcat的log，两种方法
 一
-	adb logcat -v time -f /dev/kmsg | adb shell cat /proc/kmsg | grep '[+]'
+	adb logcat -v time -f /dev/kmsg | adb shell cat /proc/kmsg | grep "\[+\]"
 	可以拆分成两个命令行
 	一个在后台执行		adb logcat -v time -f /dev/kmsg
-	另一个执行		adb shell cat /proc/kmsg | grep '[+]'
+	另一个执行		adb shell cat /proc/kmsg | grep "\[+\]"
 二
-	adb shell '(cat /proc/kmsg | while read LINE; do echo \\06kernel\\0$LINE\\0 > /dev/log/main; done)' | adb logcat -v time | grep '[+]'
+	adb shell '(cat /proc/kmsg | while read LINE; do echo \\06kernel\\0$LINE\\0 > /dev/log/main; done)' | adb logcat -v time | grep "\[+\]"
 	可以拆分成两个命令行
 	一个在后台执行		adb shell '(cat /proc/kmsg | while read LINE; do echo \\06kernel\\0$LINE\\0 > /dev/log/main; done)'
-	另一个执行		adb logcat -v time | grep '[+]'
+	另一个执行		adb logcat -v time | grep "\[+\]"
 
 
 adb vivoroot会先去ping OA服务器，ping通了才会起作用
