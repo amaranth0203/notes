@@ -76,3 +76,8 @@ MOV EAX,DWORD PRT FS:[0]
 PUSH EAX
 MOVE DWORD PTR FS:[0],ESP // FS:[0]指向当前SEH结点
 
+	move eax , xxxxxxxx
+	push eax
+	retn
+相当于 
+	jmp xxxxxxxx
