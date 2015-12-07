@@ -1,3 +1,17 @@
+project -> add and remove project fiels...
+添加文件之后再
+project -> rebuild project
+接着就可以在之前不能CTRL+单击的关键字上边点了
+不过sis的这个跳转是不可靠的，它不会去分析上下文，只是简单的搜索
+如果点击的关键字有多个实现，会出现一个窗口来让选择
+于是乎，若添加的头文件/函数实现文件并不是我们需要分析的内容
+但却刚好有一个结构体/函数名的名字和所点击的关键字是一致的
+sis也会跳到那里去
+
+
+
+
+
 去掉options->preferences->display->trim long path names with cllipses之后显示完整路径名
 
 先新建一个项目
