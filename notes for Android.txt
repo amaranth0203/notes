@@ -1,4 +1,14 @@
-﻿installing
+﻿Android.mk里边的
+	$(CLEAR_VARS)
+	$(call my-dir)
+	$(BUILD_SHARED_LIBRARY)
+	$(BUILD_EXECUTABLE)
+等等等等，不能写成$( CLEAR_VARS )
+注意括号里边的空格...（冷笑）
+
+
+
+installing
 /etc/bash.bashrc
 ~/.bashrc
 root login & nautilus-open-terminal & vmtools & network

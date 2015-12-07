@@ -1,3 +1,14 @@
+﻿
+ -- 执行命令和/或获取被执行命令的输出
+>>> import os
+>>> os.system('pwd')
+/cygdrive/c/Users/Administrator.AXX3DX8ZNMSGU5B
+0
+>>> str = os.popen('pwd').read()
+>>> print str
+/cygdrive/c/Users/Administrator.AXX3DX8ZNMSGU5B
+
+ -- 调用系统库
 >>> from ctypes.util import find_library
 >>> find_library( 'tar' )
 'libtar.so.0'

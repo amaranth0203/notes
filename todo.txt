@@ -10,3 +10,12 @@ OD 设置条件断点(第11章)那里，查看帮助文档→帮助文档
 Rutracker上认识的一个peer
 
 ... | grep -v "&msm"
+
+
+pediy合集
+
+const char* str = "a" ;
+char* s_des = "b " ;
+strcat( s_des , str ) ;
+引起的segmentation fault
+（为何使用 char s_des[] = "b "就不会）

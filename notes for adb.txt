@@ -1,3 +1,16 @@
+要同时对比kernel的log和logcat的log，两种方法
+一
+	adb logcat -v time -f /dev/kmsg | adb shell cat /proc/kmsg | grep "\[+\]"
+	可以拆分成两个命令行
+	一个在后台执行		adb logcat -v time -f /dev/kmsg
+	另一个执行		adb shell cat /proc/kmsg | grep "\[+\]"
+二
+	adb shell '(cat /proc/kmsg | while read LINE; do echo \\06kernel\\0$LINE\\0 > /dev/log/main; done)' | adb logcat -v time | grep "\[+\]"
+	可以拆分成两个命令行
+	一个在后台执行		adb shell '(cat /proc/kmsg | while read LINE; do echo \\06kernel\\0$LINE\\0 > /dev/log/main; done)'
+	另一个执行		adb logcat -v time | grep "\[+\]"
+
+
 adb vivoroot会先去ping OA服务器，ping通了才会起作用
  - 创建一个虚拟的可ping通的服务器
  - 修改二进制代码为127.000.0.001
@@ -10,3 +23,11 @@ adb shell之后，/的权限为只读，无法进行创建目录等操作
 去官网下载busybox对应的架构后push到/system/xbin下（记得先修改system挂载方式为rw）
 之后 busybox --install /system/xbin 就可以了
 
+安装SnapdragonCamera_chenchaoxin_16M.apk冲突的时候
+先打开来源不明软件限制
+接着删除/system/app下边的snapdragoncamera文件夹
+接着pm set-install-location 1
+然后就可以安装了
+
+adb shell 下面执行chmod a+x 可能会出现bad mode
+这个时候可以使用 chmod 777 来改变权限
