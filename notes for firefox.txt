@@ -1,0 +1,2 @@
+about:permissions
+ - 查看每个网站的权限（清除特定网站cookie）
