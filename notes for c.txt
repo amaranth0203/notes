@@ -1,3 +1,6 @@
+输出指针指向的地址使用%x有可能会报错
+最好是使用%p
+
 字符串操作：
 char * buffer = malloc( sizeof( char ) * SIZE ) ; //之后可以进行 buffer = "test"; 之类的赋值
 char buffer[SIZE] ; // 之后不能进行 buffer = "test"之类的赋值，只能现在直接初始化

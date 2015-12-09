@@ -1,4 +1,20 @@
 ﻿
+html编码
+>>> print urllib.urlencode({"a":"啊"})
+a=%B0%A1
+html解码
+>>> print urllib.unquote("啊")
+啊
+>>> print urllib.unquote("%B0%A1")
+啊
+
+
+
+    webbrowser.register('firefox', None, webbrowser.GenericBrowser('firefox'), 1)
+    #print webbrowser._tryorder
+    webbrowser.get("firefox").open( url )
+注册firefox之后会从path变量里边去所搜，所以要记得添加firefox的目录到path之中
+
  -- 执行命令和/或获取被执行命令的输出
 >>> import os
 >>> os.system('pwd')
