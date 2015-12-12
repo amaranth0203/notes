@@ -1,3 +1,16 @@
+/var/lib/AccountsService/users/XXX
+设置
+[User]
+SystemAccount=true
+能把该用户从登陆界面去除
+
+登陆之后出现 stdin: is not a tty
+把 /root/.profile 里边的 msg n 替换成
+tty -s && mesg n
+
+登陆之后没有任务栏，右键弹出终端后终端没有标题栏：
+gsettings reset org.compiz.core:/org/compiz/profiles/unity/plugins/core/ active-plugins
+
 apt-get install或aptitude install 不会自动补全的时候
 修改/etc/bash.bashrc，去掉# enable bash completion in interactive shells后边代码段的注释
 
@@ -28,6 +41,10 @@ find 查找目录的时候使用
 	str = aaa
 	str= aaa
 	str =aaa
+[makefile]
+写 KVERS = $(shell uname -r)
+的时候
+不能写成   $( shell uname -r)
 
 readlink -f .  能获取.的绝对路径
 

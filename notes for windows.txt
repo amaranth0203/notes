@@ -12,3 +12,5 @@ rundll32.exe user32.dll,LockWorkStation
 HKEY_CLASSES_ROOT\Directory\Background\shell\
 下边有右键弹出选项的设置，包括弹出项的名字，快捷键，执行的命令等
 可以参考cmd，例如包含字符串Extended的时候则要按住Shift右键才能弹出来等
+
+assoc .lnk=lnkfile 
