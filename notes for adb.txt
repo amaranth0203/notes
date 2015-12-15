@@ -1,3 +1,7 @@
+http://blog.csdn.net/fontlose/article/details/6666671
+第三种方法
+可以用来写小的测试程序然后在adb shell里边运行
+
 要同时对比kernel的log和logcat的log，两种方法
 一
 	adb logcat -v time -f /dev/kmsg | adb shell cat /proc/kmsg | grep "\[+\]"
