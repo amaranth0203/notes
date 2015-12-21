@@ -53,3 +53,4 @@ adb logcat | grep mm-camera | tee log.log
 adb logcat | grep mm-camera >> log.log
 都输出不了的时候，记得给grep加参数--line-buffered即
 adb logcat | grep --line-buffered mm-camera | tee log.log
+如果出现Binary file (standard input) matches,就加个参数-a

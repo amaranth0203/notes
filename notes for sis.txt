@@ -7,6 +7,10 @@ project -> rebuild project
 于是乎，若添加的头文件/函数实现文件并不是我们需要分析的内容
 但却刚好有一个结构体/函数名的名字和所点击的关键字是一致的
 sis也会跳到那里去
+(
+    再不行就F7( search -> browse project symbols )
+    或者( project -> Synchronize Files,选中add new file.. 和 force all file.. )
+)
 
 
 

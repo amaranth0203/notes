@@ -1,3 +1,8 @@
+C11之后类似typeof的宏
+_Generic( 'a', char: 1, int: 2, long: 3, default: 0)
+返回值为2，因为char在C语言里边作为整数处理
+
+(数制转换的时候活用sscanf)
 test.c 0xA5的接收方法：
 	unsigned int addr ;
 	sscanf( argv[1] , "%x" , &addr ) ;

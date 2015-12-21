@@ -1,6 +1,9 @@
 
 
 #define DEBUG_qiyunhu 1
+
+#define __FILENAME__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
+
 #ifdef DEBUG_qiyunhu
 
     #ifndef _STRRCHR_
