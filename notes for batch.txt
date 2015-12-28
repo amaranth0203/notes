@@ -1,3 +1,8 @@
+call :a flag
+然后在:a里边又call了一次
+最好在:a里边的call后边加上 set "%1=false"
+不然:a里边的call会影响flag的值
+
 替换字符串
 set str=abc ::等号两边不能有空格
 echo %str:a=d%
