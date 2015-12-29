@@ -1,3 +1,8 @@
+/dev/input/eventX
+cat的时候会输出对手机的操作（二进制）
+保存到文件再重新输入到这个event可以重现之前的操作
+也可以push进来覆盖这个文件用来重现操作
+
 http://blog.csdn.net/fontlose/article/details/6666671
 第三种方法
 可以用来写小的测试程序然后在adb shell里边运行
