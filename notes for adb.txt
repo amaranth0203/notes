@@ -6,6 +6,22 @@ cat的时候会输出对手机的操作（二进制）
 http://blog.csdn.net/fontlose/article/details/6666671
 第三种方法
 可以用来写小的测试程序然后在adb shell里边运行
+----------------------------------
+    #include <stdio.h>  
+    int main()  
+    {  
+        printf("Hello World!\n");  
+        return 0;  
+      
+    }  
+----------------------------------
+    LOCAL_PATH:= $(call my-dir)  
+    include $(CLEAR_VARS)  
+    LOCAL_SRC_FILES:=hello.c  
+    LOCAL_MODULE := helloworld  
+    LOCAL_MODULE_TAGS := optional  
+    include $(BUILD_EXECUTABLE)  
+----------------------------------
 
 要同时对比kernel的log和logcat的log，两种方法
 一
