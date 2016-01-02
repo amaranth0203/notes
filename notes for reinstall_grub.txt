@@ -1,0 +1,18 @@
+重新安装Grub的步骤（以Ubuntu为例）：
+1.使用带有linux系统的可启动光盘或U盘（如：Ubuntu live CD/USB）重新引导系统；
+2.在安装界面选择“试用Ubuntu而不改变计算机中的任何内容”；
+3.进入linux系统后，打开一个终端窗口并输入相关命令；
+ a、如果安装的linux系统没有单独的/boot文件分区，则输入以下命令：
+ sudo mount /dev/sdaX /mnt                                        #X为linux系统所安装在硬盘上的位置，将其挂载到/mnt目录下
+ sudo grub-install --root-directory=/mnt /dev/sda        #安装grub
+ 如果提示：Installation finished. No error reported .表示安装成功了
+ b、如果安装的linux系统存在单独的/boot分区，则输入以下命令：
+ sudo mount /dev/sdaX /mnt
+ sudo mount /dev/sdaY /mnt/boot                                #X,Y分别为linux系统根目录和/boot所在分区
+ sudo grub-install --root-directory=/mnt /dev/sda         #安装grub
+ 如果提示：Installation finished. No error reported .表示安装成功了
+4.使用unmount命令卸载/mnt等文件系统；
+ sudo umount /mnt
+5.重新启动系统，并取出光盘或拔出U盘，电脑将会从硬盘通过Grub启动引导系统；
+6.在Grub启动界面选择进入linux系统并执行更新Grub的命令
+ sudo update-grub

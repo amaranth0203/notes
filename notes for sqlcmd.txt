@@ -1,0 +1,18 @@
+> sqlcmd 
+> sqlcmd -U sa -P 199285 -H localhost
+> sqlcmd -U sa -P 199285 -S localhost
+
+1> select name from sys.databases
+2> go
+
+..
+
+1> use test
+2> go
+
+..
+
+1> select name from sys.tables
+2> go
+
+..

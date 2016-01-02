@@ -1,0 +1,2 @@
+Request.QueryString["username"]只能获取get过来的数据 
+Request.Form["username"]只能获取post过来的数据
