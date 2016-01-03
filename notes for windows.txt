@@ -1,3 +1,7 @@
+当出现目录过长无法删除（或无法其他操作时）
+可以使用
+robocopy c:\tmp Backup_2014_10_09  /purge
+
 在 HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics 下
 创建字符串值 "MinWidth" 然后设为30/54（对应大/小图标）
 重启电脑之后任务栏的图标就只隐藏标签，但从不合并了
