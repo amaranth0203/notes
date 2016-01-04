@@ -1,0 +1,19 @@
+进入到mm-camera目录
+使用
+	patch  -s -p0 < 0001-lib-mm-camera2-Add-ov16880-4lane-camera-lib.patch
+会生成一个新的目录b，里边是新的文件
+使用
+	patch -p0 < 0001-lib-mm-camera2-Add-ov16880-4lane-camera-lib.patch
+会直接打补丁
+
+patch文件里边，针对每个文件下边有很多段，分别记为@@ xxxxx
+称作chunk
+
+由于device-vendor.mk常常被往里边添加模组信息，比高通官方的新，于是有可能会出现
+patching file config/device-vendor.mk
+Hunk #2 succeeded at 766 (offset 63 lines).
+Hunk #3 succeeded at 1155 with fuzz 2 (offset 187 lines).
+Hunk #4 FAILED at 1309.
+1 out of 4 hunks FAILED -- saving rejects to file config/device-vendor.mk.rej
+
+这时候需要自己对照patch文件和被打补丁的文件进行手动打补丁
