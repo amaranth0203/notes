@@ -1,3 +1,24 @@
+
+
+%s/\(.*case\(.*\):\n\)\(\_.\{-}break;\)/\1new_line_1\rnew_line_2\2new_line_3\rnew_line_4\r\3/g
+
+在
+case CASETAG :
+    ...
+    break ;
+插入debug信息:
+case CASETAG :
+new_line_1
+new_line_2 CASETAGnew_line3
+new_line_4
+    ...
+    break ;
+之后再替换成想要的
+\_.代表 match any single character including newline
+.*为贪婪匹配
+.\{-}为非贪婪匹配
+
+
 S+h / S+l : 光标跳到当前视图的第一行/最后一行的开始处
 S+j : 把下一行开头的空格符全部删除，合并到这行最后边，中间再插入一个空格
 S+k : 打开光标所在关键字的手册（于是vim是读linux代码最方便的工具）
