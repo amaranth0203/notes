@@ -1,4 +1,8 @@
-﻿
+﻿git add xxx yyy zzz
+git commit -m "..." xxx yyy zzz
+就可以在一个commit-id里边只提交xxx yyy zzz三个文件
+
+
 工作时使用gerrit+git的模式来管理代码
 一开始对于一个项目，去scm里边使用repo下载代码
 然后分各个仓库(很多的.git)

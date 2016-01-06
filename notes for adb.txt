@@ -1,3 +1,15 @@
+多台手机连接电脑的时候
+adb shell会报错
+error: more than one device and emulator
+这时候
+adb devices
+List of devices attached
+4feb1319        device
+747115f2        device
+可以使用
+adb -s 4feb1319 shell
+来指定设备
+
 /dev/input/eventX
 cat的时候会输出对手机的操作（二进制）
 保存到文件再重新输入到这个event可以重现之前的操作

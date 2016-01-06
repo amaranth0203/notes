@@ -1,4 +1,8 @@
-﻿
+﻿获取数组的index
+ints = [ 1 , 2 , 3 ]
+for idx, val in enumerate(ints):
+    print idx, val
+
 html编码
 >>> print urllib.urlencode({"a":"啊"})
 a=%B0%A1
