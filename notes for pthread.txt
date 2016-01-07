@@ -1,0 +1,12 @@
+#include <pthread.h>
+pthread_t t1 ;
+pthread_create( &t1 , NULL , &start_function , NULL ) ;
+这样子就会去执行start_function
+但若main函数先结束了，线程t1也会跟着结束
+
+pthread_create( ...
+pthread_join( t1 , &exit_result ) ;
+这样子也会去执行start_function
+并且会等到start_function执行结束才会继续执行main后边的东西
+    "pthread_join() blocks until the child thread has exited"
+    于是在mm-camera里边del-mct-session才会用到(一定要free干净了才会让main退出)
