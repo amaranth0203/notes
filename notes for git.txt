@@ -1,4 +1,13 @@
-﻿
+﻿使用stash的时候
+git stash save "this is a test"
+以后再git stash list的时候会连通branch和添加的注释一同显示
+stash@{0}: On qyh_local: this is a test
+
+git stash pop之后
+可以使用 git reset HEAD 将成功合并的文件放到unstage区
+然后一个个diff，需要的就add，不需要的就checkout --
+接着手动merge冲突的文件，add再提交之后就可以git stash drop删掉在栈顶的stash记录了
+
 重命名当前分支
 	git branch -m <newname>
 重命名分支
