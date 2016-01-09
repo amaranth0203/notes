@@ -1,6 +1,6 @@
 
 
-%s/\(.*case\(.*\):\n\)\(\_.\{-}break;\)/\1new_line_1\rnew_line_2\2new_line_3\rnew_line_4\r\3/g
+%s/\(.*case\(.*\):.*\n\)\(\_.\{-}break;\)/\1new_line_1\rnew_line_2\2new_line_3\rnew_line_4\r\3/g
 
 在
 case CASETAG :
