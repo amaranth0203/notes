@@ -1,3 +1,7 @@
+#include <android/log.h>
+__android_log_print(ANDROID_LOG_ERROR, "qiyunhu", "[+] wassup %s\n", __FUNCTION__ ) ;
+
+
 
 
 #define DEBUG_qiyunhu 1
