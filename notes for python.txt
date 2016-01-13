@@ -1,7 +1,27 @@
-﻿获取数组的index
+﻿在python中保持中文不改变的方法(例如导出照片的时候目录会有"相机"两个字(utf-8)):
+现在python命令行中输入
+>>> u"相机"
+u'\u76f8\u673a'
+得到相机的unicode编码
+之后在代码中需要使用utf-8相机的地方,使用
+u'\u76f8\u673a'.encode('utf-8')替换即可
+
+
+
+
+
+获取数组的index
 ints = [ 1 , 2 , 3 ]
 for idx, val in enumerate(ints):
     print idx, val
+
+
+
+
+
+
+
+
 
 html编码
 >>> print urllib.urlencode({"a":"啊"})
