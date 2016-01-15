@@ -1,4 +1,40 @@
-﻿在python中保持中文不改变的方法(例如导出照片的时候目录会有"相机"两个字(utf-8)):
+﻿map
+    li = range( 10 )
+    map( lambda x: print( x ) , li )
+### lambda 里边要用print必须在开头
+### from __future__ import print_function
+### 而且print要作为函数使用（必须用括号）
+
+generator
+    li = range( 10 )
+    print( '\n'.join( str( x ) if x >=5 else str( 0 ) for x in li ) )
+    print( '-------' )
+    print( '\n'.join( str( x ) for x in li if x >= 5 ) )
+### 可以用来代替简单的 for 循环print
+
+
+过滤list
+    li = range( 10 )
+一种条件
+    print [ t for t in li if t >= 5 ]
+两种条件
+    print [ t if t >= 5 else 0 for t in li ]
+### 可以用来替代简单的list.append()
+### 若定义了函数
+### def p( a ) :
+###    print( a )
+### 可使用 [ p( l ) for l in li ] 来遍历输出
+
+函数参数加上*表示可变参数(传进来的当作tuple处理)
+定义:	func( *args )
+调用:
+1	func( )
+2	func( a )
+3	func( a , b , 1 )
+4	args = [ '1' , 1 , 'a' ]
+	func( *args ) 	（注意这里，list或tuple传进去的时候要加*号）
+
+在python中保持中文不改变的方法(例如导出照片的时候目录会有"相机"两个字(utf-8)):
 现在python命令行中输入
 >>> u"相机"
 u'\u76f8\u673a'
