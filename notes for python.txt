@@ -1,4 +1,24 @@
-﻿map
+﻿mixin的时候，例如
+class a( c , b )
+或者
+class a( b , c )
+如果b和c之间有继承关系，则父类应该放在后边
+以此类推
+class a( object ，b )是错的，应该写成
+class a( b , object )
+记忆：object在最后
+
+var = a if test else b
+相当于C语言的
+var = test != 0 ? a : b ;
+
+__function__
+作为被调用的函数
+sys._getframe().f_back.f_code.co_name
+在函数内部
+sys._getframe().f_code.co_name
+
+map
     li = range( 10 )
     map( lambda x: print( x ) , li )
 ### lambda 里边要用print必须在开头

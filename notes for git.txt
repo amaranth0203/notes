@@ -1,4 +1,10 @@
-﻿使用stash的时候
+﻿想查看一个commit的修改
+用 git show commit-id
+如果只想看改了哪个文件
+用 git show --name-status commit-id
+或 git show --name-only commit-id
+
+使用stash的时候
 git stash save "this is a test"
 以后再git stash list的时候会连通branch和添加的注释一同显示
 stash@{0}: On qyh_local: this is a test
