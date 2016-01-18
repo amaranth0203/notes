@@ -1,4 +1,18 @@
-﻿mixin的时候，例如
+﻿还是mixin的时候
+class a( )
+class b( )
+class c( )
+class mix( a , b , c )
+在mix() __init__的时候只会调用a的__init__方法
+写成
+class min( a , b , c ) :
+    def __init__( self ) :
+        a.__init__( self )
+        b.__init__( self )
+        c.__init__( self )
+就可以调用所有的init方法了
+
+mixin的时候，例如
 class a( c , b )
 或者
 class a( b , c )
