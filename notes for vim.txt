@@ -1,4 +1,33 @@
+折叠:
+zf打折叠记录于是
+zf%相当于notepad++折叠大括号
+展开 zo
+折叠/展开所有: zi
+zE清除所有
 
+ctags (vim 自带):
+在当前目录下运行 ctags -R 递归生成tags文件然后:set tags=生成的tags文件
+如果tags刚好和源文件在一个目录，直接运行vim即可
+使用*可以跳到下一个相同的关键字（不需要tags文件）
+使用C+]可以跳到定义处（需要tags文件）
+然后使用C+T可以跳回之前使用C+]的地方
+
+cscope :
+在当前目录下云讯 cscope -R / -Rbkq 生成cscope.xxx文件
+运行vim后使用 cs add .添加生成的文件
+接着就可以使用命令了
+cs find c xxxxxxx
+xxxxxx为要查找的关键字
+为了省去麻烦可以映射快捷键
+nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+在关键字上Ctrl + Shift + - 然后再按c就可以查找所有的caller
 
 %s/\(.*case\(.*\):.*\n\)\(\_.\{-}break;\)/\1new_line_1\rnew_line_2\2new_line_3\rnew_line_4\r\3/g
 
