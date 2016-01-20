@@ -1,0 +1,12 @@
+
+
+用lispbox的时候
+在C:\Users\Administrator.AXX3DX8ZNMSGU5B\AppData\Roaming下边的.emacs
+加(setq default-directory "e:/sources/lisp/")是没有效果的
+要在lispbox的启动bat里边找到
+set TO_EVAL="(progn (load \"lispbox\") (slime) )"
+改成
+set TO_EVAL="(progn (setq default-directory \"e:/sources/lisp/\") (load \"lispbox\") (slime) )"
+才可以
+
+之后就可以尽情地创建模块导入模块C-c C-c编译了

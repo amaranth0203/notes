@@ -1,0 +1,3 @@
+发邮件的时候卡死在copying message to sent folder :
+tools -> account setting -> copies & folders -> place a copy in 
+从 "sent" folder on 改成 other里边的 sent folder

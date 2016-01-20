@@ -1,3 +1,36 @@
+在C:\windows\gvim.bat
+和HKEY_LOCAL_MACHINE\SOFTWARE\Vim\Gvim的path里边
+都添加参数 -u xxx\.qyh_vim\vimrc
+即可使用自己的参数
+
+在( [ { ' "
+上边使用 di( di[ di{ di' di"可以删除被它们扩起来的内容
+
+编辑模式下边
+    c+d c+t 左右缩进(命令模式为 <<和>>)
+    c+x+i 补全关键字
+    c+x+f 补全路径
+          在补全的时候使用c+p和c+n上下切换
+    c+w 往回删一个词
+    c+u 往回删到行首
+
+:set tags?
+可以看到 tags 现在的值
+:set list
+查看看不到的字符
+:r !cmd
+插入cmd的执行结果
+
+:earlier  回到过去的代码状态
+:later    回到（过去的）未来的代码状态
+
+c-a c-x : 自增 自减
+
+查看完整文件路径 1 c-g
+
+help: c-g 查看 Ctrl + g 的意义
+help: s-h 查看 Shift+ h 的意义
+
 折叠:
 zf打折叠记录于是
 zf%相当于notepad++折叠大括号
@@ -13,7 +46,7 @@ ctags (vim 自带):
 然后使用C+T可以跳回之前使用C+]的地方
 
 cscope :
-在当前目录下云讯 cscope -R / -Rbkq 生成cscope.xxx文件
+在当前目录下运行 cscope -R / -Rbkq 生成cscope.xxx文件
 运行vim后使用 cs add .添加生成的文件
 接着就可以使用命令了
 cs find c xxxxxxx
@@ -72,6 +105,7 @@ S+p : 行复制之后p在该行上边（类似S+o）
 
 C+o 跳回到光标上一次所在
 C+i / Tab 和C+o相反
+`` 来回跳转
 
 
 
