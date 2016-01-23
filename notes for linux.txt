@@ -1,3 +1,6 @@
+gsettings set org.gnome.desktop.session idle-delay <seconds> (0 to disable)
+gsettings set org.gnome.desktop.screensaver lock-enabled false
+
 /var/lib/AccountsService/users/XXX
 …Ë÷√
 [User]

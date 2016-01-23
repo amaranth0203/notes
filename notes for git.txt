@@ -1,4 +1,8 @@
-﻿打git patch :
+﻿stash特定的文件
+git stash save -p xxxx
+进入交互模式
+
+打git patch :
 git apply xxx.patch
 git apply --help
 

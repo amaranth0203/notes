@@ -3,12 +3,12 @@ C-x C-c - 退出
 windows下配置文件.emacs在 C:\Users\Administrator.AXX3DX8ZNMSGU5B\AppData\Roaming 下
 C-x C-f 可以知道emacs安装路径
 
-C-p C-n C-b C-f - 上下左右 (vim : k j h l)
-C-l - 当前行移动到 中间 （继续按移动到顶端，低端，中间反复）( vim : zz )
-C-v M-v - 前后翻页(vim : C-f C-b)
-M-b M-f - 前后移动一个单词(vim : w b e ge )
-C-a C-e - 行首 行尾( vim : ^ $ )
-M-a M-e - 句首 句尾
+*** C-p C-n C-b C-f - 上下左右 (vim : k j h l)
+*** C-l - 当前行移动到 中间 （继续按移动到顶端，低端，中间反复）( vim : zz )
+*** C-v M-v - 前后翻页(vim : C-f C-b)
+*** M-b M-f - 前后移动一个单词(vim : w b e ge )
+*** C-a C-e - 行首 行尾( vim : ^ $ )
+(M-a M-e - 句首 句尾)
 M-< M-> - 文件开头 文件结尾( gg G )
 C-u 8 C-f - 执行8次C-f （也可以M-8 C-f,但是通用性不强）
 
