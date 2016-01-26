@@ -1,4 +1,4 @@
-
+清屏 : C-c M-o
 
 用lispbox的时候
 在C:\Users\Administrator.AXX3DX8ZNMSGU5B\AppData\Roaming下边的.emacs

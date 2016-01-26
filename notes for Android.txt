@@ -18,13 +18,27 @@ reboot
 aptitude & curl & vim & samba & ssh
 .vimrc .ssh 
 git & openjdk7(check version first) & repo
-xlrd
+apt-get install python-xlrd
 sudo apt-get install git gnupg flex bison gperf build-essential \
   zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
   libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
   libgl1-mesa-dev g++-multilib mingw32 tofrodos \
   python-markdown libxml2-utils xsltproc zlib1g-dev:i386
 其中libgl1-mesa-glx:i386如装不了就装libgl1-mesa-glx
+scp /usr/local/bin/repo
+! repo init username
+scp $w/.repo/manifest.xml
+! repo sync
+scp
+	~/.ssh
+    ?	/usr/bin/cms
+	/usr/bin/remote_signing.sh ( 被build/core/Makefile调用 )
+	/usr/bin/remote_signing.py ( 被remote_signing.sh调用 )
+hack a sys.exit(0) before first executed command of 
+ 1 /usr/bin/remote_signing.py
+ 2 vendor/vivo/host/bin/sign[apk,boot,*].py
+! make
+
 
 auto eth0
 iface eth0 inet static
