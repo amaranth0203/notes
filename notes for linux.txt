@@ -1,3 +1,12 @@
+使用文件来扩展swap:
+fallocate -l 4G /swapfile
+chmod 600 /swapfile 
+mkswap /swapfile 
+swapon /swapfile 
+vim_ /etc/fstab
+    /swapfile none swap sw 0 0
+reboot
+
 安装vmtool之后鼠标拖不出来 : apt-get install xserver-xorg-input-vmmouse
 
 gsettings set org.gnome.desktop.session idle-delay <seconds> (0 to disable)
@@ -33,7 +42,7 @@ apt-get install libc6:386 libstdc++6:i386
 （最好在配置之后重启然后试试echo $ANDROID_SDK_HOME 看看输出的结果是否理想
 
 gsettings set com.canonical.desktop.interface scrollbar-mode normal		- 15.x
-gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x
+gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x ( non root user )
  - 禁用ubuntu鸡肋的滚动条
 
 echo ${0%/*} 可以获得脚本所在的目录（区别与pwd）
