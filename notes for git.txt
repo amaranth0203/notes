@@ -1,4 +1,11 @@
-﻿stash特定的文件
+﻿git remote show origin ( 只显示已经tracking 远程分支的branch )
+可以看到
+Local branches configured for 'git pull':
+和
+Local ref configured for 'git push':
+也可以用 git branch -vv 简单查看 ( 无论是否 tracking 都会显示 )
+
+stash特定的文件
 git stash save -p xxxx
 进入交互模式
 

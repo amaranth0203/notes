@@ -1,3 +1,22 @@
+
+文件结构
+[System]
+[Ubuntu]
+[shell]
+[makefile]
+
+[System]
+查看dns
+nm-tool
+查看用户所属组
+groups qiyunhu
+添加用户到其他组
+usermod -a -G sudo,adm,compiler qiyunhu
+将用户从组删除
+deluser qiyunhu sudo
+deluser qiyunhu adm
+deluser qiyunhu compiler
+
 使用文件来扩展swap:
 fallocate -l 4G /swapfile
 chmod 600 /swapfile 
@@ -7,6 +26,12 @@ vim_ /etc/fstab
     /swapfile none swap sw 0 0
 reboot
 
+当某个程序需要一个环境变量字符串的时候（比如开发安卓的eclipse需要ANDROID_SDK_HOME）
+一定要在/etc/environment里边写 export ANDROID_SDK_HOME="......"
+不能写在/etc/bash.bashrc不能写在~/.bashrc也不能用source 引其他写好的文件
+（最好在配置之后重启然后试试echo $ANDROID_SDK_HOME 看看输出的结果是否理想
+
+[Ubuntu]
 安装vmtool之后鼠标拖不出来 : apt-get install xserver-xorg-input-vmmouse
 
 gsettings set org.gnome.desktop.session idle-delay <seconds> (0 to disable)
@@ -14,6 +39,7 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 
 /var/lib/AccountsService/users/XXX
 设置
+
 [User]
 SystemAccount=true
 能把该用户从登陆界面去除
@@ -36,19 +62,9 @@ apt-get update
 apt-get install libc6:386 libstdc++6:i386
 之后再用 ldd exec_file_name 就可以看到所使用的库文件了
 
-当某个程序需要一个环境变量字符串的时候（比如开发安卓的eclipse需要ANDROID_SDK_HOME）
-一定要在/etc/environment里边写 export ANDROID_SDK_HOME="......"
-不能写在/etc/bash.bashrc不能写在~/.bashrc也不能用source 引其他写好的文件
-（最好在配置之后重启然后试试echo $ANDROID_SDK_HOME 看看输出的结果是否理想
-
 gsettings set com.canonical.desktop.interface scrollbar-mode normal		- 15.x
 gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x ( non root user )
  - 禁用ubuntu鸡肋的滚动条
-
-echo ${0%/*} 可以获得脚本所在的目录（区别与pwd）
-
-find 查找目录的时候使用
-    find . -name "*vendor*" -type d
 
 [shell]
 赋值的时候写一行
@@ -57,16 +73,38 @@ find 查找目录的时候使用
 	str = aaa
 	str= aaa
 	str =aaa
+
+echo ${0%/*} 可以获得脚本所在的目录（区别与pwd）
+
+find 查找目录的时候使用
+    find . -name "*vendor*" -type d
+
 [makefile]
 写 KVERS = $(shell uname -r)
 的时候
 不能写成   $( shell uname -r)
 
 readlink -f .  能获取.的绝对路径
+替换字符:
+echo $PATH | tr ":" "\n"
 
-cygwin环境下使用 
-adb logcat | grep mm-camera | tee log.log
-adb logcat | grep mm-camera >> log.log
-都输出不了的时候，记得给grep加参数--line-buffered即
-adb logcat | grep --line-buffered mm-camera | tee log.log
-如果出现Binary file (standard input) matches,就加个参数-a
+代替xargs：
+for x in `adb shell ls | grep init` ; do adb pull $x . ; done
+删除目录下边所有文件但保留a.txt
+   rm -rvf !(a.txt)
+   ls | grep -v a.txt | xargs rm -rvf
+删除文件名为 '-r' 的文件
+   rm ./-r
+   rm -- -r ( -- 后边全部作为字符串处理 )
+ls -F 会出现很多的文件分类，如何查看具体是怎么分的：
+   info ls
+
+sed 是和vim的 s///g差不多
+awk 是和cut差不多，分隔(使用-F）之后放到$1,$2里边
+假设using_busybox里边全是命令,则使用
+   awk          '{print  "alias ",$1,"=\"/system/xbin/",$1,"\""}' using_busybox的结果是
+   alias  ls ="/system/xbin/ ls "（多出一个额外的空格）
+   awk -vOFS='' '{print  "alias ",$1,"=\"/system/xbin/",$1,"\""}' using_busybox的结果是
+   alias ls="/system/xbin/ls"（正解）
+或者直接使用printf（熟悉的C语言！）
+   awk '{printf "alias %s=\"/system/xbin/%s\"\n",$1,$1}' using_busybox
