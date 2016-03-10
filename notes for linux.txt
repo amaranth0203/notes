@@ -8,6 +8,13 @@
 [System]
 查看dns
 nm-tool
+  如果/etc/resolv.conf不存在
+  那么直接把dns添加到 /etc/network/interfaces下边 :
+  auto eth0
+  iface eth0 inet static
+  address 192.168.137.44
+  netmask 255.255.255.0
+  dns-nameservers 114.114.114.114. 8.8.8.8
 查看用户所属组
 groups qiyunhu
 添加用户到其他组
@@ -32,6 +39,9 @@ reboot
 （最好在配置之后重启然后试试echo $ANDROID_SDK_HOME 看看输出的结果是否理想
 
 [Ubuntu]
+查看和Ubuntu版本相关的信息:
+lsb_release -a
+
 安装vmtool之后鼠标拖不出来 : apt-get install xserver-xorg-input-vmmouse
 
 gsettings set org.gnome.desktop.session idle-delay <seconds> (0 to disable)

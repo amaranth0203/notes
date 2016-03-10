@@ -1,4 +1,7 @@
-﻿还是mixin的时候
+﻿Unofficial Windows Binaries for Python Extension Packages
+ - http://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+还是mixin的时候
 class a( )
 class b( )
 class c( )
