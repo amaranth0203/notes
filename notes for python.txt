@@ -1,4 +1,8 @@
-﻿Unofficial Windows Binaries for Python Extension Packages
+﻿import sys
+sys.path.insert(0, '/path/to/application/app/folder')
+之后可以继续导入/path/to/application/app/folder下边的py和pyd文件
+
+Unofficial Windows Binaries for Python Extension Packages
  - http://www.lfd.uci.edu/~gohlke/pythonlibs/
 
 还是mixin的时候

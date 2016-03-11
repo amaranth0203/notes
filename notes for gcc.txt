@@ -1,0 +1,7 @@
+加入debug信息（会打印出出错的行数）
+-g
+编译64位的库文件供python调用
+import spam
+    gcc -D MS_WIN64 -g -shared -o spam.pyd spammodule.c -I D:\executable\Python27_64bit\include -L D:\executable\Python27_64bit\libs -lpython27
+ctypes.cdll.LoadLibrary( "mydll.dll" )
+    gcc -D MS_WIN64 -g -shared -o mydll.dll mydll.c
