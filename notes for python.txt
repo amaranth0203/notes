@@ -1,4 +1,12 @@
-﻿import sys
+﻿对于list a = [1,2,3]
+b , c , d = a
+b[1] = 44
+之后 a b c d 均为 [1,44,3]
+复制对象的方法（重新返回一个新的对象）
+b , c , d = a[:] , a[:] , a[:]
+
+
+import sys
 sys.path.insert(0, '/path/to/application/app/folder')
 之后可以继续导入/path/to/application/app/folder下边的py和pyd文件
 

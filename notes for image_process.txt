@@ -1,0 +1,5 @@
+对于RGB的图像（假设范围是0~255）
+要加强亮度，不能简单*strength
+还要判断*strength之后范围是否溢出，若有溢出，则设为最大值（这里是255）
+即
+  r_value = r_value*strength < 255 ? r_value*strength : 255 ;
