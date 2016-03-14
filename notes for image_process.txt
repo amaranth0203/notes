@@ -1,3 +1,10 @@
+最简单的自动白平衡 :
+r_gain = ( r_sum + b_sum + g_sum ) / ( 3 * r_sum )
+g_gain = ( r_sum + b_sum + g_sum ) / ( 3 * g_sum )
+b_gain = ( r_sum + b_sum + g_sum ) / ( 3 * b_sum )
+然后遍历所有rgb乘以gain
+（处理之后，x_sum = ( r_sum+b_sum+g_sum ) / 3 ）
+
 对于RGB的图像（假设范围是0~255）
 要加强亮度，不能简单*strength
 还要判断*strength之后范围是否溢出，若有溢出，则设为最大值（这里是255）
