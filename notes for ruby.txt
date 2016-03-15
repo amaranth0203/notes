@@ -1,0 +1,79 @@
+﻿>>> a = []
+>>> a.append( 1 )
+>   a = []
+>   a.push( 1 )
+
+>>> 'bc' in 'abcd'
+>   'abcd'.include? 'bc'
+
+
+>>> str[3:]
+>   str[3..-1]
+
+>>> str[3:7]
+>   str[3,7-3]
+
+
+>>> for i in range( 1 , 5 ) :
+irb> for i in (1..5)	If only one line :  for i in 1..5 do ( do can't be omit )
+irb>     print i
+irb> end
+>(1..5).each do |i|
+>  print i
+>end
+
+print <<EOF  		can't write as print << EOF ( space )
+
+BEGIN { 		The brace can't write in a new line
+
+1_234_567		explain as 1234567
+
+>>> a**b
+irb> a**b		return a.power( b )
+
+>>> if : ... elif : ... else :
+irb> if ... elsif ... else ... end
+
+redo			similar to next( in c is continue ) but not i++
+retry			in exception.. OR in for i in 0..5 restart from 0
+
+>>> x = 44
+>>> y = 88
+>>> " aaa %d aaa %d aaa " % ( x , y )
+' aaa 44 aaa 88 aaa '
+
+irb> x = 44
+=> 44
+irb> y = 88
+=> 88
+irb> " aaa %d aaa %d aaa " % [ x , y ]
+=> " aaa 44 aaa 88 aaa "
+irb> ' aaa %d aaa %d aaa ' % [ x , y ]
+=> " aaa 44 aaa 88 aaa "
+
+
+16进制到10进制:
+>> "B0A0".hex
+=> 45216
+或
+>> "B0A0".to_i(16)
+=> 45216
+
+10进制到16进制:
+>> 45216.to_s(16)
+=> "b0a0"
+
+
+irb(main):007:0> require 'ipaddr'
+=> true
+irb(main):008:0> ip = IPAddr.new "192.168.44.3"
+=> #<IPAddr: IPv4:192.168.44.3/255.255.255.255>
+irb(main):009:0> ip.to_i
+=> 3232246787
+irb(main):010:0> ip.to_s
+=> "192.168.44.3"
+irb(main):011:0> ip.to_i
+=> 3232246787
+irb(main):013:0> ip.to_i.to_s(16)
+=> "c0a82c03"
+

