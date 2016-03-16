@@ -42,6 +42,7 @@ set incsearch
 nnoremap <c-\> :nohlsearch<cr>
 nnoremap <esc>j jzz
 nnoremap <esc>k kzz
+nnoremap % %zz
 
 
 " set default 'runtimepath' (without ~/.vim folders)
