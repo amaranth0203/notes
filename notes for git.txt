@@ -1,4 +1,9 @@
-﻿git remote show origin ( 只显示已经tracking 远程分支的branch )
+﻿当只想更新一个文件的时候
+git fetch
+git checkout    origin/vivo_qcom_LA.BR.1.3.2-04130-8976.0_msm8976    mm-camera2/media-controller/modules/sensors/chromatix/0308/chromatix_imx298/3A/zsl_preview/chromatix_imx298_zsl_preview_kafa79s90_bu64297.h
+
+
+git remote show origin ( 只显示已经tracking 远程分支的branch )
 可以看到
 Local branches configured for 'git pull':
 和
