@@ -1,3 +1,6 @@
+explorer.exe /e,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+打开"我的电脑"
+
 开启/关闭 ICMP 
 netsh firewall set icmpsetting 8
 netsh firewall set icmpsetting 8 disable
