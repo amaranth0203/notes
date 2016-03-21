@@ -39,6 +39,12 @@ reboot
 （最好在配置之后重启然后试试echo $ANDROID_SDK_HOME 看看输出的结果是否理想
 
 [Ubuntu]
+启动的时候跳过grub选择
+/etc/default/grub
+    GRUB_RECORDFAIL_TIMEOUT=0
+sudo update-grub
+
+
 查看和Ubuntu版本相关的信息:
 lsb_release -a
 
