@@ -1,3 +1,10 @@
+设置环境变量 ANDROID_SERIAL 等于adb devices 或者 fastboot devices出来的那个序列号之后
+就可以不用带参数 -s 对特定的手机进行操作了
+比如在解压出来的项目路径下打开cmd  设置ANDROID_SERIAL变量
+然后在这个cmd中运行flash_all.bat
+再重复操作
+即可同时刷多台手机
+
 多台手机连接电脑的时候
 adb shell会报错
 error: more than one device and emulator

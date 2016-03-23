@@ -1,3 +1,10 @@
+C + b :
+   vim的%
+
+设置里边把 ctrl + page[up/down] 
+换成 ctrl + tab 和 ctrl + shift + tab
+更符合我平时切换的习惯
+
 C + M + 鼠标选取能实现vim的 C + v
   ( 记得一定要鼠标选取，否则windows下 C + M + 方向会有很不好的结果…)
 
