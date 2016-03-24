@@ -1,3 +1,7 @@
+taskkill 后边加 /T 杀死子进程
+查看子进程
+  wmic process where (ParentProcessId=1234) get Caption,ProcessId'
+
 explorer.exe /e,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
 打开"我的电脑"
 
