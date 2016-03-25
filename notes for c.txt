@@ -1,3 +1,5 @@
+调用的dll文件要在%PATH%中
+
 按字节读二进制文件的时候，buffer定义一定要加上 unsigned，即
 unsigned char buff* = .....
 否则最高位会被当成符号位。。

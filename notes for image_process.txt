@@ -1,3 +1,11 @@
+图像缩放常用插值方法（opencv）：
+CV_INTER_NN - 最近邻插值,
+CV_INTER_LINEAR - 双线性插值 (缺省使用)
+CV_INTER_AREA - 使用象素关系重采样。当图像缩小时候，该方法可以避免波纹出现。当图像放大时，类似于 CV_INTER_NN 方法..
+CV_INTER_CUBIC - 立方插值.
+
+使用CV_INTER_CUBIC会出现锯齿（小视频）
+
 最简单的自动白平衡 :
 r_gain = ( r_sum + b_sum + g_sum ) / ( 3 * r_sum )
 g_gain = ( r_sum + b_sum + g_sum ) / ( 3 * g_sum )
