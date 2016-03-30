@@ -1,3 +1,6 @@
+启动项
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+
 taskkill 后边加 /T 杀死子进程
 查看子进程
   wmic process where (ParentProcessId=1234) get Caption,ProcessId'
