@@ -1,3 +1,7 @@
+adb 用不了的时候（出现ADB server didn't ACK）
+可以通过 netstat aon 找占用 5037 端口进程的pid
+之后结束
+
 设置环境变量 ANDROID_SERIAL 等于adb devices 或者 fastboot devices出来的那个序列号之后
 就可以不用带参数 -s 对特定的手机进行操作了
 比如在解压出来的项目路径下打开cmd  设置ANDROID_SERIAL变量
