@@ -1,3 +1,20 @@
+隐藏explorer 左边的 库 :
+HKEY_CLASSES_ROOT\CLSID\{031E4825-7B94-4dc3-B131-E946B44C8DD5}\ShellFolder
+先右键ShellFolder，权限，选自己，下边勾选允许完全控制，确定
+之后把Attributes的键值由b080010d改成b090010d
+其余项：
+家庭组	{B4FB3F98-C1EA-428d-A78A-D1F5659CBA93} b084010c -> b094010c
+网络	{F02C1A0D-BE21-4350-88B0-7367FC96EF3C} b0040064 -> b0940064
+收藏夹	{323CA680-C24D-4099-B94D-446DD2D7249E} a0900100 -> a9400100
+计算机	{20D04FE0-3AEA-1069-A2D8-08002B30309D} 新建        b094010c
+-------------------------------------
+在打开/保存的那个对话框中还会有(又是使用64位系统) 还需要处理以下位置(这个不需要重启explorer.exe但需要重启打开的程序)
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{031E4825-7B94-4dc3-B131-E946B44C8DD5}\ShellFolder
+若不生效则再处理
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{031E4825-7B94-4dc3-B131-E946B44C8DD5}]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{031E4825-7B94-4dc3-B131-E946B44C8DD5}"=-
+
 启动项
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
 

