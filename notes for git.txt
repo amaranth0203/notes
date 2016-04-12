@@ -1,4 +1,8 @@
-﻿列出和单个文件有关的所有commit
+﻿当删文件后出现很多个 deleted: xxxx 时
+git ls-files --deleted -z | xargs -0 git rm
+可以一次全部把删除的文件进行 git rm
+
+列出和单个文件有关的所有commit
 git log --follow xxx
 
 当只想更新一个文件的时候
