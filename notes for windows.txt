@@ -1,3 +1,7 @@
+锁屏登陆背景:
+mkdir -p C:\Windows\System32\oobe\info\backgrounds
+backgroundDefault.jpg ( 大小限制: 250KB )
+
 隐藏explorer 左边的 库 :
 HKEY_CLASSES_ROOT\CLSID\{031E4825-7B94-4dc3-B131-E946B44C8DD5}\ShellFolder
 先右键ShellFolder，权限，选自己，下边勾选允许完全控制，确定
