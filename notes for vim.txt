@@ -1,3 +1,9 @@
+:r 读取文件，输入到当前光标所在位置
+:r!cat
+之后随意输入，再以 ctrl-d 结束
+可以用来粘贴到vim 避免自动缩进
+也可以用autocmd BufRead * :set formatoptions-=cro来避免
+
 使用ctags/cscope跳转之后，如果有多个相同的tags。。。
 可以使用 :tn 或者 :tp 跳转到相同的 下/前 一个tags处
 

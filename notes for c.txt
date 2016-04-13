@@ -1,3 +1,23 @@
+
+不带参数不带返回值:
+typedef void* (*ar)() ;
+void* (*qyh_test)() ; // ar qyh_test ; 
+void* handle = dlopen( "libqyh.so" , RTLD_NOW ) ;
+*(void **)(&qyh_test) = dlsym( handle , "qyh_test" ) ;
+(void)qyh_test( ) ;
+
+带参数带返回值:
+typedef int ( *ar )( const char* ) ;
+//int ( *qyh_test )( const char* ) ;
+ar qyh_test ;
+void* handle = dlopen( "libqyh.so" , RTLD_NOW ) ;
+*( void ** )( &qyh_test ) = dlsym( handle , "qyh_test" ) ;
+int result = qyh_test( "armitage" ) ;
+ALOGE( "[+] wassup result : %d\n" , result ) ;
+
+
+
+
 调用的dll文件要在%PATH%中
 
 按字节读二进制文件的时候，buffer定义一定要加上 unsigned，即
