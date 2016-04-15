@@ -1,4 +1,9 @@
-﻿Android.mk里边的
+﻿Android.mk中
+若设置 LOCAL_PROPRIETARY_MODULE := true
+则编出来的库文件是在 /system/vendor/lib ( qcom )
+否则在 /system/lib ( mtk )
+
+Android.mk里边的
 	$(CLEAR_VARS)
 	$(call my-dir)
 	$(BUILD_SHARED_LIBRARY)

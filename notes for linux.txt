@@ -6,6 +6,9 @@
 [makefile]
 
 [System]
+查看so文件的符号链接（函数名）
+readelf -Ws xxx.so
+
 查看dns
 nm-tool
   如果/etc/resolv.conf不存在
