@@ -1,4 +1,6 @@
-﻿Android.mk中
+﻿msm8976丢log.. 可以试着写入文件 这样就不会丢了
+
+Android.mk中
 若设置 LOCAL_PROPRIETARY_MODULE := true
 则编出来的库文件是在 /system/vendor/lib ( qcom )
 否则在 /system/lib ( mtk )
