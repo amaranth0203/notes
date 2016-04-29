@@ -1,2 +1,19 @@
 print_r 用来打印整个数组的结构
 var_dump 也可以打印整个数组的结构，并且附加键值对的类型
+
+foreach( $arr as $value )  - 传值
+foreach( $arr as &$value ) - 传址
+
+foreach( $arr as $value ) { }
+while( list( , $value ) = each( $arr ) ) { }
+
+foreach( $arr as $key => $value ) { }
+while( list( $key , $value ) = each( $arr ) ) { }
+
+break 2 ; 跳出两层
+
+require vs include :
+    -- 这条语句出现错误（例如文件不存在）时
+    -- require 退出
+    -- include 继续执行
+    -- 看词语本身的语气来记忆
