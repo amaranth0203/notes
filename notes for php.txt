@@ -17,3 +17,8 @@ require vs include :
     -- require 退出
     -- include 继续执行
     -- 看词语本身的语气来记忆
+
+$foo::bar( )  ->  访问类属性
+
+$foo = new Foo ;
+echo $foo->bar( )  ->  访问实例的属性
