@@ -1,3 +1,9 @@
+handle.php?xxx=xxx&xxx=xxx
+会直接把请求发到 handle.php 中
+在 handle.php 里边使用 $_REQUEST $_GET $_POST 就可以直接获取参数
+在 handle.php 可以使用函数 header( 'xxxxx' ) 来添加响应头
+之后使用 echo 或者 print 即直接响应请求( echo plain txt / echo xml )
+
 print_r 用来打印整个数组的结构
 var_dump 也可以打印整个数组的结构，并且附加键值对的类型
 

@@ -1,0 +1,8 @@
+在 win 7 下
+除了配置 ServerRoot DocumentRoot ServerName 之外
+还要写 
+LoadModule php5_module "%PHP_HOME%/php5apache2.dll"
+AddHandler application/x-httpd-php .php
+PHPIniDir "%PHP_HOME%"
+
+( 可以使用 httpd -M 查看已经加载的模块有没有 php 的 ( linux 下使用 apachectl -M ) )
