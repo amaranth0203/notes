@@ -1,3 +1,14 @@
+show databases ;
+use test ;
+show tables ;
+CREATE TABLE IF NOT EXISTS FILES (
+    ID INT AUTO_INCREMENT PRIMARY KEY , 
+    NAME VARCHAR(30)
+) ;
+
+mysql -u root -p 回车
+输入密码 回车
+
 备份:
 mysqldump -u root -p *** parknshop > parknshop.bak
 恢复:
