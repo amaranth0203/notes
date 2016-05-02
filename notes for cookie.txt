@@ -1,0 +1,35 @@
+使用 firefox 的插件 
+    firebug 
+        可以跟踪 js 脚本执行的过程 
+        查看所有 cookie 的值 
+        可以看到所有请求的执行过程（分类）
+    tamper data 
+        可以查看/修改请求 
+        可以看到所有请求的执行过程（混在一起）
+        看到的请求不是原始的用于 socket 传送的信息
+    httpfox 
+        和 tamper data 的查看功能类似 
+        不能修改只能查看 
+        可以看到 raw data
+    live http headers 
+        可以看到所有请求的 header 和对应的响应 header
+
+使用以上几个插件 就可以用 python 模拟出登陆过程
+可以直接使用 socket 根据 HTTP 协议构造请求( 要注意换行符的处理 编码方式的处理等 )
+也可以使用现成的库
+
+
+设置 cookie 的方式
+1. HTTP 头 Set-cookie
+2. JS( 可以是本站的 也可以是引用外站的 也可以存在于 library 里边 )
+3. 三方( 例如 flash 等 )
+
+http协议里边
+请求之后
+响应头会有个 Set-cookie 域
+之后浏览器会按照里边的属性去构造下一个请求的 cookie
+具体格式百度/谷歌
+
+yydzh.com 里边 cookie 的 CNZZDATA175294 字段使用 JS 来设置 但是是外站的 JS ( s96.cnzz.com )
+辨别身份的 cookie 字段是 fd160_winduser
+
