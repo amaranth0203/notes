@@ -1,3 +1,19 @@
+分段:
+
+*JS基础 :
+...
+
+*AJAX :
+...
+
+*jQuery :
+...
+
+
+
+
+*JS基础:
+
 坚持使用===不使用==的原则
 
 NaN===NaA是false，NaN只能用isNaN()函数判断
@@ -85,7 +101,20 @@ function createStudent(props) {
 
 
 
+*AJAX :
 
 AJAX : 前后端交互，不刷新当前页面
+主要是使用了 XMLHttpRequest 对象来和服务端进行交互
+可以直接使用 raw 交互
+但用得更多的是 XML 交互
+实际使用封装在 jQuery 中比较多 :
+    $.get( ...
+    $.post( ...
+    $.ajax( ...
+
+
+
+*jQuery :
+
 jQuery : 选择元素使用 jQuery 是一个函数， $也是一个函数，他们两个相同，可以使用jQuery.noConflict()释放对$的占用
  - 选择器 $('#test')
