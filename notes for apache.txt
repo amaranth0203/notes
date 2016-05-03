@@ -1,8 +1,27 @@
+
+加入
+<DirectoryMatch "^E:/Sources/php/DocumentRoot/priv_(.+)">
+    Allow from None
+    Order allow,deny
+</DirectoryMatch>
+之后
+在浏览器就没有访问 priv_ 开头的目录的权限了
+
 在 win 7 下
 除了配置 ServerRoot DocumentRoot ServerName 之外
 还要写 
 LoadModule php5_module "%PHP_HOME%/php5apache2.dll"
-AddHandler application/x-httpd-php .php
+AddHandler application/x-httpd-php .php .html
+    ( .html 是为了在 html 文件中也能解释 php 代码 )
 PHPIniDir "%PHP_HOME%"
 
 ( 可以使用 httpd -M 查看已经加载的模块有没有 php 的 ( linux 下使用 apachectl -M ) )
+
+再把 %PHP_HOME% 下边的 php.ini-development 复制一份作为 php.ini
+之后打开
+extension_dir = "ext"
+extension=php_mysql.dll
+extension=php_mysqli.dll
+的注释
+
+

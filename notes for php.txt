@@ -1,3 +1,35 @@
+﻿部署出去的php代码可以用 error_log 来打印 log 到apache目录下的logs的error.log中
+
+require 或者 require_once 的时候
+使用 require_once( $_SERVER['DOCUMENT_ROOT'].'/priv_handler/handler.php' ) ;
+来确定路径
+
+http://phpdao.com/
+相当于代码生成器，生成对数据库的操作类（DAO）
+使用的方法比较旧，后边可以自己改良一下
+按照官网的指导 :
+生成 :
+- Download latest version of DAO generator for PHP and Mysql
+- unzip file
+- set connection to database properties in file templates/class/dao/sql/ConnectionProperty.class.php
+- run file generate.php (for example: http://localhost/phpdao/generate.php)
+- generated classes will put in 'generated' folder 
+使用 :
+Application generate three classes for one table (table must contain primary key). 
+First class is Domain Transfer Object
+Second is interface that define operations on table
+Third class implements preceding interface
+----
+require_once('include_dao.php');
+$transaction = new Transaction();
+$file = new File();
+$file->name = "testfromdao" ;
+DAOFactory::getFilesDAO()->insert($file);
+$transaction->commit( ) ;
+----
+更具体的用法可以下载 http://phpdao.com/testdao.zip 并且导入里边的数据库查看
+主要要注意生成的 Domain Transfer Object 里边的字段是直接使用表的字段，然后把第一个字母小写
+
 handle.php?xxx=xxx&xxx=xxx
 会直接把请求发到 handle.php 中
 在 handle.php 里边使用 $_REQUEST $_GET $_POST 就可以直接获取参数
