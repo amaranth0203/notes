@@ -1,4 +1,37 @@
 
+sp<>(RefBase) - http://blog.csdn.net/gzzaigcnforever/article/details/20649781
+
+v4l2编程 - http://blog.chinaunix.net/uid-27411029-id-3789851.html
+
+awk,cut,sed
+
+192.168.5.91:8080
+ - tomcat 默认用户名admin 密码空
+192.168.5.92:8080
+ - tomcat 默认用户名admin 密码空
+http://192.168.2.125:8080/host-manager/html
+ - tomcat 默认用户名admin 密码admin
+http://192.168.2.134:8080/host-manager/html
+ - tomcat 默认用户名admin 密码admin
+http://192.168.2.187:8080/manager/html
+ - tomcat 默认用户名admin 密码admin
+
+linux 内存管理
+
+http://stackoverflow.com/questions/1010724/what-parts-of-linux-kernel-can-i-read-for-fun 几个入口点
+
+https://en.wikipedia.org/wiki/Color_balance - 里边的算法
+
+curl 调试 nodejs 被拒绝
+
+http://mtksvn/svn/Public_File/SW-DOC/SW-ME9/%E5%9F%B9%E8%AE%AD%E6%96%87%E6%A1%A3/CCM/
+
+https://en.wikipedia.org/wiki/Demosaicing
+
+https://en.wikipedia.org/wiki/High-pass_filter
+
+http://eeweb.poly.edu/~yao/EE3414/image_filtering.pdf
+
 http://www.c-jump.com/CIS77/MLabs/M12reverse/lecture.html
 
 仔细看看一个Process的加载过程

@@ -1,0 +1,7 @@
+http://www.garshol.priv.no/download/text/http-tut.html
+ -- http_protocol_stack
+
+http://stackoverflow.com/questions/14421694/taking-pictures-with-camera-android-programmatically
+http://www.vogella.com/tutorials/AndroidCamera/article.html
+http://stackoverflow.com/questions/12273976/camera-tutorial-for-android-using-surfaceview
+ -- camera example:
