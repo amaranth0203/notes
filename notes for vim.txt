@@ -85,6 +85,10 @@ ctags (vim 自带):
 使用*可以跳到下一个相同的关键字（不需要tags文件）
 使用C+]可以跳到定义处（需要tags文件）
 然后使用C+T可以跳回之前使用C+]的地方
+最好使用 ctags -R -f .tags --languages=C --langmap=c:+.ccs
+指定生成的文件为 .tags
+因为 sublime 默认使用的文件名是  .tags
+--> 不用了  sublime 右键文件夹可以直接生成
 
 cscope :
 在当前目录下运行 cscope -R / -Rbkq 生成cscope.xxx文件

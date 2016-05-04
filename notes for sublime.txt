@@ -1,4 +1,26 @@
-﻿右键打开
+﻿添加 php 支持
+tools -> build system -> new build system
+{
+	"cmd": [ "php.exe" , "$file" ] ,
+	"file_regex" : "php$" ,
+	"selector" : "source.php"
+}
+保存为 php.sublime-build
+
+
+
+
+{ "keys": ["ctrl+tab"], "command": "next_view" },
+{ "keys": ["ctrl+shift+tab"], "command": "prev_view" }
+切换 ctrl+tab 顺序
+
+
+
+全选 点击右下角 可以切换tab和空格
+
+
+
+右键打开
 
 @echo off
 SET st2Path=D:\Program Files\Sublime Text 3\sublime_text.exe
@@ -9,7 +31,16 @@ rem add it for all file types
 @reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 2\command" /t REG_SZ /v "" /d "%st2Path% \"%%1\"" /f
 
 rem add it for folders
-@reg add "HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 2"         /t REG_SZ /v "" /d "Open with Sublime Text 2"   /f
-@reg add "HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 2"         /t REG_EXPAND_SZ /v "Icon" /d "%st2Path%,0" /f
-@reg add "HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 2\command" /t REG_SZ /v "" /d "%st2Path% \"%%1\"" /f
+rem @reg add "HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 2"         /t REG_SZ /v "" /d "Open with Sublime Text 2"   /f
+rem @reg add "HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 2"         /t REG_EXPAND_SZ /v "Icon" /d "%st2Path%,0" /f
+rem @reg add "HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 2\command" /t REG_SZ /v "" /d "%st2Path% \"%%1\"" /f
 pause
+
+
+
+添加右键支持
+ctrl+tab 顺序
+php 支持
+插件 - Package Control
+插件 - ConvertToUTF8
+插件 - Ctags
