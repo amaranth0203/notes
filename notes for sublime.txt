@@ -1,4 +1,6 @@
-﻿添加 php 支持
+﻿
+
+添加 php 支持
 tools -> build system -> new build system
 {
 	"cmd": [ "php.exe" , "$file" ] ,
@@ -6,6 +8,13 @@ tools -> build system -> new build system
 	"selector" : "source.php"
 }
 保存为 php.sublime-build
+(
+	一开始如果重启之后 C-b C-S-b 都不生效
+	可以试试将 cmd 改成 cmd_ 保存
+	然后找 php 文件 C-b
+	然后再将 cmd_ 改回 cmd 保存
+	就可以运行了
+)
 
 
 
@@ -41,6 +50,7 @@ pause
 添加右键支持
 ctrl+tab 顺序
 php 支持
+"auto_indent": false,
 插件 - Package Control
 插件 - ConvertToUTF8
 插件 - Ctags
