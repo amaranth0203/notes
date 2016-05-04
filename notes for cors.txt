@@ -1,0 +1,24 @@
+Cross-origin resource sharing
+
+用 firebug console
+用 ajax 发送 post 的时候
+在服务器端会默认禁止跨站资源请求
+firefox 自带的终端( C-S-k )会提示 于是失败
+
+可以在服务器的响应头加入以下内容 :
+header( "Access-Control-Allow-Origin: *" ) ;
+header("Access-Control-Allow-Methods: POST, GET, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: User-Agent, Accept-Language, Accept-Encoding, Accept-Charset, Connection, Content-Length, Origin, Pragma, Accept-Charset, Cache-Control, Accept, Content-Type, Sessionid");
+header("Access-Control-Max-Age: 1000");
+
+之后再发送， C-S-k 不再提示
+
+但是在服务器端有验证 isset($_SERVER['HTTP_X_REQUESTED_WITH']) 
+无法通过
+
+因为 AJAX 技术所使用的 XMLHttpRequest 对象都被浏览器做了限制，只能访问当前域名下的 URL
+于是在 firebug 使用 ajax 发送的 post 请求
+请求头中不会包含 X-Requested-With: XMLHttpRequest 字段
+
+不过
+可以自己编程绕过这一限制√

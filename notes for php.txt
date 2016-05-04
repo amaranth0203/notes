@@ -1,4 +1,10 @@
-﻿部署出去的php代码可以用 error_log 来打印 log 到apache目录下的logs的error.log中
+﻿查看 request 的 header :
+$headers = apache_request_headers();
+foreach ($headers as $header => $value) {
+    error_log( "$header: $value" );
+}
+
+部署出去的php代码可以用 error_log 来打印 log 到apache目录下的logs的error.log中
 
 require 或者 require_once 的时候
 使用 require_once( $_SERVER['DOCUMENT_ROOT'].'/priv_handler/handler.php' ) ;
@@ -33,7 +39,7 @@ $transaction->commit( ) ;
 handle.php?xxx=xxx&xxx=xxx
 会直接把请求发到 handle.php 中
 在 handle.php 里边使用 $_REQUEST $_GET $_POST 就可以直接获取参数
-在 handle.php 可以使用函数 header( 'xxxxx' ) 来添加响应头
+在 handle.php 可以使用函数 header( "Access-Control-Allow-Origin: *" ) ; 来添加响应头
 之后使用 echo 或者 print 即直接响应请求( echo plain txt / echo xml )
 
 print_r 用来打印整个数组的结构
