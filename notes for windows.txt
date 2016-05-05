@@ -1,3 +1,8 @@
+
+Shift + 右键
+可以操作锁在任务栏上边的快捷方式
+（比如为gvim加参数什么的）
+
 锁屏登陆背景:
 mkdir -p C:\Windows\System32\oobe\info\backgrounds
 backgroundDefault.jpg ( 大小限制: 250KB )
