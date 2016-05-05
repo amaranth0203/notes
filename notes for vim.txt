@@ -1,3 +1,18 @@
+
+S 清除当前行的内容并进入插入模式
+选中多行 之后 :normal A; ( 或者 :norm A; ) 可以在这些行后边添加;
+( 即都执行 normal 模式下的 A; 命令 )
+
+:ls
+:ls!
+可以显示打开过的 buffer
+:b N
+跳转到 :ls 列出来的第 N 个 buffer ( 这个 N 不会改变 )
+:bd
+关闭buffer
+:e filename
+打开一个buffer
+
 vs sp 之后 可以用 C-w r 来切换对等窗口的位置( 推进滚动 )
 
 不停地dd dd
