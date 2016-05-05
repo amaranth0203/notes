@@ -1,3 +1,25 @@
+normal 模式下有些命令/映射开头相同
+执行比较短的命令的时候会有个等待间隔
+比如 \ne 是打开 NERDTree 
+     \neb 是 :Bookmark
+\ne 之后不会立即打开 NERDTree
+这个时候可以再按一次 <leader> 表示命令完成
+( 按回车 空格 之类的也可以，但是会有副作用 )
+
+NERDTree
+C
+把当前目录作为 root 目录
+
+NERDTree
+在打开 NERDTree 之后
+:Bookmark xxx 
+把光标所在的目录/文件作为 xxx 书签
+:ClearBookmarks xxx
+删除 xxx 书签
+B
+显示所有书签
+
+NERDTree 在一个目录上边 m 之后 选择 a 添加结点即可新建文件
 
 S 清除当前行的内容并进入插入模式
 选中多行 之后 :normal A; ( 或者 :norm A; ) 可以在这些行后边添加;
