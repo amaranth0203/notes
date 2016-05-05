@@ -3,8 +3,8 @@ normal 模式下有些命令/映射开头相同
 比如 \ne 是打开 NERDTree 
      \neb 是 :Bookmark
 \ne 之后不会立即打开 NERDTree
-这个时候可以再按一次 <leader> 表示命令完成
-( 按回车 空格 之类的也可以，但是会有副作用 )
+这个时候可以再按一次 空格 表示命令完成
+( 按回车 <leader> 之类的也可以，但是会有副作用 )
 
 NERDTree
 I
