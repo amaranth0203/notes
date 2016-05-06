@@ -1,4 +1,22 @@
-﻿查看 request 的 header :
+分段:
+
+*CI :
+...
+*PHP :
+...
+
+
+
+
+*CI :
+
+route 里边的前后排列顺序也会影响效果
+
+
+
+*PHP :
+
+查看 request 的 header :
 $headers = apache_request_headers();
 foreach ($headers as $header => $value) {
     error_log( "$header: $value" );
