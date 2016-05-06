@@ -1,0 +1,4 @@
+过滤输入的信息( 在 php 里边 )叫
+satinize
+eg:
+... do it if a variable is satinized ...

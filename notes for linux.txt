@@ -86,6 +86,11 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x
  - 禁用ubuntu鸡肋的滚动条
 
 [shell]
+C-s enables terminal scroll lock. Which prevents your terminal from scrolling (By sending an "XOFF" signal to pause the output of the software).
+C-q disables the scroll lock. Resuming terminal scrolling (By sending an "XON" signal to resume the output of the software).
+This feature is legacy (back from the 80's when terminals were very slow and did not allow scrolling) and is enabled by default.
+To disable this feature you need the following in either ~/.bash_profile or ~/.bashrc:
+stty -ixon
 赋值的时候写一行
 	str=aaa
 不能写成
