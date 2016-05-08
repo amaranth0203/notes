@@ -42,6 +42,13 @@ reboot
 （最好在配置之后重启然后试试echo $ANDROID_SDK_HOME 看看输出的结果是否理想
 
 [Ubuntu]
+update-rc.d -f INIT.D_NAME remove
+禁止 INIT.d_NAME 自启动
+要添加的话
+update-rc.d -f INIT.D_NAME defaults <tab> <tab>
+就可以看到要添加到的 runlevel 了 （可以先用 runlevel 命令查看当前 runlevel ）
+也可以在上边命令的基础上添加 -n 选项，就可以看到实际执行的 ln 命令是怎么样的
+
 启动的时候跳过grub选择
 /etc/default/grub
     GRUB_RECORDFAIL_TIMEOUT=0
