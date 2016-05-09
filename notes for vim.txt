@@ -1,3 +1,16 @@
+
+在 vimrc 里边
+如果使用 
+autocmd VimEnter * :set
+autocmd VimEnter * :let
+autocmd VimEnter * call XXXXX( ) 然后 XXXXX 里边 有 let 和/或 set
+的话
+会导致其他直接 set 或者 let 的部分无效
+而且使用 autocmd 初始化的和插件有关的变量
+例如 enabled=1 等，无法起到 enable 的作用
+所以 set 和 let 都直接使用
+不要用 autocmd 
+
 set nomagic 之后搜索就不带 regex 了
 
 y复制了一些东西之后

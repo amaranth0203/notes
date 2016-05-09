@@ -73,6 +73,11 @@ extension=php_mysqli.dll
 
 *PHP :
 
+传进来的参数 空格之类的会被浏览器转义成 urlcoding
+可以用
+$slug = urldecode( $slug ) ;
+来转换成原始的字符串
+
 查看 request 的 header :
 $headers = apache_request_headers();
 foreach ($headers as $header => $value) {
