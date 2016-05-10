@@ -1,3 +1,9 @@
+添加 submodule 的时候
+如果出现 'bundle/Vundle.vim' already exists in the index
+可以使用 git ls-files --stage
+来列出所有 index 对应的内容
+之后再 git rm --cached 文件名即可
+
 在 vim bundle 添加其他的插件之后
 相当于 在 vimrc 中添加了一个 submodule
 之后使用 git config -f .gitmodules submodule.bundle/vim-airline.branch master
