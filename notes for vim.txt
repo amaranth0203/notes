@@ -1,3 +1,8 @@
+:redir @+ | set rtp | redir END
+把命令输出的结果保存到寄存器里边
+
+字体
+https://github.com/eugeii/consolas-powerline-vim
 
 在 vimrc 里边
 如果使用 

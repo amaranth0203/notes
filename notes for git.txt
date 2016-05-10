@@ -1,4 +1,16 @@
-﻿当删文件后出现很多个 deleted: xxxx 时
+在 vim bundle 添加其他的插件之后
+相当于 在 vimrc 中添加了一个 submodule
+之后使用 git config -f .gitmodules submodule.bundle/vim-airline.branch master
+来配置 submodule 到 .gitmodules 中
+再手动添加 submodule 的 path( 相对 ) 和 url
+之后 git submodule update --init 不提示错误即可
+来到新的机器上边 git pull
+git submodule init
+git submodule update
+即可
+
+
+当删文件后出现很多个 deleted: xxxx 时
 git ls-files --deleted -z | xargs -0 git rm
 可以一次全部把删除的文件进行 git rm
 
@@ -208,4 +220,3 @@ git tag -d test - 删除信息
 
 https://help.github.com/articles/remove-sensitive-data/
  - remove sensitive data
-
