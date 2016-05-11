@@ -7,8 +7,8 @@
 
 [System]
 
-ssh -N -f -o "ServerAliveInterval 180" -R 12348:localhost:22 root@113.118.76.16 -p 2323 &
-ssh hejianhui@localhost -p 12347
+ssh -i ~/.ssh/id_rsa -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@113.118.76.16 -p 2323 & > /dev/null &
+ssh liutao@localhost -p 12347
 
 使用 command &
 如果有输出 会直接打印到终端
