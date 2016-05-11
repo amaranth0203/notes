@@ -1,3 +1,21 @@
+
+禁止注释自动补全
+au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+
+当不知道哪个插件自动缩进的时候
+出现自动缩进的情况后
+使用
+    verbose set autoindent?
+    verbose set smartindent?
+    verbose set cindent?
+    verbose set indentexpr?
+来查看哪个脚本修改了这些属性 该删就删
+
+注册表右键添加 vimrc 参数的位置 :
+HKEY_LOCAL_MACHINE\SOFTWARE\Vim\Gvim
+path里边
+
 :redir @+ | set rtp | redir END
 把命令输出的结果保存到寄存器里边
 
