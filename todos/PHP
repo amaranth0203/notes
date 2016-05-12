@@ -12,3 +12,20 @@ Laravel : 5.3 之后新特性( 重量级 )
 
 
 (tp|ci) -> yii -> ( laravel | symfony )
+
+
+
+
+
+
+
+
+
+
+CI - MVC 有 DAO 
+常用 
+$this->load->view( ... )
+$this->load->model( ... )
+$this->load->database( ... )
+$this->load->library( ... )
+来调获得并用相关的 api
