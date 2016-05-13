@@ -12,13 +12,12 @@ declare -F 查看所有定义的函数
 declare -f mm 查看函数 mm 的定义
 
 
-netstat -aon | grep $(dig +short 150ou87340.iok.la) | grep -i established 
+netstat -aon | grep $(dig +short 150ou87340.iok.la) | grep -i established
 netstat -aon | grep $(dig +short 150ou87340.iok.la) | grep -i established &> /dev/null
-ssh -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323 
-ssh -i ~/.ssh/id_rsa -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323 
-ssh -i ~/.ssh/id_rsa -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323 & 
+ssh -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323
+ssh -i ~/.ssh/id_rsa -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323
+ssh -i ~/.ssh/id_rsa -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323 &
 ssh -i ~/.ssh/id_rsa -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323 & > /dev/null &
-ssh liutao@localhost -p 12348
 ps -elf | grep "150ou87340.iok.la"
 kill -9 $(pidof sleep)
 kill -9 $(pidof ssh)
@@ -62,9 +61,9 @@ deluser qiyunhu compiler
 
 使用文件来扩展swap:
 fallocate -l 4G /swapfile
-chmod 600 /swapfile 
-mkswap /swapfile 
-swapon /swapfile 
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
 vim_ /etc/fstab
     /swapfile none swap sw 0 0
 reboot
@@ -137,7 +136,7 @@ if [ $xxx eq 4 ]; then
 使用 -e 之后 一旦 $? 不为零
 马上停止脚本
 在脚本中可以使用
-set -e 
+set -e
 和
 set +e
 来启动与关闭
@@ -148,11 +147,11 @@ This feature is legacy (back from the 80's when terminals were very slow and did
 To disable this feature you need the following in either ~/.bash_profile or ~/.bashrc:
 stty -ixon
 赋值的时候写一行
-	str=aaa
+    str=aaa
 不能写成
-	str = aaa
-	str= aaa
-	str =aaa
+    str = aaa
+    str= aaa
+    str =aaa
 
 echo ${0%/*} 可以获得脚本所在的目录（区别与pwd）
 
