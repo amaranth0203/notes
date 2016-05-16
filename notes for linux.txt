@@ -12,6 +12,7 @@ declare -F 查看所有定义的函数
 declare -f mm 查看函数 mm 的定义
 
 
+wget http://nchc.dl.sourceforge.net/project/ssocks/ssocks-0.0.14.tar.gz
 netstat -aon | grep $(dig +short 150ou87340.iok.la) | grep -i established
 netstat -aon | grep $(dig +short 150ou87340.iok.la) | grep -i established &> /dev/null
 ssh -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323

