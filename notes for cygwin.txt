@@ -1,4 +1,14 @@
-﻿
+
+当出现需要 rebase 的情况
+并且如何 rebase 都是 segmentfault 
+就应该试试 windows 自带的 dll 修复工具
+sfc /scannow 进行扫描和修复
+（
+    从日志看这次出现这种情况是因为重装了监控
+    导致 basebrd.dll 被损坏
+）
+
+
 adb logcat | grep mm-camera | tee log.log
 adb logcat | grep mm-camera >> log.log
 都输出不了的时候，记得给grep加参数--line-buffered即
