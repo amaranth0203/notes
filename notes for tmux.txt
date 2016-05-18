@@ -1,0 +1,64 @@
+tmux -> session -> window -> pane
+tmux kill-
+会提示以此开头的命令有
+kill-pane
+kill-server
+kill-session
+kill-window
+
+PREFIX = Ctrl + b
+有点类似 vim 的 leader
+
+运行 tmux 之后 下边会有状态栏
+
+tmux ls 
+    列出所有 session
+
+tmux a -t xxx
+tmux attach -t xxx
+    只有一个 sessoin 的时候可以不用带参数 -t
+
+PREFIX - t 显示时间
+PREFIX - C - z 进入jobs
+PREFIX - # list buffer
+PREFIX - - delete buffer
+PREFIX - = choose buffer
+PREFIX - [ copy buffer
+PREFIX - ] past buffer
+
+
+PREFIX - L 在最后两个 session 之间来回切换
+PREFIX - l 在最后两个 window 之间来回切换
+PREFIX - ; 在最后两个 pane 之间来回切换
+
+session
+PREFIX - ? 查看所有快捷键  不支持 i j 支持 q
+PREFIX - : 命令模式 输入的命令可以省略 tmux 开头
+PREFIX - d 相当于   tmux detach
+PREFIX - $ 重命名当前 session
+PREFIX - s 开启多个 session 的时候用来选择 session
+PREFIX - ( ) switch client
+
+windows
+PREFIX - c 创建
+PREFIX - & 关闭  或者直接 exit
+PREFIX - 0~9 切换到第 x 个窗口
+PREFIX - p / n 切换到 上一个/下一个 窗口
+PREFIX - , 重命名
+PREFIX - f 以窗口名来查找
+PREFIX - w 用来选择开启了的窗口 类似 PREFIX - s
+
+pane
+PREFIX - " 分割为上下
+PREFIX - % 分割为左右
+PREFIX - x 关闭
+PREFIX - 方向 切换焦点
+PREFIX - C - 方向 1x 调整大小
+PREFIX - A - 方向 5x 调整大小
+PREFIX - q 显示窗口序号
+PREFIX - o 类似 vim 的 C-w w
+PREFIX - z 暂时把当前 pane 占据整个 window
+PREFIX - space 自动切换布局
+
+
+

@@ -1,3 +1,9 @@
+在 /etc/nsswitch.conf 中
+设置
+db_home:    windows
+之后，可以和 windows 共用 ~
+
+在 .minttyrc 中添加 RowSpacing=-2 可以减小 mintty 的行距
 
 当出现需要 rebase 的情况
 并且如何 rebase 都是 segmentfault 
