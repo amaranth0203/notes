@@ -1,3 +1,4 @@
+
 在 /etc/nsswitch.conf 中
 设置
 db_home:    windows
@@ -32,3 +33,12 @@ clear 命令 :
 并不是因为环境变量太多（05年的bug）
 而是新添加的环境变量里边含有中文名（非ascii编码？）
 修改一下即可
+
+
+clear - ncurses
+chere
+vim
+tmux
+ctags
+cscope
+python

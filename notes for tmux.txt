@@ -18,12 +18,21 @@ tmux a -t xxx
 tmux attach -t xxx
     只有一个 sessoin 的时候可以不用带参数 -t
 
+设置快捷键 ~/.tmux.conf (不存在就手动创建)
+set-window-option -g mode-keys vi
+# move x clipboard into tmux paste buffer
+# bind C-p run "tmux set-buffer \"$(xclip -o)\"; tmux paste-buffer"
+bind C-p run "tmux set-buffer \"$(cat /dev/clipboard)\""
+# move tmux copy buffer into x clipboard
+# bind C-y run "tmux save-buffer - | xclip -i"
+bind C-y run "tmux save-buffer - | cat > /dev/clipboard"
+
 PREFIX - t 显示时间
 PREFIX - C - z 进入jobs
-PREFIX - # list buffer
-PREFIX - - delete buffer
-PREFIX - = choose buffer
-PREFIX - [ copy buffer
+PREFIX - # list buffer      出现列表供观看
+PREFIX - - delete buffer    没有提示，直接去掉最上边的 buffer
+PREFIX - = choose buffer    出现列表供选择
+PREFIX - [ copy buffer      进入复制模式，按空格开始选择，按回车确认复制
 PREFIX - ] past buffer
 
 
@@ -59,6 +68,5 @@ PREFIX - q 显示窗口序号
 PREFIX - o 类似 vim 的 C-w w
 PREFIX - z 暂时把当前 pane 占据整个 window
 PREFIX - space 自动切换布局
-
 
 
