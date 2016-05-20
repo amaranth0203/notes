@@ -1,3 +1,5 @@
+设置光标闪烁速度
+set guicursor=a:blinkwait100-blinkoff100-blinkon100
 
 禁止注释自动补全
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

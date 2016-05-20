@@ -1,3 +1,15 @@
+
+当文件名出现 . 在开头 结尾 或者直接 ... 
+windows     的 cmd 和 mintty 都不能解决的时候
+            可以用 git-gui 鼠标点击解决- -
+linux       就没有这个困扰了
+
+设置远程分支
+git branch --set-upstream vivo-priv origin/vivo-priv
+git branch --set-upstream-to=origin/vivo-work-cygwin
+
+
+
 添加 submodule 的时候
 如果出现 'bundle/Vundle.vim' already exists in the index
 可以使用 git ls-files --stage

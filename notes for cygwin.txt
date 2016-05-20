@@ -1,4 +1,13 @@
 
+当安装了 git-win 之后
+估计是它自带的 git 挂载路径什么的和 cygwin 不相同 
+导致在 mintty 中 如何 push 如何 pull 都不成功
+但是 ssh -T git@github.com 又能成功
+这个时候安装一个 cygwin 的 git 即可
+由于会冲突 可将 cygwin 的 git 重命名为 git_
+但是这样又会导致补全失效
+→ 最终在 setPS1 中定义一个 git 函数即可
+
 在 /etc/nsswitch.conf 中
 设置
 db_home:    windows
@@ -42,3 +51,5 @@ tmux
 ctags
 cscope
 python
+shell-completion
+git-completion
