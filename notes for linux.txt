@@ -127,6 +127,20 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x
 
 [shell]
 
+替换上一条命令里的内容
+$ echo aaa bbb ccc
+aaa bbb ccc
+$ ^aaa^kkkkkkk
+kkkkkkk bbb ccc
+$ eeee aaa
+command 'eeee' not found
+$ ^eeee^echo
+aaa
+
+备份/重命名
+cp ~/tools/a/b/c/d/e/r/f/klsdjl/cxkljl/origin{,_bak}
+(不用输两次文件名)
+
 用 bash 执行的脚本里边
 可以用
 if [ $xxx == 4 ]; then
