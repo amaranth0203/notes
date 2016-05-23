@@ -19,6 +19,8 @@ http://192.168.2.134:8080/host-manager/html
 http://192.168.2.187:8080/manager/html
  - tomcat 默认用户名admin 密码admin
 
+zhengqiang@192.168.2.137 mysql -h 192.168.5.92 -P 3306 -uroot -p enter enter
+
 linux 内存管理
 
 http://stackoverflow.com/questions/1010724/what-parts-of-linux-kernel-can-i-read-for-fun 几个入口点

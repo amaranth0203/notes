@@ -1,4 +1,7 @@
 
+使用 cygcheck -c xxx 可以检测 package xxx 的完整性
+使用 cygcheck -c 可以列出所有已经安装的 package ( 并检测完整性 )
+
 当安装了 git-win 之后
 估计是它自带的 git 挂载路径什么的和 cygwin 不相同 
 导致在 mintty 中 如何 push 如何 pull 都不成功

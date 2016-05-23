@@ -1,0 +1,44 @@
+
+awk 是和cut差不多，分隔(使用-F）之后放到$1,$2里边
+假设using_busybox里边全是命令,则使用
+   awk          '{print  "alias ",$1,"=\"/system/xbin/",$1,"\""}' using_busybox的结果是
+   alias  ls ="/system/xbin/ ls "（多出一个额外的空格）
+   awk -vOFS='' '{print  "alias ",$1,"=\"/system/xbin/",$1,"\""}' using_busybox的结果是
+   alias ls="/system/xbin/ls"（正解）
+或者直接使用printf（熟悉的C语言！）
+   awk '{printf "alias %s=\"/system/xbin/%s\"\n",$1,$1}' using_busybox
+
+echo '192.168.1.1:2334    xxxx' | awk '{print $1}'
+  输出 192.168.1.1:2334
+echo '192.168.1.1:2334    xxxx' | awk -F ":" '{print $1}'
+  输出 192.168.1.1
+
+处理每一行
+转义输出单引号
+awk '{
+    for( i = i ; i < NF ; i ++ )
+        printf "ping -c 4 '\''%s'\''\n" , $i
+}'
+'\'' 的解释分三部分  ' & \' & '
+'   close the opening '
+\'  print a literal '
+'   open the ' again
+
+echo 'aaa bbb' | awk '{
+    for( i = 1 ; i < NF ; i ++ )
+        printf "%s" , $i
+        printf "%s" , $i
+}'
+输出
+aaa
+bbb
+
+echo 'aaa bbb' | awk '{
+    for( i = 1 ; i < NF ; i ++ ) {
+        printf "%s" , $i
+        printf "%s" , $i
+    }
+}'
+输出
+aaa
+aaa

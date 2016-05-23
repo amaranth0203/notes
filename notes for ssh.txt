@@ -1,3 +1,16 @@
+
+
+防止 ssh 登陆后中断
+除了 client 的 ssh_config 要设置
+Host *
+ServerAliveInterval 30
+( 可以在登陆的时候用 -o 来设置 )
+还需要 server 的 sshd_config 设置
+ClientAliveinterval 60
+
+
+
+
 ssh -N -f -o "ServerAliveInterval 180" -R 12346:localhost:22 root@113.118.74.231 -p 2323
 
 ssh -i /path/to/rsaKey -f -N -o "ServerAliveInterval 180" -R 55002:localhost:22 user@publicip 'sleep 365d'
