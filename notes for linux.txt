@@ -127,6 +127,10 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x
 
 [shell]
 
+cp -p 复制 但不改变时间戳
+
+ls -d */ 查看当前目录下的目录
+
 替换上一条命令里的内容
 $ echo aaa bbb ccc
 aaa bbb ccc
