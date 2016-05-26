@@ -1,0 +1,9 @@
+之前对 callbacks 的理解都正确
+除了到 nodejs 时，它宣扬的 single thread non blocking IO
+    其中的 single thread 指的是它的 event loop , 即事件分发器使用的是 single thread
+    而处理这些事件的是后边的 Internal C++ threadpool
+    也就是它的 single thread 是对外的，但是后边还是有 threadpool 来支撑
+
+还有就是 synchronous 和 asynchronous 分别修饰的 callback
+第一个是同步，第二个是异步
+一般用得比较多的是异步 callback
