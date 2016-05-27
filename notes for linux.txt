@@ -7,6 +7,18 @@
 
 [System]
 
+connect to wifi
+kill -9 $(pidof wpa_supplicant)  ---- until clean
+wpa_passphrase ssid password > /etc/wpa_supplicant/wpa_supplicant.conf
+    then add
+    ctrl_interface=/var/run/wpa_supplicant
+    to the FIRST line of the config filear
+wpa_supplicant -Dnl80211 -iwlan0 -B -c /etc/wpa_supplicant/wpa_supplicant.conf
+  ( if invalid , -h and try another driver with -D )
+wpa_cli
+> enable_network wlan0
+dhcilent wlan0
+
 declare 查看所有定义的函数 变量
 declare -F 查看所有定义的函数
 declare -f mm 查看函数 mm 的定义
