@@ -1,4 +1,46 @@
 
+
+↓↓↓↓总结起来 :
+先 git pull --all 
+使用 git fetch origin xxx:xxx 合并远端分支到本地分支( 也可以在 checkout 之后使用 git pull origin xxx )
+在 checkout 然后 cherry-pick
+之后 git push origin --all
+
+
+↓↓↓ git pull --all 所显示的类似
+   56cf810..124a4b4  shadow-cygwin -> origin/shadow-cygwin
+   da154be..d90b006  vivo-work-cygwin -> origin/vivo-work-cygwin
+的信息
+只是说在分支 shadow-cygwin 和分支 vivo-work-cygwin 上
+本地落后于远程分支
+并不会真正 pull 下来
+只能切换到每一个分支单独 pull
+出现
+Fast-forward
+ setPS1 |    2 ++
+或者冲突需要手动合并
+之类的才是真正 pull 下来并且和远端同步（处于准备 push 的状态）
+之后可以自己手动添加修改，更常用的做法是使用cherry-pick
+合并好所有的修改之后使用 git push --all 即可（此时不需要像 pull 那样每个分支都要单独操作）
+PS:
+    *   有没有批g pull 的办法？ 有，写脚本，或者下载 "git-up"
+    *   在上边的例子中，假设我现在在分支 shadow-cygwin 上使用了
+        git pull origin vivo-work-cygwin
+        那么就会把 origin/vivo-work-cygwin 先于本地的 diff 应用到本地分支 shadow-cygwin 上
+        这个不是不可逆操作。。只是要 checkout reset 等等挺麻烦的
+        以下是 google 到的 第一个测试失败第二个测试成功
+            # Mergg local branch foo into local branch master,
+            # without having to checkout master first.
+            # Here `.` means to use the local repository as the "remote":
+            git fetch . foo:master
+            
+            # Merge remote branch origin/foo into local branch foo,
+            # without having to checkout foo first:
+            git fetch origin foo:foo
+
+    
+
+
 cherry-pick 之前先 git pull --all 一下 ( 确保后边不冲突 )
 之后切到需要 cherry-pick 的 branch 之后 git cherry-pick 069277405480bbf25e7263909fec4965c1aa3e1b
 如果没有冲突 则继续下个 branch
