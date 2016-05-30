@@ -1,3 +1,29 @@
+
+
+自己编译
+使用 nmake -f src/Make-mvc.mak
+nmake : 
+    在 cmd 或者 cmder 导入
+    32 位 :
+        VS_PATH/VC/vcvarsall.bat
+        VS_PATH/Common7/Tools/VsDevCmd.bat
+        均可
+    64 位 :
+        VS_PATH/VC/vcvarsall.bat amd64
+        ( 自己打开脚本看里边的参数 )
+    
+vim.exe :
+    32 位和 64 位与 python 版本要对应
+    目前 2.7.9 可用 
+    2.7.10 2.7.11 不可用
+    python 要卸载干净再安装，不然版本号一直不变
+gvim.exe :
+    只用 VsDevCmd.bat 编译成功一次 32 位不带 python 的
+    之后再没编译成功过
+    无法得知使用关系
+
+
+
 设置光标闪烁速度
 set guicursor=a:blinkwait100-blinkoff100-blinkon100
 

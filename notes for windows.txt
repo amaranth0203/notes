@@ -1,4 +1,8 @@
 
+导入 vs 编译环境之后
+dumpbin -headers user32.lib | findstr /c:" Symbol name" > user32.txt
+可以获得 user32 里边所有的符号文件（函数名）
+
 修改桌面挂载位置
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVerison\Explorer\User Shell Folder
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVerison\Explorer\Shell Folder
