@@ -1,3 +1,11 @@
+
+修改桌面挂载位置
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVerison\Explorer\User Shell Folder
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVerison\Explorer\Shell Folder
+修改两个项下边 Desktop 的值
+再重启 explorer
+
+
 HKEY_CURRENT_USER\Control Panel\Desktop\CursorBlinkRate
 可以设置系统的光标闪动速度
 最快只能设到 200 ms 不过总比没有好
