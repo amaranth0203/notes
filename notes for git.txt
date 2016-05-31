@@ -1,4 +1,7 @@
 
+git branch | awk 'NR==5' | xargs git checkout
+git status -s | cut -d " " -f 3 | xargs git checkout --
+
 
 ↓↓↓↓总结起来 :
 先 git pull --all 
