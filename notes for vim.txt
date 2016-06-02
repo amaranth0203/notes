@@ -1,4 +1,15 @@
 
+masm 编译的时候不识别 utf-8 的中文
+可以使用 iconv -f utf-8 -t gbk xxx.rc > xxx.rc.new
+来转换
+也可以直接 :set fileencoding=gbk 之后 :write 保存
+
+
+启动很慢的时候，使用
+vim_ --startuptime st
+可以把启动过程保存到文件 st 中
+（例如可以看到 nerdtree 的 ui_glue.vim 耗时最长，特别是网络波动的时候）
+
 
 自己编译
 使用 nmake -f src/Make-mvc.mak

