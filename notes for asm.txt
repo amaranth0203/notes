@@ -6,8 +6,21 @@
 
 [commom]
 
+要使用 eax = ebx + 4
+或者交换时传递地址  eax = esi + 4
+不能直接
+mov eax , ebx + 4
+只能
+mov eax , ebx
+add eax , 4
+或者是
+lea eax , [ ebx + 4 ]
+对于 lea
+    lea eax , lable 相当于 C 的 eax = &lable
+    所以此处的意思是 eax = *(&(ebx+4)) = ebx + 4
+
 在函数里边对字符串操作时最好别用 eax 指向地址
-使用 mov bl , byte ptr[esi]
+使用 mov bl , byte ptr[esi] 代替
 否则连续取两次会出错
 
 
@@ -20,6 +33,11 @@ jne
 不能在其间插入 inc mov 等操作
 
 [masm]
+
+使用 call 之前要自己把参数 push 进去
+然后到函数体里边要调用的时候 使用 dword ptr [esp + 4] 取得第一个参数
+使用 invoke 的话就可以省略这一步骤(更加接近C)
+
 使用 ReadConsole 读的时候
 如果输入的字符串长度超过 bufferSize
 则会在 bufferSize 处截断 并且在最后加上 13 10 5
