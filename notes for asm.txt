@@ -1,0 +1,44 @@
+文件结构
+[commom]
+[masm]
+
+
+
+[commom]
+
+在函数里边对字符串操作时最好别用 eax 指向地址
+使用 mov bl , byte ptr[esi]
+否则连续取两次会出错
+
+
+使用寄存器之前清零
+xor eax , eax
+
+je
+jne
+一定要在 cmp 之后立即操作
+不能在其间插入 inc mov 等操作
+
+[masm]
+使用 ReadConsole 读的时候
+如果输入的字符串长度超过 bufferSize
+则会在 bufferSize 处截断 并且在最后加上 13 10 5
+注意比起 \r\n 多了个 5
+
+link 的参数 
+/subsystem:windows
+/subsystem:console
+windows 的话 不会有终端出现 但是和终端的函数用不了(即使是在终端下运行也不会有什么反应)
+console 的话 可以使用和终端有关的函数 也可以使用 MessageBox 等
+
+要在终端下输入和输出 要先调用
+GetStdHandle 拿到输入和输出的句柄
+(可选)之后调用 SetConsoleMode 和 SetConsoleCtrlHandle 来设置属性和处理消息的函数
+之后使用 ReadConsole 和 WriteConsole 进行输入输出
+
+在参数中当作 buffer 的参数
+要定义成 
+szBuffer    dd 1024 dup (?) ; 申请 1024 个 dd 的内存 但是不初始化 (?) 
+之类的 不然会得到很奇怪的输出
+
+.data? 是程序加载之后再申请的 所以不会增加 PE文件的大小( 区别于 .data )

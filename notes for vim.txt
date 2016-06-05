@@ -252,6 +252,7 @@ new_line_4
     break ;
 之后再替换成想要的
 \_.代表 match any single character including newline
+(注意 \_. 会作为.匹配掉一个字符)
 .*为贪婪匹配
 .\{-}为非贪婪匹配
 
