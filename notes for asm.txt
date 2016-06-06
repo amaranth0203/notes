@@ -6,6 +6,18 @@
 
 [commom]
 
+把 byte ptr[ esi ] 的值赋给 eax 时
+可以
+xor eax , eax
+mov al , bl
+也可以直接使用
+movzx eax , bl
+
+movzx/movsx 区别
+都是将窄位移到宽位
+movZx 用 Zero 填充高位
+movSx 保留 Sign 符号位( 高位全 0 或全 1 )
+
 要使用 eax = ebx + 4
 或者交换时传递地址  eax = esi + 4
 不能直接
@@ -33,6 +45,15 @@ jne
 不能在其间插入 inc mov 等操作
 
 [masm]
+
+proc 里边用到寄存器
+可以在开头的时候一个个push
+之后在结尾的时候逆序pop回去
+也可以在开头使用 pushad
+结尾使用 popad
+保存八个通用寄存器
+或者在 proc 的开头添加声明
+xxx     proc use ebx ecx esi param1 , param2 
 
 使用 call 之前要自己把参数 push 进去
 然后到函数体里边要调用的时候 使用 dword ptr [esp + 4] 取得第一个参数
