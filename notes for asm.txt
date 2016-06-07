@@ -6,6 +6,15 @@
 
 [commom]
 
+addr vs offset
+addr 是一个宏定义 先 lea 再 push , 速度比 offset 慢
+addr 可以取得运行时的地址（例如局部变量）
+offset 取得的是编译时候已经定义好的的地址（例如全局变量）
+所以 :
+addr 常用来取函数局部变量的地址 offset 常用来取全局变量的地址
+addr 可以替代 offset 来取全局变量的地址（但速度会慢一些）
+offset 不能代替 addr 来取局部变量（仍可以取全局变量）
+
 把 byte ptr[ esi ] 的值赋给 eax 时
 可以
 xor eax , eax
