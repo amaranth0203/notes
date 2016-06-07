@@ -139,6 +139,11 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x
 
 [shell]
 
+find . -name "*.exe" -type f | xargs chmod u+x
+时 如果目录名或文件名包含空格就会失败
+这个时候可以用
+find . -name "*.exe" -type f -print0 | xargs -0 chmod u+x
+
 cp -p 复制 但不改变时间戳
 
 ls -d */ 查看当前目录下的目录
