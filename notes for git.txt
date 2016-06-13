@@ -1,4 +1,9 @@
 
+git branch -a
+git checkout vivo-work-cygwin
+之后会直接切换到一个 vivo-work-cygwin 分支并且远程分支也是对应的那个
+
+
 git branch | awk 'NR==5' | xargs git checkout
 git status -s | cut -d " " -f 3 | xargs git checkout --
 
@@ -69,7 +74,7 @@ linux       就没有这个困扰了
 
 设置远程分支
 git branch --set-upstream vivo-priv origin/vivo-priv
-git branch --set-upstream-to=origin/vivo-work-cygwin
+git branch --set-upstream-to=origin/vivo-work-cygwin vivo-work-cygwin
 
 
 
