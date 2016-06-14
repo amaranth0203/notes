@@ -1,4 +1,14 @@
-﻿原始编码		hex dump
+内部类访问外部类成员的方法 : 
+class Outer {
+    private String s = "" ;
+    class Inner {
+        public void func( ) {
+            Outer.this.s = "aaa" ;
+        }
+    }
+}
+
+原始编码		hex dump
 (unicode)	utf-8
 (内存中的样子）	(硬盘上的样子）
 0000 - 007f	0xxxxxxx
@@ -33,4 +43,3 @@ Java 不支持泛型数组，例如：
     ll.add( new LinkedList<String>() ) ;
     ll.get(0).add( "hello" ) ;
     System.out.println( ll.get(0).get(0) ) ;
-
