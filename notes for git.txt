@@ -1,4 +1,14 @@
 
+当要clone一个比较大(上GB)的工程到本地的时候
+如果网络不够快或者不够稳定
+应该使用 git fetch 替代 git clone :
+git init
+git fetch git@github.com:amaranth0203/pdf.git
+git checkout FETCH_HEAD
+git checkout -b master
+git remote add origin git@github.com:amaranth0203/pdf.git
+git push -u origin master
+
 git branch -a
 git checkout vivo-work-cygwin
 之后会直接切换到一个 vivo-work-cygwin 分支并且远程分支也是对应的那个

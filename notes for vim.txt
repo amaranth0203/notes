@@ -1,4 +1,13 @@
 
+Bachspace
+    C-h
+Enter
+    C-j C-m
+Tab
+    C-i
+从光标处删到当前行开头
+    C-u
+
 masm 编译的时候不识别 utf-8 的中文
 可以使用 iconv -f utf-8 -t gbk xxx.rc > xxx.rc.new
 来转换
