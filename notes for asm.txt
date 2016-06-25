@@ -6,6 +6,15 @@
 
 [commom]
 
+push 地址时 机器码使用 68 后边跟一个 8 字节的地址 例如 68 69 30 40 00 ( push 00403060 )
+push 双字常量          68           
+push 字节时 机器码使用 6A 后边跟一个 字节的数值 例如 6A 00 ( push NULL )
+push 数据段(.data)指定位置的双字时 机器码使用 FF 35 例如
+    .data
+    @hKey   dd  ?
+    ...
+    push    @hKey   ->   FF 35 69 30 40 00 ( push dword ptr ds:[ 00403069 ] ) 
+
 addr vs offset
 addr 是一个宏定义 先 lea 再 push , 速度比 offset 慢
 addr 可以取得运行时的地址（例如局部变量）
