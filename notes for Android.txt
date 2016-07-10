@@ -1,4 +1,27 @@
-﻿msm8976丢log.. 可以试着写入文件 这样就不会丢了
+﻿
+当前目录下有两个文件夹 a 和 1 
+然后有这样的目录结构
+a/b/c/d/Android.mk
+1/2/3/4/Android.mk
+
+然后当前目录下的 Android.mk 可以直接写
+LOCAL_PATH := $(call my-dir)
+include $(LOCAL_PATH)/a/b/c/d/Android.mk
+然后编译
+也可以直接写
+LOCAL_PATH := $(call my-dir)
+include $(LOCAL_PATH)/1/2/3/4/Android.mk
+然后编译
+但是，不能写
+LOCAL_PATH := $(call my-dir)
+include $(LOCAL_PATH)/a/b/c/d/Android.mk
+include $(LOCAL_PATH)/1/2/3/4/Android.mk
+这样编译只能识别到一个文件，因为 include 之后 被include的文件( a/b/c/d/Android.mk ) 有可能会改变 LOCAL_PATH 的定义
+解决方法:
+一路放包含一层子文件夹的 Android.mk到后边去
+include $(call all-subdir-makefiles)
+
+msm8976丢log.. 可以试着写入文件 这样就不会丢了
 
 Android.mk中
 若设置 LOCAL_PROPRIETARY_MODULE := true
