@@ -1,4 +1,7 @@
 
+更新分支列表( git branch -a 里边列出来的)
+git fetch --all
+
 当要clone一个比较大(上GB)的工程到本地的时候
 如果网络不够快或者不够稳定
 应该使用 git fetch 替代 git clone :
