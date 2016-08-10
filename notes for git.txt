@@ -1,4 +1,9 @@
 
+
+git log -p test.c
+查看所有对 test.c 的修改 log
+
+
 更新分支列表( git branch -a 里边列出来的)
 git fetch --all
 

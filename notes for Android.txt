@@ -1,4 +1,26 @@
 ﻿
+ALOGE用不了的时候 :
+#include <android/log.h>
+之后
+#define LOG_EMERG   0   /* system is unusable */
+#define LOG_ALERT   1   /* action must be taken immediately */
+#define LOG_CRIT    2   /* critical conditions */
+#define LOG_ERR     3   /* error conditions */
+#define LOG_WARNING 4   /* warning conditions */
+#define LOG_NOTICE  5   /* normal but significant condition */
+#define LOG_INFO    6   /* informational */
+#define LOG_DEBUG   7   /* debug-level messages */
+然后输出
+__android_log_print( LOG_ERR , "wassup", "%s", __func__ ) ;
+或者直接用
+__android_log_print( 3 , "wassup", "%s", __func__ ) ;
+来输出
+
+
+在mk中输出信息:
+$(warning $(LOCAL_PATH))
+
+
 当前目录下有两个文件夹 a 和 1 
 然后有这样的目录结构
 a/b/c/d/Android.mk

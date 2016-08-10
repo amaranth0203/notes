@@ -139,6 +139,12 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x
 
 [shell]
 
+echo a/b/c/d/e | cut -d'/' -f2
+得到 b
+echo a/b/c/d/e | cut -d'/' -f2-
+得到 b/c/d/e
+缺点: 分隔符只能是单个字符
+
 find . -name "*.exe" -type f | xargs chmod u+x
 时 如果目录名或文件名包含空格就会失败
 这个时候可以用
