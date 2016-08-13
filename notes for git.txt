@@ -1,5 +1,8 @@
 
 
+git stash list --date=local
+查看 stash 创建的时间
+
 git log -p test.c
 查看所有对 test.c 的修改 log
 
