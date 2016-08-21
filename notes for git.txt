@@ -1,4 +1,8 @@
 
+把 stash 存到文件中( 让 git apply 使用 ) :
+git stash show stash@{0} -p > stash.diff
+之后就可以用 git apply stash.diff 了
+( 通过对比可以知道 git show stash@{0} 产生的格式不能用于 apply )
 
 git stash list --date=local
 查看 stash 创建的时间
