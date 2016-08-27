@@ -1,4 +1,84 @@
 
+void* 的二级指针使用的时候要转换一下
+即
+int data[5] = { 1 , 2 , 3 , 4 , 5 } ;
+void* get_data( void* void_ptrx2 ) {
+    *( void** )void_ptrx2 = ( void* )&data ;
+}
+int main( ) {
+    void* data_ptr ;
+    void* void_ptrx2 = &data_ptr ;
+    get_data( void_ptrx2 ) ;
+    printf( "[+] wassup %d %d\n" , *( int* )data_ptr , *( ( int* )data_ptr + 1 ) ) ;
+    printf( "[+] wassup %d %d\n" , *&data[0] , *&data[1] ) ;
+    return 0 ;
+}
+三级指针的时候不能直接写 *( void*** ) , 要写成 *( void** )*( void** )
+int data[5] = { 1 , 2 , 3 , 4 , 5 } ;
+void* get_data( void* void_ptrx3 ) {
+    // void* void_ptrx2 = *( void** )void_ptrx3 ;
+    // *( void** )void_ptrx2 = ( void* )&data ;
+    *( void** )*( void** )ptr = ( void* )&data ;
+}
+int main( ) {
+    void* data_ptr ;
+    void* void_ptrx2 = &data_ptr ;
+    void* void_ptrx3 = &void_ptrx2 ;
+    get_data( void_ptrx3 ) ;
+    printf( "[+] wassup %d %d\n" , *( int* )data_ptr , *( ( int* )data_ptr + 1 ) ) ;
+    printf( "[+] wassup %d %d\n" , *&data[0] , *&data[1] ) ;
+    return 0 ;
+}
+同理，四级指针:
+int data[5] = { 1 , 2 , 3 , 4 , 5 } ;
+void* get_data( void* void_ptrx4 ) {
+    // void* void_ptrx3 = *( void** )void_ptrx4 ;
+    // void* void_ptrx2 = *( void** )void_ptrx3 ;
+    // *( void** )void_ptrx2 = ( void* )&data ;
+    *( void** )*( void** )*( void** )ptr = ( void* )&data ;
+}
+int main( ) {
+    void* data_ptr ;
+    void* void_ptrx2 = &data_ptr ;
+    void* void_ptrx3 = &void_ptrx2 ;
+    void* void_ptrx4 = &void_ptrx3 ;
+    get_data( void_ptrx4 ) ;
+    printf( "[+] wassup %d %d\n" , *( int* )data_ptr , *( ( int* )data_ptr + 1 ) ) ;
+    printf( "[+] wassup %d %d\n" , *&data[0] , *&data[1] ) ;
+    return 0 ;
+}
+记得 O'Reilly 系列里边对 C 语言最大指针级数( multilevel pointer )
+说是 15 ( 又好像是建议不要超过那么多? )
+试一下 :
+#include <stdio.h>
+int data[5] = { 1 , 2 , 3 , 4 , 5 } ;
+void get_data( void* ptr ) {
+    *( void** )/*20x*/*( void** )/*19x*/*( void** )/*18x*/*( void** )/*17x*/\
+    *( void** )/*16x*/*( void** )/*15x*/*( void** )/*14x*/*( void** )/*13x*/\
+    *( void** )/*12x*/*( void** )/*11x*/*( void** )/*10x*/*( void** )/*9x*/\
+    *( void** )/*8x*/*( void** )/*7x*/*( void** )/*6x*/*( void** )/*5x*/\
+    *( void** )/*4x*/*( void** )/*3x*/*( void** )ptr = ( void* )&data ;
+    return ;
+}
+int main( ) {
+    void* data_ptr ; 
+    void* void_ptrx2 = &data_ptr ; void* void_ptrx3 = &void_ptrx2 ;
+    void* void_ptrx4 = &void_ptrx3 ; void* void_ptrx5 = &void_ptrx4 ;
+    void* void_ptrx6 = &void_ptrx5 ; void* void_ptrx7 = &void_ptrx6 ;
+    void* void_ptrx8 = &void_ptrx7 ; void* void_ptrx9 = &void_ptrx8 ;
+    void* void_ptrx10 = &void_ptrx9 ; void* void_ptrx11 = &void_ptrx10 ;
+    void* void_ptrx12 = &void_ptrx11 ; void* void_ptrx13 = &void_ptrx12 ;
+    void* void_ptrx14 = &void_ptrx13 ; void* void_ptrx15 = &void_ptrx14 ;
+    void* void_ptrx16 = &void_ptrx15 ; void* void_ptrx17 = &void_ptrx16 ;
+    void* void_ptrx18 = &void_ptrx17 ; void* void_ptrx19 = &void_ptrx18 ;
+    void* void_ptrx20 = &void_ptrx19 ;
+    get_data( void_ptrx20 ) ;
+    printf( "[+] wassup %d %d\n" , *( int* )data_ptr , *( ( int* )data_ptr + 1 ) ) ;
+    printf( "[+] wassup %d %d\n" , *&data[0] , *&data[1] ) ;
+    return 0 ;
+}
+还是可以的
+
 mct 里边定义事件的 enum 时使用了宏控:
 #define MCT_EVENT_GENERATE_ENUM(ENUM) ENUM,
 #define MCT_EVENT_MODULE_ENUM_LIST(ADD_ENTRY)                                 \
@@ -19,8 +99,8 @@ MCT_EVENT_MODULE_SET_STREAM_CONFIG, MCT_....
 之后这些 MCT_EVENT 就被填充到了 typedef enum 之中
 并且每个事件之间都有间隔
 ps:
-    这种方法无法躲开 grep cscope sis的"Lookup References"
-    但是可以有效避免 ctags sis的ctrl+左键直接跳转
+    这种方法无法躲开 grep/cscope/sis的"Lookup References"
+    但是可以有效避免 ctags/sis的ctrl+左键直接跳转
 
 void* 很好用，注意转换类型即可
 void* 可以直接转成 void** 用 :
