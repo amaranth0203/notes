@@ -1,4 +1,7 @@
 
+zh zl 左右滚动一个光标
+zH zL 左右滚动半个屏幕
+
 Bachspace
     C-h
 Enter

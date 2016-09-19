@@ -1,4 +1,11 @@
 
+查看 linux 下头文件的位置 :
+root@priv:/# cat > test.c
+# include <asm/processor-flags.h>
+root@priv:/# gcc -H -fsyntax-only test.c
+. /usr/include/x86_64-linux-gnu/asm/processor-flags.h
+root@priv:/# 
+
 void* 的二级指针使用的时候要转换一下
 即
 int data[5] = { 1 , 2 , 3 , 4 , 5 } ;
