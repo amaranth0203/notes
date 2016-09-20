@@ -78,3 +78,16 @@ HKEY_CLASSES_ROOT\Directory\Background\shell\
 可以参考cmd，例如包含字符串Extended的时候则要按住Shift右键才能弹出来等
 
 assoc .lnk=lnkfile 
+
+
+交换 Caps Lock 和 Ctrl 键 :
+HKEY_LOCAL_MACHINE -> System -> CurrentControlSet -> Control -> KeyBoard Layout 
+Note: KeyBoard Layout, and not KeyBoard Layouts
+Right-click: Keyboard Layout, and select New -> Binary value
+Rename: New Value #1 -> Scancode Map
+Right click: Scancode Map -> Modify
+0000  00 00 00 00 00 00 00 00
+0008  03 00 00 00 1d 00 3a 00
+0010  3a 00 1d 00 00 00 00 00  
+0018
+restart
