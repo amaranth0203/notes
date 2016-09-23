@@ -1,3 +1,8 @@
+
+M-x toggle-debug-on-error 可以查看错误 log ( 然后 google )
+
+C-x z 执行上一条 M-x
+
 C-x C-c - 退出
 
 windows下配置文件.emacs在 C:\Users\Administrator.AXX3DX8ZNMSGU5B\AppData\Roaming 下
