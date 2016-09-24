@@ -1,4 +1,17 @@
 
+M-% 替换
+
+C-M-f C-M-b 在同一层级之间切换 ( vim % [ ] )
+
+ido/smex 用来补全 文件&buffer / 命令 很好用
+C-r C-s 切换
+ido :
+    M-p M-n 在上/下级目录搜索
+    M-s 搜索
+    C-t 正则匹配
+
+M-r 移动到屏幕中央
+
 M-x toggle-debug-on-error 可以查看错误 log ( 然后 google )
 
 C-x z 执行上一条 M-x
