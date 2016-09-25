@@ -1,4 +1,14 @@
 
+
+
+在 emacs 中使用 ggtags 比较方便
+(
+  apt-get install global
+  package-install ggtags
+  find xxx/ xxx/ xxx/ xxx/ -type f > file_list.log
+  gtags -f file_list.log
+)
+
 M-% 替换
 
 C-M-f C-M-b 在同一层级之间切换 ( vim % [ ] )
