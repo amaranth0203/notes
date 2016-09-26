@@ -1,5 +1,5 @@
 
-
+M-x dired 查看当前文件所在目录
 
 在 emacs 中使用 ggtags 比较方便
 (
