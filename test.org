@@ -1,52 +1,32 @@
 
-* TODO 工作
-** TODO PD1616[0/1]
-*** TODO 两套参数接口 [0/4]
-**** TODO 拟制方案（项目宏控）
-**** TODO 确认可行性（祥玉）
-**** TODO 发邮件确认（安奇逻辑）
-**** TODO 执行
-** DONE PD1617
 
 
-** Lord of the Rings
-   My favorite scenes are (in this order) [1]
-   1. The attack of the Rohirrim
-   2. E's f
-      + this
-      + I real 
-   Import 
-   - Eli.. :: a
-   - Sean ... :: b
-   - ldskfjlskd :: slkdfj
+* 项目
+** PD1616 [0/2]                                                       :works:
+ - [-] 两套参数接口 [2/3]
+   - [X] 拟制方案
+     项目宏控
+   - [X] 发邮件确认
+     + 标准
+     + 接口事宜
+     + 例子图片
+   - [ ] 执行
+ - [ ] otp 偏差
+
+** PD1617 [2/2]                                                       :works:
+ - [X] 寄往日本的 golden 手机状态
+    PD1617_A_A09.30.07
+ - [X] porting checklist [11/11]
+   - [X] 验证、添加项目宏控
+   - [X]  区分前后置
+   - [X]  device-vendor.mk
+   - [X]  工模使用q3a
+   - [X]  prebuilt_HY11
+   - [X]  调用 ext_lib
+   - [X]  roi&face
+   - [X]  aec_param
+   - [X]  otp->wbc
+   - [X]  led calibration
+   - [X]  mcas
 
 
-* 1
-** 11
-   11
-** 12
-   12
-** 13
-   13
-
-
-* 2
-** 21
-   21
-*** 211
-******** TODO 
-    211
-*** 212
-**** 
-         212
-** 22
-   22
-
-
-* 3
-** 31
-   31
-** 32
-   32
-  
-[1] wassup
