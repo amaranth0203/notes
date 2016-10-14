@@ -1,0 +1,23 @@
+loop - client
+    get $message_cnt
+    get $member_cnt
+    if == do nothing
+    else update
+loop - server
+    check_cookie
+    if set
+    else
+        set cookie
+        $member_cnt ++
+        $member += member
+    check_message
+    if set
+        $message += message
+        $message_cnt ++
+    $return += $menber
+    $return += $menber_cnt
+    $return += $message
+    $return += $message_cnt
+
+send_message - client
+    send
