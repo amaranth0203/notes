@@ -4,7 +4,7 @@
 我能反杀
 一直想飞到西安然后坐火车去敦煌
 
-* slf [0/5]
+* slf [0/6]
 ** TODO 上传 tabbar-tweak.el
 ** TODO 同步表情
 ** TODO LKM
@@ -12,6 +12,7 @@
 关键字 ddos 阿里养鸡 arm地址
 ** TODO irc channel 做中转
 
+** TODO 转换添加 mid 到看代码的列表里
 
 * 出差长安记得带回去的 [0/4]
  - [ ] 台式机 x2
