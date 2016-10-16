@@ -91,3 +91,7 @@ Right click: Scancode Map -> Modify
 0010  3a 00 1d 00 00 00 00 00  
 0018
 restart
+
+00 3a 对应 caps lock
+00 1d 对应 left ctrl
+e0 1d 对应 right ctrl
