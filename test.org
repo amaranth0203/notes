@@ -11,22 +11,22 @@
  - [ ] 数据线 x2 （康丽 x1 ）
 
 
-* 临时 [6/12]
-** TODO 修改答辩ppt
-*** TODO 例子加上数据、对比   多加几个例子
-**** TODO PD1515BA清晰度噪点
+* 临时 [12/12]
+** DONE 修改答辩ppt
+*** DONE 例子加上数据、对比   多加几个例子
+**** DONE PD1515BA清晰度噪点
  - [X] 借机
- - [ ] 改参数
- - [ ] 拍照
-**** TODO 1419CL 偏色
-** TODO 移动行
-** TODO 注释
-** TODO expand-region以及其他插件
-** TODO 擦白版
-** TODO excel
+ - [X] 改参数
+ - [X] 拍照
+**** DONE 1419CL 偏色
+** DONE 擦白版
+** DONE excel
  - [X] 计算公式（快捷键）
  - [X] 最大值
- - [ ] 数据 -> 变化图
+ - [X] 数据 -> 变化图
+** DONE expand-region以及其他插件
+** DONE 注释
+** DONE 移动行
 ** DONE 问石梦云win7的主题
  - 搜狗的“图标整理器”
 ** DONE mtp驱动
