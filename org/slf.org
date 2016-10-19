@@ -1,0 +1,75 @@
+
+
+* TODO priv [2/7]
+  - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
+她喜欢我
+还有时间
+我能反杀
+一直想飞到西安然后坐火车去敦煌
+** TODO 六弄咖啡馆
+   - State "TODO"       from "DONE"       [2016-10-19 周三 09:01]
+   :PROPERTIES:
+   :movie:    must download
+   :END:
+** TODO 同步表情
+   - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
+** TODO LKM
+   - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
+** TODO PYTHON 那个模块
+   - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
+关键字 ddos 阿里养鸡 arm地址
+** TODO irc channel 做中转
+   - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
+** DONE 转换添加 mid 到看代码的列表里
+   - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
+** DONE 上传 tabbar-tweak.el
+   - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
+   
+
+
+* learn_table
+
+| student | math | pyh | mean | pi number |
+|---------+------+-----+------+-----------|
+| b       |   13 |  09 |   11 |         5 |
+| h       |   15 |  14 | 14.5 |         7 |
+| a       |   17 |  13 |   15 |         9 |
+#+TBLFM: $4=vmean($2..$3)
+#+TBLFM: $5='(substring (number-to-string $pi) (round(string-to-number $4)) (+ 1 (round (string-to-number $4))));    
+#+CONSTANTS: pi=3.1415926535897932384666666666666
+
+| id |              r/g |              b/g |            gb/gr |   distance |
+|----+------------------+------------------+------------------+------------|
+|    | 540.602836879433 | 708.265957446809 | 1028.49290780142 |  1771.8880 |
+|  1 |         0.560547 |         0.629883 |         1.000977 | 0.10865988 |
+|  2 |         0.571289 |         0.642578 |         1.004883 | 0.10854316 |
+|  7 |         0.574219 |         0.637695 |                1 | 0.11745107 |
+#+TBLFM: $5=(((($2*1024/@2$2)-1)^2+(($3*1024/@2$3)-1)^2+(($4*1024/@2$4)-1)^2)^0.5)
+
+* temporary
+  SCHEDULED: <2016-10-19 周三>
+** TODO 同步.emacs
+   :PROPERTIES:
+   :Effort:   0:00
+   :END:
+** DONE qyh_repo_rollback.sh [init|reset] [5/5]
+ - [X] 列举相关的仓
+   $w/kernel
+   $w1
+   $w1sdk
+   $w2
+ - [X] check arguments
+ - [X] check $w
+ - [X] reset 到 init
+ - [X] sync 到 target
+** DONE 擦白版
+** DONE excel
+ - [X] 计算公式（快捷键）
+ - [X] 最大值
+ - [X] 数据 -> 变化图
+** DONE expand-region以及其他插件
+** DONE 注释
+** DONE 移动行
+** DONE 问石梦云win7的主题
+ - 搜狗的“图标整理器”
+** DONE mtp驱动
