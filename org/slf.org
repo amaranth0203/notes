@@ -1,6 +1,6 @@
 
 
-* TODO priv [2/7]
+* TODO priv [2/9]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
@@ -20,6 +20,25 @@
 关键字 ddos 阿里养鸡 arm地址
 ** TODO irc channel 做中转
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
+** TODO XJJ
+   - State "TODO"       from ""           [2016-10-19 周三 15:19]
+*** server
+**** DONE C&C address release
+     CLOSED: [2016-10-19 周三 15:21]
+     - State "DONE"       from ""           [2016-10-19 周三 15:21]
+     - curl http://my.csdn.net/echofocus | grep wassup
+**** TODO C&C address bind and listen
+     - State "TODO"       from ""           [2016-10-19 周三 15:21]
+     - C programming
+*** client
+**** DONE read C&C address
+     CLOSED: [2016-10-19 周三 23:39]
+     - State "DONE"       from "TODO"       [2016-10-19 周三 23:39]
+     - State "TODO"       from ""           [2016-10-19 周三 15:37]
+**** TODO create channel
+     - State "TODO"       from ""           [2016-10-19 周三 15:37]
+
+
 ** DONE 转换添加 mid 到看代码的列表里
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
 ** DONE 上传 tabbar-tweak.el
@@ -46,12 +65,18 @@
 |  7 |         0.574219 |         0.637695 |                1 | 0.11745107 |
 #+TBLFM: $5=(((($2*1024/@2$2)-1)^2+(($3*1024/@2$3)-1)^2+(($4*1024/@2$4)-1)^2)^0.5)
 
-* temporary
+* temporary [9/10]
   SCHEDULED: <2016-10-19 周三>
-** TODO 同步.emacs
+** DONE 同步.emacs
+   CLOSED: [2016-10-19 周三 10:29]
+   - State "DONE"       from "TODO"       [2016-10-19 周三 10:29]
    :PROPERTIES:
    :Effort:   0:00
    :END:
+** TODO [#A] VICTORY LOVES PREPARATION
+   DEADLINE: <2016-09-15 周四>
+   CLOCK: [2016-10-19 周三 15:18]
+   - State "TODO"       from ""           [2016-10-19 周三 10:33]
 ** DONE qyh_repo_rollback.sh [init|reset] [5/5]
  - [X] 列举相关的仓
    $w/kernel

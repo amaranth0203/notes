@@ -1,7 +1,0 @@
-server.c
-1. 监听
-2. 获取之后管理 session
-client.c
-1. 获取 server 地址
-2. 打开 shell
-3. 发送字符串，收到正确的验证字符串后返回 shell
