@@ -1,16 +1,23 @@
 
 
-* TODO priv [2/9]
+* TODO priv [2/11]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
 我能反杀
 一直想飞到西安然后坐火车去敦煌
-** TODO 六弄咖啡馆
+
+** TODO [#A] VICTORY LOVES PREPARATION
+   DEADLINE: <2016-10-19 周三>
+   CLOCK: [2016-10-19 周三 15:18]
+   - State "TODO"       from ""           [2016-10-19 周三 10:33]
+** TODO 下载六弄咖啡馆
    - State "TODO"       from "DONE"       [2016-10-19 周三 09:01]
    :PROPERTIES:
    :movie:    must download
    :END:
+** TODO 我可以咬你一口吗
+   - State "TODO"       from ""           [2016-10-20 周四 21:10]
 ** TODO 同步表情
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
 ** TODO LKM
@@ -27,24 +34,52 @@
      CLOSED: [2016-10-19 周三 15:21]
      - State "DONE"       from ""           [2016-10-19 周三 15:21]
      - curl http://my.csdn.net/echofocus | grep wassup
-**** TODO C&C address bind and listen
+**** DONE C&C address bind and listen
+     CLOSED: [2016-10-20 周四 13:35]
+     - State "DONE"       from "TODO"       [2016-10-20 周四 13:35]
      - State "TODO"       from ""           [2016-10-19 周三 15:21]
      - C programming
+**** DONE 执行 cd 之后无效 模仿一下 netcat 用 select
+     CLOSED: [2016-10-20 周四 17:12]
+     - State "DONE"       from "TODO"       [2016-10-20 周四 17:12]
+     - State "TODO"       from ""           [2016-10-20 周四 13:35]
 *** client
 **** DONE read C&C address
      CLOSED: [2016-10-19 周三 23:39]
      - State "DONE"       from "TODO"       [2016-10-19 周三 23:39]
      - State "TODO"       from ""           [2016-10-19 周三 15:37]
-**** TODO create channel
+**** DONE create channel
+     CLOSED: [2016-10-20 周四 12:32]
+     - State "DONE"       from "TODO"       [2016-10-20 周四 12:32]
      - State "TODO"       from ""           [2016-10-19 周三 15:37]
 
+**** DONE 整理 create channel 的代码
+     CLOSED: [2016-10-20 周四 14:07]
+     - State "DONE"       from "TODO"       [2016-10-20 周四 14:07]
+     - State "TODO"       from ""           [2016-10-20 周四 13:35]
 
+*** TODO rootkit
+    - State "TODO"       from ""           [2016-10-20 周四 17:12]
+**** TODO 看感染的例子
+     - State "TODO"       from ""           [2016-10-20 周四 21:41]
+**** TODO 例子运行起来
+     - State "TODO"       from ""           [2016-10-20 周四 21:41]
+**** TODO 成功用 suterusu 感染
+     - State "TODO"       from ""           [2016-10-20 周四 21:41]
+**** TODO 增加 suterusu 的功能 [0/3]
+     - State "TODO"       from ""           [2016-10-20 周四 21:41]
+     - [ ] run file after hide it
+     - [ ] find port and pid and hide it
+     - [ ] check status as daemon
+
+
+** TODO 加密解密算法
+   - State "TODO"       from ""           [2016-10-20 周四 18:
 ** DONE 转换添加 mid 到看代码的列表里
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
 ** DONE 上传 tabbar-tweak.el
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
    
-
 
 * learn_table
 
@@ -73,10 +108,6 @@
    :PROPERTIES:
    :Effort:   0:00
    :END:
-** TODO [#A] VICTORY LOVES PREPARATION
-   DEADLINE: <2016-09-15 周四>
-   CLOCK: [2016-10-19 周三 15:18]
-   - State "TODO"       from ""           [2016-10-19 周三 10:33]
 ** DONE qyh_repo_rollback.sh [init|reset] [5/5]
  - [X] 列举相关的仓
    $w/kernel
