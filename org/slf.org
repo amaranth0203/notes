@@ -9,7 +9,6 @@
 
 ** TODO [#A] VICTORY LOVES PREPARATION
    DEADLINE: <2016-10-19 周三>
-   CLOCK: [2016-10-19 周三 15:18]
    - State "TODO"       from ""           [2016-10-19 周三 10:33]
 ** TODO 下载六弄咖啡馆
    - State "TODO"       from "DONE"       [2016-10-19 周三 09:01]
@@ -66,11 +65,12 @@
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
 **** TODO 成功用 suterusu 感染
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
-**** TODO 增加 suterusu 的功能 [0/3]
+**** DONE 增加 suterusu 的功能 [2/2]
+     CLOSED: [2016-10-21 周五 16:34]
+     - State "DONE"       from "TODO"       [2016-10-21 周五 16:34]
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
-     - [ ] run file after hide it
-     - [ ] find port and pid and hide it
-     - [ ] check status as daemon
+     - [X] run file after hide it
+     - [X] find port and pid and hide it
 
 
 ** TODO 加密解密算法
