@@ -1,6 +1,6 @@
 
 
-* TODO priv [2/11]
+* TODO priv [2/15]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
@@ -10,13 +10,20 @@
 ** TODO [#A] VICTORY LOVES PREPARATION
    DEADLINE: <2016-10-19 周三>
    - State "TODO"       from ""           [2016-10-19 周三 10:33]
-** TODO 下载六弄咖啡馆
+** TODO 柳铁老校区，吃好多好吃的
+** TODO 我没有口红
+   - State "TODO"       from ""           [2016-10-23 周日 12:03]
+** TODO 下载<<六弄咖啡馆>>
    - State "TODO"       from "DONE"       [2016-10-19 周三 09:01]
    :PROPERTIES:
    :movie:    must download
    :END:
-** TODO 我可以咬你一口吗
+** TODO <<我可以咬你一口吗>>
    - State "TODO"       from ""           [2016-10-20 周四 21:10]
+** TODO <<你今天真好看>>
+   - State "TODO"       from ""           [2016-10-23 周日 12:04]
+** TODO <<憨豆都追女仔>>
+   - State "TODO"       from ""           [2016-10-23 周日 12:06]
 ** TODO 同步表情
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
 ** TODO LKM
@@ -59,9 +66,14 @@
 
 *** TODO rootkit
     - State "TODO"       from ""           [2016-10-20 周四 17:12]
-**** TODO 看感染的例子
+**** DONE 看感染的例子
+     CLOSED: [2016-10-23 周日 12:08]
+     - State "DONE"       from "TODO"       [2016-10-23 周日 12:08]
+     - State "TODO"       from "TODO"       [2016-10-23 周日 12:08]
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
-**** TODO 例子运行起来
+**** DONE 例子运行起来
+     CLOSED: [2016-10-23 周日 12:08]
+     - State "DONE"       from "TODO"       [2016-10-23 周日 12:08]
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
 **** TODO 成功用 suterusu 感染
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
@@ -71,8 +83,10 @@
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
      - [X] run file after hide it
      - [X] find port and pid and hide it
-
-
+**** TODO 取消 hide_port hide_pid 查看稳定性
+     - State "TODO"       from ""           [2016-10-23 周日 12:09]
+**** TODO release
+     - State "TODO"       from ""           [2016-10-23 周日 12:09]
 ** TODO 加密解密算法
    - State "TODO"       from ""           [2016-10-20 周四 18:
 ** DONE 转换添加 mid 到看代码的列表里
