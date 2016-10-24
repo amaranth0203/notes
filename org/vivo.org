@@ -60,7 +60,7 @@
    SCHEDULED: <2016-10-31 周一>
    - State "TODO"       from ""           [2016-10-19 周三 09:16]
 
-*** TODO raw 图 [4/4]
+*** TODO raw 图 [4/5]
     DEADLINE: <2016-10-20 周四>
     - State "TODO"       from ""           [2016-10-19 周三 16:56]
     - [X] 提供图片
@@ -69,6 +69,7 @@
       - 看不懂
     - [X] 模组厂重新提供 DLL
       - 无法调用
+    - [ ]
 *** DONE [B161018-700] AcuteLogic segment fault                        :@bug:
     CLOSED: [2016-10-20 周四 17:20] SCHEDULED: <2016-10-20 周四>
     - State "DONE"       from "TODO"       [2016-10-20 周四 17:20] \\
@@ -165,9 +166,19 @@
  - [X] 祥玉:加规避
 
 
-** PD1617 [5/5] <2016-09-19 周一>--<2016-12-02 周五>
+** PD1617 [7/8] <2016-09-19 周一>--<2016-12-02 周五>
    SCHEDULED: <2016-12-02 周五>
    - State "TODO"       from ""           [2016-10-19 周三 09:16]
+*** TODO 寄1617、1619回去给永富
+    - State "TODO"       from ""           [2016-10-24 周一 17:50]
+*** DONE 新机器发放行单
+    CLOSED: [2016-10-24 周一 22:46]
+    - State "DONE"       from "TODO"       [2016-10-24 周一 22:46]
+    - State "TODO"       from ""           [2016-10-24 周一 10:06]
+*** DONE 拆机换 golden
+    CLOSED: [2016-10-24 周一 17:50]
+    - State "DONE"       from "TODO"       [2016-10-24 周一 17:50]
+    - State "TODO"       from ""           [2016-10-24 周一 10:06]
 *** DONE 给海叔编个库 
 *** DONE 添加76pro的代码 
 *** DONE 寄往日本的 golden 手机状态

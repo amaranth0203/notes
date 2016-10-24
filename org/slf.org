@@ -64,7 +64,7 @@
      - State "DONE"       from "TODO"       [2016-10-20 周四 14:07]
      - State "TODO"       from ""           [2016-10-20 周四 13:35]
 
-*** TODO rootkit
+*** rootkit
     - State "TODO"       from ""           [2016-10-20 周四 17:12]
 **** DONE 看感染的例子
      CLOSED: [2016-10-23 周日 12:08]
@@ -75,7 +75,9 @@
      CLOSED: [2016-10-23 周日 12:08]
      - State "DONE"       from "TODO"       [2016-10-23 周日 12:08]
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
-**** TODO 成功用 suterusu 感染
+**** DONE 成功用 suterusu 感染
+     CLOSED: [2016-10-24 周一 12:19]
+     - State "DONE"       from "TODO"       [2016-10-24 周一 12:19]
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
 **** DONE 增加 suterusu 的功能 [2/2]
      CLOSED: [2016-10-21 周五 16:34]
