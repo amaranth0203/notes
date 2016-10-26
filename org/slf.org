@@ -1,6 +1,6 @@
 
 
-* TODO priv [2/15]
+* TODO priv [2/16]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
@@ -33,6 +33,8 @@
 关键字 ddos 阿里养鸡 arm地址
 ** TODO irc channel 做中转
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
+** TODO tor做中转
+   - State "TODO"       from ""           [2016-10-26 周三 22:51]
 ** TODO XJJ
    - State "TODO"       from ""           [2016-10-19 周三 15:19]
 *** server
@@ -91,6 +93,35 @@
      - State "TODO"       from ""           [2016-10-23 周日 12:09]
 ** TODO 加密解密算法
    - State "TODO"       from ""           [2016-10-20 周四 18:
+   - 应该用勒索程序将RSA加密后的密文
+     发送到私有的服务端A
+     A再通过后台直接查询比特币交易平台B
+     B返回的结果
+     A判断为收到钱了
+     在A上用私钥进行解密
+     然后将明文AES密钥和IV返回给勒索程序。
+   - 使用AES加密算法去加密系统中的文件
+     然后使用RSA加密算法去加密AES密钥
+     虽然AES是对称加密算法
+     但RSA为非对称加密算法
+     只有拥有RSA私钥才能解密得到AES的密钥进而对被加密的文件进行解密
+     软件加密时使用的AES密钥是随机生成的
+     因此在加密过后无法复现密钥
+*** DONE MD5
+    CLOSED: [2016-10-26 周三 20:10]
+    - State "DONE"       from "TODO"       [2016-10-26 周三 20:10]
+    - State "TODO"       from ""           [2016-10-26 周三 09:45]
+      output -> 128bits -> 32 in hex
+      input -> break into 512-bit blocks (sixteen 32-bit words)
+      input -> padded -> divisible by 512
+      input -> padded -> one 1 -> many 0 -> 64 bits fewer than a multiple of 512
+      ^?
+      input -> padded -> remaining bits filled up with 64 bits representing the length of the original message, modulo 2^64
+      process -> on 32-bit A B C D
+*** TODO 使用AES加密算法去加密文件
+    - State "TODO"       from ""           [2016-10-26 周三 22:41]
+*** TODO 使用RSA加密AES密钥
+    - State "TODO"       from ""           [2016-10-26 周三 22:41]
 ** DONE 转换添加 mid 到看代码的列表里
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
 ** DONE 上传 tabbar-tweak.el
@@ -118,6 +149,27 @@
 
 * temporary [9/10]
   SCHEDULED: <2016-10-19 周三>
+** TODO 下载歌曲 [0/16]
+   DEADLINE: <2016-10-26 周三>
+   - State "TODO"       from ""           [2016-10-26 周三 09:36]
+   - [ ] 寂寞的鸭子
+   - [ ] 忘不了
+   - [ ] 为你我受冷风吹
+   - [ ] 姐姐妹妹站起来
+   - [ ] 黄昏
+   - [ ] 你知道不知道
+   - [ ] 蓝色雨（温岚）
+   - [ ] 启程
+   - [ ] 相爱十年 邓超，董洁 爱的箴言
+   - [ ] 圣诞结
+   - [ ] 演员
+   - [ ] 后来
+   - [ ] 搁浅
+   - [ ] 吉米来吧
+
+   - [ ] 你是我心内的一首歌
+   - [ ] 丹顶鹤的故事
+
 ** DONE 同步.emacs
    CLOSED: [2016-10-19 周三 10:29]
    - State "DONE"       from "TODO"       [2016-10-19 周三 10:29]
