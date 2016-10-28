@@ -118,8 +118,12 @@
       ^?
       input -> padded -> remaining bits filled up with 64 bits representing the length of the original message, modulo 2^64
       process -> on 32-bit A B C D
+**** TODO [#C] 最后的长度 << 3 为什么
+     - State "TODO"       from ""           [2016-10-28 周五 17:08]
 *** TODO 使用AES加密算法去加密文件
     - State "TODO"       from ""           [2016-10-26 周三 22:41]
+**** TODO 需要使用 SHA 生成 fixed length keys
+     - State "TODO"       from ""           [2016-10-28 周五 16:06]
 *** TODO 使用RSA加密AES密钥
     - State "TODO"       from ""           [2016-10-26 周三 22:41]
 ** DONE 转换添加 mid 到看代码的列表里
@@ -127,7 +131,6 @@
 ** DONE 上传 tabbar-tweak.el
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
    
-
 * learn_table
 
 | student | math | pyh | mean | pi number |
