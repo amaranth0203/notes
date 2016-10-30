@@ -1,6 +1,6 @@
 
 
-* TODO priv [2/16]
+* TODO priv [3/16]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
@@ -13,7 +13,9 @@
 ** TODO 柳铁老校区，吃好多好吃的
 ** TODO 我没有口红
    - State "TODO"       from ""           [2016-10-23 周日 12:03]
-** TODO 下载<<六弄咖啡馆>>
+** DONE 下载<<六弄咖啡馆>>
+   CLOSED: [2016-10-30 周日 17:01]
+   - State "DONE"       from "TODO"       [2016-10-30 周日 17:01]
    - State "TODO"       from "DONE"       [2016-10-19 周三 09:01]
    :PROPERTIES:
    :movie:    must download
@@ -122,7 +124,9 @@
      - State "TODO"       from ""           [2016-10-28 周五 17:08]
 *** TODO 使用AES加密算法去加密文件
     - State "TODO"       from ""           [2016-10-26 周三 22:41]
-**** TODO 需要使用 SHA 生成 fixed length keys
+**** DONE 需要使用 SHA 生成 fixed length keys
+     CLOSED: [2016-10-30 周日 17:02]
+     - State "DONE"       from "TODO"       [2016-10-30 周日 17:02]
      - State "TODO"       from ""           [2016-10-28 周五 16:06]
 *** TODO 使用RSA加密AES密钥
     - State "TODO"       from ""           [2016-10-26 周三 22:41]
