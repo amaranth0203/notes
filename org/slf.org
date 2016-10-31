@@ -122,7 +122,9 @@
       process -> on 32-bit A B C D
 **** TODO [#C] 最后的长度 << 3 为什么
      - State "TODO"       from ""           [2016-10-28 周五 17:08]
-*** TODO 使用AES加密算法去加密文件
+*** DONE 使用AES加密/解密算法去加密文件
+    CLOSED: [2016-10-31 周一 18:03]
+    - State "DONE"       from "TODO"       [2016-10-31 周一 18:03]
     - State "TODO"       from ""           [2016-10-26 周三 22:41]
 **** DONE 需要使用 SHA 生成 fixed length keys
      CLOSED: [2016-10-30 周日 17:02]
