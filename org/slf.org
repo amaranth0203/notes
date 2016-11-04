@@ -1,6 +1,6 @@
 
 
-* TODO priv [3/16]
+* TODO priv [4/16]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
@@ -37,7 +37,9 @@
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
 ** TODO tor做中转
    - State "TODO"       from ""           [2016-10-26 周三 22:51]
-** TODO XJJ
+** DONE XJJ
+   CLOSED: [2016-11-04 周五 18:53]
+   - State "DONE"       from "TODO"       [2016-11-04 周五 18:53]
    - State "TODO"       from ""           [2016-10-19 周三 15:19]
 *** server
 **** DONE C&C address release
@@ -89,16 +91,27 @@
      - State "TODO"       from ""           [2016-10-20 周四 21:41]
      - [X] run file after hide it
      - [X] find port and pid and hide it
-**** TODO 取消 hide_port hide_pid 查看稳定性
+**** DONE 取消 hide_port hide_pid 查看稳定性
+     CLOSED: [2016-11-04 周五 14:25]
+     - State "DONE"       from "TODO"       [2016-11-04 周五 14:25]
      - State "TODO"       from ""           [2016-10-23 周日 12:09]
-**** TODO release
+**** DONE release
+     CLOSED: [2016-11-04 周五 18:53]
+     - State "DONE"       from "TODO"       [2016-11-04 周五 18:53]
      - State "TODO"       from ""           [2016-10-23 周日 12:09]
-***** TODO 自启动
+***** DONE 自启动
+      CLOSED: [2016-11-04 周五 15:52]
+      - State "DONE"       from "TODO"       [2016-11-04 周五 15:52]
       - State "TODO"       from ""           [2016-11-01 周二 15:44]
-***** TODO hide file : client module
+***** DONE hide [4/4]
+      CLOSED: [2016-11-04 周五 18:08]
+      - State "DONE"       from "TODO"       [2016-11-04 周五 18:08]
       - State "TODO"       from ""           [2016-11-01 周二 15:44]
-***** TODO hide lkm from sysfs and so on
-      - State "TODO"       from "TODO"       [2016-11-01 周二 16:00]
+      - [X] client binary
+      - [X] client port
+      - [X] client pid
+      - [X] ko binary
+
 ** TODO 加密解密算法
    - State "TODO"       from ""           [2016-10-20 周四 18:
    - 应该用勒索程序将RSA加密后的密文
