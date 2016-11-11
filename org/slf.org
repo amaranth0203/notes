@@ -1,6 +1,6 @@
 
 
-* TODO priv [4/16]
+* TODO priv [5/20]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
@@ -153,6 +153,18 @@
     - State "TODO"       from ""           [2016-10-26 周三 22:41]
 ** DONE 转换添加 mid 到看代码的列表里
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
+** DONE RELEASE XJJ
+   CLOSED: [2016-11-11 周五 21:38] DEADLINE: <2016-11-11 周五>
+   - State "DONE"       from "TODO"       [2016-11-11 周五 21:38]
+   - State "TODO"       from ""           [2016-11-11 周五 09:40]
+** TODO 11.21 打印
+   - State "TODO"       from ""           [2016-11-11 周五 10:40]
+** TODO 买票 12.31
+   SCHEDULED: <2016-11-12 周六>
+   - State "TODO"       from ""           [2016-11-11 周五 09:41]
+** TODO LaTeX 
+   SCHEDULED: <2016-11-11 周五>
+   - State "TODO"       from ""           [2016-11-11 周五 09:56]
 ** DONE 上传 tabbar-tweak.el
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
    
@@ -181,7 +193,7 @@
    CLOSED: [2016-11-05 周六 18:28] DEADLINE: <2016-11-07 周一>
    - State "DONE"       from "TODO"       [2016-11-05 周六 18:28]
    - State "TODO"       from ""           [2016-11-05 周六 17:44]
-** TODO 下载歌曲 [0/16]
+** TODO 下载歌曲 [0/17]
    DEADLINE: <2016-10-26 周三>
    - State "TODO"       from ""           [2016-10-26 周三 09:36]
    - [ ] 寂寞的鸭子
@@ -198,9 +210,9 @@
    - [ ] 后来
    - [ ] 搁浅
    - [ ] 吉米来吧
-
    - [ ] 你是我心内的一首歌
    - [ ] 丹顶鹤的故事
+   - [ ] 遇见你的时候所有星星都落到我头上
 
 ** DONE 同步.emacs
    CLOSED: [2016-10-19 周三 10:29]
