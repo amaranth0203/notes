@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: debug_header
+# key: debug_header
+# --
+#define __qyh_DEBUG__ 1
+$0

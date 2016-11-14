@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: debug
+# key: debug
+# --
+#ifdef __qyh_DEBUG__
+printf( "$1" , $2 ) ;
+#endif
+$0

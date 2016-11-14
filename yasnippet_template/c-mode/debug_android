@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: debug_android
+# key: debug_android
+# --
+#if __qyh_DEBUG__ 
+__android_log_print( 3 , "__qyh_wassup__" , "$1" , $2 ) ;
+#endif
+$0

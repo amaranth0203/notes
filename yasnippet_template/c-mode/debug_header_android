@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: debug_header_android
+# key: debug_header_android
+# --
+#include <android/log.h>
+#define __qyh_DEBUG__ 1
+$0
