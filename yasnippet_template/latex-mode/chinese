@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: chinese
+# key: chinese
+# --
+\usepackage[hyperref, UTF8]{ctex}
+$0

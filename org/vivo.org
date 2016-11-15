@@ -1,7 +1,7 @@
 
 
 
-* temporary [3/4]
+* temporary [4/4]
   SCHEDULED: <2016-10-19 周三>
   CLOCK: [2016-10-19 周三 09:42]--[2016-10-19 周三 09:44] =>  0:02
 ** DONE 3a r10809-1...r10810-1
@@ -25,8 +25,9 @@
    CLOSED: [2016-11-11 周五 21:38] SCHEDULED: <2016-11-11 周五>
    - State "DONE"       from "TODO"       [2016-11-11 周五 21:38]
    - State "TODO"       from ""           [2016-11-11 周五 09:42]
-** TODO [#A] 分析 alawb ，输出文档
-   DEADLINE: <2016-11-12 周六>
+** DONE [#A] 分析 alawb ，输出文档
+   CLOSED: [2016-11-15 周二 10:02] DEADLINE: <2016-11-12 周六>
+   - State "DONE"       from "TODO"       [2016-11-15 周二 10:02]
    - State "TODO"       from ""           [2016-11-05 周六 18:54]
 
 * 出差长安记得带回去的 [0/5]

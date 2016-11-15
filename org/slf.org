@@ -1,6 +1,6 @@
 
 
-* TODO priv [5/20]
+* TODO priv [6/20]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
@@ -158,12 +158,14 @@
    - State "DONE"       from "TODO"       [2016-11-11 周五 21:38]
    - State "TODO"       from ""           [2016-11-11 周五 09:40]
 ** TODO 11.21 打印
+   SCHEDULED: <2016-11-21 周一>
    - State "TODO"       from ""           [2016-11-11 周五 10:40]
 ** TODO 买票 12.31
    SCHEDULED: <2016-11-12 周六>
    - State "TODO"       from ""           [2016-11-11 周五 09:41]
-** TODO LaTeX 
-   SCHEDULED: <2016-11-11 周五>
+** DONE LaTeX 
+   CLOSED: [2016-11-15 周二 10:02] SCHEDULED: <2016-11-11 周五>
+   - State "DONE"       from "TODO"       [2016-11-15 周二 10:02]
    - State "TODO"       from ""           [2016-11-11 周五 09:56]
 ** DONE 上传 tabbar-tweak.el
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
