@@ -1,4 +1,21 @@
 
+C-x RET f 可以改变文件的 CRLF 方式
+c(Unix) --
+表示 gbk + LF
+使用 C-x RET f dos RET
+将变成 c\**- 再保存成 c\--- 表示 gbk + CRLF
+使用 C-x RET f mac RET
+将变成 c(Mac)**- 再保存成 c(Mac)--- 表示 gbk + CR
+再使用 C-x RET f unix RET
+将变成 c(Unix)**- 在保存成 c(Unix)--- 表示 gbk + LF ( 转一圈回来了 )
+
+C-x RET f 可以改变文件的 encoding 方式
+在当前 buffer 的右下角有 c(Unix)---
+表示使用的是 Chinese-gbk LF 方式来 encoding
+这时输入 C-x RET f utf-8 RET
+当前 buffer 右下角的状态就会变成 U(Unix)**-
+再保存文件 状态就会变成 U(Unix)---
+表示使用 Utf-8 LF 方式编码
 
 C-M-\ indent-region
 

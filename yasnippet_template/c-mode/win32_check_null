@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: win32_check_null
+# key: win32_check_null
+# --
+if( $1 == NULL ) {
+  MessageBox( $2 ,
+              "$3" ,
+              "Error" ,
+              MB_OK | MB_ICONERROR ) ;
+} // end of if( $1 == NULL )
+$0

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: case_
+# key: case_
+# --
+case $1 : {
+break ;
+} // end of case $1
+$0

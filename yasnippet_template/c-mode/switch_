@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: switch_
+# key: switch_
+# --
+switch( $1 ) {
+} // end of switch( $1 )
+$0
