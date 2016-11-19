@@ -3,5 +3,5 @@
 # key: switch_
 # --
 switch( $1 ) {
+  $0
 } // end of switch( $1 )
-$0

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: while_
+# key: while_
+# --
+while( $1 ) {
+  $0
+} // end of while( $1 )

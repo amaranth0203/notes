@@ -3,6 +3,6 @@
 # key: case_
 # --
 case $1 : {
+  $0
 break ;
 } // end of case $1
-$0

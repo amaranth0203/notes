@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: tmp
+# key: tmp
+# --
+    hwnd_$1 = CreateWindowEx( NULL ,
+                               "button" ,
+                               "$2" ,
+                               WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON ,
+                               2*13 , 2*$3 , 2*79 , 2*14 ,
+                               hwnd ,
+                               ( HMENU )( ID_$5 ) ,
+                               GetModuleHandle( NULL ) ,
+                               NULL ) ;
+    if( hwnd_$1 == NULL ) {
+      MessageBox( hwnd ,
+                  "CreateWindowEx $1" ,
+                  "Error" ,
+                  MB_OK | MB_ICONERROR ) ;
+    } // end of if( hwnd_$1 == NULL ) 
+    SendMessage( hwnd_$1 , WM_SETFONT , ( WPARAM)hfDefault , MAKELPARAM( FALSE , 0 ) ) ;
