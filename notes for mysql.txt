@@ -5,6 +5,13 @@ CREATE TABLE IF NOT EXISTS FILES (
     id INT AUTO_INCREMENT PRIMARY KEY , 
     name VARCHAR(30)
 ) ;
+insert into files ( name ) values ( 'aaaa' ) ;
+select * from files ;
+select * from files where name = 'aaaa' ;
+select id from files where name = 'aaaa' ;
+select name from files where name = 'aaaa' ;
+delete from files where name = 'aaaa' ;
+( further select&where delete&where ... see "notes for oracle.txt" )
 
 mysql -u root -p 回车
 输入密码 回车

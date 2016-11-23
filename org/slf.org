@@ -1,12 +1,15 @@
 
 
-* TODO priv [6/20]
+* TODO priv [6/21]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
 我能反杀
 一直想飞到西安然后坐火车去敦煌
 
+** TODO sqlmap
+   SCHEDULED: <2016-11-29 周二>
+   - State "TODO"       from ""           [2016-11-22 周二 12:25]
 ** TODO [#A] VICTORY LOVES PREPARATION
    DEADLINE: <2016-10-19 周三>
    - State "TODO"       from ""           [2016-10-19 周三 10:33]

