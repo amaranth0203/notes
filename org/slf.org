@@ -1,140 +1,144 @@
 
 
 * TODO priv [6/21]
-  - State "TODO"       from "TODO"       [2016-10-19 ÖÜÈý 09:00]
-ËýÏ²»¶ÎÒ
-»¹ÓÐÊ±¼ä
-ÎÒÄÜ·´É±
-Ò»Ö±Ïë·Éµ½Î÷°²È»ºó×ø»ð³µÈ¥¶Ø»Í
+  - State "TODO"       from "TODO"       [2016-10-19 å‘¨ä¸‰ 09:00]
+å¥¹å–œæ¬¢æˆ‘
+è¿˜æœ‰æ—¶é—´
+æˆ‘èƒ½åæ€
+ä¸€ç›´æƒ³é£žåˆ°è¥¿å®‰ç„¶åŽåç«è½¦åŽ»æ•¦ç…Œ
 
 ** TODO sqlmap
-   SCHEDULED: <2016-11-29 ÖÜ¶þ>
-   - State "TODO"       from ""           [2016-11-22 ÖÜ¶þ 12:25]
+   SCHEDULED: <2016-11-29 å‘¨äºŒ>
+   - State "TODO"       from ""           [2016-11-22 å‘¨äºŒ 12:25]
+*** TODO post
+    - State "TODO"       from ""           [2016-11-23 å‘¨ä¸‰ 14:41]
+*** TODO cookie/session
+    - State "TODO"       from ""           [2016-11-23 å‘¨ä¸‰ 14:41]
 ** TODO [#A] VICTORY LOVES PREPARATION
-   DEADLINE: <2016-10-19 ÖÜÈý>
-   - State "TODO"       from ""           [2016-10-19 ÖÜÈý 10:33]
-** TODO ÁøÌúÀÏÐ£Çø£¬³ÔºÃ¶àºÃ³ÔµÄ
-** TODO ÎÒÃ»ÓÐ¿Úºì
-   - State "TODO"       from ""           [2016-10-23 ÖÜÈÕ 12:03]
-** DONE ÏÂÔØ<<ÁùÅª¿§·È¹Ý>>
-   CLOSED: [2016-10-30 ÖÜÈÕ 17:01]
-   - State "DONE"       from "TODO"       [2016-10-30 ÖÜÈÕ 17:01]
-   - State "TODO"       from "DONE"       [2016-10-19 ÖÜÈý 09:01]
+   DEADLINE: <2016-10-19 å‘¨ä¸‰>
+   - State "TODO"       from ""           [2016-10-19 å‘¨ä¸‰ 10:33]
+** TODO æŸ³é“è€æ ¡åŒºï¼Œåƒå¥½å¤šå¥½åƒçš„
+** TODO æˆ‘æ²¡æœ‰å£çº¢
+   - State "TODO"       from ""           [2016-10-23 å‘¨æ—¥ 12:03]
+** DONE ä¸‹è½½<<å…­å¼„å’–å•¡é¦†>>
+   CLOSED: [2016-10-30 å‘¨æ—¥ 17:01]
+   - State "DONE"       from "TODO"       [2016-10-30 å‘¨æ—¥ 17:01]
+   - State "TODO"       from "DONE"       [2016-10-19 å‘¨ä¸‰ 09:01]
    :PROPERTIES:
    :movie:    must download
    :END:
-** TODO <<ÎÒ¿ÉÒÔÒ§ÄãÒ»¿ÚÂð>>
-   - State "TODO"       from ""           [2016-10-20 ÖÜËÄ 21:10]
-** TODO <<Äã½ñÌìÕæºÃ¿´>>
-   - State "TODO"       from ""           [2016-10-23 ÖÜÈÕ 12:04]
-** TODO <<º©¶¹¶¼×·Å®×Ð>>
-   - State "TODO"       from ""           [2016-10-23 ÖÜÈÕ 12:06]
-** TODO Í¬²½±íÇé
-   - State "TODO"       from "TODO"       [2016-10-19 ÖÜÈý 08:59]
+** TODO <<æˆ‘å¯ä»¥å’¬ä½ ä¸€å£å—>>
+   - State "TODO"       from ""           [2016-10-20 å‘¨å›› 21:10]
+** TODO <<ä½ ä»Šå¤©çœŸå¥½çœ‹>>
+   - State "TODO"       from ""           [2016-10-23 å‘¨æ—¥ 12:04]
+** TODO <<æ†¨è±†éƒ½è¿½å¥³ä»”>>
+   - State "TODO"       from ""           [2016-10-23 å‘¨æ—¥ 12:06]
+** TODO åŒæ­¥è¡¨æƒ…
+   - State "TODO"       from "TODO"       [2016-10-19 å‘¨ä¸‰ 08:59]
 ** TODO LKM
-   - State "TODO"       from "TODO"       [2016-10-19 ÖÜÈý 08:59]
-** TODO PYTHON ÄÇ¸öÄ£¿é
-   - State "TODO"       from "TODO"       [2016-10-19 ÖÜÈý 08:59]
-¹Ø¼ü×Ö ddos °¢ÀïÑø¼¦ armµØÖ·
-** TODO irc channel ×öÖÐ×ª
-   - State "TODO"       from "TODO"       [2016-10-19 ÖÜÈý 08:59]
-** TODO tor×öÖÐ×ª
-   - State "TODO"       from ""           [2016-10-26 ÖÜÈý 22:51]
+   - State "TODO"       from "TODO"       [2016-10-19 å‘¨ä¸‰ 08:59]
+** TODO PYTHON é‚£ä¸ªæ¨¡å—
+   - State "TODO"       from "TODO"       [2016-10-19 å‘¨ä¸‰ 08:59]
+å…³é”®å­— ddos é˜¿é‡Œå…»é¸¡ armåœ°å€
+** TODO irc channel åšä¸­è½¬
+   - State "TODO"       from "TODO"       [2016-10-19 å‘¨ä¸‰ 08:59]
+** TODO toråšä¸­è½¬
+   - State "TODO"       from ""           [2016-10-26 å‘¨ä¸‰ 22:51]
 ** DONE XJJ
-   CLOSED: [2016-11-04 ÖÜÎå 18:53]
-   - State "DONE"       from "TODO"       [2016-11-04 ÖÜÎå 18:53]
-   - State "TODO"       from ""           [2016-10-19 ÖÜÈý 15:19]
+   CLOSED: [2016-11-04 å‘¨äº” 18:53]
+   - State "DONE"       from "TODO"       [2016-11-04 å‘¨äº” 18:53]
+   - State "TODO"       from ""           [2016-10-19 å‘¨ä¸‰ 15:19]
 *** server
 **** DONE C&C address release
-     CLOSED: [2016-10-19 ÖÜÈý 15:21]
-     - State "DONE"       from ""           [2016-10-19 ÖÜÈý 15:21]
+     CLOSED: [2016-10-19 å‘¨ä¸‰ 15:21]
+     - State "DONE"       from ""           [2016-10-19 å‘¨ä¸‰ 15:21]
      - curl http://my.csdn.net/echofocus | grep wassup
 **** DONE C&C address bind and listen
-     CLOSED: [2016-10-20 ÖÜËÄ 13:35]
-     - State "DONE"       from "TODO"       [2016-10-20 ÖÜËÄ 13:35]
-     - State "TODO"       from ""           [2016-10-19 ÖÜÈý 15:21]
+     CLOSED: [2016-10-20 å‘¨å›› 13:35]
+     - State "DONE"       from "TODO"       [2016-10-20 å‘¨å›› 13:35]
+     - State "TODO"       from ""           [2016-10-19 å‘¨ä¸‰ 15:21]
      - C programming
-**** DONE Ö´ÐÐ cd Ö®ºóÎÞÐ§ Ä£·ÂÒ»ÏÂ netcat ÓÃ select
-     CLOSED: [2016-10-20 ÖÜËÄ 17:12]
-     - State "DONE"       from "TODO"       [2016-10-20 ÖÜËÄ 17:12]
-     - State "TODO"       from ""           [2016-10-20 ÖÜËÄ 13:35]
+**** DONE æ‰§è¡Œ cd ä¹‹åŽæ— æ•ˆ æ¨¡ä»¿ä¸€ä¸‹ netcat ç”¨ select
+     CLOSED: [2016-10-20 å‘¨å›› 17:12]
+     - State "DONE"       from "TODO"       [2016-10-20 å‘¨å›› 17:12]
+     - State "TODO"       from ""           [2016-10-20 å‘¨å›› 13:35]
 *** client
 **** DONE read C&C address
-     CLOSED: [2016-10-19 ÖÜÈý 23:39]
-     - State "DONE"       from "TODO"       [2016-10-19 ÖÜÈý 23:39]
-     - State "TODO"       from ""           [2016-10-19 ÖÜÈý 15:37]
+     CLOSED: [2016-10-19 å‘¨ä¸‰ 23:39]
+     - State "DONE"       from "TODO"       [2016-10-19 å‘¨ä¸‰ 23:39]
+     - State "TODO"       from ""           [2016-10-19 å‘¨ä¸‰ 15:37]
 **** DONE create channel
-     CLOSED: [2016-10-20 ÖÜËÄ 12:32]
-     - State "DONE"       from "TODO"       [2016-10-20 ÖÜËÄ 12:32]
-     - State "TODO"       from ""           [2016-10-19 ÖÜÈý 15:37]
+     CLOSED: [2016-10-20 å‘¨å›› 12:32]
+     - State "DONE"       from "TODO"       [2016-10-20 å‘¨å›› 12:32]
+     - State "TODO"       from ""           [2016-10-19 å‘¨ä¸‰ 15:37]
 
-**** DONE ÕûÀí create channel µÄ´úÂë
-     CLOSED: [2016-10-20 ÖÜËÄ 14:07]
-     - State "DONE"       from "TODO"       [2016-10-20 ÖÜËÄ 14:07]
-     - State "TODO"       from ""           [2016-10-20 ÖÜËÄ 13:35]
+**** DONE æ•´ç† create channel çš„ä»£ç 
+     CLOSED: [2016-10-20 å‘¨å›› 14:07]
+     - State "DONE"       from "TODO"       [2016-10-20 å‘¨å›› 14:07]
+     - State "TODO"       from ""           [2016-10-20 å‘¨å›› 13:35]
 
 *** rootkit
-    - State "TODO"       from ""           [2016-10-20 ÖÜËÄ 17:12]
-**** DONE ¿´¸ÐÈ¾µÄÀý×Ó
-     CLOSED: [2016-10-23 ÖÜÈÕ 12:08]
-     - State "DONE"       from "TODO"       [2016-10-23 ÖÜÈÕ 12:08]
-     - State "TODO"       from "TODO"       [2016-10-23 ÖÜÈÕ 12:08]
-     - State "TODO"       from ""           [2016-10-20 ÖÜËÄ 21:41]
-**** DONE Àý×ÓÔËÐÐÆðÀ´
-     CLOSED: [2016-10-23 ÖÜÈÕ 12:08]
-     - State "DONE"       from "TODO"       [2016-10-23 ÖÜÈÕ 12:08]
-     - State "TODO"       from ""           [2016-10-20 ÖÜËÄ 21:41]
-**** DONE ³É¹¦ÓÃ suterusu ¸ÐÈ¾
-     CLOSED: [2016-10-24 ÖÜÒ» 12:19]
-     - State "DONE"       from "TODO"       [2016-10-24 ÖÜÒ» 12:19]
-     - State "TODO"       from ""           [2016-10-20 ÖÜËÄ 21:41]
-**** DONE Ôö¼Ó suterusu µÄ¹¦ÄÜ [2/2]
-     CLOSED: [2016-10-21 ÖÜÎå 16:34]
-     - State "DONE"       from "TODO"       [2016-10-21 ÖÜÎå 16:34]
-     - State "TODO"       from ""           [2016-10-20 ÖÜËÄ 21:41]
+    - State "TODO"       from ""           [2016-10-20 å‘¨å›› 17:12]
+**** DONE çœ‹æ„ŸæŸ“çš„ä¾‹å­
+     CLOSED: [2016-10-23 å‘¨æ—¥ 12:08]
+     - State "DONE"       from "TODO"       [2016-10-23 å‘¨æ—¥ 12:08]
+     - State "TODO"       from "TODO"       [2016-10-23 å‘¨æ—¥ 12:08]
+     - State "TODO"       from ""           [2016-10-20 å‘¨å›› 21:41]
+**** DONE ä¾‹å­è¿è¡Œèµ·æ¥
+     CLOSED: [2016-10-23 å‘¨æ—¥ 12:08]
+     - State "DONE"       from "TODO"       [2016-10-23 å‘¨æ—¥ 12:08]
+     - State "TODO"       from ""           [2016-10-20 å‘¨å›› 21:41]
+**** DONE æˆåŠŸç”¨ suterusu æ„ŸæŸ“
+     CLOSED: [2016-10-24 å‘¨ä¸€ 12:19]
+     - State "DONE"       from "TODO"       [2016-10-24 å‘¨ä¸€ 12:19]
+     - State "TODO"       from ""           [2016-10-20 å‘¨å›› 21:41]
+**** DONE å¢žåŠ  suterusu çš„åŠŸèƒ½ [2/2]
+     CLOSED: [2016-10-21 å‘¨äº” 16:34]
+     - State "DONE"       from "TODO"       [2016-10-21 å‘¨äº” 16:34]
+     - State "TODO"       from ""           [2016-10-20 å‘¨å›› 21:41]
      - [X] run file after hide it
      - [X] find port and pid and hide it
-**** DONE È¡Ïû hide_port hide_pid ²é¿´ÎÈ¶¨ÐÔ
-     CLOSED: [2016-11-04 ÖÜÎå 14:25]
-     - State "DONE"       from "TODO"       [2016-11-04 ÖÜÎå 14:25]
-     - State "TODO"       from ""           [2016-10-23 ÖÜÈÕ 12:09]
+**** DONE å–æ¶ˆ hide_port hide_pid æŸ¥çœ‹ç¨³å®šæ€§
+     CLOSED: [2016-11-04 å‘¨äº” 14:25]
+     - State "DONE"       from "TODO"       [2016-11-04 å‘¨äº” 14:25]
+     - State "TODO"       from ""           [2016-10-23 å‘¨æ—¥ 12:09]
 **** DONE release
-     CLOSED: [2016-11-04 ÖÜÎå 18:53]
-     - State "DONE"       from "TODO"       [2016-11-04 ÖÜÎå 18:53]
-     - State "TODO"       from ""           [2016-10-23 ÖÜÈÕ 12:09]
-***** DONE ×ÔÆô¶¯
-      CLOSED: [2016-11-04 ÖÜÎå 15:52]
-      - State "DONE"       from "TODO"       [2016-11-04 ÖÜÎå 15:52]
-      - State "TODO"       from ""           [2016-11-01 ÖÜ¶þ 15:44]
+     CLOSED: [2016-11-04 å‘¨äº” 18:53]
+     - State "DONE"       from "TODO"       [2016-11-04 å‘¨äº” 18:53]
+     - State "TODO"       from ""           [2016-10-23 å‘¨æ—¥ 12:09]
+***** DONE è‡ªå¯åŠ¨
+      CLOSED: [2016-11-04 å‘¨äº” 15:52]
+      - State "DONE"       from "TODO"       [2016-11-04 å‘¨äº” 15:52]
+      - State "TODO"       from ""           [2016-11-01 å‘¨äºŒ 15:44]
 ***** DONE hide [4/4]
-      CLOSED: [2016-11-04 ÖÜÎå 18:08]
-      - State "DONE"       from "TODO"       [2016-11-04 ÖÜÎå 18:08]
-      - State "TODO"       from ""           [2016-11-01 ÖÜ¶þ 15:44]
+      CLOSED: [2016-11-04 å‘¨äº” 18:08]
+      - State "DONE"       from "TODO"       [2016-11-04 å‘¨äº” 18:08]
+      - State "TODO"       from ""           [2016-11-01 å‘¨äºŒ 15:44]
       - [X] client binary
       - [X] client port
       - [X] client pid
       - [X] ko binary
 
-** TODO ¼ÓÃÜ½âÃÜËã·¨
-   - State "TODO"       from ""           [2016-10-20 ÖÜËÄ 18:
-   - Ó¦¸ÃÓÃÀÕË÷³ÌÐò½«RSA¼ÓÃÜºóµÄÃÜÎÄ
-     ·¢ËÍµ½Ë½ÓÐµÄ·þÎñ¶ËA
-     AÔÙÍ¨¹ýºóÌ¨Ö±½Ó²éÑ¯±ÈÌØ±Ò½»Ò×Æ½Ì¨B
-     B·µ»ØµÄ½á¹û
-     AÅÐ¶ÏÎªÊÕµ½Ç®ÁË
-     ÔÚAÉÏÓÃË½Ô¿½øÐÐ½âÃÜ
-     È»ºó½«Ã÷ÎÄAESÃÜÔ¿ºÍIV·µ»Ø¸øÀÕË÷³ÌÐò¡£
-   - Ê¹ÓÃAES¼ÓÃÜËã·¨È¥¼ÓÃÜÏµÍ³ÖÐµÄÎÄ¼þ
-     È»ºóÊ¹ÓÃRSA¼ÓÃÜËã·¨È¥¼ÓÃÜAESÃÜÔ¿
-     ËäÈ»AESÊÇ¶Ô³Æ¼ÓÃÜËã·¨
-     µ«RSAÎª·Ç¶Ô³Æ¼ÓÃÜËã·¨
-     Ö»ÓÐÓµÓÐRSAË½Ô¿²ÅÄÜ½âÃÜµÃµ½AESµÄÃÜÔ¿½ø¶ø¶Ô±»¼ÓÃÜµÄÎÄ¼þ½øÐÐ½âÃÜ
-     Èí¼þ¼ÓÃÜÊ±Ê¹ÓÃµÄAESÃÜÔ¿ÊÇËæ»úÉú³ÉµÄ
-     Òò´ËÔÚ¼ÓÃÜ¹ýºóÎÞ·¨¸´ÏÖÃÜÔ¿
+** TODO åŠ å¯†è§£å¯†ç®—æ³•
+   - State "TODO"       from ""           [2016-10-20 å‘¨å›› 18:
+   - åº”è¯¥ç”¨å‹’ç´¢ç¨‹åºå°†RSAåŠ å¯†åŽçš„å¯†æ–‡
+     å‘é€åˆ°ç§æœ‰çš„æœåŠ¡ç«¯A
+     Aå†é€šè¿‡åŽå°ç›´æŽ¥æŸ¥è¯¢æ¯”ç‰¹å¸äº¤æ˜“å¹³å°B
+     Bè¿”å›žçš„ç»“æžœ
+     Aåˆ¤æ–­ä¸ºæ”¶åˆ°é’±äº†
+     åœ¨Aä¸Šç”¨ç§é’¥è¿›è¡Œè§£å¯†
+     ç„¶åŽå°†æ˜Žæ–‡AESå¯†é’¥å’ŒIVè¿”å›žç»™å‹’ç´¢ç¨‹åºã€‚
+   - ä½¿ç”¨AESåŠ å¯†ç®—æ³•åŽ»åŠ å¯†ç³»ç»Ÿä¸­çš„æ–‡ä»¶
+     ç„¶åŽä½¿ç”¨RSAåŠ å¯†ç®—æ³•åŽ»åŠ å¯†AESå¯†é’¥
+     è™½ç„¶AESæ˜¯å¯¹ç§°åŠ å¯†ç®—æ³•
+     ä½†RSAä¸ºéžå¯¹ç§°åŠ å¯†ç®—æ³•
+     åªæœ‰æ‹¥æœ‰RSAç§é’¥æ‰èƒ½è§£å¯†å¾—åˆ°AESçš„å¯†é’¥è¿›è€Œå¯¹è¢«åŠ å¯†çš„æ–‡ä»¶è¿›è¡Œè§£å¯†
+     è½¯ä»¶åŠ å¯†æ—¶ä½¿ç”¨çš„AESå¯†é’¥æ˜¯éšæœºç”Ÿæˆçš„
+     å› æ­¤åœ¨åŠ å¯†è¿‡åŽæ— æ³•å¤çŽ°å¯†é’¥
 *** DONE MD5
-    CLOSED: [2016-10-26 ÖÜÈý 20:10]
-    - State "DONE"       from "TODO"       [2016-10-26 ÖÜÈý 20:10]
-    - State "TODO"       from ""           [2016-10-26 ÖÜÈý 09:45]
+    CLOSED: [2016-10-26 å‘¨ä¸‰ 20:10]
+    - State "DONE"       from "TODO"       [2016-10-26 å‘¨ä¸‰ 20:10]
+    - State "TODO"       from ""           [2016-10-26 å‘¨ä¸‰ 09:45]
       output -> 128bits -> 32 in hex
       input -> break into 512-bit blocks (sixteen 32-bit words)
       input -> padded -> divisible by 512
@@ -142,42 +146,42 @@
       ^?
       input -> padded -> remaining bits filled up with 64 bits representing the length of the original message, modulo 2^64
       process -> on 32-bit A B C D
-**** TODO [#C] ×îºóµÄ³¤¶È << 3 ÎªÊ²Ã´
-     - State "TODO"       from ""           [2016-10-28 ÖÜÎå 17:08]
-*** DONE Ê¹ÓÃAES¼ÓÃÜ/½âÃÜËã·¨È¥¼ÓÃÜÎÄ¼þ
-    CLOSED: [2016-10-31 ÖÜÒ» 18:03]
-    - State "DONE"       from "TODO"       [2016-10-31 ÖÜÒ» 18:03]
-    - State "TODO"       from ""           [2016-10-26 ÖÜÈý 22:41]
-**** DONE ÐèÒªÊ¹ÓÃ SHA Éú³É fixed length keys
-     CLOSED: [2016-10-30 ÖÜÈÕ 17:02]
-     - State "DONE"       from "TODO"       [2016-10-30 ÖÜÈÕ 17:02]
-     - State "TODO"       from ""           [2016-10-28 ÖÜÎå 16:06]
-*** TODO Ê¹ÓÃRSA¼ÓÃÜAESÃÜÔ¿
-    - State "TODO"       from ""           [2016-10-26 ÖÜÈý 22:41]
-** DONE ×ª»»Ìí¼Ó mid µ½¿´´úÂëµÄÁÐ±íÀï
-   - State "DONE"       from "DONE"       [2016-10-19 ÖÜÈý 09:00]
+**** TODO [#C] æœ€åŽçš„é•¿åº¦ << 3 ä¸ºä»€ä¹ˆ
+     - State "TODO"       from ""           [2016-10-28 å‘¨äº” 17:08]
+*** DONE ä½¿ç”¨AESåŠ å¯†/è§£å¯†ç®—æ³•åŽ»åŠ å¯†æ–‡ä»¶
+    CLOSED: [2016-10-31 å‘¨ä¸€ 18:03]
+    - State "DONE"       from "TODO"       [2016-10-31 å‘¨ä¸€ 18:03]
+    - State "TODO"       from ""           [2016-10-26 å‘¨ä¸‰ 22:41]
+**** DONE éœ€è¦ä½¿ç”¨ SHA ç”Ÿæˆ fixed length keys
+     CLOSED: [2016-10-30 å‘¨æ—¥ 17:02]
+     - State "DONE"       from "TODO"       [2016-10-30 å‘¨æ—¥ 17:02]
+     - State "TODO"       from ""           [2016-10-28 å‘¨äº” 16:06]
+*** TODO ä½¿ç”¨RSAåŠ å¯†AESå¯†é’¥
+    - State "TODO"       from ""           [2016-10-26 å‘¨ä¸‰ 22:41]
+** DONE è½¬æ¢æ·»åŠ  mid åˆ°çœ‹ä»£ç çš„åˆ—è¡¨é‡Œ
+   - State "DONE"       from "DONE"       [2016-10-19 å‘¨ä¸‰ 09:00]
 ** DONE RELEASE XJJ
-   CLOSED: [2016-11-11 ÖÜÎå 21:38] DEADLINE: <2016-11-11 ÖÜÎå>
-   - State "DONE"       from "TODO"       [2016-11-11 ÖÜÎå 21:38]
-   - State "TODO"       from ""           [2016-11-11 ÖÜÎå 09:40]
-** TODO 11.21 ´òÓ¡
-   SCHEDULED: <2016-11-21 ÖÜÒ»>
-   - State "TODO"       from ""           [2016-11-11 ÖÜÎå 10:40]
-** TODO ÂòÆ± 12.31
-   SCHEDULED: <2016-11-12 ÖÜÁù>
-   - State "TODO"       from ""           [2016-11-11 ÖÜÎå 09:41]
+   CLOSED: [2016-11-11 å‘¨äº” 21:38] DEADLINE: <2016-11-11 å‘¨äº”>
+   - State "DONE"       from "TODO"       [2016-11-11 å‘¨äº” 21:38]
+   - State "TODO"       from ""           [2016-11-11 å‘¨äº” 09:40]
+** TODO 11.21 æ‰“å°
+   SCHEDULED: <2016-11-21 å‘¨ä¸€>
+   - State "TODO"       from ""           [2016-11-11 å‘¨äº” 10:40]
+** TODO ä¹°ç¥¨ 12.31
+   SCHEDULED: <2016-11-12 å‘¨å…­>
+   - State "TODO"       from ""           [2016-11-11 å‘¨äº” 09:41]
 ** DONE LaTeX 
-   CLOSED: [2016-11-15 ÖÜ¶þ 10:02] SCHEDULED: <2016-11-11 ÖÜÎå>
-   - State "DONE"       from "TODO"       [2016-11-15 ÖÜ¶þ 10:02]
-   - State "TODO"       from ""           [2016-11-11 ÖÜÎå 09:56]
-** DONE ÉÏ´« tabbar-tweak.el
-   - State "DONE"       from "DONE"       [2016-10-19 ÖÜÈý 09:00]
+   CLOSED: [2016-11-15 å‘¨äºŒ 10:02] SCHEDULED: <2016-11-11 å‘¨äº”>
+   - State "DONE"       from "TODO"       [2016-11-15 å‘¨äºŒ 10:02]
+   - State "TODO"       from ""           [2016-11-11 å‘¨äº” 09:56]
+** DONE ä¸Šä¼  tabbar-tweak.el
+   - State "DONE"       from "DONE"       [2016-10-19 å‘¨ä¸‰ 09:00]
    
 * learn_table
 
 | student | math | pyh | mean | pi number |
 |---------+------+-----+------+-----------|
-| b       |   13 |  09 |   11 |         5 |
+| b æµ‹è¯•  |   13 |  09 |   11 |         5 |
 | h       |   15 |  14 | 14.5 |         7 |
 | a       |   17 |  13 |   15 |         9 |
 #+TBLFM: $4=vmean($2..$3)
@@ -193,56 +197,56 @@
 #+TBLFM: $5=(((($2*1024/@2$2)-1)^2+(($3*1024/@2$3)-1)^2+(($4*1024/@2$4)-1)^2)^0.5)
 
 * temporary [10/11]
-  SCHEDULED: <2016-10-19 ÖÜÈý>
+  SCHEDULED: <2016-10-19 å‘¨ä¸‰>
 ** DONE qyh dj peek
-   CLOSED: [2016-11-05 ÖÜÁù 18:28] DEADLINE: <2016-11-07 ÖÜÒ»>
-   - State "DONE"       from "TODO"       [2016-11-05 ÖÜÁù 18:28]
-   - State "TODO"       from ""           [2016-11-05 ÖÜÁù 17:44]
-** TODO ÏÂÔØ¸èÇú [0/17]
-   DEADLINE: <2016-10-26 ÖÜÈý>
-   - State "TODO"       from ""           [2016-10-26 ÖÜÈý 09:36]
-   - [ ] ¼ÅÄ¯µÄÑ¼×Ó
-   - [ ] Íü²»ÁË
-   - [ ] ÎªÄãÎÒÊÜÀä·ç´µ
-   - [ ] ½ã½ãÃÃÃÃÕ¾ÆðÀ´
-   - [ ] »Æ»è
-   - [ ] ÄãÖªµÀ²»ÖªµÀ
-   - [ ] À¶É«Óê£¨ÎÂá°£©
-   - [ ] Æô³Ì
-   - [ ] Ïà°®Ê®Äê µË³¬£¬¶­½à °®µÄóðÑÔ
-   - [ ] Ê¥µ®½á
-   - [ ] ÑÝÔ±
-   - [ ] ºóÀ´
-   - [ ] ¸éÇ³
-   - [ ] ¼ªÃ×À´°É
-   - [ ] ÄãÊÇÎÒÐÄÄÚµÄÒ»Ê×¸è
-   - [ ] µ¤¶¥º×µÄ¹ÊÊÂ
-   - [ ] Óö¼ûÄãµÄÊ±ºòËùÓÐÐÇÐÇ¶¼Âäµ½ÎÒÍ·ÉÏ
+   CLOSED: [2016-11-05 å‘¨å…­ 18:28] DEADLINE: <2016-11-07 å‘¨ä¸€>
+   - State "DONE"       from "TODO"       [2016-11-05 å‘¨å…­ 18:28]
+   - State "TODO"       from ""           [2016-11-05 å‘¨å…­ 17:44]
+** TODO ä¸‹è½½æ­Œæ›² [0/17]
+   DEADLINE: <2016-10-26 å‘¨ä¸‰>
+   - State "TODO"       from ""           [2016-10-26 å‘¨ä¸‰ 09:36]
+   - [ ] å¯‚å¯žçš„é¸­å­
+   - [ ] å¿˜ä¸äº†
+   - [ ] ä¸ºä½ æˆ‘å—å†·é£Žå¹
+   - [ ] å§å§å¦¹å¦¹ç«™èµ·æ¥
+   - [ ] é»„æ˜
+   - [ ] ä½ çŸ¥é“ä¸çŸ¥é“
+   - [ ] è“è‰²é›¨ï¼ˆæ¸©å²šï¼‰
+   - [ ] å¯ç¨‹
+   - [ ] ç›¸çˆ±åå¹´ é‚“è¶…ï¼Œè‘£æ´ çˆ±çš„ç®´è¨€
+   - [ ] åœ£è¯žç»“
+   - [ ] æ¼”å‘˜
+   - [ ] åŽæ¥
+   - [ ] ææµ…
+   - [ ] å‰ç±³æ¥å§
+   - [ ] ä½ æ˜¯æˆ‘å¿ƒå†…çš„ä¸€é¦–æ­Œ
+   - [ ] ä¸¹é¡¶é¹¤çš„æ•…äº‹
+   - [ ] é‡è§ä½ çš„æ—¶å€™æ‰€æœ‰æ˜Ÿæ˜Ÿéƒ½è½åˆ°æˆ‘å¤´ä¸Š
 
-** DONE Í¬²½.emacs
-   CLOSED: [2016-10-19 ÖÜÈý 10:29]
-   - State "DONE"       from "TODO"       [2016-10-19 ÖÜÈý 10:29]
+** DONE åŒæ­¥.emacs
+   CLOSED: [2016-10-19 å‘¨ä¸‰ 10:29]
+   - State "DONE"       from "TODO"       [2016-10-19 å‘¨ä¸‰ 10:29]
    :PROPERTIES:
    :Effort:   0:00
    :END:
 ** DONE qyh_repo_rollback.sh [init|reset] [5/5]
- - [X] ÁÐ¾ÙÏà¹ØµÄ²Ö
+ - [X] åˆ—ä¸¾ç›¸å…³çš„ä»“
    $w/kernel
    $w1
    $w1sdk
    $w2
  - [X] check arguments
  - [X] check $w
- - [X] reset µ½ init
- - [X] sync µ½ target
-** DONE ²Á°×°æ
+ - [X] reset åˆ° init
+ - [X] sync åˆ° target
+** DONE æ“¦ç™½ç‰ˆ
 ** DONE excel
- - [X] ¼ÆËã¹«Ê½£¨¿ì½Ý¼ü£©
- - [X] ×î´óÖµ
- - [X] Êý¾Ý -> ±ä»¯Í¼
-** DONE expand-regionÒÔ¼°ÆäËû²å¼þ
-** DONE ×¢ÊÍ
-** DONE ÒÆ¶¯ÐÐ
-** DONE ÎÊÊ¯ÃÎÔÆwin7µÄÖ÷Ìâ
- - ËÑ¹·µÄ¡°Í¼±êÕûÀíÆ÷¡±
-** DONE mtpÇý¶¯
+ - [X] è®¡ç®—å…¬å¼ï¼ˆå¿«æ·é”®ï¼‰
+ - [X] æœ€å¤§å€¼
+ - [X] æ•°æ® -> å˜åŒ–å›¾
+** DONE expand-regionä»¥åŠå…¶ä»–æ’ä»¶
+** DONE æ³¨é‡Š
+** DONE ç§»åŠ¨è¡Œ
+** DONE é—®çŸ³æ¢¦äº‘win7çš„ä¸»é¢˜
+ - æœç‹—çš„â€œå›¾æ ‡æ•´ç†å™¨â€
+** DONE mtpé©±åŠ¨
