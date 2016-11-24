@@ -1,9 +1,9 @@
 gcc -MM *.c
-ÏÔÊ¾ËùÓĞµÄÒÀÀµ
+æ˜¾ç¤ºæ‰€æœ‰çš„ä¾èµ–
 
-¼ÓÈëdebugĞÅÏ¢£¨»á´òÓ¡³ö³ö´íµÄĞĞÊı£©
+åŠ å…¥debugä¿¡æ¯ï¼ˆä¼šæ‰“å°å‡ºå‡ºé”™çš„è¡Œæ•°ï¼‰
 -g
-±àÒë64Î»µÄ¿âÎÄ¼ş¹©pythonµ÷ÓÃ
+ç¼–è¯‘64ä½çš„åº“æ–‡ä»¶ä¾›pythonè°ƒç”¨
 import spam
     gcc -D MS_WIN64 -g -shared -o spam.pyd spammodule.c -I D:\executable\Python27_64bit\include -L D:\executable\Python27_64bit\libs -lpython27
 ctypes.cdll.LoadLibrary( "mydll.dll" )

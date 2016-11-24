@@ -1,18 +1,18 @@
-ÖØĞÂ°²×°GrubµÄ²½Öè£¨ÒÔUbuntuÎªÀı£©£º
-1.Ê¹ÓÃ´øÓĞlinuxÏµÍ³µÄ¿ÉÆô¶¯¹âÅÌ»òUÅÌ£¨Èç£ºUbuntu live CD/USB£©ÖØĞÂÒıµ¼ÏµÍ³£»
-2.ÔÚ°²×°½çÃæÑ¡Ôñ¡°ÊÔÓÃUbuntu¶ø²»¸Ä±ä¼ÆËã»úÖĞµÄÈÎºÎÄÚÈİ¡±£»
-3.½øÈëlinuxÏµÍ³ºó£¬´ò¿ªÒ»¸öÖÕ¶Ë´°¿Ú²¢ÊäÈëÏà¹ØÃüÁî£»
- a¡¢Èç¹û°²×°µÄlinuxÏµÍ³Ã»ÓĞµ¥¶ÀµÄ/bootÎÄ¼ş·ÖÇø£¬ÔòÊäÈëÒÔÏÂÃüÁî£º
- sudo mount /dev/sdaX /mnt                                        #XÎªlinuxÏµÍ³Ëù°²×°ÔÚÓ²ÅÌÉÏµÄÎ»ÖÃ£¬½«Æä¹ÒÔØµ½/mntÄ¿Â¼ÏÂ
- sudo grub-install --root-directory=/mnt /dev/sda        #°²×°grub
- Èç¹ûÌáÊ¾£ºInstallation finished. No error reported .±íÊ¾°²×°³É¹¦ÁË
- b¡¢Èç¹û°²×°µÄlinuxÏµÍ³´æÔÚµ¥¶ÀµÄ/boot·ÖÇø£¬ÔòÊäÈëÒÔÏÂÃüÁî£º
+é‡æ–°å®‰è£…Grubçš„æ­¥éª¤ï¼ˆä»¥Ubuntuä¸ºä¾‹ï¼‰ï¼š
+1.ä½¿ç”¨å¸¦æœ‰linuxç³»ç»Ÿçš„å¯å¯åŠ¨å…‰ç›˜æˆ–Uç›˜ï¼ˆå¦‚ï¼šUbuntu live CD/USBï¼‰é‡æ–°å¼•å¯¼ç³»ç»Ÿï¼›
+2.åœ¨å®‰è£…ç•Œé¢é€‰æ‹©â€œè¯•ç”¨Ubuntuè€Œä¸æ”¹å˜è®¡ç®—æœºä¸­çš„ä»»ä½•å†…å®¹â€ï¼›
+3.è¿›å…¥linuxç³»ç»Ÿåï¼Œæ‰“å¼€ä¸€ä¸ªç»ˆç«¯çª—å£å¹¶è¾“å…¥ç›¸å…³å‘½ä»¤ï¼›
+ aã€å¦‚æœå®‰è£…çš„linuxç³»ç»Ÿæ²¡æœ‰å•ç‹¬çš„/bootæ–‡ä»¶åˆ†åŒºï¼Œåˆ™è¾“å…¥ä»¥ä¸‹å‘½ä»¤ï¼š
+ sudo mount /dev/sdaX /mnt                                        #Xä¸ºlinuxç³»ç»Ÿæ‰€å®‰è£…åœ¨ç¡¬ç›˜ä¸Šçš„ä½ç½®ï¼Œå°†å…¶æŒ‚è½½åˆ°/mntç›®å½•ä¸‹
+ sudo grub-install --root-directory=/mnt /dev/sda        #å®‰è£…grub
+ å¦‚æœæç¤ºï¼šInstallation finished. No error reported .è¡¨ç¤ºå®‰è£…æˆåŠŸäº†
+ bã€å¦‚æœå®‰è£…çš„linuxç³»ç»Ÿå­˜åœ¨å•ç‹¬çš„/bootåˆ†åŒºï¼Œåˆ™è¾“å…¥ä»¥ä¸‹å‘½ä»¤ï¼š
  sudo mount /dev/sdaX /mnt
- sudo mount /dev/sdaY /mnt/boot                                #X,Y·Ö±ğÎªlinuxÏµÍ³¸ùÄ¿Â¼ºÍ/bootËùÔÚ·ÖÇø
- sudo grub-install --root-directory=/mnt /dev/sda         #°²×°grub
- Èç¹ûÌáÊ¾£ºInstallation finished. No error reported .±íÊ¾°²×°³É¹¦ÁË
-4.Ê¹ÓÃunmountÃüÁîĞ¶ÔØ/mntµÈÎÄ¼şÏµÍ³£»
+ sudo mount /dev/sdaY /mnt/boot                                #X,Yåˆ†åˆ«ä¸ºlinuxç³»ç»Ÿæ ¹ç›®å½•å’Œ/bootæ‰€åœ¨åˆ†åŒº
+ sudo grub-install --root-directory=/mnt /dev/sda         #å®‰è£…grub
+ å¦‚æœæç¤ºï¼šInstallation finished. No error reported .è¡¨ç¤ºå®‰è£…æˆåŠŸäº†
+4.ä½¿ç”¨unmountå‘½ä»¤å¸è½½/mntç­‰æ–‡ä»¶ç³»ç»Ÿï¼›
  sudo umount /mnt
-5.ÖØĞÂÆô¶¯ÏµÍ³£¬²¢È¡³ö¹âÅÌ»ò°Î³öUÅÌ£¬µçÄÔ½«»á´ÓÓ²ÅÌÍ¨¹ıGrubÆô¶¯Òıµ¼ÏµÍ³£»
-6.ÔÚGrubÆô¶¯½çÃæÑ¡Ôñ½øÈëlinuxÏµÍ³²¢Ö´ĞĞ¸üĞÂGrubµÄÃüÁî
+5.é‡æ–°å¯åŠ¨ç³»ç»Ÿï¼Œå¹¶å–å‡ºå…‰ç›˜æˆ–æ‹”å‡ºUç›˜ï¼Œç”µè„‘å°†ä¼šä»ç¡¬ç›˜é€šè¿‡Grubå¯åŠ¨å¼•å¯¼ç³»ç»Ÿï¼›
+6.åœ¨Grubå¯åŠ¨ç•Œé¢é€‰æ‹©è¿›å…¥linuxç³»ç»Ÿå¹¶æ‰§è¡Œæ›´æ–°Grubçš„å‘½ä»¤
  sudo update-grub

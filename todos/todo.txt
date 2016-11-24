@@ -1,33 +1,33 @@
 
 sp<>(RefBase) - http://blog.csdn.net/gzzaigcnforever/article/details/20649781
 
-v4l2±à³Ì - http://blog.chinaunix.net/uid-27411029-id-3789851.html
+v4l2ç¼–ç¨‹ - http://blog.chinaunix.net/uid-27411029-id-3789851.html
 
 awk,cut,sed
 
 same NT machines : -- mainsoft
     192.168.5.91:8080
-     - tomcat Ä¬ÈÏÓÃ»§Ãûadmin ÃÜÂë¿Õ
+     - tomcat é»˜è®¤ç”¨æˆ·åadmin å¯†ç ç©º
     192.168.5.92:8080
-     - tomcat Ä¬ÈÏÓÃ»§Ãûadmin ÃÜÂë¿Õ
+     - tomcat é»˜è®¤ç”¨æˆ·åadmin å¯†ç ç©º
 
 http://192.168.2.125:8080/manager/html  -- scm 
- - tomcat Ä¬ÈÏÓÃ»§Ãûadmin ÃÜÂëadmin
+ - tomcat é»˜è®¤ç”¨æˆ·åadmin å¯†ç admin
 
 http://192.168.2.134:8080/host-manager/html
- - tomcat Ä¬ÈÏÓÃ»§Ãûadmin ÃÜÂëadmin
+ - tomcat é»˜è®¤ç”¨æˆ·åadmin å¯†ç admin
 http://192.168.2.187:8080/manager/html
- - tomcat Ä¬ÈÏÓÃ»§Ãûadmin ÃÜÂëadmin
+ - tomcat é»˜è®¤ç”¨æˆ·åadmin å¯†ç admin
 
 zhengqiang@192.168.2.137 mysql -h 192.168.5.92 -P 3306 -uroot -p enter enter
 
-linux ÄÚ´æ¹ÜÀí
+linux å†…å­˜ç®¡ç†
 
-http://stackoverflow.com/questions/1010724/what-parts-of-linux-kernel-can-i-read-for-fun ¼¸¸öÈë¿Úµã
+http://stackoverflow.com/questions/1010724/what-parts-of-linux-kernel-can-i-read-for-fun å‡ ä¸ªå…¥å£ç‚¹
 
-https://en.wikipedia.org/wiki/Color_balance - Àï±ßµÄËã·¨
+https://en.wikipedia.org/wiki/Color_balance - é‡Œè¾¹çš„ç®—æ³•
 
-curl µ÷ÊÔ nodejs ±»¾Ü¾ø
+curl è°ƒè¯• nodejs è¢«æ‹’ç»
 
 http://mtksvn/svn/Public_File/SW-DOC/SW-ME9/%E5%9F%B9%E8%AE%AD%E6%96%87%E6%A1%A3/CCM/
 
@@ -39,14 +39,14 @@ http://eeweb.poly.edu/~yao/EE3414/image_filtering.pdf
 
 http://www.c-jump.com/CIS77/MLabs/M12reverse/lecture.html
 
-×ĞÏ¸¿´¿´Ò»¸öProcessµÄ¼ÓÔØ¹ı³Ì
+ä»”ç»†çœ‹çœ‹ä¸€ä¸ªProcessçš„åŠ è½½è¿‡ç¨‹
 
-RutrackerÉÏÈÏÊ¶µÄÒ»¸öpeer
+Rutrackerä¸Šè®¤è¯†çš„ä¸€ä¸ªpeer
 
-pediyºÏ¼¯
+pediyåˆé›†
 
 const char* str = "a" ;
 char* s_des = "b " ;
 strcat( s_des , str ) ;
-ÒıÆğµÄsegmentation fault
-£¨ÎªºÎÊ¹ÓÃ char s_des[] = "b "¾Í²»»á£©
+å¼•èµ·çš„segmentation fault
+ï¼ˆä¸ºä½•ä½¿ç”¨ char s_des[] = "b "å°±ä¸ä¼šï¼‰

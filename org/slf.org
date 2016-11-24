@@ -1,14 +1,27 @@
 
 
-* TODO priv [6/21]
+* TODO priv [7/22]
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
 她喜欢我
 还有时间
 我能反杀
 一直想飞到西安然后坐火车去敦煌
 
-** TODO sqlmap
-   SCHEDULED: <2016-11-29 周二>
+** TODO 给 explorer 打 patch
+   SCHEDULED: <2016-11-30 周三>
+   - State "TODO"       from ""           [2016-11-24 周四 14:29]
+
+*** TODO windows 版的 XJJ
+    - State "TODO"       from ""           [2016-11-24 周四 14:31]
+*** TODO 生成 binary-code 的方法
+    - State "TODO"       from ""           [2016-11-24 周四 14:31]
+*** TODO 执行 patch
+    - State "TODO"       from ""           [2016-11-24 周四 14:32]
+*** TODO RELEASE
+    - State "TODO"       from ""           [2016-11-24 周四 14:32]
+** DONE sqlmap
+   CLOSED: [2016-11-24 周四 14:32] SCHEDULED: <2016-11-29 周二>
+   - State "DONE"       from "TODO"       [2016-11-24 周四 14:32]
    - State "TODO"       from ""           [2016-11-22 周二 12:25]
 *** TODO post
     - State "TODO"       from ""           [2016-11-23 周三 14:41]

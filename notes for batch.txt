@@ -1,29 +1,29 @@
-�ӳ�
+延迟
 choice /t 5 /d y /n >nul
 
-ƴ���ַ�����ʱ�������ֵ�����
-����������������ô���ﲻ����Ҫ��Ч���������ַ�����ͷ������ֵĶ�����
-������һ��ɾ�����з�^
-���ݵ�������
+拼接字符串的时候出现奇怪的现象
+（比如添加引号怎么都达不到想要的效果，反而字符串开头出现奇怪的东西）
+可以试一下删掉换行符^
+最快捷的做法是
 set "file=!file:~0,-1!"
-��ȡ���һ���ַ�
+截取最后一个字符
 
 call :a flag
-Ȼ����:a�����call��һ��
-�����:a��ߵ�call��߼��� set "%1=false"
-��Ȼ:a��ߵ�call��Ӱ��flag��ֵ
+然后在:a里边又call了一次
+最好在:a里边的call后边加上 set "%1=false"
+不然:a里边的call会影响flag的值
 
-�滻�ַ���
-set str=abc ::�Ⱥ����߲����пո�
+替换字符串
+set str=abc ::等号两边不能有空格
 echo %str:a=d%
-���:    dbc
+结果:    dbc
 
-�ȴ�����ִ������ټ���ִ��:
+等待程序执行完毕再继续执行:
 echo before ping
 start /wait ping www.baidu.com -n 2 
 echo after ping
 
-���ݳ���ִ�з��صĽ�������з�֧:
+根据程序执行返回的结果来进行分支:
 
 echo before ping
 start /wait ping aaa -n 2

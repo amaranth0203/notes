@@ -1,19 +1,19 @@
-½øÈëµ½mm-cameraÄ¿Â¼
-Ê¹ÓÃ
+è¿›å…¥åˆ°mm-cameraç›®å½•
+ä½¿ç”¨
 	patch  -s -p0 < 0001-lib-mm-camera2-Add-ov16880-4lane-camera-lib.patch
-»áÉú³ÉÒ»¸öĞÂµÄÄ¿Â¼b£¬Àï±ßÊÇĞÂµÄÎÄ¼ş
-Ê¹ÓÃ
+ä¼šç”Ÿæˆä¸€ä¸ªæ–°çš„ç›®å½•bï¼Œé‡Œè¾¹æ˜¯æ–°çš„æ–‡ä»¶
+ä½¿ç”¨
 	patch -p0 < 0001-lib-mm-camera2-Add-ov16880-4lane-camera-lib.patch
-»áÖ±½Ó´ò²¹¶¡
+ä¼šç›´æ¥æ‰“è¡¥ä¸
 
-patchÎÄ¼şÀï±ß£¬Õë¶ÔÃ¿¸öÎÄ¼şÏÂ±ßÓĞºÜ¶à¶Î£¬·Ö±ğ¼ÇÎª@@ xxxxx
-³Æ×÷chunk
+patchæ–‡ä»¶é‡Œè¾¹ï¼Œé’ˆå¯¹æ¯ä¸ªæ–‡ä»¶ä¸‹è¾¹æœ‰å¾ˆå¤šæ®µï¼Œåˆ†åˆ«è®°ä¸º@@ xxxxx
+ç§°ä½œchunk
 
-ÓÉÓÚdevice-vendor.mk³£³£±»ÍùÀï±ßÌí¼ÓÄ£×éĞÅÏ¢£¬±È¸ßÍ¨¹Ù·½µÄĞÂ£¬ÓÚÊÇÓĞ¿ÉÄÜ»á³öÏÖ
+ç”±äºdevice-vendor.mkå¸¸å¸¸è¢«å¾€é‡Œè¾¹æ·»åŠ æ¨¡ç»„ä¿¡æ¯ï¼Œæ¯”é«˜é€šå®˜æ–¹çš„æ–°ï¼Œäºæ˜¯æœ‰å¯èƒ½ä¼šå‡ºç°
 patching file config/device-vendor.mk
 Hunk #2 succeeded at 766 (offset 63 lines).
 Hunk #3 succeeded at 1155 with fuzz 2 (offset 187 lines).
 Hunk #4 FAILED at 1309.
 1 out of 4 hunks FAILED -- saving rejects to file config/device-vendor.mk.rej
 
-ÕâÊ±ºòĞèÒª×Ô¼º¶ÔÕÕpatchÎÄ¼şºÍ±»´ò²¹¶¡µÄÎÄ¼ş½øĞĞÊÖ¶¯´ò²¹¶¡
+è¿™æ—¶å€™éœ€è¦è‡ªå·±å¯¹ç…§patchæ–‡ä»¶å’Œè¢«æ‰“è¡¥ä¸çš„æ–‡ä»¶è¿›è¡Œæ‰‹åŠ¨æ‰“è¡¥ä¸

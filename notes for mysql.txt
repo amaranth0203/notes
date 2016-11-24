@@ -1,4 +1,4 @@
-﻿show databases ;
+show databases ;
 use test ;
 show tables ;
 CREATE TABLE IF NOT EXISTS FILES (

@@ -1,13 +1,13 @@
 
-²é¿´ linux ÏÂÍ·ÎÄ¼şµÄÎ»ÖÃ :
+æŸ¥çœ‹ linux ä¸‹å¤´æ–‡ä»¶çš„ä½ç½® :
 root@priv:/# cat > test.c
 # include <asm/processor-flags.h>
 root@priv:/# gcc -H -fsyntax-only test.c
 . /usr/include/x86_64-linux-gnu/asm/processor-flags.h
 root@priv:/# 
 
-void* µÄ¶ş¼¶Ö¸ÕëÊ¹ÓÃµÄÊ±ºòÒª×ª»»Ò»ÏÂ
-¼´
+void* çš„äºŒçº§æŒ‡é’ˆä½¿ç”¨çš„æ—¶å€™è¦è½¬æ¢ä¸€ä¸‹
+å³
 int data[5] = { 1 , 2 , 3 , 4 , 5 } ;
 void* get_data( void* void_ptrx2 ) {
     *( void** )void_ptrx2 = ( void* )&data ;
@@ -20,7 +20,7 @@ int main( ) {
     printf( "[+] wassup %d %d\n" , *&data[0] , *&data[1] ) ;
     return 0 ;
 }
-Èı¼¶Ö¸ÕëµÄÊ±ºò²»ÄÜÖ±½ÓĞ´ *( void*** ) , ÒªĞ´³É *( void** )*( void** )
+ä¸‰çº§æŒ‡é’ˆçš„æ—¶å€™ä¸èƒ½ç›´æ¥å†™ *( void*** ) , è¦å†™æˆ *( void** )*( void** )
 int data[5] = { 1 , 2 , 3 , 4 , 5 } ;
 void* get_data( void* void_ptrx3 ) {
     // void* void_ptrx2 = *( void** )void_ptrx3 ;
@@ -36,7 +36,7 @@ int main( ) {
     printf( "[+] wassup %d %d\n" , *&data[0] , *&data[1] ) ;
     return 0 ;
 }
-Í¬Àí£¬ËÄ¼¶Ö¸Õë:
+åŒç†ï¼Œå››çº§æŒ‡é’ˆ:
 int data[5] = { 1 , 2 , 3 , 4 , 5 } ;
 void* get_data( void* void_ptrx4 ) {
     // void* void_ptrx3 = *( void** )void_ptrx4 ;
@@ -54,9 +54,9 @@ int main( ) {
     printf( "[+] wassup %d %d\n" , *&data[0] , *&data[1] ) ;
     return 0 ;
 }
-¼ÇµÃ O'Reilly ÏµÁĞÀï±ß¶Ô C ÓïÑÔ×î´óÖ¸Õë¼¶Êı( multilevel pointer )
-ËµÊÇ 15 ( ÓÖºÃÏñÊÇ½¨Òé²»Òª³¬¹ıÄÇÃ´¶à? )
-ÊÔÒ»ÏÂ :
+è®°å¾— O'Reilly ç³»åˆ—é‡Œè¾¹å¯¹ C è¯­è¨€æœ€å¤§æŒ‡é’ˆçº§æ•°( multilevel pointer )
+è¯´æ˜¯ 15 ( åˆå¥½åƒæ˜¯å»ºè®®ä¸è¦è¶…è¿‡é‚£ä¹ˆå¤š? )
+è¯•ä¸€ä¸‹ :
 #include <stdio.h>
 int data[5] = { 1 , 2 , 3 , 4 , 5 } ;
 void get_data( void* ptr ) {
@@ -84,9 +84,9 @@ int main( ) {
     printf( "[+] wassup %d %d\n" , *&data[0] , *&data[1] ) ;
     return 0 ;
 }
-»¹ÊÇ¿ÉÒÔµÄ
+è¿˜æ˜¯å¯ä»¥çš„
 
-mct Àï±ß¶¨ÒåÊÂ¼şµÄ enum Ê±Ê¹ÓÃÁËºê¿Ø:
+mct é‡Œè¾¹å®šä¹‰äº‹ä»¶çš„ enum æ—¶ä½¿ç”¨äº†å®æ§:
 #define MCT_EVENT_GENERATE_ENUM(ENUM) ENUM,
 #define MCT_EVENT_MODULE_ENUM_LIST(ADD_ENTRY)                                 \
   ADD_ENTRY(MCT_EVENT_MODULE_SET_STREAM_CONFIG)                               \
@@ -95,22 +95,22 @@ mct Àï±ß¶¨ÒåÊÂ¼şµÄ enum Ê±Ê¹ÓÃÁËºê¿Ø:
 typedef enum _mct_event_module_type {
   MCT_EVENT_MODULE_ENUM_LIST(MCT_EVENT_GENERATE_ENUM)
 } mct_event_module_type_t;
-ÔÚ typedef enum ÖĞ
-MCT_EVENT_MODULE_ENUM_LIST»á°Ñ²ÎÊı
-MCT_EVENT_GENERATE_ENUM°´ºêÕ¹¿ª
-Ìæ»»µôÃ¿Ò»¸öADD_ENTRY
-Éú³É
+åœ¨ typedef enum ä¸­
+MCT_EVENT_MODULE_ENUM_LISTä¼šæŠŠå‚æ•°
+MCT_EVENT_GENERATE_ENUMæŒ‰å®å±•å¼€
+æ›¿æ¢æ‰æ¯ä¸€ä¸ªADD_ENTRY
+ç”Ÿæˆ
 MCT_EVENT_GENERATE_ENUM(MCT_EVENT_MODULE_SET_STREAM_CONFIG) MCT_.........
-¶øMCT_EVENT_GENERATE_ENUMÕ¹¿ªºóÓÖ»áÉú³É
+è€ŒMCT_EVENT_GENERATE_ENUMå±•å¼€ååˆä¼šç”Ÿæˆ
 MCT_EVENT_MODULE_SET_STREAM_CONFIG, MCT_....
-Ö®ºóÕâĞ© MCT_EVENT ¾Í±»Ìî³äµ½ÁË typedef enum Ö®ÖĞ
-²¢ÇÒÃ¿¸öÊÂ¼şÖ®¼ä¶¼ÓĞ¼ä¸ô
+ä¹‹åè¿™äº› MCT_EVENT å°±è¢«å¡«å……åˆ°äº† typedef enum ä¹‹ä¸­
+å¹¶ä¸”æ¯ä¸ªäº‹ä»¶ä¹‹é—´éƒ½æœ‰é—´éš”
 ps:
-    ÕâÖÖ·½·¨ÎŞ·¨¶ã¿ª grep/cscope/sisµÄ"Lookup References"
-    µ«ÊÇ¿ÉÒÔÓĞĞ§±ÜÃâ ctags/sisµÄctrl+×ó¼üÖ±½ÓÌø×ª
+    è¿™ç§æ–¹æ³•æ— æ³•èº²å¼€ grep/cscope/sisçš„"Lookup References"
+    ä½†æ˜¯å¯ä»¥æœ‰æ•ˆé¿å… ctags/sisçš„ctrl+å·¦é”®ç›´æ¥è·³è½¬
 
-void* ºÜºÃÓÃ£¬×¢Òâ×ª»»ÀàĞÍ¼´¿É
-void* ¿ÉÒÔÖ±½Ó×ª³É void** ÓÃ :
+void* å¾ˆå¥½ç”¨ï¼Œæ³¨æ„è½¬æ¢ç±»å‹å³å¯
+void* å¯ä»¥ç›´æ¥è½¬æˆ void** ç”¨ :
     void* wbc ;
     void* event_data ;
     event_data = &wbc ;
@@ -118,21 +118,21 @@ void* ¿ÉÒÔÖ±½Ó×ª³É void** ÓÃ :
     process_event( event ) {
         *(void**)event_data = &data ;
     }
-Ö®ºó wbc Ö¸ÏòÁË data 
+ä¹‹å wbc æŒ‡å‘äº† data 
 
 
-ÒÑÖªÊı×é³¤¶È£¬Ê¹ÓÃgcc±àÒëÆ÷£¬¿ÉÒÔÕâÑù³õÊ¼»¯Êı×é£º
+å·²çŸ¥æ•°ç»„é•¿åº¦ï¼Œä½¿ç”¨gccç¼–è¯‘å™¨ï¼Œå¯ä»¥è¿™æ ·åˆå§‹åŒ–æ•°ç»„ï¼š
 uint32 tmp_02[3072] = { [0 ... 3071] = 1296 }  ;
-0 ºÍ ... ºÍ 3071 Ö®¼ä±ØĞëÓĞ¿Õ¸ñ¼ä¸ô
+0 å’Œ ... å’Œ 3071 ä¹‹é—´å¿…é¡»æœ‰ç©ºæ ¼é—´éš”
 
-²»´ø²ÎÊı²»´ø·µ»ØÖµ:
+ä¸å¸¦å‚æ•°ä¸å¸¦è¿”å›å€¼:
 typedef void* (*ar)() ;
 void* (*qyh_test)() ; // ar qyh_test ; 
 void* handle = dlopen( "libqyh.so" , RTLD_NOW ) ;
 *(void **)(&qyh_test) = dlsym( handle , "qyh_test" ) ;
 (void)qyh_test( ) ;
 
-´ø²ÎÊı´ø·µ»ØÖµ:
+å¸¦å‚æ•°å¸¦è¿”å›å€¼:
 typedef int ( *ar )( const char* ) ;
 //int ( *qyh_test )( const char* ) ;
 ar qyh_test ;
@@ -144,55 +144,55 @@ ALOGE( "[+] wassup result : %d\n" , result ) ;
 
 
 
-µ÷ÓÃµÄdllÎÄ¼şÒªÔÚ%PATH%ÖĞ
+è°ƒç”¨çš„dllæ–‡ä»¶è¦åœ¨%PATH%ä¸­
 
-°´×Ö½Ú¶Á¶ş½øÖÆÎÄ¼şµÄÊ±ºò£¬buffer¶¨ÒåÒ»¶¨Òª¼ÓÉÏ unsigned£¬¼´
+æŒ‰å­—èŠ‚è¯»äºŒè¿›åˆ¶æ–‡ä»¶çš„æ—¶å€™ï¼Œbufferå®šä¹‰ä¸€å®šè¦åŠ ä¸Š unsignedï¼Œå³
 unsigned char buff* = .....
-·ñÔò×î¸ßÎ»»á±»µ±³É·ûºÅÎ»¡£¡£
+å¦åˆ™æœ€é«˜ä½ä¼šè¢«å½“æˆç¬¦å·ä½ã€‚ã€‚
 
-C11Ö®ºóÀàËÆtypeofµÄºê
+C11ä¹‹åç±»ä¼¼typeofçš„å®
 _Generic( 'a', char: 1, int: 2, long: 3, default: 0)
-·µ»ØÖµÎª2£¬ÒòÎªcharÔÚCÓïÑÔÀï±ß×÷ÎªÕûÊı´¦Àí
+è¿”å›å€¼ä¸º2ï¼Œå› ä¸ºcharåœ¨Cè¯­è¨€é‡Œè¾¹ä½œä¸ºæ•´æ•°å¤„ç†
 
-(ÊıÖÆ×ª»»µÄÊ±ºò»îÓÃsscanf)
-test.c 0xA5µÄ½ÓÊÕ·½·¨£º
+(æ•°åˆ¶è½¬æ¢çš„æ—¶å€™æ´»ç”¨sscanf)
+test.c 0xA5çš„æ¥æ”¶æ–¹æ³•ï¼š
 	unsigned int addr ;
 	sscanf( argv[1] , "%x" , &addr ) ;
 
-Êä³öÖ¸ÕëÖ¸ÏòµÄµØÖ·Ê¹ÓÃ%xÓĞ¿ÉÄÜ»á±¨´í
-×îºÃÊÇÊ¹ÓÃ%p
+è¾“å‡ºæŒ‡é’ˆæŒ‡å‘çš„åœ°å€ä½¿ç”¨%xæœ‰å¯èƒ½ä¼šæŠ¥é”™
+æœ€å¥½æ˜¯ä½¿ç”¨%p
 
-×Ö·û´®²Ù×÷£º
-char * buffer = malloc( sizeof( char ) * SIZE ) ; //Ö®ºó¿ÉÒÔ½øĞĞ buffer = "test"; Ö®ÀàµÄ¸³Öµ
-char buffer[SIZE] ; // Ö®ºó²»ÄÜ½øĞĞ buffer = "test"Ö®ÀàµÄ¸³Öµ£¬Ö»ÄÜÏÖÔÚÖ±½Ó³õÊ¼»¯
-ÓÚÊÇ×Ö·û´®²Ù×÷Í³Ò»Ê¹ÓÃ memset ºÍ memcpy À´½øĞĞ³õÊ¼»¯ºÍ¸³Öµ :
-memset( buffer , 0 , SIZE ) ; //ÒÔ0Ìî³ä
-memcpy( buffer , "wassup" , 6 ) ; //¸³Öµwassup£¬³¤¶ÈÎª6£¨½áÎ²µÄ'\0'±»¿³µô£©
+å­—ç¬¦ä¸²æ“ä½œï¼š
+char * buffer = malloc( sizeof( char ) * SIZE ) ; //ä¹‹åå¯ä»¥è¿›è¡Œ buffer = "test"; ä¹‹ç±»çš„èµ‹å€¼
+char buffer[SIZE] ; // ä¹‹åä¸èƒ½è¿›è¡Œ buffer = "test"ä¹‹ç±»çš„èµ‹å€¼ï¼Œåªèƒ½ç°åœ¨ç›´æ¥åˆå§‹åŒ–
+äºæ˜¯å­—ç¬¦ä¸²æ“ä½œç»Ÿä¸€ä½¿ç”¨ memset å’Œ memcpy æ¥è¿›è¡Œåˆå§‹åŒ–å’Œèµ‹å€¼ :
+memset( buffer , 0 , SIZE ) ; //ä»¥0å¡«å……
+memcpy( buffer , "wassup" , 6 ) ; //èµ‹å€¼wassupï¼Œé•¿åº¦ä¸º6ï¼ˆç»“å°¾çš„'\0'è¢«ç æ‰ï¼‰
 
-ÎÄ¼ş²Ù×÷
-¾¡Á¿Ê¹ÓÃ fseek fread fwrite £¨´ò¿ª·½Ê½Ö±½ÓÊ¹ÓÃ "rwb+" ±È½ÏÊ¡ÊÂ)
-fread»òÕßfwriteÖ®Ç°£¬Ò»¶¨ÒªÓÃfseek¶¨Î»
+æ–‡ä»¶æ“ä½œ
+å°½é‡ä½¿ç”¨ fseek fread fwrite ï¼ˆæ‰“å¼€æ–¹å¼ç›´æ¥ä½¿ç”¨ "rwb+" æ¯”è¾ƒçœäº‹)
+freadæˆ–è€…fwriteä¹‹å‰ï¼Œä¸€å®šè¦ç”¨fseekå®šä½
 File* fp ;
 fp = fopen( "filename" , "rwb+" ) ;
-fseek( fp , 2L , SEEK_SET ) ; //´ÓÆ«ÒÆÎª2µÄµØ·½¿ªÊ¼¶Á/Ğ´£¨µÚÈı¸ö×Ö½Ú£©£¨2L»»³É0LÔò´ÓÎÄ¼ş¿ªÍ·£©
-fread(  &buffer[1] , sizeof( unsigned char ) , 3 , fp ) ; //´ÓÉÏ±ßfseek¶¨Î»µÄÎ»ÖÃ£¬¶ÁÈ¡3¸ösizeofµÄ´óĞ¡£¬Ğ´Èëbuffer[1]Ö®ºóµÄµØÖ·Ö®ÖĞ
-fseek( fp , 2L , SEEK_SET ) ; //´ÓÆ«ÒÆÎª2µÄµØ·½¿ªÊ¼¶Á/Ğ´£¨µÚÈı¸ö×Ö½Ú£©£¨2L»»³É0LÔò´ÓÎÄ¼ş¿ªÍ·£©
-fwrite( &buffer[1] , sizeof( unsigned char ) , 3 , fp ) ; //°Ñbuffer[1]Ö®ºóµÄµØÖ·ÖĞ3¸ösizeofµÄ´óĞ¡µÄÄÚÈİ£¬Ğ´ÈëÎÄ¼ş±»fseek¶¨Î»µÄÎ»ÖÃÖĞ
+fseek( fp , 2L , SEEK_SET ) ; //ä»åç§»ä¸º2çš„åœ°æ–¹å¼€å§‹è¯»/å†™ï¼ˆç¬¬ä¸‰ä¸ªå­—èŠ‚ï¼‰ï¼ˆ2Læ¢æˆ0Låˆ™ä»æ–‡ä»¶å¼€å¤´ï¼‰
+fread(  &buffer[1] , sizeof( unsigned char ) , 3 , fp ) ; //ä»ä¸Šè¾¹fseekå®šä½çš„ä½ç½®ï¼Œè¯»å–3ä¸ªsizeofçš„å¤§å°ï¼Œå†™å…¥buffer[1]ä¹‹åçš„åœ°å€ä¹‹ä¸­
+fseek( fp , 2L , SEEK_SET ) ; //ä»åç§»ä¸º2çš„åœ°æ–¹å¼€å§‹è¯»/å†™ï¼ˆç¬¬ä¸‰ä¸ªå­—èŠ‚ï¼‰ï¼ˆ2Læ¢æˆ0Låˆ™ä»æ–‡ä»¶å¼€å¤´ï¼‰
+fwrite( &buffer[1] , sizeof( unsigned char ) , 3 , fp ) ; //æŠŠbuffer[1]ä¹‹åçš„åœ°å€ä¸­3ä¸ªsizeofçš„å¤§å°çš„å†…å®¹ï¼Œå†™å…¥æ–‡ä»¶è¢«fseekå®šä½çš„ä½ç½®ä¸­
 fclose( fp ) ;
 
 fprintf( stdout , "%s" , "wassup" ) ;
 printf( "%s" , "wassup" ) ;
- - ÒÔÉÏÁ½¾ä´úÂëµÈÍ¬Ğ§¹û
+ - ä»¥ä¸Šä¸¤å¥ä»£ç ç­‰åŒæ•ˆæœ
 
-sprintf( buffer , "%x" , 256 ) ; //¸ñÊ½»¯Êä³öµ½×Ö·û´®Ö®ÖĞ
- - ¿ÉÒÔ¶ÁÈ¡ÎÄ¼şĞÅÏ¢ĞŞ¸ÄÖ®ºóÏÈsprintfµ½bufferÖĞ£¬ÔÙÄæĞò£¨´óĞ¡×Ö½ÚĞò²»Í¬£©Ğ´ÈëÎÄ¼şÖĞ£¬ÓÃÀ´ĞŞ¸ÄÎÄ¼şÍ·ĞÅÏ¢
+sprintf( buffer , "%x" , 256 ) ; //æ ¼å¼åŒ–è¾“å‡ºåˆ°å­—ç¬¦ä¸²ä¹‹ä¸­
+ - å¯ä»¥è¯»å–æ–‡ä»¶ä¿¡æ¯ä¿®æ”¹ä¹‹åå…ˆsprintfåˆ°bufferä¸­ï¼Œå†é€†åºï¼ˆå¤§å°å­—èŠ‚åºä¸åŒï¼‰å†™å…¥æ–‡ä»¶ä¸­ï¼Œç”¨æ¥ä¿®æ”¹æ–‡ä»¶å¤´ä¿¡æ¯
 
-º¯ÊıÖ¸Õë:
+å‡½æ•°æŒ‡é’ˆ:
 void fun( ){ puts( "aaa" ) ; }
 void (*fptr)( ) ;
 fptr = fun ;
 fptr() ;
-¿ÉÒÔÇ¶Ì×ÔÚ½á¹¹ÌåÀï±ß( C++ÀàµÄÊµÏÖ ):
+å¯ä»¥åµŒå¥—åœ¨ç»“æ„ä½“é‡Œè¾¹( C++ç±»çš„å®ç° ):
 struct st
 {
     int (*output)() ;
@@ -209,10 +209,10 @@ int main()
     return 0 ;
 }
 
-½á¹¹ÌåÖ¸Õë(ÒıÓÃÉÏ±ßµÄÀı×Ó):
+ç»“æ„ä½“æŒ‡é’ˆ(å¼•ç”¨ä¸Šè¾¹çš„ä¾‹å­):
 test->output = aa ;
-¿ÉÒÔĞ´³É
+å¯ä»¥å†™æˆ
 (*test).output = aa ;
 
 
-¶à´Î³öÏÖredefinition´íÎóµÄÊ±ºò¼ÇµÃ¿´¿´ÓĞÃ»ÓĞ¼ÓÉÏ#ifndef _HEADER_FILE_H_ºê
+å¤šæ¬¡å‡ºç°redefinitioné”™è¯¯çš„æ—¶å€™è®°å¾—çœ‹çœ‹æœ‰æ²¡æœ‰åŠ ä¸Š#ifndef _HEADER_FILE_H_å®

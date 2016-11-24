@@ -1,27 +1,27 @@
 console 10 bold
 
 C + b :
-   vimµÄ%
+   vimçš„%
 
-ÉèÖÃÀï±ß°Ñ ctrl + page[up/down] 
-»»³É ctrl + tab ºÍ ctrl + shift + tab
-¸ü·ûºÏÎÒÆ½Ê±ÇÐ»»µÄÏ°¹ß
+è®¾ç½®é‡Œè¾¹æŠŠ ctrl + page[up/down] 
+æ¢æˆ ctrl + tab å’Œ ctrl + shift + tab
+æ›´ç¬¦åˆæˆ‘å¹³æ—¶åˆ‡æ¢çš„ä¹ æƒ¯
 
-C + M + Êó±êÑ¡È¡ÄÜÊµÏÖvimµÄ C + v
-  ( ¼ÇµÃÒ»¶¨ÒªÊó±êÑ¡È¡£¬·ñÔòwindowsÏÂ C + M + ·½Ïò»áÓÐºÜ²»ºÃµÄ½á¹û¡­)
+C + M + é¼ æ ‡é€‰å–èƒ½å®žçŽ°vimçš„ C + v
+  ( è®°å¾—ä¸€å®šè¦é¼ æ ‡é€‰å–ï¼Œå¦åˆ™windowsä¸‹ C + M + æ–¹å‘ä¼šæœ‰å¾ˆä¸å¥½çš„ç»“æžœâ€¦)
 
-C,C++ºÍjavaµÄ×¢ÊÍÖÐÈç¹û°üº¬²»Åä¶ÔµÄ //{ »òÕß //} »á¶Ô´úÂëÕÛµþÔì³ÉÓ°Ïì
-ÕÛµþ¿ì½Ý¼ü :
-	C + M + f ÕÛµþ¹â±êËùÔÚ×îÀï±ß²ã´Î
-	C + M + S + f Õ¹¿ª¹â±êËùÔÚ×îÀï±ß²ã´Î
-	M + 0 ÕÛµþÈ«²¿
-	M + S + 0 Õ¹¿ªÈ«²¿
-	M + [1,8] ÕÛµþ[1,8]²ã
-	M + S + [1,8] Õ¹¿ª[1,8]²ã
+C,C++å’Œjavaçš„æ³¨é‡Šä¸­å¦‚æžœåŒ…å«ä¸é…å¯¹çš„ //{ æˆ–è€… //} ä¼šå¯¹ä»£ç æŠ˜å é€ æˆå½±å“
+æŠ˜å å¿«æ·é”® :
+	C + M + f æŠ˜å å…‰æ ‡æ‰€åœ¨æœ€é‡Œè¾¹å±‚æ¬¡
+	C + M + S + f å±•å¼€å…‰æ ‡æ‰€åœ¨æœ€é‡Œè¾¹å±‚æ¬¡
+	M + 0 æŠ˜å å…¨éƒ¨
+	M + S + 0 å±•å¼€å…¨éƒ¨
+	M + [1,8] æŠ˜å [1,8]å±‚
+	M + S + [1,8] å±•å¼€[1,8]å±‚
 
-ÉèÖÃ¡úÊ×Ñ¡Ïî¡ú¶àÐÐ±êÇ©
+è®¾ç½®â†’é¦–é€‰é¡¹â†’å¤šè¡Œæ ‡ç­¾
 
 C + M + enter 
- - vimµÄ S + o
+ - vimçš„ S + o
 C + M + S + enter
- - vimµÄ o
+ - vimçš„ o

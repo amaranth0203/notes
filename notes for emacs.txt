@@ -1,167 +1,167 @@
 
-C-SPC C-SPC ��ǵ�ǰλ��
-C-x r . ������ǰ����
-C-M-a ����������ͷ
-��ǰҳ������΢��ǰһ��ҳ�ͻῴ����������ĵط�
-C-u C-SPC �ص���һ�����
-C-x r w ��������( ����ʹ�� M-p M-n �л� )
- -- ����ʹ�ø����İ취Ҳ���Ի����� i-search �����棬���Ǳ����̣ܶ�����i����ʱ��Ч���ͱȽϲ������������е�iҲ����������
+C-SPC C-SPC 标记当前位置
+C-x w . 高亮当前变量( 不起作用时可用 M-s h .)
+C-M-a 跳到函数开头
+当前页或者稍微往前一两页就会看到变量定义的地方
+C-u C-SPC 回到上一个标记
+C-x w r 撤销高亮( 可以使用 M-p M-n 切换 )
+ -- 其中使用高亮的办法也可以换成用 i-search 来代替，但是变量很短（比如i）的时候效果就比较差（会把其他单词中的i也高亮出来）
 
-C-x RET f ���Ըı��ļ��� CRLF ��ʽ
+C-x RET f 可以改变文件的 CRLF 方式
 c(Unix) --
-��ʾ gbk + LF
-ʹ�� C-x RET f dos RET
-����� c\**- �ٱ���� c\--- ��ʾ gbk + CRLF
-ʹ�� C-x RET f mac RET
-����� c(Mac)**- �ٱ���� c(Mac)--- ��ʾ gbk + CR
-��ʹ�� C-x RET f unix RET
-����� c(Unix)**- �ڱ���� c(Unix)--- ��ʾ gbk + LF ( תһȦ������ )
+表示 gbk + LF
+使用 C-x RET f dos RET
+将变成 c\**- 再保存成 c\--- 表示 gbk + CRLF
+使用 C-x RET f mac RET
+将变成 c(Mac)**- 再保存成 c(Mac)--- 表示 gbk + CR
+再使用 C-x RET f unix RET
+将变成 c(Unix)**- 在保存成 c(Unix)--- 表示 gbk + LF ( 转一圈回来了 )
 
-C-x RET f ���Ըı��ļ��� encoding ��ʽ
-�ڵ�ǰ buffer �����½��� c(Unix)---
-��ʾʹ�õ��� Chinese-gbk LF ��ʽ�� encoding
-��ʱ���� C-x RET f utf-8 RET
-��ǰ buffer ���½ǵ�״̬�ͻ��� U(Unix)**-
-�ٱ����ļ� ״̬�ͻ��� U(Unix)---
-��ʾʹ�� Utf-8 LF ��ʽ����
+C-x RET f 可以改变文件的 encoding 方式
+在当前 buffer 的右下角有 c(Unix)---
+表示使用的是 Chinese-gbk LF 方式来 encoding
+这时输入 C-x RET f utf-8 RET
+当前 buffer 右下角的状态就会变成 U(Unix)**-
+再保存文件 状态就会变成 U(Unix)---
+表示使用 Utf-8 LF 方式编码
 
 C-M-\ indent-region
 
-C-M-h ѡ����������
+C-M-h 选中整个函数
 
-C-M-a/e ����������ͷ/��β
+C-M-a/e 跳到函数开头/结尾
 
-mark ��ʱ���� C-x C-x ��������ת
+mark 的时候用 C-x C-x 来来回跳转
 
-C-s ��ʱ��
-ʹ�� C-w �ͻ�ѵ�ǰ�����һ���������ӵ�����������
-M-e �޸�����������
-M-r �������ʽ
+C-s 的时候
+使用 C-w 就会把当前光标后的一个单词添加到搜索内容中
+M-e 修改搜索的内容
+M-r 正则表达式
 M-c CaseSensitity
 M-% query-replace
 
-C-a ������������ M-m ������һ���ǿհ��ַ���
+C-a 跳到绝对行首 M-m 跳到第一个非空白字符处
 
-M-z e ��ǰɾ���� e ��һ�γ��ֵĵط�
-C-u 2 M-z e ��ǰɾ���� e �ڶ��γ��ֵĵط�
-���Խ�� C-- �����ɾ��
-C-- M-z e ���ɾ���� e ��һ�γ��ֵĵط�
+M-z e 向前删除到 e 第一次出现的地方
+C-u 2 M-z e 向前删除到 e 第二次出现的地方
+可以结合 C-- 来向后删除
+C-- M-z e 向后删除到 e 第一次出现的地方
 
-C-- ִ�з����������
-����
-C-- M-d �ͱ������Ϥ�� C-w
-C-- C-d �ͱ������Ϥ�� C-h
+C-- 执行反方向的命令
+例如
+C-- M-d 就变成了熟悉的 C-w
+C-- C-d 就变成了熟悉的 C-h
 
-M-! ִ��ϵͳ����( ���� explorer . ���ɴ򿪵�ǰ�ļ�����Ŀ¼ )
+M-! 执行系统命令( 例如 explorer . 即可打开当前文件所在目录 )
 
-M-: ִ�б���ʽ
+M-: 执行表达式
 
-M-x dired �鿴��ǰ�ļ�����Ŀ¼
+M-x dired 查看当前文件所在目录
 
-�� emacs ��ʹ�� ggtags �ȽϷ���
+在 emacs 中使用 ggtags 比较方便
 (
   apt-get install global
   package-install ggtags
   find xxx/ xxx/ xxx/ xxx/ -type f > file_list.log
-  gtags -f file_list.log
+  gtags -vf file_list.log
 )
 
-M-% �滻
+M-% 替换
 
-C-M-f C-M-b ��ͬһ�㼶֮���л� ( vim % [ ] )
+C-M-f C-M-b 在同一层级之间切换 ( vim % [ ] )
 
-ido/smex ������ȫ �ļ�&buffer / ���� �ܺ���
-C-r C-s �л�
+ido/smex 用来补全 文件&buffer / 命令 很好用
+C-r C-s 切换
 ido :
-    M-p M-n ����/�¼�Ŀ¼����
-    M-s ����
-    C-t ����ƥ��
+    M-p M-n 在上/下级目录搜索
+    M-s 搜索
+    C-t 正则匹配
 
-M-r �ƶ�����Ļ����
+M-r 移动到屏幕中央
 
-M-x toggle-debug-on-error ���Բ鿴���� log ( Ȼ�� google )
+M-x toggle-debug-on-error 可以查看错误 log ( 然后 google )
 
-C-x z ִ����һ�� M-x
+C-x z 执行上一条 M-x
 
-C-x C-c - �˳�
+C-x C-c - 退出
 
-windows�������ļ�.emacs�� C:\Users\Administrator.AXX3DX8ZNMSGU5B\AppData\Roaming ��
-C-x C-f ����֪��emacs��װ·��
+windows下配置文件.emacs在 C:\Users\Administrator.AXX3DX8ZNMSGU5B\AppData\Roaming 下
+C-x C-f 可以知道emacs安装路径
 
-*** C-p C-n C-b C-f - �������� (vim : k j h l)
-*** C-l - ��ǰ���ƶ��� �м� ���������ƶ������ˣ��Ͷˣ��м䷴����( vim : zz )
-*** C-v M-v - ǰ��ҳ(vim : C-f C-b)
-*** M-b M-f - ǰ���ƶ�һ������(vim : w b e ge )
-*** C-a C-e - ���� ��β( vim : ^ $ )
-(M-a M-e - ���� ��β)
-M-< M-> - �ļ���ͷ �ļ���β( gg G )
-C-u 8 C-f - ִ��8��C-f ��Ҳ����M-8 C-f,����ͨ���Բ�ǿ��
+*** C-p C-n C-b C-f - 上下左右 (vim : k j h l)
+*** C-l - 当前行移动到 中间 （继续按移动到顶端，低端，中间反复）( vim : zz )
+*** C-v M-v - 前后翻页(vim : C-f C-b)
+*** M-b M-f - 前后移动一个单词(vim : w b e ge )
+*** C-a C-e - 行首 行尾( vim : ^ $ )
+(M-a M-e - 句首 句尾)
+M-< M-> - 文件开头 文件结尾( gg G )
+C-u 8 C-f - 执行8次C-f （也可以M-8 C-f,但是通用性不强）
 
-C-g - �ж�ִ�У����Զఴ����ֱ������QuitΪֹ��
-<ESC><ESC> - ȡ��������ESC
+C-g - 中断执行（可以多按几次直到出现Quit为止）
+<ESC><ESC> - 取消按错的ESC
 
-C-h k C-f - ��ʾC-f������ĵ�( vim :  :help xxx )
+C-h k C-f - 显示C-f命令的文档( vim :  :help xxx )
 C-x u 
 C-/
 C-_
- - ������������ Undo ( vim : u )
+ - 以上三个都是 Undo ( vim : u )
 
 C-d - delete
 M-d - delete
-C-k - ɾ����굽��β֮�������
-M-k - ɾ����굽��β֮������ݣ��õıȽ��ٰɣ�
+C-k - 删除光标到行尾之间的内容
+M-k - 删除光标到句尾之间的内容（用的比较少吧）
 
 C-@ - mark set
- - mark set ֮������C-dɾ��ѡ������ݣ�����ʹ�ü��дﵽɾ����Ŀ��( vim : v / C-v������룩��
+ - mark set 之后不能用C-d删除选择的内容，可以使用剪切达到删除的目的( vim : v / C-v（块插入））
 
 C-w - cut
 M-w - copy
 C-y - paste
-M-y - paste�ںܶ�����а������֮���л�
-( vim : d(����) )
+M-y - paste在很多个剪切板的内容之间切换
+( vim : d(剪切) )
 
 
 
-M-x repl����ȫ��s����ȫ��- M-x replace-string - �滻�ַ�������ѡ�еĲ��ֽ��У�û��ѡ�еĻ���Թ��֮��Ĳ��ֽ��У�
-M-x fund����ȫ�� - M-x fundamental-mode - ������ģʽ
+M-x repl（补全）s（补全）- M-x replace-string - 替换字符串（被选中的部分进行，没有选中的话则对光标之后的部分进行）
+M-x fund（补全） - M-x fundamental-mode - 返回主模式
 
 
-C-x f - �����п�
-M-q - ���µ��п�ˢ��buffer
+C-x f - 设置行宽
+M-q - 以新的行宽刷新buffer
 
-C-s - �������
-C-r - ��ǰ����
- - ƥ��ɹ��� ʹ��C-s C-r��ǰ����ת
- - �س�ͣ���������ĵط���C-g������ص�֮ǰ���������ĵط�
-( vim :  /str�س���Ȼ��nb��ǰ����ת��
+C-s - 向后搜索
+C-r - 向前搜索
+ - 匹配成功后 使用C-s C-r来前后跳转
+ - 回车停在搜索到的地方，C-g则会跳回到之前发起搜索的地方
+( vim :  /str回车，然后nb来前后跳转）
 
-C-x C-f - ���ļ�( vim :  :open filename)
-C-x C-s - �洢�ļ�( vim :  :w )
-	�洢��ʱ�����Ŀ¼������
-M-x make-directory ����Ŀ¼
-C-x s - �洢���б��޸Ĺ����ļ�����һѯ���Ƿ�
-C-x C-b - �г��Ѿ��򿪵��ļ���buffer��
-C-x b - ����buffer�����л���ȥ
+C-x C-f - 打开文件( vim :  :open filename)
+C-x C-s - 存储文件( vim :  :w )
+	存储的时候如果目录不存在
+M-x make-directory 创建目录
+C-x s - 存储所有被修改过的文件（逐一询问是否）
+C-x C-b - 列出已经打开的文件（buffer）
+C-x b - 输入buffer名字切换过去
 C-x k - kill buffer
-C-x 0 �رյ�ǰ����
-C-x 1 ֻ���µ�ǰ����
-C-x 2 �ָ��һ�����񣨷ֳ����£�
-C-x 3 �ָ��һ�����񣨷ֳ����ң�
-C-M-v ���µĴ������ҳ
-C-M-S-v ���µĴ�����ǰ��ҳ
-C-x o �л�������(other)����
-C-x 4 C-f ���µĴ����д��ļ�
+C-x 0 关闭当前窗格
+C-x 1 只留下当前窗格
+C-x 2 分割出一个窗格（分成上下）
+C-x 3 分割出一个窗格（分成左右）
+C-M-v 对新的窗格向后翻页
+C-M-S-v 对新的窗格向前翻页
+C-x o 切换到其他(other)窗格
+C-x 4 C-f 在新的窗格中打开文件
 ( vim : vs / sp / C-w )
 
-M-x make-frame - �����µĴ��ڣ������µ��������ò�û�б����룩
-M-x delete-frame - ɾ�����رգ���ǰ���ڣ�ֻʣ��һ�����ڵ�ʱ��ʧЧ��
+M-x make-frame - 创建新的窗口（但是新的字体设置并没有被导入）
+M-x delete-frame - 删除（关闭）当前窗口（只剩下一个窗口的时候失效）
 
-C-h c - �൱�� C-h k ( �鿴key�İ����ĵ���
-C-h f previous-line - �鿴����(function)�İ����ĵ�
-C-h v �鿴����(variable)�İ����ĵ�
-C-h a - ����ؼ��������Ұ����ĵ�
+C-h c - 相当于 C-h k ( 查看key的帮助文档）
+C-h f previous-line - 查看函数(function)的帮助文档
+C-h v 查看变量(variable)的帮助文档
+C-h a - 输入关键字来查找帮助文档
 
-C-h i �Ķ��ֲᣨ��ȥ֮��?)
+C-h i 阅读手册（进去之后按?)
 
 ( vim : :help xxx )
 

@@ -1,34 +1,34 @@
-adb �ò��˵�ʱ�򣨳���ADB server didn't ACK��
-����ͨ�� netstat aon ��ռ�� 5037 �˿ڽ��̵�pid
-֮�����
+adb 用不了的时候（出现ADB server didn't ACK）
+可以通过 netstat aon 找占用 5037 端口进程的pid
+之后结束
 
-���û������� ANDROID_SERIAL ����adb devices ���� fastboot devices�������Ǹ����к�֮��
-�Ϳ��Բ��ô����� -s ���ض����ֻ����в�����
-�����ڽ�ѹ��������Ŀ·���´�cmd  ����ANDROID_SERIAL����
-Ȼ�������cmd������flash_all.bat
-���ظ�����
-����ͬʱˢ��̨�ֻ�
+设置环境变量 ANDROID_SERIAL 等于adb devices 或者 fastboot devices出来的那个序列号之后
+就可以不用带参数 -s 对特定的手机进行操作了
+比如在解压出来的项目路径下打开cmd  设置ANDROID_SERIAL变量
+然后在这个cmd中运行flash_all.bat
+再重复操作
+即可同时刷多台手机
 
-��̨�ֻ����ӵ��Ե�ʱ��
-adb shell�ᱨ��
+多台手机连接电脑的时候
+adb shell会报错
 error: more than one device and emulator
-��ʱ��
+这时候
 adb devices
 List of devices attached
 4feb1319        device
 747115f2        device
-����ʹ��
+可以使用
 adb -s 4feb1319 shell
-��ָ���豸
+来指定设备
 
 /dev/input/eventX
-cat��ʱ���������ֻ��Ĳ����������ƣ�
-���浽�ļ����������뵽���event��������֮ǰ�Ĳ���
-Ҳ����push������������ļ��������ֲ���
+cat的时候会输出对手机的操作（二进制）
+保存到文件再重新输入到这个event可以重现之前的操作
+也可以push进来覆盖这个文件用来重现操作
 
 http://blog.csdn.net/fontlose/article/details/6666671
-�����ַ���
-��������дС�Ĳ��Գ���Ȼ����adb shell�������
+第三种方法
+可以用来写小的测试程序然后在adb shell里边运行
 ----------------------------------
     #include <stdio.h>  
     int main()  
@@ -46,36 +46,36 @@ http://blog.csdn.net/fontlose/article/details/6666671
     include $(BUILD_EXECUTABLE)  
 ----------------------------------
 
-Ҫͬʱ�Ա�kernel��log��logcat��log�����ַ���
-һ
+要同时对比kernel的log和logcat的log，两种方法
+一
 	adb logcat -v time -f /dev/kmsg | adb shell cat /proc/kmsg | grep "\[+\]"
-	���Բ�ֳ�����������
-	һ���ں�ִ̨��		adb logcat -v time -f /dev/kmsg
-	��һ��ִ��		adb shell cat /proc/kmsg | grep "\[+\]"
-��
+	可以拆分成两个命令行
+	一个在后台执行		adb logcat -v time -f /dev/kmsg
+	另一个执行		adb shell cat /proc/kmsg | grep "\[+\]"
+二
 	adb shell '(cat /proc/kmsg | while read LINE; do echo \\06kernel\\0$LINE\\0 > /dev/log/main; done)' | adb logcat -v time | grep "\[+\]"
-	���Բ�ֳ�����������
-	һ���ں�ִ̨��		adb shell '(cat /proc/kmsg | while read LINE; do echo \\06kernel\\0$LINE\\0 > /dev/log/main; done)'
-	��һ��ִ��		adb logcat -v time | grep "\[+\]"
+	可以拆分成两个命令行
+	一个在后台执行		adb shell '(cat /proc/kmsg | while read LINE; do echo \\06kernel\\0$LINE\\0 > /dev/log/main; done)'
+	另一个执行		adb logcat -v time | grep "\[+\]"
 
 
-adb vivoroot����ȥping OA��������pingͨ�˲Ż�������
- - ����һ������Ŀ�pingͨ�ķ�����
- - �޸Ķ����ƴ���Ϊ127.000.0.001
+adb vivoroot会先去ping OA服务器，ping通了才会起作用
+ - 创建一个虚拟的可ping通的服务器
+ - 修改二进制代码为127.000.0.001
 
-adb shell֮��/��Ȩ��Ϊֻ�����޷����д���Ŀ¼�Ȳ���
-   # mount �� �ῴ�� rootfs / rootfs ro 0 0  ����
-   # mount -o remount -o rw / �� ��ִ�� # mount �ῴ��rootfs / rootfs rw 0 0
-   Ȼ��Ϳ��Դ���Ŀ¼��
+adb shell之后，/的权限为只读，无法进行创建目录等操作
+   # mount → 会看到 rootfs / rootfs ro 0 0  接着
+   # mount -o remount -o rw / → 再执行 # mount 会看到rootfs / rootfs rw 0 0
+   然后就可以创建目录了
    
-ȥ��������busybox��Ӧ�ļܹ���push��/system/xbin�£��ǵ����޸�system���ط�ʽΪrw��
-֮�� busybox --install /system/xbin �Ϳ�����
+去官网下载busybox对应的架构后push到/system/xbin下（记得先修改system挂载方式为rw）
+之后 busybox --install /system/xbin 就可以了
 
-��װSnapdragonCamera_chenchaoxin_16M.apk��ͻ��ʱ��
-�ȴ���Դ������������
-����ɾ��/system/app�±ߵ�snapdragoncamera�ļ���
-����pm set-install-location 1
-Ȼ��Ϳ��԰�װ��
+安装SnapdragonCamera_chenchaoxin_16M.apk冲突的时候
+先打开来源不明软件限制
+接着删除/system/app下边的snapdragoncamera文件夹
+接着pm set-install-location 1
+然后就可以安装了
 
-adb shell ����ִ��chmod a+x ���ܻ����bad mode
-���ʱ�����ʹ�� chmod 777 ���ı�Ȩ��
+adb shell 下面执行chmod a+x 可能会出现bad mode
+这个时候可以使用 chmod 777 来改变权限

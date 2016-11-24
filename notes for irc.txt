@@ -1,13 +1,13 @@
-/list - ÁĞ³öchannel
-/join - ¼ÓÈëchannel
-/part - Àë¿ªchannel
+/list - åˆ—å‡ºchannel
+/join - åŠ å…¥channel
+/part - ç¦»å¼€channel
 
-¼ÓÈëchannelÖ®ºó
-   /who * ²é¿´ËùÓĞÈË
-   /ip xxx.xxx.xxx.xxx ²é¿´ipÏêÏ¸ĞÅÏ¢
-   /msg xxx "message" ¸øxxx·¢"message"
+åŠ å…¥channelä¹‹å
+   /who * æŸ¥çœ‹æ‰€æœ‰äºº
+   /ip xxx.xxx.xxx.xxx æŸ¥çœ‹ipè¯¦ç»†ä¿¡æ¯
+   /msg xxx "message" ç»™xxxå‘"message"
 
 'pia XXX
- -  (¨s¡ã§¥¡ã)¨s©ß©¥©ß XXX
-'echo ¸îÒ»ÏÂ
- - Ğ¡¶Î×Ó
+ -  (â•¯Â°Ğ”Â°)â•¯â”»â”â”» XXX
+'echo å‰²ä¸€ä¸‹
+ - å°æ®µå­

@@ -1,2 +1,2 @@
-Request.QueryString["username"]Ö»ÄÜ»ñÈ¡get¹ıÀ´µÄÊı¾İ 
-Request.Form["username"]Ö»ÄÜ»ñÈ¡post¹ıÀ´µÄÊı¾İ
+Request.QueryString["username"]åªèƒ½è·å–getè¿‡æ¥çš„æ•°æ® 
+Request.Form["username"]åªèƒ½è·å–postè¿‡æ¥çš„æ•°æ®

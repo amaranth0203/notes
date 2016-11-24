@@ -1,88 +1,88 @@
 
-dumpbin /exports c:\Windows\System32\user32.dll Ò²¿ÉÒÔ
+dumpbin /exports c:\Windows\System32\user32.dll ä¹Ÿå¯ä»¥
 
-µ¼Èë vs ±àÒë»·¾³Ö®ºó
+å¯¼å…¥ vs ç¼–è¯‘çŽ¯å¢ƒä¹‹åŽ
 dumpbin -headers user32.lib | findstr /c:" Symbol name" > user32.txt
-¿ÉÒÔ»ñµÃ user32 Àï±ßËùÓÐµÄ·ûºÅÎÄ¼þ£¨º¯ÊýÃû£©
+å¯ä»¥èŽ·å¾— user32 é‡Œè¾¹æ‰€æœ‰çš„ç¬¦å·æ–‡ä»¶ï¼ˆå‡½æ•°åï¼‰
 
-ÐÞ¸Ä×ÀÃæ¹ÒÔØÎ»ÖÃ
+ä¿®æ”¹æ¡Œé¢æŒ‚è½½ä½ç½®
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVerison\Explorer\User Shell Folder
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVerison\Explorer\Shell Folder
-ÐÞ¸ÄÁ½¸öÏîÏÂ±ß Desktop µÄÖµ
-ÔÙÖØÆô explorer
+ä¿®æ”¹ä¸¤ä¸ªé¡¹ä¸‹è¾¹ Desktop çš„å€¼
+å†é‡å¯ explorer
 
 
 HKEY_CURRENT_USER\Control Panel\Desktop\CursorBlinkRate
-¿ÉÒÔÉèÖÃÏµÍ³µÄ¹â±êÉÁ¶¯ËÙ¶È
-×î¿ìÖ»ÄÜÉèµ½ 200 ms ²»¹ý×Ü±ÈÃ»ÓÐºÃ
+å¯ä»¥è®¾ç½®ç³»ç»Ÿçš„å…‰æ ‡é—ªåŠ¨é€Ÿåº¦
+æœ€å¿«åªèƒ½è®¾åˆ° 200 ms ä¸è¿‡æ€»æ¯”æ²¡æœ‰å¥½
 
-Shift + ÓÒ¼ü
-¿ÉÒÔ²Ù×÷ËøÔÚÈÎÎñÀ¸ÉÏ±ßµÄ¿ì½Ý·½Ê½
-£¨±ÈÈçÎªgvim¼Ó²ÎÊýÊ²Ã´µÄ£©
+Shift + å³é”®
+å¯ä»¥æ“ä½œé”åœ¨ä»»åŠ¡æ ä¸Šè¾¹çš„å¿«æ·æ–¹å¼
+ï¼ˆæ¯”å¦‚ä¸ºgvimåŠ å‚æ•°ä»€ä¹ˆçš„ï¼‰
 
-ËøÆÁµÇÂ½±³¾°:
+é”å±ç™»é™†èƒŒæ™¯:
 mkdir -p C:\Windows\System32\oobe\info\backgrounds
-backgroundDefault.jpg ( ´óÐ¡ÏÞÖÆ: 250KB )
+backgroundDefault.jpg ( å¤§å°é™åˆ¶: 250KB )
 
-Òþ²Øexplorer ×ó±ßµÄ ¿â :
+éšè—explorer å·¦è¾¹çš„ åº“ :
 HKEY_CLASSES_ROOT\CLSID\{031E4825-7B94-4dc3-B131-E946B44C8DD5}\ShellFolder
-ÏÈÓÒ¼üShellFolder£¬È¨ÏÞ£¬Ñ¡×Ô¼º£¬ÏÂ±ß¹´Ñ¡ÔÊÐíÍêÈ«¿ØÖÆ£¬È·¶¨
-Ö®ºó°ÑAttributesµÄ¼üÖµÓÉb080010d¸Ä³Éb090010d
-ÆäÓàÏî£º
-¼ÒÍ¥×é	{B4FB3F98-C1EA-428d-A78A-D1F5659CBA93} b084010c -> b094010c
-ÍøÂç	{F02C1A0D-BE21-4350-88B0-7367FC96EF3C} b0040064 -> b0940064
-ÊÕ²Ø¼Ð	{323CA680-C24D-4099-B94D-446DD2D7249E} a0900100 -> a9400100
-¼ÆËã»ú	{20D04FE0-3AEA-1069-A2D8-08002B30309D} ÐÂ½¨        b094010c
+å…ˆå³é”®ShellFolderï¼Œæƒé™ï¼Œé€‰è‡ªå·±ï¼Œä¸‹è¾¹å‹¾é€‰å…è®¸å®Œå…¨æŽ§åˆ¶ï¼Œç¡®å®š
+ä¹‹åŽæŠŠAttributesçš„é”®å€¼ç”±b080010dæ”¹æˆb090010d
+å…¶ä½™é¡¹ï¼š
+å®¶åº­ç»„	{B4FB3F98-C1EA-428d-A78A-D1F5659CBA93} b084010c -> b094010c
+ç½‘ç»œ	{F02C1A0D-BE21-4350-88B0-7367FC96EF3C} b0040064 -> b0940064
+æ”¶è—å¤¹	{323CA680-C24D-4099-B94D-446DD2D7249E} a0900100 -> a9400100
+è®¡ç®—æœº	{20D04FE0-3AEA-1069-A2D8-08002B30309D} æ–°å»º        b094010c
 -------------------------------------
-ÔÚ´ò¿ª/±£´æµÄÄÇ¸ö¶Ô»°¿òÖÐ»¹»áÓÐ(ÓÖÊÇÊ¹ÓÃ64Î»ÏµÍ³) »¹ÐèÒª´¦ÀíÒÔÏÂÎ»ÖÃ(Õâ¸ö²»ÐèÒªÖØÆôexplorer.exeµ«ÐèÒªÖØÆô´ò¿ªµÄ³ÌÐò)
+åœ¨æ‰“å¼€/ä¿å­˜çš„é‚£ä¸ªå¯¹è¯æ¡†ä¸­è¿˜ä¼šæœ‰(åˆæ˜¯ä½¿ç”¨64ä½ç³»ç»Ÿ) è¿˜éœ€è¦å¤„ç†ä»¥ä¸‹ä½ç½®(è¿™ä¸ªä¸éœ€è¦é‡å¯explorer.exeä½†éœ€è¦é‡å¯æ‰“å¼€çš„ç¨‹åº)
 HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{031E4825-7B94-4dc3-B131-E946B44C8DD5}\ShellFolder
-Èô²»ÉúÐ§ÔòÔÙ´¦Àí
+è‹¥ä¸ç”Ÿæ•ˆåˆ™å†å¤„ç†
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{031E4825-7B94-4dc3-B131-E946B44C8DD5}]
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
 "{031E4825-7B94-4dc3-B131-E946B44C8DD5}"=-
 
-Æô¶¯Ïî
+å¯åŠ¨é¡¹
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
 
-taskkill ºó±ß¼Ó /T É±ËÀ×Ó½ø³Ì
-²é¿´×Ó½ø³Ì
+taskkill åŽè¾¹åŠ  /T æ€æ­»å­è¿›ç¨‹
+æŸ¥çœ‹å­è¿›ç¨‹
   wmic process where (ParentProcessId=1234) get Caption,ProcessId'
 
 explorer.exe /e,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
-´ò¿ª"ÎÒµÄµçÄÔ"
+æ‰“å¼€"æˆ‘çš„ç”µè„‘"
 
-¿ªÆô/¹Ø±Õ ICMP 
+å¼€å¯/å…³é—­ ICMP 
 netsh firewall set icmpsetting 8
 netsh firewall set icmpsetting 8 disable
 
 
-ÏëÔÚÈÎÎñÀ¸ÉÏ¸½¼ÓÒ»¸öÅú´¦ÀíÎÄ¼þµÄ¿ì½Ý·½Ê½Ê±£¬¿ì½Ý·½Ê½µÄÄ¿±êÐ´³É:
+æƒ³åœ¨ä»»åŠ¡æ ä¸Šé™„åŠ ä¸€ä¸ªæ‰¹å¤„ç†æ–‡ä»¶çš„å¿«æ·æ–¹å¼æ—¶ï¼Œå¿«æ·æ–¹å¼çš„ç›®æ ‡å†™æˆ:
 cmd.exe /c xxx.bat
 
 
-µ±³öÏÖÄ¿Â¼¹ý³¤ÎÞ·¨É¾³ý£¨»òÎÞ·¨ÆäËû²Ù×÷Ê±£©
-¿ÉÒÔÊ¹ÓÃ
+å½“å‡ºçŽ°ç›®å½•è¿‡é•¿æ— æ³•åˆ é™¤ï¼ˆæˆ–æ— æ³•å…¶ä»–æ“ä½œæ—¶ï¼‰
+å¯ä»¥ä½¿ç”¨
 robocopy c:\tmp Backup_2014_10_09  /purge
 
-ÔÚ HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics ÏÂ
-´´½¨×Ö·û´®Öµ "MinWidth" È»ºóÉèÎª30/54£¨¶ÔÓ¦´ó/Ð¡Í¼±ê£©
-ÖØÆôµçÄÔÖ®ºóÈÎÎñÀ¸µÄÍ¼±ê¾ÍÖ»Òþ²Ø±êÇ©£¬µ«´Ó²»ºÏ²¢ÁË
+åœ¨ HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics ä¸‹
+åˆ›å»ºå­—ç¬¦ä¸²å€¼ "MinWidth" ç„¶åŽè®¾ä¸º30/54ï¼ˆå¯¹åº”å¤§/å°å›¾æ ‡ï¼‰
+é‡å¯ç”µè„‘ä¹‹åŽä»»åŠ¡æ çš„å›¾æ ‡å°±åªéšè—æ ‡ç­¾ï¼Œä½†ä»Žä¸åˆå¹¶äº†
 
-ÎÒµÄµçÄÔÉÏºóÌ¨ÔËÐÐ×ÅÒ»¸öÎÒ×Ô¼ºÐ´µÄ³ÌÐò£¬ÀàËÆWindowsµÄ¼Æ»®ÈÎÎñ£¬¿ÉÒÔÌáÐÑÎÒ¸Ã×öÊ²Ã´ÊÂÇé»òÕß¶¨Ê±ÔËÐÐ³ÌÐò¡£
-ÓÐÒ»Ïî¾ÍÊÇÏÂÎçÏÂ°àÒÔºó¿ª»úÔò×Ô¶¯ÔËÐÐÒ»¸öÃüÁî£º
-shutdown /s /t 60 /c "ÕâÃ´ÍíÁË£¬Äã¿ªÎÒµçÄÔ¸ÉÊ²Ã´£¿"
-½Ó×ÅÊÇÕâ¸ö£º
+æˆ‘çš„ç”µè„‘ä¸ŠåŽå°è¿è¡Œç€ä¸€ä¸ªæˆ‘è‡ªå·±å†™çš„ç¨‹åºï¼Œç±»ä¼¼Windowsçš„è®¡åˆ’ä»»åŠ¡ï¼Œå¯ä»¥æé†’æˆ‘è¯¥åšä»€ä¹ˆäº‹æƒ…æˆ–è€…å®šæ—¶è¿è¡Œç¨‹åºã€‚
+æœ‰ä¸€é¡¹å°±æ˜¯ä¸‹åˆä¸‹ç­ä»¥åŽå¼€æœºåˆ™è‡ªåŠ¨è¿è¡Œä¸€ä¸ªå‘½ä»¤ï¼š
+shutdown /s /t 60 /c "è¿™ä¹ˆæ™šäº†ï¼Œä½ å¼€æˆ‘ç”µè„‘å¹²ä»€ä¹ˆï¼Ÿ"
+æŽ¥ç€æ˜¯è¿™ä¸ªï¼š
 rundll32.exe user32.dll,LockWorkStation
-¶ÔÁË£¬ÎÒµÄµçÄÔÊÇÓÐÃÜÂëµÄ£¬µ«ÊÇÉèÖÃ³ÉÁË×Ô¶¯µÇÂ¼¡£
+å¯¹äº†ï¼Œæˆ‘çš„ç”µè„‘æ˜¯æœ‰å¯†ç çš„ï¼Œä½†æ˜¯è®¾ç½®æˆäº†è‡ªåŠ¨ç™»å½•ã€‚
 
 HKEY_CLASSES_ROOT\Directory\Background\shell\
-ÏÂ±ßÓÐÓÒ¼üµ¯³öÑ¡ÏîµÄÉèÖÃ£¬°üÀ¨µ¯³öÏîµÄÃû×Ö£¬¿ì½Ý¼ü£¬Ö´ÐÐµÄÃüÁîµÈ
-¿ÉÒÔ²Î¿¼cmd£¬ÀýÈç°üº¬×Ö·û´®ExtendedµÄÊ±ºòÔòÒª°´×¡ShiftÓÒ¼ü²ÅÄÜµ¯³öÀ´µÈ
+ä¸‹è¾¹æœ‰å³é”®å¼¹å‡ºé€‰é¡¹çš„è®¾ç½®ï¼ŒåŒ…æ‹¬å¼¹å‡ºé¡¹çš„åå­—ï¼Œå¿«æ·é”®ï¼Œæ‰§è¡Œçš„å‘½ä»¤ç­‰
+å¯ä»¥å‚è€ƒcmdï¼Œä¾‹å¦‚åŒ…å«å­—ç¬¦ä¸²Extendedçš„æ—¶å€™åˆ™è¦æŒ‰ä½Shiftå³é”®æ‰èƒ½å¼¹å‡ºæ¥ç­‰
 
 assoc .lnk=lnkfile 
 
 
-½»»» Caps Lock ºÍ Ctrl ¼ü :
+äº¤æ¢ Caps Lock å’Œ Ctrl é”® :
 HKEY_LOCAL_MACHINE -> System -> CurrentControlSet -> Control -> KeyBoard Layout 
 Note: KeyBoard Layout, and not KeyBoard Layouts
 Right-click: Keyboard Layout, and select New -> Binary value
@@ -94,6 +94,6 @@ Right click: Scancode Map -> Modify
 0018
 restart
 
-00 3a ¶ÔÓ¦ caps lock
-00 1d ¶ÔÓ¦ left ctrl
-e0 1d ¶ÔÓ¦ right ctrl
+00 3a å¯¹åº” caps lock
+00 1d å¯¹åº” left ctrl
+e0 1d å¯¹åº” right ctrl

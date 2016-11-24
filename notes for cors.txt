@@ -1,24 +1,24 @@
 Cross-origin resource sharing
 
-ÓÃ firebug console
-ÓÃ ajax ·¢ËÍ post µÄÊ±ºò
-ÔÚ·şÎñÆ÷¶Ë»áÄ¬ÈÏ½ûÖ¹¿çÕ¾×ÊÔ´ÇëÇó
-firefox ×Ô´øµÄÖÕ¶Ë( C-S-k )»áÌáÊ¾ ÓÚÊÇÊ§°Ü
+ç”¨ firebug console
+ç”¨ ajax å‘é€ post çš„æ—¶å€™
+åœ¨æœåŠ¡å™¨ç«¯ä¼šé»˜è®¤ç¦æ­¢è·¨ç«™èµ„æºè¯·æ±‚
+firefox è‡ªå¸¦çš„ç»ˆç«¯( C-S-k )ä¼šæç¤º äºæ˜¯å¤±è´¥
 
-¿ÉÒÔÔÚ·şÎñÆ÷µÄÏìÓ¦Í·¼ÓÈëÒÔÏÂÄÚÈİ :
+å¯ä»¥åœ¨æœåŠ¡å™¨çš„å“åº”å¤´åŠ å…¥ä»¥ä¸‹å†…å®¹ :
 header( "Access-Control-Allow-Origin: *" ) ;
 header("Access-Control-Allow-Methods: POST, GET, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: User-Agent, Accept-Language, Accept-Encoding, Accept-Charset, Connection, Content-Length, Origin, Pragma, Accept-Charset, Cache-Control, Accept, Content-Type, Sessionid");
 header("Access-Control-Max-Age: 1000");
 
-Ö®ºóÔÙ·¢ËÍ£¬ C-S-k ²»ÔÙÌáÊ¾
+ä¹‹åå†å‘é€ï¼Œ C-S-k ä¸å†æç¤º
 
-µ«ÊÇÔÚ·şÎñÆ÷¶ËÓĞÑéÖ¤ isset($_SERVER['HTTP_X_REQUESTED_WITH']) 
-ÎŞ·¨Í¨¹ı
+ä½†æ˜¯åœ¨æœåŠ¡å™¨ç«¯æœ‰éªŒè¯ isset($_SERVER['HTTP_X_REQUESTED_WITH']) 
+æ— æ³•é€šè¿‡
 
-ÒòÎª AJAX ¼¼ÊõËùÊ¹ÓÃµÄ XMLHttpRequest ¶ÔÏó¶¼±»ä¯ÀÀÆ÷×öÁËÏŞÖÆ£¬Ö»ÄÜ·ÃÎÊµ±Ç°ÓòÃûÏÂµÄ URL
-ÓÚÊÇÔÚ firebug Ê¹ÓÃ ajax ·¢ËÍµÄ post ÇëÇó
-ÇëÇóÍ·ÖĞ²»»á°üº¬ X-Requested-With: XMLHttpRequest ×Ö¶Î
+å› ä¸º AJAX æŠ€æœ¯æ‰€ä½¿ç”¨çš„ XMLHttpRequest å¯¹è±¡éƒ½è¢«æµè§ˆå™¨åšäº†é™åˆ¶ï¼Œåªèƒ½è®¿é—®å½“å‰åŸŸåä¸‹çš„ URL
+äºæ˜¯åœ¨ firebug ä½¿ç”¨ ajax å‘é€çš„ post è¯·æ±‚
+è¯·æ±‚å¤´ä¸­ä¸ä¼šåŒ…å« X-Requested-With: XMLHttpRequest å­—æ®µ
 
-²»¹ı
-¿ÉÒÔ×Ô¼º±à³ÌÈÆ¹ıÕâÒ»ÏŞÖÆ¡Ì
+ä¸è¿‡
+å¯ä»¥è‡ªå·±ç¼–ç¨‹ç»•è¿‡è¿™ä¸€é™åˆ¶âˆš

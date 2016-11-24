@@ -1,20 +1,20 @@
-ͼ�����ų��ò�ֵ������opencv����
-CV_INTER_NN - ����ڲ�ֵ,
-CV_INTER_LINEAR - ˫���Բ�ֵ (ȱʡʹ��)
-CV_INTER_AREA - ʹ�����ع�ϵ�ز�������ͼ����Сʱ�򣬸÷������Ա��Ⲩ�Ƴ��֡���ͼ��Ŵ�ʱ�������� CV_INTER_NN ����..
-CV_INTER_CUBIC - ������ֵ.
+图像缩放常用插值方法（opencv）：
+CV_INTER_NN - 最近邻插值,
+CV_INTER_LINEAR - 双线性插值 (缺省使用)
+CV_INTER_AREA - 使用象素关系重采样。当图像缩小时候，该方法可以避免波纹出现。当图像放大时，类似于 CV_INTER_NN 方法..
+CV_INTER_CUBIC - 立方插值.
 
-ʹ��CV_INTER_CUBIC����־�ݣ�С��Ƶ��
+使用CV_INTER_CUBIC会出现锯齿（小视频）
 
-��򵥵��Զ���ƽ�� :
+最简单的自动白平衡 :
 r_gain = ( r_sum + b_sum + g_sum ) / ( 3 * r_sum )
 g_gain = ( r_sum + b_sum + g_sum ) / ( 3 * g_sum )
 b_gain = ( r_sum + b_sum + g_sum ) / ( 3 * b_sum )
-Ȼ���������rgb����gain
-������֮��x_sum = ( r_sum+b_sum+g_sum ) / 3 ��
+然后遍历所有rgb乘以gain
+（处理之后，x_sum = ( r_sum+b_sum+g_sum ) / 3 ）
 
-����RGB��ͼ�񣨼��跶Χ��0~255��
-Ҫ��ǿ���ȣ����ܼ�*strength
-��Ҫ�ж�*strength֮��Χ�Ƿ�������������������Ϊ���ֵ��������255��
-��
+对于RGB的图像（假设范围是0~255）
+要加强亮度，不能简单*strength
+还要判断*strength之后范围是否溢出，若有溢出，则设为最大值（这里是255）
+即
   r_value = r_value*strength < 255 ? r_value*strength : 255 ;

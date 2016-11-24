@@ -1,13 +1,13 @@
-ÎŞ·¨¼ÓÔØÎÄ¼ş C:\Users\Administrator.AXX3DX8ZNMSGU5B\Desktop\test.ps1£¬ÒòÎªÔÚ´Ë
-ÏµÍ³ÖĞ½ûÖ¹Ö´ĞĞ½Å±¾¡£ÓĞ¹ØÏêÏ¸ĞÅÏ¢£¬Çë²ÎÔÄ "get-help about_signing"¡£
-ËùÔÚÎ»ÖÃ ĞĞ:1 ×Ö·û: 56
+æ— æ³•åŠ è½½æ–‡ä»¶ C:\Users\Administrator.AXX3DX8ZNMSGU5B\Desktop\test.ps1ï¼Œå› ä¸ºåœ¨æ­¤
+ç³»ç»Ÿä¸­ç¦æ­¢æ‰§è¡Œè„šæœ¬ã€‚æœ‰å…³è¯¦ç»†ä¿¡æ¯ï¼Œè¯·å‚é˜… "get-help about_signing"ã€‚
+æ‰€åœ¨ä½ç½® è¡Œ:1 å­—ç¬¦: 56
 + C:\Users\Administrator.AXX3DX8ZNMSGU5B\Desktop\test.ps1 <<<<
     + CategoryInfo          : NotSpecified: (:) [], PSSecurityException
     + FullyQualifiedErrorId : RuntimeException
 
-½â¾ö·½·¨£º
+è§£å†³æ–¹æ³•ï¼š
 set-ExecutionPolicy RemoteSigned
 
-ÈÆ¹ıÈ¨ÏŞ(ÕûÌåË¼Â·ÊÇ¸´ÖÆµ½ps´°¿ÚÔËĞĞ)£º
+ç»•è¿‡æƒé™(æ•´ä½“æ€è·¯æ˜¯å¤åˆ¶åˆ°psçª—å£è¿è¡Œ)ï¼š
 Get-Content .runme.ps1 | Invoke-Expression
-GC .runme.ps1 | iex  (¼òĞ´)
+GC .runme.ps1 | iex  (ç®€å†™)

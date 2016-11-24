@@ -1,14 +1,14 @@
-sessionÊÇÉ¶¡£ºÃºÃÑ§Ï°HTTPÐ­Òé
+sessionæ˜¯å•¥ã€‚å¥½å¥½å­¦ä¹ HTTPåè®®
 
-ÁË½âÍøÕ¾µÄÔËÐÐÔ­Àí£¬¶®µÃÒ»´ÎÇëÇó¶¼·¢ÉúÁËÊ²Ã´¡£
+äº†è§£ç½‘ç«™çš„è¿è¡ŒåŽŸç†ï¼Œæ‡‚å¾—ä¸€æ¬¡è¯·æ±‚éƒ½å‘ç”Ÿäº†ä»€ä¹ˆã€‚
 
 Codeigniter Bootstrap thinkphp
 
 TP CI YII
 
-CI : Ð¡ÐÍ
+CI : å°åž‹
 
-Laravel : 5.3 Ö®ºóÐÂÌØÐÔ( ÖØÁ¿¼¶ )
+Laravel : 5.3 ä¹‹åŽæ–°ç‰¹æ€§( é‡é‡çº§ )
 
 
 (tp|ci) -> yii -> ( laravel | symfony )
@@ -22,10 +22,10 @@ Laravel : 5.3 Ö®ºóÐÂÌØÐÔ( ÖØÁ¿¼¶ )
 
 
 
-CI - MVC ÓÐ DAO 
-³£ÓÃ 
+CI - MVC æœ‰ DAO 
+å¸¸ç”¨ 
 $this->load->view( ... )
 $this->load->model( ... )
 $this->load->database( ... )
 $this->load->library( ... )
-À´µ÷»ñµÃ²¢ÓÃÏà¹ØµÄ api
+æ¥è°ƒèŽ·å¾—å¹¶ç”¨ç›¸å…³çš„ api

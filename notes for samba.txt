@@ -12,5 +12,5 @@ chmod 777 /home/qiyunhu
 touch /etc/samba/smbpasswd
 smbpasswd -a qiyunhu
 services smbd restart
-smbclient -L //localhost/share	//ÕâÀïÓÃµÄshareÊÇÉÏ±ßÅäÖÃÎÄ¼şÖĞÀ¨ºÅÀï±ßµÄÃû×Ö
-Á¬½Ó³É¹¦¾Í¿ÉÒÔÔÚwindowsÏÂ±ßÓ³Éä\\$(ip)\shareÁË
+smbclient -L //localhost/share	//è¿™é‡Œç”¨çš„shareæ˜¯ä¸Šè¾¹é…ç½®æ–‡ä»¶ä¸­æ‹¬å·é‡Œè¾¹çš„åå­—
+è¿æ¥æˆåŠŸå°±å¯ä»¥åœ¨windowsä¸‹è¾¹æ˜ å°„\\$(ip)\shareäº†

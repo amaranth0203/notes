@@ -1,12 +1,12 @@
-ÇåÆÁ : C-c M-o
+æ¸…å± : C-c M-o
 
-ÓÃlispboxµÄÊ±ºò
-ÔÚC:\Users\Administrator.AXX3DX8ZNMSGU5B\AppData\RoamingÏÂ±ßµÄ.emacs
-¼Ó(setq default-directory "e:/sources/lisp/")ÊÇÃ»ÓĞĞ§¹ûµÄ
-ÒªÔÚlispboxµÄÆô¶¯batÀï±ßÕÒµ½
+ç”¨lispboxçš„æ—¶å€™
+åœ¨C:\Users\Administrator.AXX3DX8ZNMSGU5B\AppData\Roamingä¸‹è¾¹çš„.emacs
+åŠ (setq default-directory "e:/sources/lisp/")æ˜¯æ²¡æœ‰æ•ˆæœçš„
+è¦åœ¨lispboxçš„å¯åŠ¨baté‡Œè¾¹æ‰¾åˆ°
 set TO_EVAL="(progn (load \"lispbox\") (slime) )"
-¸Ä³É
+æ”¹æˆ
 set TO_EVAL="(progn (setq default-directory \"e:/sources/lisp/\") (load \"lispbox\") (slime) )"
-²Å¿ÉÒÔ
+æ‰å¯ä»¥
 
-Ö®ºó¾Í¿ÉÒÔ¾¡ÇéµØ´´½¨Ä£¿éµ¼ÈëÄ£¿éC-c C-c±àÒëÁË
+ä¹‹åå°±å¯ä»¥å°½æƒ…åœ°åˆ›å»ºæ¨¡å—å¯¼å…¥æ¨¡å—C-c C-cç¼–è¯‘äº†

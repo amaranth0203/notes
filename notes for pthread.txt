@@ -1,12 +1,12 @@
 #include <pthread.h>
 pthread_t t1 ;
 pthread_create( &t1 , NULL , &start_function , NULL ) ;
-ÕâÑù×Ó¾Í»áÈ¥Ö´ĞĞstart_function
-µ«Èômainº¯ÊıÏÈ½áÊøÁË£¬Ïß³Ìt1Ò²»á¸ú×Å½áÊø
+è¿™æ ·å­å°±ä¼šå»æ‰§è¡Œstart_function
+ä½†è‹¥mainå‡½æ•°å…ˆç»“æŸäº†ï¼Œçº¿ç¨‹t1ä¹Ÿä¼šè·Ÿç€ç»“æŸ
 
 pthread_create( ...
 pthread_join( t1 , &exit_result ) ;
-ÕâÑù×ÓÒ²»áÈ¥Ö´ĞĞstart_function
-²¢ÇÒ»áµÈµ½start_functionÖ´ĞĞ½áÊø²Å»á¼ÌĞøÖ´ĞĞmainºó±ßµÄ¶«Î÷
+è¿™æ ·å­ä¹Ÿä¼šå»æ‰§è¡Œstart_function
+å¹¶ä¸”ä¼šç­‰åˆ°start_functionæ‰§è¡Œç»“æŸæ‰ä¼šç»§ç»­æ‰§è¡Œmainåè¾¹çš„ä¸œè¥¿
     "pthread_join() blocks until the child thread has exited"
-    ÓÚÊÇÔÚmm-cameraÀï±ßdel-mct-session²Å»áÓÃµ½(Ò»¶¨Òªfree¸É¾»ÁË²Å»áÈÃmainÍË³ö)
+    äºæ˜¯åœ¨mm-cameraé‡Œè¾¹del-mct-sessionæ‰ä¼šç”¨åˆ°(ä¸€å®šè¦freeå¹²å‡€äº†æ‰ä¼šè®©mainé€€å‡º)

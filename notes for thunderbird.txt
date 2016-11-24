@@ -1,3 +1,3 @@
-·¢ÓÊ¼şµÄÊ±ºò¿¨ËÀÔÚcopying message to sent folder :
+å‘é‚®ä»¶çš„æ—¶å€™å¡æ­»åœ¨copying message to sent folder :
 tools -> account setting -> copies & folders -> place a copy in 
-´Ó "sent" folder on ¸Ä³É otherÀï±ßµÄ sent folder
+ä» "sent" folder on æ”¹æˆ otheré‡Œè¾¹çš„ sent folder
