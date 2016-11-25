@@ -1,4 +1,72 @@
 
+!!! * 不能代替 [] 的情况:
+/* 来自 google : c tricks */
+首先是:
+{
+    int yes=1;
+    setsockopt(yourSocket, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int));
+}
+可以用
+setsockopt(yourSocket, SOL_SOCKET, SO_REUSEADDR, (int[]){1}, sizeof(int));
+代替，但是不能写成 (int*){1} ;
+接着，高级用法:
+Passing a Variable Amount of Arguments
+
+void func(type* values) {
+    while(*values) {
+        x = *values++;
+        /* do whatever with x */
+    }
+}
+
+func((type[]){val1,val2,val3,val4,0});
+------------------------------------------
+Static linked lists
+
+int main() {
+    struct llist { int a; struct llist* next;};
+    #define cons(x,y) (struct llist[]){{x,y}}
+    struct llist *list=cons(1, cons(2, cons(3, cons(4, NULL))));
+    struct llist *p = list;
+    while(p != 0) {
+        printf("%d\n", p->a);
+        p = p->next;
+    }
+}
+Passing a Variable Amount of Arguments这一部分:
+#include <stdio.h>
+void test( char** a ) {
+  char* tmp ;
+  while( *a ) {
+    tmp = *a++ ;
+    printf( "[+] test : %s\n" , tmp ) ;
+  }
+}
+int main(int argc, char *argv[])
+{
+  test( (char*[]){"aaa","bbb",0} ) ;
+  return 0;
+}
+（ 注意调用的地方还是得写 char*[] 不能写成 char** ）
+接着结构体多加点内容就理解下一个部分了:
+#include <stdio.h>
+int main(int argc, char *argv[])
+{
+  struct llist { int a ; int b ; int c ; struct llist* next ; } ;
+#define cons( a , b , c , y ) ( struct llist[] ){a,b,c,y} ;
+  struct llist* list = cons( 1 , 2 , 0 , 0 ) ;
+  list = cons( 4 , 5 , 0 , list ) ;
+  list = cons( 7 , 8 , 0 , list ) ;
+  struct llist* p = list ;
+  while( p != NULL ) {
+    printf( " ->%d<- " , p->a ) ;
+    p = p->next ;
+  }
+  return 0;
+}
+a,b,c,y刚好可以填充结构体，少一个就不行
+可以把int换成void*来使用 XD
+
 查看 linux 下头文件的位置 :
 root@priv:/# cat > test.c
 # include <asm/processor-flags.h>
