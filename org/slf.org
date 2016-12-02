@@ -1,6 +1,6 @@
 
 
-* priv [19/33]
+* priv [20/34]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
@@ -8,6 +8,10 @@
   我能反杀
   一直想飞到西安然后坐火车去敦煌
   
+** DONE tmux 时间格式
+   CLOSED: [2016-12-01 周四 18:23] DEADLINE: <2016-12-01 周四>
+   - State "DONE"       from "TODO"       [2016-12-01 周四 18:23]
+   - State "TODO"       from ""           [2016-12-01 周四 12:32]
 ** TODO 给 explorer 打 patch
    SCHEDULED: <2016-11-30 周三>
    - State "TODO"       from ""           [2016-11-24 周四 14:29]
