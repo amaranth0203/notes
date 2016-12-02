@@ -26,15 +26,23 @@
    CLOSED: [2016-11-11 周五 21:38] SCHEDULED: <2016-11-11 周五>
    - State "DONE"       from "TODO"       [2016-11-11 周五 21:38]
    - State "TODO"       from ""           [2016-11-11 周五 09:42]
-** TODO [#A] AEC 人脸
+** TODO [#A] AEC 人脸 [3/6]
    DEADLINE: <2016-12-15 周四>
    - State "TODO"       from ""           [2016-12-01 周四 15:12]
-   - adbe5f32c9b66f5dea195eabc25a529d532b8121 算法实现
-   - 4f53f1cb79d6741ec297d679f62c319a47ec9f4f 算法实现
-   - [ ] 在 aec_port 里找到人脸信息
-   - [ ] aec_port.h 里边添加定义的结构体
-   - [ ] msg.u 后边添加传入的 void
+   - adbe5f32c9b66f5dea195eabc25a529d532b8121 算法实现 Sep 23
+   - 4f53f1cb79d6741ec297d679f62c319a47ec9f4f 算法实现 Oct 13
+   - [X] 在 aec_port 里找到人脸信息
+     - aec_port_proc_downstream_event(...) 的 case MCT_EVENT_MODULE_FACE_INFO
+   - [X] aec_port 的 msg.u 后边添加传入的 void, 传到 aec_biz
+     - 使用 AEC_SET_PARM_CUSTOM_EVT_MOD
+     - 使用 aec_set_parm.u.aec_custom_data.data
+     - void* data 指向 aec_proc_roi_info_t
+   - [X] aec_core.h 里边添加定义的结构体，从 aec_biz 传到算法里
+     - 添加 AEC_SET_CUSTOM_EVT_MOD 到 aec_core_get_enum_type 里
+     - 添加 q3a_custom_data_t 到 aec_core_set_param_type 的 u 里
+     - 以上两者对应，传到算法里
    - [ ] 正常前置人脸尺寸范围
+     - 先做比较两个面积，面积倍数大于 1.414 时，舍弃小脸，小于时插值
    - [ ] size/weight 可 tune
    - [ ] [后期] : 前后置分开
 
@@ -265,11 +273,12 @@
 
 
 
-** PD1619LG4 [0/1]
+** PD1619LG4 [1/1]
    SCHEDULED: <2016-12-02 周五>
 
-*** 正在处理 [B161124-678] MWB 效果反了 [0/1]                   :@bug:@量产前必解:
-    SCHEDULED: <2016-12-01 周四>
+*** 解决待关闭 [B161124-678] MWB 效果反了 [0/1]                 :@bug:@量产前必解:
+    CLOSED: [2016-12-02 周五 19:18] SCHEDULED: <2016-12-01 周四>
+    - State "解决待关闭" from "正在处理"   [2016-12-02 周五 19:18]
     - State "正在处理"   from ""           [2016-12-01 周四 15:11]
     - [ ] 确认品质接受后发出变更邮件
 
