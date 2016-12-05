@@ -1,6 +1,6 @@
 
 
-* priv [21/34]
+* priv [23/34]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
@@ -53,9 +53,16 @@
    - State "TODO"       from ""           [2016-10-23 周日 12:06]
 ** TODO 同步表情
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
-** TODO LKM
+** DONE LKM
+   CLOSED: [2016-12-04 周日 12:09]
+   - State "DONE"       from "TODO"       [2016-12-04 周日 12:09]
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
-** TODO PYTHON 那个模块
+** DONE PYTHON 那个模块
+   CLOSED: [2016-12-04 周日 13:50]
+   - State "DONE"       from "TODO"       [2016-12-04 周日 13:50] \\
+     叫做 pwntools
+     -> pwn
+     -> CTF( 西电居然有个 XDCTF, 呵呵 )
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
 关键字 ddos 阿里养鸡 arm地址
 ** TODO irc channel 做中转

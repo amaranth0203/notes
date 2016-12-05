@@ -1,4 +1,12 @@
 
+使用 pip 安装模块时
+可以直接用  
+python -m pip --help
+python -m pip list
+python -m pip install xxxxxxx
+而不用再去找 pip.py
+----> linux 失败
+
 多线程的时候 使用 
 t = threading.Thread( target = function , args = arguments )
 t.daemon = True
