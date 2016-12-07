@@ -1,0 +1,7 @@
+* 添加附属文件
+** attachfile
+\usepackage{attachfile}
+\attachfile{rate.txt}
+** navigator
+\usepackage{navigator}
+\embeddedfile{sourcecode}{rate.txt} 
