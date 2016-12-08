@@ -1,7 +1,31 @@
+* 自定义命令
+  @@html:<div style="display: none">@@
+  \attachfile{manifest.xml}
+  @@html:</div>@@
+* 有下划线或者特殊符号
+** 在 org-mode
+    - 使用 #+BEGIN_EXAMPLE 和 #+END_EXAMPLE 扩起来
+    - 使用 : 开头 ( BEGIN_EXAMPLE 的简写 )
+    - 在开头添加 #+OPTIONS: ^:nil ( Subscripts and superscripts )
+** 在 latex-mode
+    - 使用 \verb|a_b_c_d|
+    - 使用 \begin{verbatim}a_b_c_c\end{verbatim}
+* 包含中文
+** \usepackage[hyperref, UTF8]{ctex}
+   从 org-mode 导出到 LaTeX 的时候会在开头添加上创建信息例如
+   % Created 2016-12-08 周四 13:04
+   由于是在document外边，中文 package 无法覆盖
+   会导致编译失败
+   目前的对策 :
+    - 删掉注释
+    - 调整系统时间使用英文
+* 添加package
+** #+LaTeX_HEADER: \usepackage[hyperref, UTF8]{ctex}
+** #+LaTeX_HEADER: \usepackage{attachfile}
 * 添加附属文件
 ** attachfile
-\usepackage{attachfile}
-\attachfile{rate.txt}
+   \usepackage{attachfile}
+   \attachfile{rate.txt}
 ** navigator
-\usepackage{navigator}
-\embeddedfile{sourcecode}{rate.txt} 
+   \usepackage{navigator}
+   \embeddedfile{sourcecode}{rate.txt} 

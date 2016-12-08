@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: commit_record
+# key: commit_record
+# --
+** commit $1
+   $2
+   - $3 modify : $0
+   - so commit in gerrit
+   - 相关人员
+   - qcom info
+   - patch 文件

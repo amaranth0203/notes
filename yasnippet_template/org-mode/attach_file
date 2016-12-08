@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: attach_file
+# key: attach_file
+# --
+@@html:<div style="display: none">@@
+\attachfile{$1}
+@@html:</div>@@$0
