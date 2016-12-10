@@ -1,4 +1,6 @@
 
+echo "abcd efgh" | awk -v var=$column '{print $var}'
+
 awk 是和cut差不多，分隔(使用-F）之后放到$1,$2里边
 假设using_busybox里边全是命令,则使用
    awk          '{print  "alias ",$1,"=\"/system/xbin/",$1,"\""}' using_busybox的结果是

@@ -5,7 +5,20 @@
 ** commit $1
    $2
    - $3 modify : $0
+   - change-id
+     :
    - so commit in gerrit
    - 相关人员
    - qcom info
    - patch 文件
+   - 编译环境
+     - mm-camerasdk
+       - branch
+         :
+       - commit-id
+         :
+     - mm-camerasdk
+       - branch
+         :
+       - commit-id
+         :
