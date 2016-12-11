@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: commit_record_2
+# key: commit_record_2
+# --
+*** commit $1
+    $4
+    : $5
+    - change-id
+      : $2
+    - commit in gerrit
+      : $3
+$0
