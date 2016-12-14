@@ -80,7 +80,7 @@
    - State "TODO"       from ""           [2016-10-19 周三 09:16]
 
 *** TODO 借 aec porting 手机
-    SCHEDULED: <2016-12-20 周二>
+    : <2016-12-21 周三> SCHEDULED: <2016-12-20 周二>
     - State "TODO"       from ""           [2016-12-11 周日 12:45]
 *** DONE 去掉保密外壳
     CLOSED: [2016-12-02 周五 10:01] DEADLINE: <2016-12-02 周五>
@@ -231,11 +231,12 @@
  - [X] 祥玉:加规避
 
 
-** PD1619 [10/11] 
+** PD1619 [11/11] 
    SCHEDULED: <2016-12-02 周五>
    - State "TODO"       from ""           [2016-10-19 周三 09:16]
-*** TODO 和品质看闪光灯偏色的问题
-    SCHEDULED: <2016-12-11 周日>
+*** DONE 和品质看闪光灯偏色的问题
+    CLOSED: [2016-12-13 周二 16:58] SCHEDULED: <2016-12-11 周日>g
+    - State "DONE"       from "TODO"       [2016-12-13 周二 16:58]
     - State "TODO"       from ""           [2016-12-11 周日 12:46]
 *** 关闭 [B161023-299] ev_extend                                       :@bug:
     CLOSED: [2016-10-29 周六 15:16]
