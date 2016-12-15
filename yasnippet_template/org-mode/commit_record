@@ -3,11 +3,12 @@
 # key: commit_record
 # --
 ** commit $1
-   $2
-   - $3 modify : $0
+   $4
+   - $5 modify : $0
    - change-id
-     :
+     : $2
    - so commit in gerrit
+     : $3
    - 相关人员
    - qcom info
    - patch 文件
