@@ -16,11 +16,13 @@
    SCHEDULED: <2016-11-30 周三>
    - State "TODO"       from ""           [2016-11-24 周四 14:29]
 
-*** TODO windows 版的 XJJ
+*** TODO mstsc silent
+    - State "TODO"       from ""           [2016-12-19 周一 16:37]
+*** TODO windows version of XJJ
     - State "TODO"       from ""           [2016-11-24 周四 14:31]
 *** TODO 生成 binary-code 的方法
     - State "TODO"       from ""           [2016-11-24 周四 14:31]
-*** TODO 执行 patch
+*** TODO patch in local
     - State "TODO"       from ""           [2016-11-24 周四 14:32]
 *** TODO RELEASE
     - State "TODO"       from ""           [2016-11-24 周四 14:32]
