@@ -18,7 +18,7 @@
 
 *** TODO mstsc silent
     - State "TODO"       from ""           [2016-12-19 周一 16:37]
-*** TODO windows version of XJJ
+*** TODO windows version of XJJ( variable redirect )
     - State "TODO"       from ""           [2016-11-24 周四 14:31]
 *** DONE 生成 binary-code 的方法
     CLOSED: [2016-12-20 周二 21:55]
