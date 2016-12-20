@@ -20,9 +20,16 @@
     - State "TODO"       from ""           [2016-12-19 周一 16:37]
 *** TODO windows version of XJJ
     - State "TODO"       from ""           [2016-11-24 周四 14:31]
-*** TODO 生成 binary-code 的方法
+*** DONE 生成 binary-code 的方法
+    CLOSED: [2016-12-20 周二 21:55]
+    - State "DONE"       from "TODO"       [2016-12-20 周二 21:55] \\
+      32-bit 参考 windows pe 里边的方法直接用 masm 生成即可
+      64-bit 使用 nasm 编译，使用 golink 链接生成即可
     - State "TODO"       from ""           [2016-11-24 周四 14:31]
-*** TODO patch in local
+*** DONE patch in local
+    CLOSED: [2016-12-20 周二 21:56]
+    - State "DONE"       from "TODO"       [2016-12-20 周二 21:56] \\
+      使用 python 来进行 inject
     - State "TODO"       from ""           [2016-11-24 周四 14:32]
 *** TODO RELEASE
     - State "TODO"       from ""           [2016-11-24 周四 14:32]

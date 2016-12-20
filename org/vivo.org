@@ -76,12 +76,13 @@
     - State "DONE"       from "TODO"       [2016-11-03 周四 15:43]
     - State "TODO"       from ""           [2016-11-02 周三 17:28]
 
-** PD1616 [20/21] 
+** PD1616 [21/21] 
    SCHEDULED: <2016-10-31 周一>
    - State "TODO"       from ""           [2016-10-19 周三 09:16]
 
-*** TODO 借 aec porting 手机
-    : <2016-12-21 周三> SCHEDULED: <2016-12-20 周二>
+*** DONE 借 aec porting 手机
+    CLOSED: [2016-12-20 周二 21:47] : <2016-12-21 周三> SCHEDULED: <2016-12-20 周二>
+    - State "DONE"       from "TODO"       [2016-12-20 周二 21:47]
     - State "TODO"       from ""           [2016-12-11 周日 12:45]
 *** DONE 去掉保密外壳
     CLOSED: [2016-12-02 周五 10:01] DEADLINE: <2016-12-02 周五>
