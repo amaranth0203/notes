@@ -1,4 +1,17 @@
 
+执行 shellcode 
+char code[] = "\x00\x00" ; // shellcode
+void( *fp )( void ) ; // 声明函数指针
+fp = ( void* )code ; // 指向 shellcode
+fp( ) ; // 执行
+如果声明的是 int 的需要移动一下指针位置再执行（跳过堆栈里边的参数）
+写成一行 :
+( *code )( ) 会提示 called object is not a function or function pointer
+于是先转换再调用 :
+( *( void(*)( void ) )code )( )
+简写 :
+( *( void(*)( ) )code )( )
+
 !!! * 不能代替 [] 的情况:
 /* 来自 google : c tricks */
 首先是:
