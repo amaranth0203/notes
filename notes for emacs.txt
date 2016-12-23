@@ -1,4 +1,6 @@
 
+C-x C-; comment-line/uncomment-line
+
 C-x ( 开始录制
 C-x ) 停止录制
 C-x e 播放录制

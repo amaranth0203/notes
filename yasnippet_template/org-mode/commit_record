@@ -23,3 +23,8 @@
          :
        - commit-id
          :
+     - hardware/qcom/camera
+       - branch
+         :
+       - commit-id
+         :
