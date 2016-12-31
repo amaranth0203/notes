@@ -3,6 +3,6 @@
 # key: attach_file
 # --
 @@html:<div style="display: none">@@
-\attachfile{$1}
+\verb|file : |\attachfile{$1}
 @@html:</div>@@
 : file-name : $0
