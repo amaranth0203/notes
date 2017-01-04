@@ -1,6 +1,11 @@
-* pub [5/6]
+* pub [6/7]
   SCHEDULED: <2016-10-19 周三>
   CLOCK: [2016-10-19 周三 09:42]--[2016-10-19 周三 09:44] =>  0:02
+** TODO 问安奇逻辑要一个1619包含前置的porting用的库文件
+   SCHEDULED: <2017-01-09 周一>
+   - State "TODO"       from ""           [2017-01-04 周三 11:37]
+   - 包含 front_init 和 rear_init
+   - 两个 init 使用的参数不同（肉眼可识别）
 ** DONE 充值安奇逻辑客餐卡
    CLOSED: [2016-12-03 周六 10:03] DEADLINE: <2016-12-05 周一> SCHEDULED: <2016-12-03 周六>
    - State "DONE"       from "TODO"       [2016-12-03 周六 10:03]
@@ -26,8 +31,9 @@
    CLOSED: [2016-11-11 周五 21:38] SCHEDULED: <2016-11-11 周五>
    - State "DONE"       from "TODO"       [2016-11-11 周五 21:38]
    - State "TODO"       from ""           [2016-11-11 周五 09:42]
-** TODO [#A] AEC 人脸 [5/7]
-   DEADLINE: <2016-12-15 周四>
+** DONE [#A] AEC 人脸 [7/7]
+   CLOSED: [2017-01-04 周三 11:35] DEADLINE: <2016-12-15 周四>
+   - State "DONE"       from "TODO"       [2017-01-04 周三 11:35]
    - State "TODO"       from ""           [2016-12-01 周四 15:12]
    - adbe5f32c9b66f5dea195eabc25a529d532b8121 算法实现 Sep 23
    - 4f53f1cb79d6741ec297d679f62c319a47ec9f4f 算法实现 Oct 13
@@ -44,8 +50,8 @@
    - [X] 正常前置人脸尺寸范围
      - 算法里边对人脸 luma 的处理那里已经自动排序过，index=0是最大的人脸
      - 算法中人脸的大小跟 aec_port 里边不一样，估计做过映射
-   - [ ] size/weight 可 tune
-   - [ ] [后期] : 前后置分开
+   - [X] size/weight 可 tune
+   - [X] [后期] : 前后置分开( 走参数里的 enable/disable )
    - [X] 单独记录 patch
      - 使用 emacs org-mode 输出 LaTeX , 添加 patch 文件，再输出 pdf 
 
@@ -63,7 +69,6 @@
  - [X] 数据线 x2 （康丽 x1 ）
  - [X] PD1415D PD1415BA
  - [X] 三脚架
-
 
 * 项目
 #+TAGS: @bug(b)
