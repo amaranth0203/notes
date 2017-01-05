@@ -27,8 +27,14 @@
     - State "TODO"       from ""           [2016-12-19 周一 16:37]
 *** TODO windows version of XJJ( variable redirect )
     - State "TODO"       from ""           [2016-11-24 周四 14:31]
-*** DONE 生成 binary-code 的方法
-    CLOSED: [2016-12-20 周二 21:55]
+*** TODO 生成 binary-code 的方法
+    - State "TODO"       from "DONE"       [2017-01-05 周四 10:33] \\
+      在 vs 里边用 c 来生成
+    - 32bit
+      : http://www.cnblogs.com/M4ster/p/shellcode_write.html
+      : https://nickharbour.wordpress.com/2010/07/01/writing-shellcode-with-a-c-compiler/
+    - 64bit 有兼容 32bit 的方法，但是是用 c++ 写的
+      : http://bbs.pediy.com/showthread.php?t=203140
     - State "DONE"       from "TODO"       [2016-12-20 周二 21:55] \\
       32-bit 参考 windows pe 里边的方法直接用 masm 生成即可
       64-bit 使用 nasm 编译，使用 golink 链接生成即可
@@ -38,6 +44,13 @@
     - State "DONE"       from "TODO"       [2016-12-20 周二 21:56] \\
       使用 python 来进行 inject
     - State "TODO"       from ""           [2016-11-24 周四 14:32]
+*** DONE Cross-architecture shellcode
+    CLOSED: [2017-01-05 周四 17:42]
+    - State "DONE"       from "TODO"       [2017-01-05 周四 17:42]
+    - State "TODO"       from ""           [2017-01-05 周四 10:34]
+    - google 
+    - http://www.chokepoint.net/2013/09/building-multiplatform-shellcode-header.html
+    - https://github.com/amaranth0203/win-exec-calc-shellcode/blob/master/HOW_TO_BUILD.txt
 *** TODO RELEASE
     - State "TODO"       from ""           [2016-11-24 周四 14:32]
 ** DONE sqlmap
