@@ -1,0 +1,29 @@
+* shellcode
+** 编写
+*** 用汇编写
+**** masm32
+    - 只有 32 bit
+**** nasm [ win-exec-calc-shellcode ]
+    - 有 32/64 bit
+**** ml/ml64
+    - 有 32/64 bit
+*** 用 c/cpp ( vs 或 vc )
+**** vc [ vs2010/shellcode ]
+     - 不用考虑函数顺序，但是只有 32bit
+**** vs [ vs2010/shellcode vs2012/PIC_Bindshell ]
+     - 函数顺序可以用 function_link_order 解决，64bit asm用单独asm文件解决
+    
+** dump shellcode
+
+*** 直接在主函数用 fwrite( StartSign , EndSign - StartSign , ... ) [ vs2010/shellcode ]
+
+*** 编译时指定入口为 shellcode，去掉主函数然后 dump [ vs2012/PIC_Bindshell ]
+    - dump方法
+      : 手动( hexedit )
+      : python 库pefile
+      : vs 里边添加 powershell/python 在生成 exe 的时候直接 dump [ vs2012/PIC_Bindshell ]
+** release
+*** patch 到 exe [ win-exec-calc-shellcode/test_for_crosss_arch_shellcode_inject ]
+    - 用 python
+*** inject 到 process
+    - 调用相关 api

@@ -1,3 +1,11 @@
+
+
+很多 ps 脚本用到了 version3 / version4 里边的新语法
+查看自己的版本 : 
+$psversiontable.psversion
+看输出的 Major 列是几就是 version几
+
+
 无法加载文件 C:\Users\Administrator.AXX3DX8ZNMSGU5B\Desktop\test.ps1，因为在此
 系统中禁止执行脚本。有关详细信息，请参阅 "get-help about_signing"。
 所在位置 行:1 字符: 56

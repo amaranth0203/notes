@@ -1,11 +1,6 @@
 * pub [6/7]
   SCHEDULED: <2016-10-19 周三>
   CLOCK: [2016-10-19 周三 09:42]--[2016-10-19 周三 09:44] =>  0:02
-** TODO 问安奇逻辑要一个1619包含前置的porting用的库文件
-   SCHEDULED: <2017-01-09 周一>
-   - State "TODO"       from ""           [2017-01-04 周三 11:37]
-   - 包含 front_init 和 rear_init
-   - 两个 init 使用的参数不同（肉眼可识别）
 ** DONE 充值安奇逻辑客餐卡
    CLOSED: [2016-12-03 周六 10:03] DEADLINE: <2016-12-05 周一> SCHEDULED: <2016-12-03 周六>
    - State "DONE"       from "TODO"       [2016-12-03 周六 10:03]
