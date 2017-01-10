@@ -55,6 +55,7 @@
     - google 
     - http://www.chokepoint.net/2013/09/building-multiplatform-shellcode-header.html
     - https://github.com/amaranth0203/win-exec-calc-shellcode/blob/master/HOW_TO_BUILD.txt
+*** VMProtected
 *** TODO RELEASE
     - State "TODO"       from ""           [2016-11-24 周四 14:32]
 ** DONE sqlmap
