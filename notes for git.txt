@@ -1,4 +1,9 @@
 
+create a brand new branch :
+git checkout --orphan brand_new_branch // 创建新分支
+git rm --cached -r . // 删除当前目录存在的文件（在创建分支时被 add 但未来 commit )
+
+
 关于 tag ( 类似 branch )
 git tag --list 查看本地 tag ( git branch )
 git ls-remote --tags 查看远程 tag ( git branch -r )

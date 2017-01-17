@@ -1,0 +1,35 @@
+* 编译配置
+** 在其他电脑出现 "无法启动，丢失 MSVCR100.dll"
+   可以用 where MSVCR100.dll 然后复制过去
+   也可以在编译选项里边 配置属性->常规->项目默认值->MFC的使用
+   选择 "在静态库中使用MFC" 再编译即可
+* #pragma 注释
+  : 下边记录的是在实际中碰到过的
+  : 完整的可以 google 或者到 http://www.cnblogs.com/cchyao/archive/2010/09/25/1834308.html
+** #pragma const_seg( ".text" )
+   指定已初始化的常量编进的节
+** #pragma code_seg("ExeShell")
+   指定代码编进的节
+** #pragma comment( linker, "/ALIGN:4096" )
+   指定 align
+** #pragma comment( linker,"/ENTRY:main" )
+   指定入口函数
+** #pragma comment( lib , "xxx.lib" )
+   指定链接时去链接 xxx.lib 如:
+   : #include <stdio.h>
+   : #include <windows.h>
+   : int main( ) { printf( "%p" , bind ) ; return 0 }
+   编译时会报错 :
+   : error LNK2019: 无法解析的外部符号 _bind@12，该符号在函数 _main 中被引用
+   但改成
+   : #include <stdio.h>
+   : #include <windows.h>
+   : #pragma comment( lib , "ws2_32.lib" )
+   : int main( ) { printf( "%p" , bind ) ; return 0 }
+   则可以顺利通过编译
+
+* <2017-01-17 周二> 遗留
+  调试的时候用TRACE();代替printf();
+  打开3l8.raw的时候使用GRBG，10bit，(Hsize,Vsize)= 4208 , 3120 
+
+

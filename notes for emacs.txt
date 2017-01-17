@@ -1,4 +1,9 @@
 
+编辑 c 文件时想要多行赋值对齐
+之前的办法是直接用 tab 对齐
+emacs 下 c-mode 输入 tab 的方法 :
+C-q C-i
+
 C-x C-; comment-line/uncomment-line
 
 C-x ( 开始录制
