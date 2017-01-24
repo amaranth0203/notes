@@ -3,6 +3,8 @@
    可以用 where MSVCR100.dll 然后复制过去
    也可以在编译选项里边 配置属性->常规->项目默认值->MFC的使用
    选择 "在静态库中使用MFC" 再编译即可
+* 使用 WinSock 相关时提示重定义
+  记得 #include <winsock2.h> 要在 #include <windows.h> 的前边
 * #pragma 注释
   : 下边记录的是在实际中碰到过的
   : 完整的可以 google 或者到 http://www.cnblogs.com/cchyao/archive/2010/09/25/1834308.html

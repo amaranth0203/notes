@@ -21,11 +21,16 @@
    - State "TODO"       from ""           [2016-12-01 周四 12:32]
 ** TODO [#A] 给 explorer 打 patch
    SCHEDULED: <2016-11-30 周三>
+   - State "TODO"       from "TODO"       [2017-01-24 周二 11:38] \\
+     由于覆盖正在运行的 explorer.exe 比较有难度
+     转成由 sys 文件加载 dll 的方式
    - State "TODO"       from ""           [2016-11-24 周四 14:29]
 
 *** TODO mstsc silent
     - State "TODO"       from ""           [2016-12-19 周一 16:37]
 *** TODO windows version of XJJ( variable redirect )
+    - State "TODO"       from "TODO"       [2017-01-24 周二 11:39] \\
+      dll explort
     - State "TODO"       from ""           [2016-11-24 周四 14:31]
 *** DONE 生成 binary-code 的方法
     CLOSED: [2017-01-09 周一 18:44]
@@ -55,7 +60,8 @@
     - google 
     - http://www.chokepoint.net/2013/09/building-multiplatform-shellcode-header.html
     - https://github.com/amaranth0203/win-exec-calc-shellcode/blob/master/HOW_TO_BUILD.txt
-*** VMProtected
+*** TODO VMProtected
+    - State "TODO"       from ""           [2017-01-24 周二 11:39]
 *** TODO RELEASE
     - State "TODO"       from ""           [2016-11-24 周四 14:32]
 ** DONE sqlmap
