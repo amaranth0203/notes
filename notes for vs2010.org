@@ -1,3 +1,7 @@
+* reversed shell
+  vc 上边 connect 之后直接使用 CreateProcess 重定向即可
+  vs 必须要用 pipeline
+  http://stackoverflow.com/questions/27834419/winsock-command-line-on-a-remote-server
 * 编译配置
 ** 在其他电脑出现 "无法启动，丢失 MSVCR100.dll"
    可以用 where MSVCR100.dll 然后复制过去

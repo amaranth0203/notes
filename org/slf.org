@@ -28,7 +28,11 @@
 
 *** TODO mstsc silent
     - State "TODO"       from ""           [2016-12-19 周一 16:37]
-*** TODO windows version of XJJ( variable redirect )
+*** TODO daemon.sys
+    - State "TODO"       from ""           [2017-01-25 周三 18:42]
+*** DONE windows version of XJJ( variable redirect )
+    CLOSED: [2017-01-25 周三 12:13]
+    - State "DONE"       from "TODO"       [2017-01-25 周三 12:13]
     - State "TODO"       from "TODO"       [2017-01-24 周二 11:39] \\
       dll explort
     - State "TODO"       from ""           [2016-11-24 周四 14:31]
@@ -60,7 +64,9 @@
     - google 
     - http://www.chokepoint.net/2013/09/building-multiplatform-shellcode-header.html
     - https://github.com/amaranth0203/win-exec-calc-shellcode/blob/master/HOW_TO_BUILD.txt
-*** TODO VMProtected
+*** DONE VMProtected
+    CLOSED: [2017-01-25 周三 12:13]
+    - State "DONE"       from "TODO"       [2017-01-25 周三 12:13]
     - State "TODO"       from ""           [2017-01-24 周二 11:39]
 *** TODO RELEASE
     - State "TODO"       from ""           [2016-11-24 周四 14:32]
