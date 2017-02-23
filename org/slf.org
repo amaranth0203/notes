@@ -30,6 +30,7 @@
     - State "TODO"       from ""           [2016-12-19 周一 16:37]
 *** TODO daemon.sys
     - State "TODO"       from ""           [2017-01-25 周三 18:42]
+    - 参考 Xenos 里边的 kernel create_thread
 *** DONE windows version of XJJ( variable redirect )
     CLOSED: [2017-01-25 周三 12:13]
     - State "DONE"       from "TODO"       [2017-01-25 周三 12:13]

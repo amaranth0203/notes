@@ -1,3 +1,5 @@
+* 编写 dll
+** 在 dll main 里边不能用 messagebox 如果要弹窗，使用 WTSSendMessage 记录 log 用 OutputDebugString 然后用 DebugView 查看或者直接写文件
 * reversed shell
   vc 上边 connect 之后直接使用 CreateProcess 重定向即可
   vs 必须要用 pipeline

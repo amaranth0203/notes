@@ -1,1 +1,8 @@
 * 插入时间戳时 先输入 C-u 再来 C-C . 或者 C-C ! 就可以精确到 小时/分钟
+* org-agenda 批量操作
+  - M-m org-agenda-bulk-toggle
+  - M-* org-agenda-bulk-toggle-all
+  - % org-agenda-bulk-mark-regexp
+  - B org-agenda-bulk-action
+* 查看 前一个/下一个 view
+  - f / b
