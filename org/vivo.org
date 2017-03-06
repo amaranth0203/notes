@@ -5,9 +5,16 @@
 #+TODO: TODO(t@/!) 新的(1@/!) 正在处理(2@/!) 重新打开(3@/!) 延后处理(4@/!) | DONE(d@/!) 解决待关闭(5@/!) 不做处理(6@/!) 退回(7@/!) 关闭(8@/!) 转给他人(9@/!)
 
 
-* pub [12/12]
+* pub [13/14]
   SCHEDULED: <2016-10-19 周三>
   CLOCK: [2016-10-19 周三 09:42]--[2016-10-19 周三 09:44] =>  0:02
+** TODO [#A] 问王青芸关于住房的事 -> 刘顺顺
+   SCHEDULED: <2017-03-01 周三>
+   - State "TODO"       from ""           [2017-03-01 周三 11:47]
+** DONE [#A] 收集AWB问题
+   CLOSED: [2017-03-06 周一 11:57] SCHEDULED: <2017-03-01 周三>
+   - State "DONE"       from "TODO"       [2017-03-06 周一 11:57]
+   - State "TODO"       from ""           [2017-03-01 周三 12:16]
 ** DONE 充值安奇逻辑客餐卡
    CLOSED: [2016-12-03 周六 10:03] DEADLINE: <2016-12-05 周一> SCHEDULED: <2016-12-03 周六>
    - State "DONE"       from "TODO"       [2016-12-03 周六 10:03]
@@ -331,23 +338,32 @@
     - State "解决待关闭" from "DONE"       [2016-10-29 周六 15:10]
     - State "DONE"       from "TODO"       [2016-10-29 周六 15:01]
     - State "TODO"       from ""           [2016-10-28 周五 12:06]
-** PD1635 [5/8]
-*** TODO 前置第一版问题点 [0/5]
+** PD1635 [13/17]
+*** DONE 提供后置闪光灯 data sheet -> 丘志平
+    CLOSED: [2017-03-06 周一 11:47] SCHEDULED: <2017-03-04 周六>
+    - State "DONE"       from "TODO"       [2017-03-06 周一 11:47]
+    - State "TODO"       from ""           [2017-03-04 周六 16:51]
+*** TODO 前置第一版问题点 [2/5]
     - State "TODO"       from ""           [2017-02-18 周六 11:11]
-**** TODO [B170220-245]前置：各场景基础及美颜拍照，整体偏黄绿          :@bug:
-     SCHEDULED: <2017-02-18 周六> 
+**** 解决待关闭 [B170220-245]前置：各场景基础及美颜拍照，整体偏黄绿    :@bug:
+     CLOSED: [2017-03-06 周一 16:26] SCHEDULED: <2017-02-18 周六> 
+     - State "解决待关闭" from "TODO"       [2017-03-06 周一 16:26]
      - State "TODO"       from ""           [2017-02-18 周六 11:12]
-**** TODO [B170220-264]前置：办公室环境基础及美颜拍照golden/limit 一致性——办公室环境 golden（7）limit（7） :@bug:
+**** 正在处理 [B170220-264]前置：办公室环境基础及美颜拍照golden/limit 一致性——办公室环境 golden（7）limit（7） :@bug:
      SCHEDULED: <2017-02-18 周六> 
+     - State "正在处理"   from "TODO"       [2017-03-06 周一 16:28]
      - State "TODO"       from ""           [2017-02-18 周六 11:12]
-**** TODO [B170220-280]前置：上下唇色色彩差异大——单色背景人物、灯室人物、烛光人物、室外美颜人物 :@bug:
+**** 正在处理 [B170220-280]前置：上下唇色色彩差异大——单色背景人物、灯室人物、烛光人物、室外美颜人物 :@bug:
      SCHEDULED: <2017-02-18 周六> 
+     - State "正在处理"   from "TODO"       [2017-03-06 周一 16:28]
      - State "TODO"       from ""           [2017-02-18 周六 11:12]
-**** TODO [B170220-283]前置：中低色温人脸色块明显，肤色均匀性差——对应烛光、灯室、模拟KFC、KFC等场景 :@bug:
+**** 正在处理 [B170220-283]前置：中低色温人脸色块明显，肤色均匀性差——对应烛光、灯室、模拟KFC、KFC等场景 :@bug:
      SCHEDULED: <2017-02-18 周六> 
+     - State "正在处理"   from "TODO"       [2017-03-06 周一 16:28]
      - State "TODO"       from ""           [2017-02-18 周六 11:13]
-**** TODO [B170220-299]前置：模拟卖场/卖场（高色温场景），人脸色块明显 :@bug:
-     SCHEDULED: <2017-02-18 周六> 
+**** 解决待关闭 [B170220-299]前置：模拟卖场/卖场（高色温场景），人脸色块明显 :@bug:
+     CLOSED: [2017-03-06 周一 16:25] SCHEDULED: <2017-02-18 周六> 
+     - State "解决待关闭" from "TODO"       [2017-03-06 周一 16:25]
      - State "TODO"       from ""           [2017-02-18 周六 11:13]
 *** DONE 确认dsp合成前后raw的差异
     CLOSED: [2017-02-21 周二 15:57] SCHEDULED: <2017-02-18 周六>
@@ -357,6 +373,37 @@
 *** TODO 提供前置偏差大的 limit 模组
     SCHEDULED: <2017-02-20 周一>
     - State "TODO"       from ""           [2017-02-20 周一 12:17]
+*** DONE [#A] 优化 hal 调用 mcas 的代码
+    CLOSED: [2017-03-03 周五 14:59] SCHEDULED: <2017-03-01 周三>
+    - State "DONE"       from "TODO"       [2017-03-03 周五 14:59]
+    - State "TODO"       from ""           [2017-03-01 周三 11:55]
+*** DONE 借 1635 golden 屏( 黄秋霞 ) 和 1616
+    CLOSED: [2017-03-02 周四 10:06] SCHEDULED: <2017-03-02 周四>
+    - State "DONE"       from "TODO"       [2017-03-02 周四 10:06]
+    - State "TODO"       from ""           [2017-03-01 周三 21:51]
+*** DONE [#A] porting mm-camera -> 找赵工确认效果
+    CLOSED: [2017-02-28 周二 16:07] SCHEDULED: <2017-02-28 周二>
+    - State "DONE"       from "TODO"       [2017-02-28 周二 16:07]
+    - State "TODO"       from ""           [2017-02-28 周二 12:10]
+*** DONE [#A] porting prebuilt_HY11
+    CLOSED: [2017-02-28 周二 16:15] SCHEDULED: <2017-02-28 周二>
+    - State "DONE"       from "TODO"       [2017-02-28 周二 16:15]
+    - State "TODO"       from ""           [2017-02-28 周二 12:10]
+*** DONE [#A] porting device.mk
+    CLOSED: [2017-02-28 周二 16:20] SCHEDULED: <2017-02-28 周二>
+    - State "DONE"       from "TODO"       [2017-02-28 周二 16:20]
+    - State "TODO"       from ""           [2017-02-28 周二 12:10]
+*** DONE [#A] porting hardware -> 找赵工确认效果
+    CLOSED: [2017-02-28 周二 16:07] SCHEDULED: <2017-02-28 周二>
+    - State "DONE"       from "TODO"       [2017-02-28 周二 16:07]
+    - State "TODO"       from ""           [2017-02-28 周二 12:10]
+*** DONE [#A] porting 前置兼容
+    CLOSED: [2017-02-28 周二 16:07] SCHEDULED: <2017-02-28 周二>
+    - State "DONE"       from "TODO"       [2017-02-28 周二 16:07]
+    - State "TODO"       from ""           [2017-02-28 周二 12:10]
+*** TODO 前置补光灯校准通路
+    SCHEDULED: <2017-02-28 周二>
+    - State "TODO"       from ""           [2017-02-28 周二 10:25]
 *** TODO 提供后置偏差大的 limit 模组
     SCHEDULED: <2017-02-20 周一>
     - State "TODO"       from ""           [2017-02-20 周一 12:17]

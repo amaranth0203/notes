@@ -1,13 +1,28 @@
 
 
-* priv [24/36]
+* priv [28/40]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
   还有时间
   我能反杀
   一直想飞到西安然后坐火车去敦煌
-  
+** DONE Kristell
+   CLOSED: [2017-03-05 周日 14:35] SCHEDULED: <2017-03-02 周四>
+   - State "DONE"       from "TODO"       [2017-03-05 周日 14:35]
+   - State "TODO"       from ""           [2017-03-02 周四 09:56]
+** DONE qyh dj 在 cygwin 验证
+   CLOSED: [2017-03-05 周日 14:54] SCHEDULED: <2017-03-02 周四>
+   - State "DONE"       from "TODO"       [2017-03-05 周日 14:54]
+   - State "TODO"       from ""           [2017-03-02 周四 14:47]
+** DONE qyh dj peek
+   CLOSED: [2017-03-05 周日 16:43] SCHEDULED: <2017-03-02 周四>
+   - State "DONE"       from "TODO"       [2017-03-05 周日 16:43]
+   - State "TODO"       from ""           [2017-03-02 周四 14:48]
+** DONE [#A] 友臣
+   CLOSED: [2017-03-04 周六 10:51] SCHEDULED: <2017-03-03 周五>
+   - State "DONE"       from "TODO"       [2017-03-04 周六 10:51]
+   - State "TODO"       from ""           [2017-03-02 周四 09:56]
 ** DONE 替换 +
    CLOSED: [2016-12-26 周一 20:13]
    - State "DONE"       from "TODO"       [2016-12-26 周一 20:13]
