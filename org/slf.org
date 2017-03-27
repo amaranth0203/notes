@@ -1,6 +1,6 @@
 
 
-* priv [28/40]
+* priv [29/42]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
@@ -11,6 +11,13 @@
    CLOSED: [2017-03-05 周日 14:35] SCHEDULED: <2017-03-02 周四>
    - State "DONE"       from "TODO"       [2017-03-05 周日 14:35]
    - State "TODO"       from ""           [2017-03-02 周四 09:56]
+** TODO [#A] hexo + github 搭建博客（不需外网ip）
+   SCHEDULED: <2017-03-16 周四>
+   - State "TODO"       from ""           [2017-03-16 周四 21:56]
+** DONE [#A] emacs helm
+   CLOSED: [2017-03-14 周二 21:29] SCHEDULED: <2017-03-14 周二>
+   - State "DONE"       from "TODO"       [2017-03-14 周二 21:29]
+   - State "TODO"       from ""           [2017-03-14 周二 19:07]
 ** DONE qyh dj 在 cygwin 验证
    CLOSED: [2017-03-05 周日 14:54] SCHEDULED: <2017-03-02 周四>
    - State "DONE"       from "TODO"       [2017-03-05 周日 14:54]

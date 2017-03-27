@@ -1,4 +1,15 @@
 
+生成 patch 的时候如果有二进制文件就用
+git diff --binary HEAD~1 HEAD~0 > a.diff
+
+git reset --hard HEAD^1 
+回退多个 commit 的时候可以用
+git reset --hard HEAD~100
+
+repo sync . -- 只同步当前目录
+repo sync -d . -- 只同步当前目录并且 reset --hard 到 manifest.xml 中的 commit-id
+----> 不怎么好用，会切换到 no branch 去
+
 create a brand new branch :
 git checkout --orphan brand_new_branch // 创建新分支
 git rm --cached -r . // 删除当前目录存在的文件（在创建分支时被 add 但未来 commit )

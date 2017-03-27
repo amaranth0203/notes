@@ -1,4 +1,29 @@
 
+char* 和 char[] 的区别
+      The difference here is that
+
+      char *s = "Hello world";
+      will place Hello world in the read-only parts of the memory and making s a pointer to that, making any writing operation on this memory illegal. While doing:
+
+      char s[] = "Hello world";
+      puts the literal string in read-only memory and copies the string to newly allocated memory on the stack. Thus making
+
+      s[0] = 'J';
+      legal.
+      A more lengthy explanation would include what segments the memory is stored in, and how much memory is allocated:
+
+      Example:                       Allocation Type:     Read/Write:    Storage Location:   Memory Used (Bytes):
+      ===========================================================================================================
+      const char* str = "Stack";     Static               Read-only      Code segment        6 (5 chars plus '\0')
+      char* str = "Stack";           Static               Read-only      Code segment        6 (5 chars plus '\0')
+      char* str = malloc(...);       Dynamic              Read-write     Heap                Amount passed to malloc
+      char str[] = "Stack";          Static               Read-write     Stack               6 (5 chars plus '\0')
+      char strGlobal[10] = "Global"; Static               Read-write     Data Segment (R/W)  10
+使用的时候
+可以用 char* a = xxx ? "aaa" : "bbb" ; // aaa 和 bbb 被同时写入Code segment中 可以用 strings 查看
+不能用 char a[] = xx ? "aaa" : "bbb" ;
+
+
 执行 shellcode 
 char code[] = "\x00\x00" ; // shellcode
 void( *fp )( void ) ; // 声明函数指针
