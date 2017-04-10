@@ -1,6 +1,7 @@
 
+#+TODO: TODO(t@/!) | DONE(d@/!) CANCEL(c@/!)
 
-* priv [29/42]
+* priv [32/42]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
@@ -35,22 +36,29 @@
    - State "DONE"       from "TODO"       [2016-12-26 周一 20:13]
    - State "TODO"       from ""           [2016-12-21 周三 11:19]
 
-** TODO 学习 git tag
+** DONE 学习 git tag
+   CLOSED: [2017-04-11 周二 01:00]
+   - State "DONE"       from "TODO"       [2017-04-11 周二 01:00]
    - State "TODO"       from "TODO"       [2016-12-26 周一 10:28]
 ** DONE tmux 时间格式
    CLOSED: [2016-12-01 周四 18:23] DEADLINE: <2016-12-01 周四>
    - State "DONE"       from "TODO"       [2016-12-01 周四 18:23]
    - State "TODO"       from ""           [2016-12-01 周四 12:32]
-** TODO [#A] 给 explorer 打 patch
-   SCHEDULED: <2016-11-30 周三>
+** DONE [#A] 给 explorer 打 patch
+   CLOSED: [2017-04-11 周二 00:57] SCHEDULED: <2016-11-30 周三>
+   - State "DONE"       from "TODO"       [2017-04-11 周二 00:57]
    - State "TODO"       from "TODO"       [2017-01-24 周二 11:38] \\
      由于覆盖正在运行的 explorer.exe 比较有难度
      转成由 sys 文件加载 dll 的方式
    - State "TODO"       from ""           [2016-11-24 周四 14:29]
 
-*** TODO mstsc silent
+*** CANCEL mstsc silent
+    CLOSED: [2017-04-11 周二 01:00]
+    - State "CANCEL"     from "TODO"       [2017-04-11 周二 01:00]
     - State "TODO"       from ""           [2016-12-19 周一 16:37]
-*** TODO daemon.sys
+*** DONE daemon.sys
+    CLOSED: [2017-04-11 周二 00:57]
+    - State "DONE"       from "TODO"       [2017-04-11 周二 00:57]
     - State "TODO"       from ""           [2017-01-25 周三 18:42]
     - 参考 Xenos 里边的 kernel create_thread
 *** DONE windows version of XJJ( variable redirect )
@@ -91,7 +99,9 @@
     CLOSED: [2017-01-25 周三 12:13]
     - State "DONE"       from "TODO"       [2017-01-25 周三 12:13]
     - State "TODO"       from ""           [2017-01-24 周二 11:39]
-*** TODO RELEASE
+*** DONE RELEASE
+    CLOSED: [2017-04-11 周二 00:57]
+    - State "DONE"       from "TODO"       [2017-04-11 周二 00:57]
     - State "TODO"       from ""           [2016-11-24 周四 14:32]
 ** DONE sqlmap
    CLOSED: [2016-11-24 周四 14:32] SCHEDULED: <2016-11-29 周二>
@@ -213,7 +223,9 @@
       - [X] client pid
       - [X] ko binary
 
-** TODO 加密解密算法
+** DONE 加密解密算法
+   CLOSED: [2017-04-11 周二 01:01]
+   - State "DONE"       from "TODO"       [2017-04-11 周二 01:01]
    - State "TODO"       from ""           [2016-10-20 周四 18:
    - 应该用勒索程序将RSA加密后的密文
      发送到私有的服务端A
@@ -250,7 +262,9 @@
      CLOSED: [2016-10-30 周日 17:02]
      - State "DONE"       from "TODO"       [2016-10-30 周日 17:02]
      - State "TODO"       from ""           [2016-10-28 周五 16:06]
-*** TODO 使用RSA加密AES密钥
+*** CANCEL 使用RSA加密AES密钥
+    CLOSED: [2017-04-11 周二 01:01]
+    - State "CANCEL"     from "TODO"       [2017-04-11 周二 01:01]
     - State "TODO"       from ""           [2016-10-26 周三 22:41]
 ** DONE 转换添加 mid 到看代码的列表里
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
