@@ -1,13 +1,36 @@
 
 #+TODO: TODO(t@/!) | DONE(d@/!) CANCEL(c@/!)
 
-* priv [32/42]
+* priv [37/48]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
   还有时间
   我能反杀
   一直想飞到西安然后坐火车去敦煌
+** DONE 问中级软件设计师在事业单位报名里边的职称应该选什么
+   CLOSED: [2017-04-20 周四 10:55] SCHEDULED: <2017-04-17 周一>
+   - State "DONE"       from "TODO"       [2017-04-20 周四 10:55]
+   - State "TODO"       from ""           [2017-04-17 周一 22:44]
+** TODO 导出酷狗识别失败的音乐
+   SCHEDULED: <2017-04-17 周一>
+   - State "TODO"       from ""           [2017-04-17 周一 18:59]
+** DONE 找[要看的]的完整时间，√的符号
+   CLOSED: [2017-04-16 周日 14:01] SCHEDULED: <2017-04-16 周日>
+   - State "DONE"       from "TODO"       [2017-04-16 周日 14:01]
+   - State "TODO"       from ""           [2017-04-16 周日 12:42]
+** DONE 看事业单位的职位表
+   CLOSED: [2017-04-17 周一 22:45] SCHEDULED: <2017-04-16 周日>
+   - State "DONE"       from "TODO"       [2017-04-17 周一 22:45]
+   - State "TODO"       from ""           [2017-04-16 周日 18:27]
+** CANCEL [#A] 查去年的分数线
+   CLOSED: [2017-04-19 周三 20:10] SCHEDULED: <2017-04-11 周二>
+   - State "CANCEL"     from "TODO"       [2017-04-19 周三 20:10]
+   - State "TODO"       from ""           [2017-04-11 周二 13:53]
+** DONE [#A] 下五十度灰
+   CLOSED: [2017-04-14 周五 20:27] SCHEDULED: <2017-04-11 周二>
+   - State "DONE"       from "TODO"       [2017-04-14 周五 20:27]
+   - State "TODO"       from ""           [2017-04-11 周二 13:53]
 ** DONE Kristell
    CLOSED: [2017-03-05 周日 14:35] SCHEDULED: <2017-03-02 周四>
    - State "DONE"       from "TODO"       [2017-03-05 周日 14:35]

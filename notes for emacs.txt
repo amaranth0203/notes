@@ -1,4 +1,20 @@
 
+helm-find-files 和 ido-fine-file 比起来
+
+找 s71200.py 时, helm 可以直接 s py
+ido s 之后 空格 会报错
+
+helm( 新窗口 ) 使用 C-n C-p 切换, 
+ido( mini buffer ) 使用 C-s C-r 切换.
+
+打开已经打开过的文件 ido 可以在 ido-find-file 之后输文件名直接 M-s 搜索文件
+helm 可以借助 bookmarks ( setq bookmark-save-flag 1 )
+helm-filtered-bookmarks 命令
+也可以使用 recentf 使用 ( setq-default recent-save-file "~/.emacs.d/recentf" )
+在不同 emacs 窗体之间共享 recentf 时使用
+recentf-save-list 和 recentf-load-list 命令
+
+
 类似vim里边替换时用 \( \) 来引用
 之后再用 \1 \2 来替换的
 emacs 也可以 格式也一样
