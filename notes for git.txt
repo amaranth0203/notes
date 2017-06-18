@@ -1,4 +1,8 @@
 
+git clone 大项目时
+可以先 git clone --depth=1 xxxx.git
+之后再 git fetch --unshallow
+
 生成 patch 的时候如果有二进制文件就用
 git diff --binary HEAD~1 HEAD~0 > a.diff
 

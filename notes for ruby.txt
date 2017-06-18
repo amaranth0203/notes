@@ -1,3 +1,22 @@
+
+ruby 有个测试工具叫 rspce
+
+ruby 工程下边可以有个文件叫 Gemfile
+里边列举了这个工程需要的 gem 以及依赖的 gem
+对于这个 Gemfile 可以直接通过组件 bundler 来安装
+# bundle install
+
+ruby 打包出来的东西叫 gem, 类似 python 的模块
+可以直接用 gem install bundler 从镜像上边安装 bundler 这个组件( 类似 pip )
+
+ruby 有个工具叫 rvm( Ruby Version Manager )
+可以实现切换到特定目录就用特定版本的 ruby
+( 之前有过在 msf 目录可以用 ruby，切换出来就没有 ruby 的奇妙经历 )
+-> 具体文件 : 
+   .rvmrc ( rvm use 1.9.3@my-app )
+   .ruby-version ( 1.9.3 )
+都可以
+
 >>> a = []
 >>> a.append( 1 )
 >   a = []

@@ -124,6 +124,7 @@ gsettings reset org.compiz.core:/org/compiz/profiles/unity/plugins/core/ active-
 
 apt-get install或aptitude install 不会自动补全的时候
 修改/etc/bash.bashrc，去掉# enable bash completion in interactive shells后边代码段的注释
+-------> 前提是已经安装了包 bash-completion
 
 当目录下边的文件确实存在，但运行起来却说file or directore not exist的时候
 很大可能是在64架构下运行了32位的可执行文件（可以使用 file exec_file_name 来查看）
@@ -138,6 +139,11 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x
  - 禁用ubuntu鸡肋的滚动条
 
 [shell]
+
+rm -- -r ( -- 后边全部做纯字符串来处理 )
+- 可以代表 "stdin"
+gzip -dc xxx.tar.gz | tar xvf -
+curl -sS httpxxxxxx | gpg --import -
 
 echo a/b/c/d/e | cut -d'/' -f2
 得到 b
