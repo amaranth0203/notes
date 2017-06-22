@@ -140,6 +140,16 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x
 
 [shell]
 
+解压和压缩
+		.tar	.tar.gz2	.tar.bz2
+解压            -xvf	-zxvf		-jxvf
+压缩            -cvf	-zcvf		-jcvf
+首先后边的 vf 代表 verbose 和 file(加参数)
+之后 x/c 代表 eXtract 和 Compress
+在 tar 的基础上
+如果加了 gz2 参数就多个 z
+如果加了 bz2 参数就多个 j
+
 rm -- -r ( -- 后边全部做纯字符串来处理 )
 - 可以代表 "stdin"
 gzip -dc xxx.tar.gz | tar xvf -
