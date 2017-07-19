@@ -14,3 +14,13 @@ smbpasswd -a qiyunhu
 services smbd restart
 smbclient -L //localhost/share	//这里用的share是上边配置文件中括号里边的名字
 连接成功就可以在windows下边映射\\$(ip)\share了
+
+也可以用
+testparm来查看是否有
+[share]
+    ...
+    guest ok = Yes
+之后再
+smbclient //localhost/share
+smb: \> ls
+来查看

@@ -1,0 +1,20 @@
+* uwsgi
+** -w --wsgi-file 用不了 很可能是python模块没装，安装一个或者使用 uwsgi_python
+** 一定要叫 application , 叫 app 都不行
+** nginx 一直 502 时，换 sock 发现是 permission deny , 可以用 chmod 777，也可以把 www-data 加入到当前用户组( config 里边的 uid gid sock-chmod 都没有用 )
+** attendance 里边使用的几个文件 :
+*** uwsgi_config.ini
+[uwsgi]
+module = wsgi
+master = true
+process = 5
+socket = attendance.sock
+vacuum = true # clean up the socket when the process stops
+die-on-term = true
+*** wsgi.py
+from test_wechatpy import application
+
+if __name__ == "__main__":
+    application.run()
+*** 启动命令
+uwsgi_python3 --ini uwsgi_config.ini

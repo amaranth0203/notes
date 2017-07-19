@@ -140,6 +140,18 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false	- 12.x
 
 [shell]
 
+创建目录的时候用 mkdir
+创建多级目录的时候需要加参数 -p ( --parents )
+如 mkdir a/b/c/d/e/
+
+复制文件时用 cp src dst
+是覆盖复制
+如果目标目录不存在，则不能复制
+这时候可以先用 mkdir 创建，再复制
+也可以用
+rsync 来复制 : ( tools_and_more 目录下没有 phantomjs 目录 )
+rsync -a ./bin/phantomjs /usr/local/tools_and_more/phantomjs/
+
 解压和压缩
 		.tar	.tar.gz2	.tar.bz2
 解压            -xvf	-zxvf		-jxvf

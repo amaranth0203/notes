@@ -1,0 +1,6 @@
+* PowerDesigner
+** 连接 mysql 要安装 mysql-connector-odbc-5.3.8-win32 才可以
+
+** 连接 mysql 时不要直接连 root , vps 可能有安全策略导致连接不上
+
+** 选择列之后右键 properties 之后勾选 identity 可以添加 auto_increment 属性

@@ -1,3 +1,41 @@
+
+
+
+
+
+
+插入utf-8中文提示 1366, "Incorrect string value 时候
+
+先查看编码 :
+1. mysql> status ;
+2. mysql> show variables like '%char%';
+3. mysql> SELECT SCHEMA_NAME 'database', default_character_set_name 'charset', DEFAULT_COLLATION_NAME 'collation' FROM information_schema.SCHEMATA ;
+4. mysql> show create table class ;
+
+更改编码 :
+
+在/etc/mysql/my.cnf后追加
+[client]
+default-character-set=utf8
+[mysqld]
+character-set-server=utf8
+之后重启服务
+可以更改 1. 2. 的
+
+mysql> ALTER DATABASE attendance CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+可以更改 3. 的
+
+mysql> ALTER TABLE class_teacher CONVERT TO CHARACTER SET utf8 ;
+可以更改 4. 的
+
+但是都改完之后还是会出错，需要删掉表重建
+之后就可以了
+
+
+
+
+
+
 show databases ;
 use test ;
 show tables ;
