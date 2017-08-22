@@ -1,3 +1,14 @@
+
+wannacry 爆发之后国内运营商封锁 445 端口导致 samba 无法正常挂载
+可以采用折中的办法:
+使用 446 端口代替 445 端口 :
+     在 /etc/samba/smb.conf 开头加 smb ports = 446 139
+由于 windows 无法更改端口，可以先在内网 linux(虚拟机也可以)下挂载:
+     apt-get install cifs-utils
+     sudo mount -t cifs -o username=USERNAME,password=PASSWORD //qiyunhu.com/share /media/sf_Desktop/qiyunhu.com
+接着映射到内网虚拟机的默认端口再挂载
+
+
 aptitude install samba
 chmod 777 /home/qiyunhu
 
