@@ -12,3 +12,9 @@
 
 get得到的页面方便收藏（后退键方便），但是长度有限制（导致数据丢失
 post大容量，安全，（后退键会触发是否重新提交）
+
+跨域请求的时候用 form 的 get 来实现比较方便
+post的话会触发 cors , 需要更改服务端才能实现
+
+form 提交的内容如果不是 utf-8 编码的话，记得加上 accept-charset :
+<form accept-charset="ISO-8859-1">
