@@ -1,4 +1,6 @@
 
+git branch -vv 可以看到各自的分支和哪一个远程分支关联( track a remote branch ), 当和对应的远程分支没有关联上时可使用: git branch --set-upstream-to=shadow-wsl 来关联
+
 git clone 大项目时
 可以先 git clone --depth=1 xxxx.git
 之后再 git fetch --unshallow
