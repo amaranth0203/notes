@@ -1,0 +1,7 @@
+
+* bitcoind bitcoin-qt
+  两个命令都能当 json-rpc 服务器用, 但 -qt 必须加 -server 才能用 -cli 连接上
+* -rpcuser -rpcpassword
+  随意设置, 当做 json-rpc 服务器的用户名和密码, 对 qt 没什么影响
+* -testnet
+  用来练习, 不用真的去购买
