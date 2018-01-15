@@ -5,3 +5,16 @@
   随意设置, 当做 json-rpc 服务器的用户名和密码, 对 qt 没什么影响
 * -testnet
   用来练习, 不用真的去购买
+* 一个交易过程
+  一个交易可以由一个或者几个输入(UTXO)(一个输入的余额不足时用几个输入来进行)和一个或多个输出组成
+  一个交易必须支出相应的费用 minrelaytxfee 0.00001 (BTC/kB)
+** 探索一个交易过程
+   listunspent - 查看目前没有使用的余额
+   createrawtransaction - 使用listunspent中的txid来作为输入, 使用收钱地址作为输出
+   						- 其中 输入总额 - 输入总额 >= min relay fee ( 否则会出现 min relay fee not meet 错误 )
+   decoderawtransaction - 确认上一步创建的交易没错
+   walletpassphrase - 解锁钱包
+   signrawtransaction - 给交易签名
+   decoderawtransaction - 再次确认上一步签名的交易没错
+   sendrawtransaction - 提交交易( 检查 minrelayfee )
+
