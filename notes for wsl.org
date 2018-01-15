@@ -1,0 +1,7 @@
+* 可以使用原生的 utuntu, 改的是系统调用( cygwin 和 wsl 比起来有点类似 ring3 和 ring0 对比 )
+* 如果要改系统位置( 解放c盘 ), 可以百度看看 junction( mklink /J ) 到 c 之外的盘
+* 已知的缺点
+** 字体不能用 powerline console 是因为 win10 cmd 对字体要求非常严格( 可以使用 sarasa-gothic 代替 )
+** 中文输入法看不到候选字
+** emacs undo 命令的快捷键 C-/ 因为不是 ascii 码不能使用( 使用 C-x u 代替 )
+** emacs org-mode 中 org-meta-return 命令的快捷键 C-I 不能使用( 变成 C-c C-x m )
