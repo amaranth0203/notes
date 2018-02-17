@@ -1,4 +1,6 @@
 
+C-x C-f 之后输入 /sudo:: 会询问密码，接着可以以root权限编辑文件(如hosts)
+
 helm-find-files 和 ido-fine-file 比起来
 
 找 s71200.py 时, helm 可以直接 s py

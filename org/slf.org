@@ -1,7 +1,7 @@
 
 #+TODO: TODO(t@/!) | DONE(d@/!) CANCEL(c@/!)
 
-* priv [37/48]
+* priv [41/48]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
@@ -12,8 +12,10 @@
    CLOSED: [2017-04-20 周四 10:55] SCHEDULED: <2017-04-17 周一>
    - State "DONE"       from "TODO"       [2017-04-20 周四 10:55]
    - State "TODO"       from ""           [2017-04-17 周一 22:44]
-** TODO 导出酷狗识别失败的音乐
-   SCHEDULED: <2017-04-17 周一>
+** CANCEL 导出酷狗识别失败的音乐
+   CLOSED: [2018-02-17 Sat 18:25] SCHEDULED: <2017-04-17 周一>
+   - State "CANCEL"     from "TODO"       [2018-02-17 Sat 18:25] \\
+     热情不再，酷狗已删
    - State "TODO"       from ""           [2017-04-17 周一 18:59]
 ** DONE 找[要看的]的完整时间，√的符号
    CLOSED: [2017-04-16 周日 14:01] SCHEDULED: <2017-04-16 周日>
@@ -35,8 +37,10 @@
    CLOSED: [2017-03-05 周日 14:35] SCHEDULED: <2017-03-02 周四>
    - State "DONE"       from "TODO"       [2017-03-05 周日 14:35]
    - State "TODO"       from ""           [2017-03-02 周四 09:56]
-** TODO [#A] hexo + github 搭建博客（不需外网ip）
-   SCHEDULED: <2017-03-16 周四>
+** CANCEL [#A] hexo + github 搭建博客（不需外网ip）
+   CLOSED: [2018-02-17 Sat 18:25] SCHEDULED: <2017-03-16 周四>
+   - State "CANCEL"     from "TODO"       [2018-02-17 Sat 18:25] \\
+     只能搭建"博客" 很多后台操作不支持
    - State "TODO"       from ""           [2017-03-16 周四 21:56]
 ** DONE [#A] emacs helm
    CLOSED: [2017-03-14 周二 21:29] SCHEDULED: <2017-03-14 周二>
@@ -138,7 +142,9 @@
    DEADLINE: <2016-10-19 周三>
    - State "TODO"       from ""           [2016-10-19 周三 10:33]
 ** TODO 柳铁老校区，吃好多好吃的
-** TODO 我没有口红
+** CANCEL 我没有口红
+   CLOSED: [2018-02-17 Sat 18:27]
+   - State "CANCEL"     from "TODO"       [2018-02-17 Sat 18:27]
    - State "TODO"       from ""           [2016-10-23 周日 12:03]
 ** DONE 下载<<六弄咖啡馆>>
    CLOSED: [2016-10-30 周日 17:01]
@@ -169,7 +175,9 @@
 关键字 ddos 阿里养鸡 arm地址
 ** TODO irc channel 做中转
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
-** TODO tor做中转
+** DONE tor做中转
+   CLOSED: [2018-02-17 Sat 18:29]
+   - State "DONE"       from "TODO"       [2018-02-17 Sat 18:29]
    - State "TODO"       from ""           [2016-10-26 周三 22:51]
 ** DONE XJJ
    CLOSED: [2016-11-04 周五 18:53]
@@ -275,7 +283,10 @@
       ^?
       input -> padded -> remaining bits filled up with 64 bits representing the length of the original message, modulo 2^64
       process -> on 32-bit A B C D
-**** TODO [#C] 最后的长度 << 3 为什么
+**** CANCEL [#C] 最后的长度 << 3 为什么
+     CLOSED: [2018-02-17 Sat 18:27]
+     - State "CANCEL"     from "TODO"       [2018-02-17 Sat 18:27] \\
+       直接用 c# 封装的 Rijndael 算法
      - State "TODO"       from ""           [2016-10-28 周五 17:08]
 *** DONE 使用AES加密/解密算法去加密文件
     CLOSED: [2016-10-31 周一 18:03]

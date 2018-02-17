@@ -1,0 +1,4 @@
+* 无法分区移动硬盘
+  想要给移动硬盘分区，用于 time machine, 结果分区时说无法对有"主引导记录"的磁盘进行分区
+  google出来的格式化命令是 qiyunhu@qiyunhudeMacBook-Pro  ~  sudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk3
+  NAME 是卷标，更改一下，之后把 MBRFormat 去掉，之后再用 disk utility 分区即可（提示错误就推出再连接）
