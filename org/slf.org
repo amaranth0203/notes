@@ -1,7 +1,7 @@
 
 #+TODO: TODO(t@/!) | DONE(d@/!) CANCEL(c@/!)
 
-* priv [41/48]
+* priv [41/49]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
@@ -378,6 +378,35 @@
  - 搜狗的“图标整理器”
 ** DONE mtp驱动
    
+** TODO SS(重写hidden-tear) [1/8]
+   - State "TODO"       from ""           [2018-02-17 Sat 21:44]
+   由于 csharp 的 "metamorphic code" 很难实现，于是用cpp重写
+*** TODO 确认发送出去的是加密过的内容(参考本页加密解密算法)
+    - State "TODO"       from ""           [2018-02-17 Sat 21:45]
+
+*** TODO 删除备份(卷影)
+    - State "TODO"       from ""           [2018-02-17 Sat 21:45]
+
+*** TODO 添加对数据库的针对 [0/2]
+    - State "TODO"       from ""           [2018-02-17 Sat 21:45]
+**** TODO 结束进程
+     - State "TODO"       from ""           [2018-02-17 Sat 21:48]
+**** TODO 删除文件(去查有什么文件 db sql 等)
+     - State "TODO"       from ""           [2018-02-17 Sat 21:49]
+*** TODO 多线程加密
+    - State "TODO"       from ""           [2018-02-17 Sat 21:46]
+    - State "TODO"       from ""           [2018-02-17 Sat 21:49]
+*** TODO time limit
+    - State "TODO"       from ""           [2018-02-18 Sun 16:32]
+*** TODO AAV
+    - State "TODO"       from ""           [2018-02-18 Sun 16:33]
+*** TODO 总程序架构(窗口,隐藏,多线程api)
+    - State "TODO"       from ""           [2018-02-18 Sun 16:33]
+*** DONE 先试试看c的方式能否调用多线程api
+    CLOSED: [2018-02-18 Sun 17:54]
+    - State "DONE"       from "TODO"       [2018-02-18 Sun 17:54] \\
+      用不了，调用不了.net api里边的方法
+    - State "TODO"       from ""           [2018-02-18 Sun 16:57]
 * learn_table
 
 | student | math | pyh | mean | pi number |

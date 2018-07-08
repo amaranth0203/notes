@@ -1,4 +1,29 @@
+* 显示/不显示 隐藏文件
+  defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
+  defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder
+* sudo 提示 operation not permitted
+  重启 按住 ⌘+R 进入 Recovery OS
+  之后 Utilities > Terminal
+  > csrutil disable
+  之后重启即可
 * 无法分区移动硬盘
   想要给移动硬盘分区，用于 time machine, 结果分区时说无法对有"主引导记录"的磁盘进行分区
   google出来的格式化命令是 qiyunhu@qiyunhudeMacBook-Pro  ~  sudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk3
   NAME 是卷标，更改一下，之后把 MBRFormat 去掉，之后再用 disk utility 分区即可（提示错误就推出再连接）
+* 杀掉输入法进程
+  kill -9 SCIM_Extension
+* 照片app一直显示『正在更新』，无法与icloud同步
+  退出照片，然后按住option+command再点击照片app的图标打开照片app，会被询问是否修复，点击修复后即可
+* 照片排序问题
+  相册里的照片是根据时间来排序的，具体又分两种(png直接转成jpeg来处理了)
+  - 查看
+    - jpeg 需要用 exiftool 来查看，排序依据是 Date/Time Original 这一项
+    - gif 根据文件创建时间来排序
+      - stat 查看 :
+        stat -f %SB filename
+        stat -f "Access (atime): %Sa%nModify (mtime): %Sm%nChange (ctime): %Sc%nBirth  (Btime): %SB" filename
+      - GetFileInfo 查看 created 即可
+  - 修改( 无法通过 touch 修改 )
+    - jpeg : exiftool -datetimeoriginal="2018:04:21 07:03:44" filename
+    - gif : setfile -d '04/21/2018 08:44:44' filename
+  

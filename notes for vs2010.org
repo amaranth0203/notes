@@ -9,6 +9,9 @@
    可以用 where MSVCR100.dll 然后复制过去
    也可以在编译选项里边 配置属性->常规->项目默认值->MFC的使用
    选择 "在静态库中使用MFC" 再编译即可
+** 出现丢失 vcruntime140.dll
+   编译选项，生成代码里边，选用 /MT
+   ( /MD 只有30多k /MT 有 400 多k )
 * 使用 WinSock 相关时提示重定义
   记得 #include <winsock2.h> 要在 #include <windows.h> 的前边
 * #pragma 注释

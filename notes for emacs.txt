@@ -1,4 +1,8 @@
 
+M-x pop-tag-mark RET : goto definition 之后跳转回去
+
+C-x 0 删除当前窗口
+
 C-x C-f 之后输入 /sudo:: 会询问密码，接着可以以root权限编辑文件(如hosts)
 
 helm-find-files 和 ido-fine-file 比起来

