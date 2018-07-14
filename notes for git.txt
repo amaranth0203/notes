@@ -1,4 +1,29 @@
 
+.git过大怎么办(vs工程的 .vs目录)
+1.查看git空间
+    du -h . | grep M
+2.运行 gc 生成 pack 文件
+    git gc --prune=now
+3.找出大文件
+    git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | grep blob | sort -k 3 -n | awk '{print $1}')" | sort -k 2 > large-files.txt
+    emacs large-files.txt // 要保留的文件就删掉记录,最后large-files.txt里边剩下的文件名是要删除掉的文件
+    cat large-files.txt| awk '{print $2}'|tr '\n' ' ' > large-files-inline.txt
+4.移除引用
+    git filter-branch -f --prune-empty --index-filter "git rm -rf --cached --ignore-unmatch `cat large-files-inline.txt`" --tag-name-filter cat -- --all
+5.进行 repack
+    git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
+    git reflog expire --expire=now --all
+    git gc --prune=now
+6.再查看pack空间使用情况
+    git count-objects -vH
+    (或者使用 du -h . | grep M)
+
+作者：郑宇
+链接：https://www.zhihu.com/question/29769130/answer/315745139
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
 git branch -vv 可以看到各自的分支和哪一个远程分支关联( track a remote branch ), 当和对应的远程分支没有关联上时可使用: git branch --set-upstream-to=shadow-wsl 来关联
 
 git clone 大项目时
