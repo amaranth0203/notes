@@ -1,4 +1,8 @@
 
+命令行查看所有分区
+    wmic logicaldisk get caption
+也可以一个个dir...
+
 [win10开机黑屏数分钟]
 摘自知乎https://www.zhihu.com/question/33662311
 由 amd 显卡引起，需要关闭 ULPS, Ultra Low Power State,
