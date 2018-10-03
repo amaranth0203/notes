@@ -32,4 +32,5 @@
   ( if ( string= ( substring ( thing-at-point 'line t ) 0 2 ) "`#" )
       ( uncomment_inline_shell )
       ( comment_inline_shell ) )
+  ( next-line )                                
 )
