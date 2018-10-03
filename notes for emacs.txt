@@ -1,4 +1,17 @@
 
+单独为一个模式定义快捷键:
+打开 command.sh 之后 C-h m
+可以看到半页的地方说 Shell-script mode defined in 'sh-script.el'
+光标移到上边回车,可以看到注释里边有 <sh-mode-map>
+之后打开 .emacs 进行定义:
+( require 'sh-script )
+( define-key sh-mode-map ( kbd "C-c ;" ) 'check_to_switch_inline_shell_comment_status )
+即可
+也可以用:
+( with-eval-after-load "sh-script"
+  ( define-key sh-mode-map ( kbd "C-c ;" ) 'check_to_switch_inline_shell_comment_status ) )
+
+
 M-x pop-tag-mark RET : goto definition 之后跳转回去
 
 C-x 0 删除当前窗口
