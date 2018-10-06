@@ -1,7 +1,7 @@
-
+#+TITLE: self-used org to keep some something
 #+TODO: TODO(t@/!) | DONE(d@/!) CANCEL(c@/!)
-
-* priv [41/49]
+#+TAGS: secret(s)
+* priv [42/50]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
@@ -134,9 +134,13 @@
    CLOSED: [2016-11-24 周四 14:32] SCHEDULED: <2016-11-29 周二>
    - State "DONE"       from "TODO"       [2016-11-24 周四 14:32]
    - State "TODO"       from ""           [2016-11-22 周二 12:25]
-*** TODO post
+*** DONE post
+    CLOSED: [2018-10-06 Sat 15:35]
+    - State "DONE"       from "TODO"       [2018-10-06 Sat 15:35]
     - State "TODO"       from ""           [2016-11-23 周三 14:41]
-*** TODO cookie/session
+*** DONE cookie/session
+    CLOSED: [2018-10-06 Sat 15:35]
+    - State "DONE"       from "TODO"       [2018-10-06 Sat 15:35]
     - State "TODO"       from ""           [2016-11-23 周三 14:41]
 ** TODO [#A] VICTORY LOVES PREPARATION
    DEADLINE: <2016-10-19 周三>
@@ -159,7 +163,9 @@
    - State "TODO"       from ""           [2016-10-23 周日 12:04]
 ** TODO <<憨豆都追女仔>>
    - State "TODO"       from ""           [2016-10-23 周日 12:06]
-** TODO 同步表情
+** DONE 同步表情
+   CLOSED: [2018-10-05 Fri 15:16]
+   - State "DONE"       from "TODO"       [2018-10-05 Fri 15:16]
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
 ** DONE LKM
    CLOSED: [2016-12-04 周日 12:09]
@@ -179,127 +185,58 @@
    CLOSED: [2018-02-17 Sat 18:29]
    - State "DONE"       from "TODO"       [2018-02-17 Sat 18:29]
    - State "TODO"       from ""           [2016-10-26 周三 22:51]
-** DONE XJJ
-   CLOSED: [2016-11-04 周五 18:53]
-   - State "DONE"       from "TODO"       [2016-11-04 周五 18:53]
-   - State "TODO"       from ""           [2016-10-19 周三 15:19]
-*** server
-**** DONE C&C address release
-     CLOSED: [2016-10-19 周三 15:21]
-     - State "DONE"       from ""           [2016-10-19 周三 15:21]
-     - curl http://my.csdn.net/echofocus | grep wassup
-**** DONE C&C address bind and listen
-     CLOSED: [2016-10-20 周四 13:35]
-     - State "DONE"       from "TODO"       [2016-10-20 周四 13:35]
-     - State "TODO"       from ""           [2016-10-19 周三 15:21]
-     - C programming
-**** DONE 执行 cd 之后无效 模仿一下 netcat 用 select
-     CLOSED: [2016-10-20 周四 17:12]
-     - State "DONE"       from "TODO"       [2016-10-20 周四 17:12]
-     - State "TODO"       from ""           [2016-10-20 周四 13:35]
-*** client
-**** DONE read C&C address
-     CLOSED: [2016-10-19 周三 23:39]
-     - State "DONE"       from "TODO"       [2016-10-19 周三 23:39]
-     - State "TODO"       from ""           [2016-10-19 周三 15:37]
-**** DONE create channel
-     CLOSED: [2016-10-20 周四 12:32]
-     - State "DONE"       from "TODO"       [2016-10-20 周四 12:32]
-     - State "TODO"       from ""           [2016-10-19 周三 15:37]
+** DONE XJJ                                                          :secret:
+-----BEGIN PGP MESSAGE-----
 
-**** DONE 整理 create channel 的代码
-     CLOSED: [2016-10-20 周四 14:07]
-     - State "DONE"       from "TODO"       [2016-10-20 周四 14:07]
-     - State "TODO"       from ""           [2016-10-20 周四 13:35]
+jA0EBwMCenTSXx4gCD9g0ukB9ZqbfUQfN7sLHyd0sUm/8/+i0kZFjlwxbwIdP5GO
+HGli1Xmu1oTsHHugsSJBq20faGUP/qV8gxKtMmlc/hrdaAQS9Q2VLeVpv5qnC5HY
+2lHjiV8HeXQ92k+TdTQL5g/w1t8aA05nf4xUflze1PrGscNxP7ag36rvzz5ingi1
+K0nKorjwIUo06whGnWmbhe8PcEIY6LYKn1Zm9TPmxYn/Vd5EQYtZ1xFd1llDc4w3
+5O7T+dyiBMjdEqcjHcRQZ4zOqUoCNr4KBOztEvUE2O7+TZ0Qbm4+yQTvEreGxNFf
+NhrSPnZs/CUpFym1JKEWvw3DUjMso3U3ethLq4/xGVn4qbhM63LmXEeFHCKca1Jy
+WG6/+NuUAgmMIP3RRGwsqEYSVZmevpREaxwlsCvFGUg8S6JS7p3NrKIVnAkYSagd
+w9yVnGT/RPZIAOHHNmndV8MhY/2dxzHGOIJK+JD2uzFgZzr4TPMLZG27vuMbPz1B
+gO9Be/raSyu02Gq60mh1s90TNLUEPc81wq1lM5wfbCYS0sCOcqcmVzfrZel5HTGn
+CW3Ki/DmT1hcxtAXOixo3ZLgpK3WqGw2PMvMurwC/ewjJw2I6qn0x3lhI8NtqW0N
+eAtfJCmGIUxcM6eNKEbAh1YwnQnFD81Qxjeg6VbOWfP9ot06ql5/SZgwoMWylJPj
+sMB4//sdvsjRa9F9yH589NGJeaKwTpvqR9dFR5BeZMqeT1IzjGAy3cdI0UPshprF
+DP46iPtde71lg8WSOGQxSFEafPCbYG819aJdarRau+eOed6w2a+hqlA+MzmNMWtD
+hrFnPy0gUB3zixTBB590oyUDFEQTpk7qiWh8GLxoiYUmdRoYHwjOOGTyEc8xDQDO
+NPA+j0cSB7KWjR5ngP/KKJqj6ODxZ9C7aJJlL6iV5XU9BM3+2r4WLlCBBpJVRJVn
+BVHBK3smC0nuBe1BFFGoeoDXiWfSiUVGtLKsXm+pZaYUZRIeakBauv+UtiIibB4e
+pt3/+QvRzan46D7KnrQIBoyq04Auc3APXE1D3attTIx00S+tv7c2skEzJt0fxtjG
+NFPyw6ChmrpBPu5eBLzFYcHVw8vXC47WN+h8
+=eWJe
+-----END PGP MESSAGE-----
 
-*** rootkit
-    - State "TODO"       from ""           [2016-10-20 周四 17:12]
-**** DONE 看感染的例子
-     CLOSED: [2016-10-23 周日 12:08]
-     - State "DONE"       from "TODO"       [2016-10-23 周日 12:08]
-     - State "TODO"       from "TODO"       [2016-10-23 周日 12:08]
-     - State "TODO"       from ""           [2016-10-20 周四 21:41]
-**** DONE 例子运行起来
-     CLOSED: [2016-10-23 周日 12:08]
-     - State "DONE"       from "TODO"       [2016-10-23 周日 12:08]
-     - State "TODO"       from ""           [2016-10-20 周四 21:41]
-**** DONE 成功用 suterusu 感染
-     CLOSED: [2016-10-24 周一 12:19]
-     - State "DONE"       from "TODO"       [2016-10-24 周一 12:19]
-     - State "TODO"       from ""           [2016-10-20 周四 21:41]
-**** DONE 增加 suterusu 的功能 [2/2]
-     CLOSED: [2016-10-21 周五 16:34]
-     - State "DONE"       from "TODO"       [2016-10-21 周五 16:34]
-     - State "TODO"       from ""           [2016-10-20 周四 21:41]
-     - [X] run file after hide it
-     - [X] find port and pid and hide it
-**** DONE 取消 hide_port hide_pid 查看稳定性
-     CLOSED: [2016-11-04 周五 14:25]
-     - State "DONE"       from "TODO"       [2016-11-04 周五 14:25]
-     - State "TODO"       from ""           [2016-10-23 周日 12:09]
-**** DONE release
-     CLOSED: [2016-11-04 周五 18:53]
-     - State "DONE"       from "TODO"       [2016-11-04 周五 18:53]
-     - State "TODO"       from ""           [2016-10-23 周日 12:09]
-***** DONE 自启动
-      CLOSED: [2016-11-04 周五 15:52]
-      - State "DONE"       from "TODO"       [2016-11-04 周五 15:52]
-      - State "TODO"       from ""           [2016-11-01 周二 15:44]
-***** DONE hide [4/4]
-      CLOSED: [2016-11-04 周五 18:08]
-      - State "DONE"       from "TODO"       [2016-11-04 周五 18:08]
-      - State "TODO"       from ""           [2016-11-01 周二 15:44]
-      - [X] client binary
-      - [X] client port
-      - [X] client pid
-      - [X] ko binary
+** DONE 加密解密算法                                                 :secret:
+-----BEGIN PGP MESSAGE-----
 
-** DONE 加密解密算法
-   CLOSED: [2017-04-11 周二 01:01]
-   - State "DONE"       from "TODO"       [2017-04-11 周二 01:01]
-   - State "TODO"       from ""           [2016-10-20 周四 18:
-   - 应该用勒索程序将RSA加密后的密文
-     发送到私有的服务端A
-     A再通过后台直接查询比特币交易平台B
-     B返回的结果
-     A判断为收到钱了
-     在A上用私钥进行解密
-     然后将明文AES密钥和IV返回给勒索程序。
-   - 使用AES加密算法去加密系统中的文件
-     然后使用RSA加密算法去加密AES密钥
-     虽然AES是对称加密算法
-     但RSA为非对称加密算法
-     只有拥有RSA私钥才能解密得到AES的密钥进而对被加密的文件进行解密
-     软件加密时使用的AES密钥是随机生成的
-     因此在加密过后无法复现密钥
-*** DONE MD5
-    CLOSED: [2016-10-26 周三 20:10]
-    - State "DONE"       from "TODO"       [2016-10-26 周三 20:10]
-    - State "TODO"       from ""           [2016-10-26 周三 09:45]
-      output -> 128bits -> 32 in hex
-      input -> break into 512-bit blocks (sixteen 32-bit words)
-      input -> padded -> divisible by 512
-      input -> padded -> one 1 -> many 0 -> 64 bits fewer than a multiple of 512
-      ^?
-      input -> padded -> remaining bits filled up with 64 bits representing the length of the original message, modulo 2^64
-      process -> on 32-bit A B C D
-**** CANCEL [#C] 最后的长度 << 3 为什么
-     CLOSED: [2018-02-17 Sat 18:27]
-     - State "CANCEL"     from "TODO"       [2018-02-17 Sat 18:27] \\
-       直接用 c# 封装的 Rijndael 算法
-     - State "TODO"       from ""           [2016-10-28 周五 17:08]
-*** DONE 使用AES加密/解密算法去加密文件
-    CLOSED: [2016-10-31 周一 18:03]
-    - State "DONE"       from "TODO"       [2016-10-31 周一 18:03]
-    - State "TODO"       from ""           [2016-10-26 周三 22:41]
-**** DONE 需要使用 SHA 生成 fixed length keys
-     CLOSED: [2016-10-30 周日 17:02]
-     - State "DONE"       from "TODO"       [2016-10-30 周日 17:02]
-     - State "TODO"       from ""           [2016-10-28 周五 16:06]
-*** CANCEL 使用RSA加密AES密钥
-    CLOSED: [2017-04-11 周二 01:01]
-    - State "CANCEL"     from "TODO"       [2017-04-11 周二 01:01]
-    - State "TODO"       from ""           [2016-10-26 周三 22:41]
+jA0EBwMCJiinBmMXfkBg0uoB8vf0uJ9BbhER2Xjtu6UuTSCs0USng+OxgC+lBa2m
+VRf5G34c8m8bKzWRzBFExvyZ4lZwA3FRWSBB+g3fErMQfv8+I5MObLp3iVDzGTLx
+XWYlzxocL76IvL6Hcy21zCKRj0nZ4tksw53pWtsG6uuQyV5W48n6/L2Lck6pd3sj
+fKDIKdFzUs1Dr0RcNMwJajn+bh0BbvNZObX6HjRd2wiwLeXyVQwn4j0+RaeJeSrS
+AUq4ptSHyL/NlqPG/FHQyOHCtdwLS699IPQTyfPYOXIQ8ujSsHgLXfQ4na4gbKyY
+01OSlyyOT0bxisH00EARqweHOkhmVZ8emqnG6pvL6se5IZDqFnitKF7yP6Ikw4rn
+LXOxDuIJLddBLwXa4ObSiJJ8Wr84JJc5AYzF0ehIT5blCR5pgeWqBo364m/3AZi3
+DAdM3DuPW+NXgtP/LVgB1iOpuTFuB7xOcewUSTocSgjtDSD5eCtrxI/ViTRIa0mi
+61eoE6XAR/6I8K8B1Gqi1vOapAmiAo9lwUOJbGFmCXTR63cuVR/0iPZMugLFAAAG
+X0vCl7uQcIDalrfjyTBqE/LaES4LMuiKSovRaCkleeNlSWtBqN5VFMdduZ544roY
+9S4bhtyLlsI4taIwT1E3QSDfR39p4XEmRqzrRxEzu/GgTdS/lvOwZscQv49voEsC
+aYZXkifDg9X7nqOeK0rL57pUQy3048otCncLEVZVn9PEfr7ozCFVfeTIa4l827Gr
+d4uOT0Hn7glam1Fq+/MV6VBJTqXTfDTTy+fzEYzZUBw7SucjyjBMoh+HQ49cxq6N
+pVTJ0bmcRcoYNyBCrRH9r+i6JslivyYlBXqmY339b1Im1JJ9nd7/5lPUQ7iPD+FG
+QVVkPX9+Wh1n4Hk9JsLYeuDmg38FHrAYGAE3MhSsnKEbMjXJR+VYMaAG6oTnum4Z
+OpLsHpB3E3yQD5eN3zn12m4DmL4wACyPLpUFUTbQZHGixQg+n0QVduCU1DTMIweG
+20lMS6kicuuD6Mk6JaT6y0LKT0pk0zQhLXwXGvqok4sq5rsekMFZJJTBBKy7GjTh
+Ys8rVxdI6J6qUHRK1CsgQJ0tWEwYQA1+6V7uHBqFRz4Rqz3JZU0l4/HPKRq4iOHE
+CPsTpvKrD8/ioEkEDB+HELMa1MZuUSOX6JX1B/LFw81dl7zH+5RfTXDuPayCMlYj
+xY38luZHEa06YuL6s5Nl8MhpRQtvyi7OaBtEuIcerl9Q+tycR2PmPxWwnCOuHN97
+uj6gM9HAYsJ1BvIXzZw2sOVbWVXCzG86+//Pn9YErPxapaBXfXtcn+f/3hx05Qx8
+KcEx2E7u6AaFqtfMYRepMk5UxCWfGVvzmWD+0EU55Qx5LGkEhgo+W06vH/tx3+pL
+vwboJWxloa5QR1DI5no6LqBK+dMF7MQvR8QO9nmc
+=BaCd
+-----END PGP MESSAGE-----
 ** DONE 转换添加 mid 到看代码的列表里
    - State "DONE"       from "DONE"       [2016-10-19 周三 09:00]
 ** DONE RELEASE XJJ
@@ -377,36 +314,28 @@
 ** DONE 问石梦云win7的主题
  - 搜狗的“图标整理器”
 ** DONE mtp驱动
-   
-** TODO SS(重写hidden-tear) [1/8]
-   - State "TODO"       from ""           [2018-02-17 Sat 21:44]
-   由于 csharp 的 "metamorphic code" 很难实现，于是用cpp重写
-*** TODO 确认发送出去的是加密过的内容(参考本页加密解密算法)
-    - State "TODO"       from ""           [2018-02-17 Sat 21:45]
+** TODO SS(重写hidden-tear) [5/8]                                    :secret:
+-----BEGIN PGP MESSAGE-----
 
-*** TODO 删除备份(卷影)
-    - State "TODO"       from ""           [2018-02-17 Sat 21:45]
+jA0EBwMCIsMA6AlVtqZg0ukBhshe0ZRbCXvq5X8oBnUrHVMX4oIxXY39/gQZtkr3
+ofmL3L4MYT2gIJDhSvRUBNqdhsm2GTEkMNmcIkFkHy9VJQqsrcgNjw3bvGK8xwzU
+tT48JoXq/Wp5FBieTTGXFkgGgxc9lXOTLaXBPMPR3jF3Z+FE8VGB6aswPVMnC+Pb
++Ge0ERbTZMliOOk7/I1Qzqxz92wXgwCN0Ki4mPNWjr586Ppkg/7MdJWd5PmFTlBh
+/ouZfwfHvjn3dd5FYYEXzCRZp8q1sfonOzrztt0koPeKNVZZXYqwC1YWumz9SSN1
+c3WM1Exd/aQoxuvLCHZx5s9R5OPe3n2azyfG2egveoMS6Lx68mCbRht19Xseostw
+VkXilev5nNM5pwmm5OdlQO0uQ3m4Pd0ZEhHWqoIgt58Xk0B1Wp87cmbSpY97wObY
+T9YJs/2I+l4ROBRN1k3SvsPP4P5uvpZhKa2wzb3rugkNYeXPMkjl+YbdRItXvsuh
+xmztMJwRjHDQvq1schuL7pf7QujSE9tPABZOLvZo3fRH2bUMoRPHJln78porv3wE
+RoLuRUlZORpTrnjWB6gALG93q59LuQ/fhYjWyDSh+d2yrEacZZuRHc5FDtElYtmG
+YboA644AbY/O+3ntf95tQxHOlxmJW/OistwlrWaj/9DlEDS+TtwaGlGo1F8uRxzI
+MX4s/AkoDo2qGnr78h66+a1UY1PzG2DWrI6cDC2p7WMkrQgIkGr0PO7V04huyaw9
+WpMrvBwA3C+V+FWvG0qfFrmhcq+JqIt2tDGLe/ntg0ts2SotPq9RLpIL2Jpnz7pM
+jLzlw6RZsPagOYOGlkJeyum+DjOoR8pvGYc2aHPM4N4=
+=6UzG
+-----END PGP MESSAGE-----
+** TODO test
+   - State "TODO"       from ""           [2018-10-06 Sat 15:49]
 
-*** TODO 添加对数据库的针对 [0/2]
-    - State "TODO"       from ""           [2018-02-17 Sat 21:45]
-**** TODO 结束进程
-     - State "TODO"       from ""           [2018-02-17 Sat 21:48]
-**** TODO 删除文件(去查有什么文件 db sql 等)
-     - State "TODO"       from ""           [2018-02-17 Sat 21:49]
-*** TODO 多线程加密
-    - State "TODO"       from ""           [2018-02-17 Sat 21:46]
-    - State "TODO"       from ""           [2018-02-17 Sat 21:49]
-*** TODO time limit
-    - State "TODO"       from ""           [2018-02-18 Sun 16:32]
-*** TODO AAV
-    - State "TODO"       from ""           [2018-02-18 Sun 16:33]
-*** TODO 总程序架构(窗口,隐藏,多线程api)
-    - State "TODO"       from ""           [2018-02-18 Sun 16:33]
-*** DONE 先试试看c的方式能否调用多线程api
-    CLOSED: [2018-02-18 Sun 17:54]
-    - State "DONE"       from "TODO"       [2018-02-18 Sun 17:54] \\
-      用不了，调用不了.net api里边的方法
-    - State "TODO"       from ""           [2018-02-18 Sun 16:57]
 * learn_table
 
 | student | math | pyh | mean | pi number |

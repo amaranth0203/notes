@@ -1,4 +1,10 @@
 
+brew install gpg 安装的是 GunPG 2.x 版本
+必须要 brew install gpg1 安装 GunPG 1.x 版本才能供 epa-file 使用
+可以使用 epa-encrypt-file 来加密文件
+也可以直接打开 test.org.gpg 文件
+在保存的时候会要求重新输入密码
+
 单独为一个模式定义快捷键:
 打开 command.sh 之后 C-h m
 可以看到半页的地方说 Shell-script mode defined in 'sh-script.el'
