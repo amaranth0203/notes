@@ -8,6 +8,43 @@
   还有时间
   我能反杀
   一直想飞到西安然后坐火车去敦煌
+** TODO [#A] VICTORY LOVES PREPARATION
+   DEADLINE: <2016-10-19 周三>
+   - State "TODO"       from ""           [2016-10-19 周三 10:33]
+** TODO 柳铁老校区，吃好多好吃的
+** TODO <<我可以咬你一口吗>>
+   - State "TODO"       from ""           [2016-10-20 周四 21:10]
+** TODO <<你今天真好看>>
+   - State "TODO"       from ""           [2016-10-23 周日 12:04]
+** TODO <<憨豆都追女仔>>
+   - State "TODO"       from ""           [2016-10-23 周日 12:06]
+** TODO irc channel 做中转
+   - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
+** TODO SS(重写hidden-tear) [5/8]                                    :secret:
+-----BEGIN PGP MESSAGE-----
+
+jA0EBwMCIsMA6AlVtqZg0ukBhshe0ZRbCXvq5X8oBnUrHVMX4oIxXY39/gQZtkr3
+ofmL3L4MYT2gIJDhSvRUBNqdhsm2GTEkMNmcIkFkHy9VJQqsrcgNjw3bvGK8xwzU
+tT48JoXq/Wp5FBieTTGXFkgGgxc9lXOTLaXBPMPR3jF3Z+FE8VGB6aswPVMnC+Pb
++Ge0ERbTZMliOOk7/I1Qzqxz92wXgwCN0Ki4mPNWjr586Ppkg/7MdJWd5PmFTlBh
+/ouZfwfHvjn3dd5FYYEXzCRZp8q1sfonOzrztt0koPeKNVZZXYqwC1YWumz9SSN1
+c3WM1Exd/aQoxuvLCHZx5s9R5OPe3n2azyfG2egveoMS6Lx68mCbRht19Xseostw
+VkXilev5nNM5pwmm5OdlQO0uQ3m4Pd0ZEhHWqoIgt58Xk0B1Wp87cmbSpY97wObY
+T9YJs/2I+l4ROBRN1k3SvsPP4P5uvpZhKa2wzb3rugkNYeXPMkjl+YbdRItXvsuh
+xmztMJwRjHDQvq1schuL7pf7QujSE9tPABZOLvZo3fRH2bUMoRPHJln78porv3wE
+RoLuRUlZORpTrnjWB6gALG93q59LuQ/fhYjWyDSh+d2yrEacZZuRHc5FDtElYtmG
+YboA644AbY/O+3ntf95tQxHOlxmJW/OistwlrWaj/9DlEDS+TtwaGlGo1F8uRxzI
+MX4s/AkoDo2qGnr78h66+a1UY1PzG2DWrI6cDC2p7WMkrQgIkGr0PO7V04huyaw9
+WpMrvBwA3C+V+FWvG0qfFrmhcq+JqIt2tDGLe/ntg0ts2SotPq9RLpIL2Jpnz7pM
+jLzlw6RZsPagOYOGlkJeyum+DjOoR8pvGYc2aHPM4N4=
+=6UzG
+-----END PGP MESSAGE-----
+** TODO 试用本地key文件解密gpg文件
+   - State "TODO"       from ""           [2018-10-08 Mon 00:31]
+** TODO 学习 bable
+   - State "TODO"       from ""           [2018-10-08 Mon 00:32]
+** TODO 把发送短信脚本转移到 bable 中
+   - State "TODO"       from ""           [2018-10-08 Mon 00:33]
 ** DONE 问中级软件设计师在事业单位报名里边的职称应该选什么
    CLOSED: [2017-04-20 周四 10:55] SCHEDULED: <2017-04-17 周一>
    - State "DONE"       from "TODO"       [2017-04-20 周四 10:55]
@@ -142,10 +179,6 @@
     CLOSED: [2018-10-06 Sat 15:35]
     - State "DONE"       from "TODO"       [2018-10-06 Sat 15:35]
     - State "TODO"       from ""           [2016-11-23 周三 14:41]
-** TODO [#A] VICTORY LOVES PREPARATION
-   DEADLINE: <2016-10-19 周三>
-   - State "TODO"       from ""           [2016-10-19 周三 10:33]
-** TODO 柳铁老校区，吃好多好吃的
 ** CANCEL 我没有口红
    CLOSED: [2018-02-17 Sat 18:27]
    - State "CANCEL"     from "TODO"       [2018-02-17 Sat 18:27]
@@ -157,12 +190,6 @@
    :PROPERTIES:
    :movie:    must download
    :END:
-** TODO <<我可以咬你一口吗>>
-   - State "TODO"       from ""           [2016-10-20 周四 21:10]
-** TODO <<你今天真好看>>
-   - State "TODO"       from ""           [2016-10-23 周日 12:04]
-** TODO <<憨豆都追女仔>>
-   - State "TODO"       from ""           [2016-10-23 周日 12:06]
 ** DONE 同步表情
    CLOSED: [2018-10-05 Fri 15:16]
    - State "DONE"       from "TODO"       [2018-10-05 Fri 15:16]
@@ -179,8 +206,6 @@
      -> CTF( 西电居然有个 XDCTF, 呵呵 )
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
 关键字 ddos 阿里养鸡 arm地址
-** TODO irc channel 做中转
-   - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
 ** DONE tor做中转
    CLOSED: [2018-02-17 Sat 18:29]
    - State "DONE"       from "TODO"       [2018-02-17 Sat 18:29]
@@ -314,34 +339,6 @@ vwboJWxloa5QR1DI5no6LqBK+dMF7MQvR8QO9nmc
 ** DONE 问石梦云win7的主题
  - 搜狗的“图标整理器”
 ** DONE mtp驱动
-** TODO SS(重写hidden-tear) [5/8]                                    :secret:
------BEGIN PGP MESSAGE-----
-
-jA0EBwMCIsMA6AlVtqZg0ukBhshe0ZRbCXvq5X8oBnUrHVMX4oIxXY39/gQZtkr3
-ofmL3L4MYT2gIJDhSvRUBNqdhsm2GTEkMNmcIkFkHy9VJQqsrcgNjw3bvGK8xwzU
-tT48JoXq/Wp5FBieTTGXFkgGgxc9lXOTLaXBPMPR3jF3Z+FE8VGB6aswPVMnC+Pb
-+Ge0ERbTZMliOOk7/I1Qzqxz92wXgwCN0Ki4mPNWjr586Ppkg/7MdJWd5PmFTlBh
-/ouZfwfHvjn3dd5FYYEXzCRZp8q1sfonOzrztt0koPeKNVZZXYqwC1YWumz9SSN1
-c3WM1Exd/aQoxuvLCHZx5s9R5OPe3n2azyfG2egveoMS6Lx68mCbRht19Xseostw
-VkXilev5nNM5pwmm5OdlQO0uQ3m4Pd0ZEhHWqoIgt58Xk0B1Wp87cmbSpY97wObY
-T9YJs/2I+l4ROBRN1k3SvsPP4P5uvpZhKa2wzb3rugkNYeXPMkjl+YbdRItXvsuh
-xmztMJwRjHDQvq1schuL7pf7QujSE9tPABZOLvZo3fRH2bUMoRPHJln78porv3wE
-RoLuRUlZORpTrnjWB6gALG93q59LuQ/fhYjWyDSh+d2yrEacZZuRHc5FDtElYtmG
-YboA644AbY/O+3ntf95tQxHOlxmJW/OistwlrWaj/9DlEDS+TtwaGlGo1F8uRxzI
-MX4s/AkoDo2qGnr78h66+a1UY1PzG2DWrI6cDC2p7WMkrQgIkGr0PO7V04huyaw9
-WpMrvBwA3C+V+FWvG0qfFrmhcq+JqIt2tDGLe/ntg0ts2SotPq9RLpIL2Jpnz7pM
-jLzlw6RZsPagOYOGlkJeyum+DjOoR8pvGYc2aHPM4N4=
-=6UzG
------END PGP MESSAGE-----
-** TODO 试用本地key文件解密gpg文件
-    SCHEDULED: <2018-10-14 Sun>
-   - State "TODO"       from ""           [2018-10-08 Mon 00:31]
-** TODO 学习 bable
-    SCHEDULED: <2018-10-14 Sun>
-   - State "TODO"       from ""           [2018-10-08 Mon 00:32]
-** TODO 把发送短信脚本转移到 bable 中
-    SCHEDULED: <2018-10-14 Sun>
-   - State "TODO"       from ""           [2018-10-08 Mon 00:33]
 * learn_table
 
 | student | math | pyh | mean | pi number |
