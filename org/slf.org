@@ -1,7 +1,7 @@
 #+TITLE: self-used org to keep some something
 #+TODO: TODO(t@/!) | DONE(d@/!) CANCEL(c@/!)
 #+TAGS: secret(s)
-* priv [42/52]
+* priv [42/53]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
@@ -41,8 +41,11 @@ jLzlw6RZsPagOYOGlkJeyum+DjOoR8pvGYc2aHPM4N4=
 -----END PGP MESSAGE-----
 ** TODO 试用本地key文件解密gpg文件
    - State "TODO"       from ""           [2018-10-08 Mon 00:31]
-** TODO 学习 bable
-   - State "TODO"       from ""           [2018-10-08 Mon 00:32]
+** 学习 bable [0/2]
+*** TODO babel BEGIN_SRC 之后文件的种类 -> conf 用变量
+   - State "TODO"       from ""           [2018-10-08 Mon 01:08]
+*** TODO 缩进
+    - State "TODO"       from ""           [2018-10-08 Mon 01:10]
 ** TODO 把发送短信脚本转移到 bable 中
    - State "TODO"       from ""           [2018-10-08 Mon 00:33]
 ** DONE 问中级软件设计师在事业单位报名里边的职称应该选什么
