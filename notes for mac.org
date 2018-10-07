@@ -26,4 +26,5 @@
   - 修改( 无法通过 touch 修改 )
     - jpeg : exiftool -datetimeoriginal="2018:04:21 07:03:44" filename
     - gif : setfile -d '04/21/2018 08:44:44' filename
-  
+* 在 finder toolbar 添加 automator :
+  同时按住 option 和 command 再拖到 toolbar 上即可
