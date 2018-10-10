@@ -1,7 +1,7 @@
 #+TITLE: self-used org to keep some something
 #+TODO: TODO(t@/!) | DONE(d@/!) CANCEL(c@/!)
 #+TAGS: secret(s)
-* priv [46/51]
+* priv [47/52]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
@@ -32,7 +32,12 @@ WpMrvBwA3C+V+FWvG0qfFrmhcq+JqIt2tDGLe/ntg0ts2SotPq9RLpIL2Jpnz7pM
 jLzlw6RZsPagOYOGlkJeyum+DjOoR8pvGYc2aHPM4N4=
 =6UzG
 -----END PGP MESSAGE-----
-** TODO 试用本地key文件解密gpg文件
+** TODO 学完 ollydbg
+   - State "TODO"       from              [2018-10-11 Thu 01:57]
+** DONE 试用本地key文件解密gpg文件
+   CLOSED: [2018-10-11 Thu 01:56]
+   - State "DONE"       from "TODO"       [2018-10-11 Thu 01:56] \\
+     gpg -d xxx.gpg
    - State "TODO"       from ""           [2018-10-08 Mon 00:31]
 ** 学习 babel [2/2]
 *** CANCEL babel BEGIN_SRC 之后文件的种类 -> conf 用变量
