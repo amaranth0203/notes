@@ -1,23 +1,16 @@
 #+TITLE: self-used org to keep some something
 #+TODO: TODO(t@/!) | DONE(d@/!) CANCEL(c@/!)
 #+TAGS: secret(s)
-* priv [42/53]
+* priv [46/51]
   SCHEDULED: <2016-10-19 周三>
   - State "TODO"       from "TODO"       [2016-10-19 周三 09:00]
   她喜欢我
   还有时间
   我能反杀
-  一直想飞到西安然后坐火车去敦煌
 ** TODO [#A] VICTORY LOVES PREPARATION
    DEADLINE: <2016-10-19 周三>
    - State "TODO"       from ""           [2016-10-19 周三 10:33]
 ** TODO 柳铁老校区，吃好多好吃的
-** TODO <<我可以咬你一口吗>>
-   - State "TODO"       from ""           [2016-10-20 周四 21:10]
-** TODO <<你今天真好看>>
-   - State "TODO"       from ""           [2016-10-23 周日 12:04]
-** TODO <<憨豆都追女仔>>
-   - State "TODO"       from ""           [2016-10-23 周日 12:06]
 ** TODO irc channel 做中转
    - State "TODO"       from "TODO"       [2016-10-19 周三 08:59]
 ** TODO SS(重写hidden-tear) [5/8]                                    :secret:
@@ -41,13 +34,34 @@ jLzlw6RZsPagOYOGlkJeyum+DjOoR8pvGYc2aHPM4N4=
 -----END PGP MESSAGE-----
 ** TODO 试用本地key文件解密gpg文件
    - State "TODO"       from ""           [2018-10-08 Mon 00:31]
-** 学习 bable [0/2]
-*** TODO babel BEGIN_SRC 之后文件的种类 -> conf 用变量
+** 学习 babel [2/2]
+*** CANCEL babel BEGIN_SRC 之后文件的种类 -> conf 用变量
+    CLOSED: [2018-10-11 Thu 01:51]
+    - State "CANCEL"     from "TODO"       [2018-10-11 Thu 01:51] \\
+      有延迟的输出要等最后才有结果
    - State "TODO"       from ""           [2018-10-08 Mon 01:08]
-*** TODO 缩进
+*** DONE 缩进
+    CLOSED: [2018-10-11 Thu 00:40]
+    - State "DONE"       from "TODO"       [2018-10-11 Thu 00:40]
     - State "TODO"       from ""           [2018-10-08 Mon 01:10]
-** TODO 把发送短信脚本转移到 bable 中
+** CANCEL 把发送短信脚本转移到 bable 中
+   CLOSED: [2018-10-11 Thu 01:52]
    - State "TODO"       from ""           [2018-10-08 Mon 00:33]
+** CANCEL <<我可以咬你一口吗>>
+    CLOSED: [2018-10-10 Wed 22:38]
+    - State "CANCEL"     from "TODO"       [2018-10-10 Wed 22:38] \\
+      nothing to say
+   - State "TODO"       from ""           [2016-10-20 周四 21:10]
+** CANCEL <<你今天真好看>>
+    CLOSED: [2018-10-10 Wed 22:38]
+    - State "CANCEL"     from "TODO"       [2018-10-10 Wed 22:38] \\
+      nothing to say
+   - State "TODO"       from ""           [2016-10-23 周日 12:04]
+** CANCEL <<憨豆都追女仔>>
+    CLOSED: [2018-10-10 Wed 22:37]
+    - State "CANCEL"     from "TODO"       [2018-10-10 Wed 22:37] \\
+      nothing to say
+   - State "TODO"       from ""           [2016-10-23 周日 12:06]
 ** DONE 问中级软件设计师在事业单位报名里边的职称应该选什么
    CLOSED: [2017-04-20 周四 10:55] SCHEDULED: <2017-04-17 周一>
    - State "DONE"       from "TODO"       [2017-04-20 周四 10:55]

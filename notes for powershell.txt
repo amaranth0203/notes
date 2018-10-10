@@ -1,4 +1,6 @@
 
+在 cmd 运行: powershell -exec bypass -file xxx.ps1
+
 
 很多 ps 脚本用到了 version3 / version4 里边的新语法
 查看自己的版本 : 
