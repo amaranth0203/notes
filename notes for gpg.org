@@ -1,0 +1,11 @@
+* priv_key 和 passphrase 的关系
+  priv_key 可以用来 加密 和 解密
+  但是使用 priv_key 的时候,需要输入 passphrase
+  所以两者缺一不可
+* emacs 支持的版本是 gpg1, brew install 默认安装的版本是 gpg2
+* emacs 使用 epa-file 系列命令来调用 gpg 加密
+* gpg --gen-key 生成私钥
+* gpg --list-secret-keys 列出生成的私钥
+* gpg --armor --export-secrets-keys "xxx" > xxx.asc 导出密钥,这个密钥在其他电脑导入并信任后,可以用来解密文件(需要 passphrase)
+* gpg --import xxx.asc 导入,导入之后需要 gpg --edit-key xxx 来设置信任等级后才能使用
+* gpg --no-use-agent -o /dev/null --local-user norank -as - && echo "[+] The correct passphrase was entered for this key" 验证密钥 norank 的 passphrase
