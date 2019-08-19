@@ -1,3 +1,5 @@
+C-x C-n  set-goal-column  修改比较少的多行时,可以代替列模式
+C-u C-x C-n 取消 goal-column
 
 brew install gpg 安装的是 GunPG 2.x 版本
 必须要 brew install gpg1 安装 GunPG 1.x 版本才能供 epa-file 使用

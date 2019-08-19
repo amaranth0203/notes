@@ -1,0 +1,23 @@
+* ffmpeg
+** 简单的转换格式
+   ffmpeg -i xxx.mkv output.mp4
+   不用指定输出格式,好像是会从文件名判断
+** 转换时截取部分内容
+   ffmpeg -i xxx.mkv -ss 00:01:00 -t 30 output.mp4
+   - 从 00:01:00 开始,截取 30 秒
+   - ss set the start time offset
+   - t duration
+** mkv 转换带上字幕
+   - ffmpeg -i Breaking.Bad.S04E08.2011.BluRay.720p.x264.AC3-CMCT.mkv -ss 00:06:25 -t 355 -vf subtitles=Breaking.Bad.S04E08.2011.BluRay.720p.x264.AC3-CMCT.mkv output-cut.mkv
+     ffmpeg -i output-cut.mkv -vf subtitles=output-cut.mkv output_ori.mp4
+** 加/减速部分内容
+   https://stackoverflow.com/a/36430269
+   - ffmpeg -i output_ori.mp4 -ss 00:00:00 -t 225 slow1.mp4 # 00:00:00 + 225 s 得到下一个片段的 -ss 00:03:45
+     ffmpeg -i output_ori.mp4 -ss 00:03:45 -t 25 part-2.mp4
+     ffmpeg -i output_ori.mp4 -ss 00:04:10 -t 88 slow3.mp4
+     ffmpeg -i output_ori.mp4 -ss 00:05:38 part-4.mp4
+     ffmpeg -i slow1.mp4 -filter:v "setpts=0.1*PTS" -filter:a "atempo=10" part-1.mp4 # 加速视频用 pts 加速音频用 atempo 两个数值互为倒数
+     ffmpeg -i slow3.mp4 -filter:v "setpts=0.1*PTS" -filter:a "atempo=10" part-3.mp4
+     ffmpeg -f concat -safe 0 -i <(for f in part-*.mp4; do echo "file '$PWD/$f'"; done) -c copy output.mp4
+     
+

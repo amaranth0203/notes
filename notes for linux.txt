@@ -7,6 +7,24 @@
 
 [System]
 
+ng new my-app --skip-install之后
+使用 npm install 总是被 kill 掉
+top 之后 Shift + e 切换单位可以看到内存不足( 也可以用 free -h 查看 )
+临时的解决方案:
+https://blog.csdn.net/weixin_33698823/article/details/88026458
+
+sudo fallocate -l 1G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo swapon --show
+sudo cp /etc/fstab /etc/fstab.bak
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+sudo sysctl vm.swappiness=10
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+sudo sysctl vm.vfs_cache_pressure=50
+echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.conf
+
 connect to wifi
 kill -9 $(pidof wpa_supplicant)  ---- until clean
 wpa_passphrase ssid password > /etc/wpa_supplicant/wpa_supplicant.conf

@@ -1,3 +1,22 @@
+2019.06.24 start
+           如果需要给不同用户添加不同的权限：
+                再下边 [share] 的例子里边再继续添加
+                valid users = tools sambaguest
+                read list = sambaguest
+                write list = tools
+           之后 sambaguest 就只有读权限
+           tools 有读写权限
+           smbpasswd -a sambaguest 可能会失败
+           需要提前 useradd :
+           useradd -d /dev/null -s /sbin/nologin sambaguest
+
+           如果 xp 挂载的时候一直反复问密码（无论对错都反复问）
+           则需要牺牲一部分的安全：
+                在默认的 [global] 下添加
+                server max protocal = NT1
+                lanman auth = yes
+                ntlm auth = yes
+2019.06.24 ended
 
 wannacry 爆发之后国内运营商封锁 445 端口导致 samba 无法正常挂载
 可以采用折中的办法:

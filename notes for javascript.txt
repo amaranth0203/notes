@@ -119,5 +119,51 @@ $.ajax( 中 success : function 的判定是根据响应头的状态码来区分�
 
 jQuery : 选择元素使用 jQuery 是一个函数， $也是一个函数，他们两个相同，可以使用jQuery.noConflict()释放对$的占用
  - 选择器 $('#test')
+$( '#test' )
+ - 选择 id = 'test' 的 dom 元素
 $( ".aaaa" )
  - 选择 class = "aaaa" 的元素
+$( "input" )
+ - 选择 input 标签
+$( "input[name=aaaa]" )
+ - 选择标签 <input name="aaaa">
+ 选择器中多个条件直接写就是 && 的关系 , 用逗号隔开则是 || 关系
+
+层级选择器（Descendant Selector）
+对于这样的结构
+<div id="test-jquery">
+    <p id="para-1" class="color-red">JavaScript</p>
+    <p id="para-2" class="color-green">Haskell</p>
+    <p class="color-red color-green">Erlang</p>
+    <p name="name" class="color-black">Python</p>
+    <form class="test-form" target="_blank" action="#0" onsubmit="return false;">
+        <legend>注册新用户</legend>
+        <fieldset>
+            <p><label>名字: <input name="name"></label></p>
+            <p><label>邮件: <input name="email"></label></p>
+            <p><label>口令: <input name="password" type="password"></label></p>
+            <p><button type="submit">注册</button></p>
+        </fieldset>
+    </form>
+</div>
+ - $('p') 选中所有的<p>
+ - $('form.test-form p') 只选中 form 里边的 <p>
+ - $('form.test-form p input') 只选中在 form 里边的 p 里边的 input
+子选择器（Child Selector
+ - 还是上边的例子 , $('form.test-form>p') 选不出,因为form 的直属子节点只有 legend 和 fieldset, 没有 p
+
+查找和过滤
+对于这样的结构
+<ul class="lang">
+    <li class="js dy">JavaScript</li>
+    <li class="dy">Python</li>
+    <li id="swift">Swift</li>
+    <li class="dy">Scheme</li>
+    <li name="haskell">Haskell</li>
+</ul>
+ - 传入一个函数，要特别注意函数内部的this被绑定为DOM对象，不是jQuery对象：
+        var langs = $('ul.lang li'); // 拿到JavaScript, Python, Swift, Scheme和Haskell
+        langs.filter(function () {
+            return this.innerHTML.indexOf('S') === 0; // 返回S开头的节点
+        }); // 拿到Swift, Scheme
+

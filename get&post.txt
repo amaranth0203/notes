@@ -1,4 +1,16 @@
-﻿http://blog.csdn.net/alextiger0/article/details/5836572
+﻿使用 axios 来 post 时
+
+默认的 Content-Type 是 application/json;
+而 ajax 来 post 时, 默认的是 application/x-www-form-urlencoded
+
+对于 application/json, 通过 F12 看记录可以看到发送的数据是类似 {"aaa":1,"bbb":2}
+而 x-www-form-urlencode 是类似 aaa=1&bbb=2
+
+在 django 端处理的方式也不同,
+如果是 x-www-form-urlencode 的话, 可以用 request.POST['aaa'] 来获取
+如果是 json 的话, 则应该用 json.dumps( request.body.decode( 'utf-8' ) ) 来获取
+
+http://blog.csdn.net/alextiger0/article/details/5836572
 根据HTTP规范：
 ×Get用于查询，安全的，幂等的，其中
 	安全：只查询，不修改，不影响状态
