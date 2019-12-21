@@ -1,0 +1,4 @@
+* 打开 https 的方式:
+  网上有添加 cer_key 到 本机什么什么的
+  可以直接使用 curl -k xxxxxx
+  不过如果映射的是 80 端口，记得要用 curl -k https://xxx:80

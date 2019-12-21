@@ -34,3 +34,16 @@
       ( comment_inline_shell ) )
   ( next-line )                                
 )
+
+;; 设置透明度 https://blog.csdn.net/ccat/article/details/4378345
+(setq alpha-list '((100 100) (95 65) (90 60) (85 55) (75 45) (65 35)))
+(defun loop-alpha ()
+  (interactive)
+  (let ((h (car alpha-list)))                ;; head value will set to
+    ((lambda (a ab)
+       (set-frame-parameter (selected-frame) 'alpha (list a ab))
+       (add-to-list 'default-frame-alist (cons 'alpha (list a ab)))
+       ) (car h) (car (cdr h)))
+    (setq alpha-list (cdr (append alpha-list (list h))))
+    )
+)

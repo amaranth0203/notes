@@ -1,0 +1,10 @@
+* 可以用来同步本地和远程的文件夹(或者ls,或者删除等等)
+  配合 ssh-copy-id 使用更方便
+** 当ls用
+   rsync --list-only rsync://elpa.emacs-china.org/elpa
+** 删除(用空文件夹替换)
+   rsync --delete -rlptD /tmp/empty/ /var/spool/postfix/maildrop/
+** 远程同步到本地(拉文件)
+   rsync -avz ubuntu@45.40.203.83:~/gxxd_check/ ./gxxd_check/
+** 本地同步到远程(推文件)
+   rsync -avz ./gxxd_check/ ubuntu@45.40.203.83:~/gxxd_check/

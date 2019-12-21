@@ -1,3 +1,20 @@
+使用 idea 生成的时候,同样要选择多对多(还得自己填写)
+参考 idea开发工具 中Hibernate怎么生成一对多, 多对多映射关系 ? - 吕知呼的回答 - 知乎
+https://www.zhihu.com/question/266494301/answer/386297616
+
+
+
+
+
+用 springboot 来读取和写入已存在的数据库 :
+参考 https://blog.csdn.net/CREATE_17/article/details/89056097
+生成 entity 的时候记得用 eclipse j2ee 版本, 转换成 jpa 工程
+然后导入即可
+多对多表记得在一开始的时候设置多对多, 不要保留默认的 fk
+否则json会一直嵌套
+
+
+
 IoC有两种实现方式 ： 依赖注入( DI )( 常用 ) 依赖查找( DL )( 主动去找，对方不提供服务的时候就很被动，所以不常用 ）
 Dependency Injection & Dependency Lookup
 

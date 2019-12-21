@@ -1,3 +1,7 @@
+用命令增加拷贝 key 的可靠性 :
+    ssh-copy-id -i ~/.ssh/id_rsa.pub xxx@ip
+
+
 
 unset HISTFILE
 export HISTSIZE=0

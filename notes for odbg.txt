@@ -1,3 +1,13 @@
+test eax,eax // eax 和 eax 进行按位 and 操作
+jnz xxxx // 参考 上一条结果, 如果 eax = 0 , test eax 结果为0, 不会跳转
+
+
+
+
+
+
+
+
 C -- Carry (进位(无符号运算
 P -- Parity (二进制偶数个1
 A -- 辅助进位

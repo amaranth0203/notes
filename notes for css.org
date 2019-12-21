@@ -1,0 +1,145 @@
+* http://zh.learnlayout.com/
+  可以在https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_default
+  在线练习，不过需要翻墙
+** div:width 固定宽度
+** div:margin 填充外边的四周
+   - 一个参数:上下左右
+   - 两个参数:上下,左右
+   - 四个参数:上,右,下,左(从上开始顺时针)
+** div:max-width 最大宽度
+** div:margin+max-width 常用于居中
+   max-width: 600px; // 最大宽度 600px 浏览器缩小会一起缩小 用 width 则不会一起缩小
+   margin: 0 auto; // 上下外边0px,左右居中
+** div:border (不改变大小，往里边吃)
+   - border:2px solid lightblue;
+** div:padding 填充(撑大)里边的四周(区别于margin)
+   .a{
+     border:2px solid lightblue;
+     width: 100px;
+     height: 100px;
+     margin: 20px auto;
+   }
+   .b{
+     border:2px solid lightblue;
+     width: 100px;
+     height: 100px;
+     margin: 20px auto;
+     padding: 5px;
+   }
+   尽管width和height相同,b和a比四周会被padding撑大5px
+   多个参数时和 margin 一致
+** div:padding + box-sizing:border-box 时 padding 和 border 一样往里边吃
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+   有人这么写(应用到所有) :
+   * {
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+   }
+** div:position
+*** position:static 这个元素不会被 positioned
+*** position:relative 没有 top right bottom 和 left 时,也不会被 positioned
+    - 相对于之前 margin 的位置来 positioned
+    - 该元素的 margin 居中有效
+    - 该元素内部的元素 margin 无效
+*** position:fixed 页面滚动不会影响
+    - 相对于左上角的(0,0)来 margin
+    - 会把之前的 margin 居中无效掉
+*** position:absolute
+    先看一个例子
+    .b{
+        border:8px solid lightblue;
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        padding: 10px 20px;
+        -webkit-box-sizing: border-box;
+  	    -moz-box-sizing: border-box;
+  	    box-sizing: border-box;
+        position: relative;
+        top: 0px;
+        left: 20px;
+    }
+    .inside-b{
+        border:2px solid lightpink;
+  	    position:absolute;
+        width:100px;
+        height:100px;
+    }
+    此时 inside-b 的位置根据 b 对内容的排列来定
+    如果把 inside-b 加上 top:0px; 和 left:0px;
+    inside-b 就会靠到 b 内部的左上角
+    -> 无视向内撑大的 padding,但是不能超过 border
+    即最近的positioned的祖先元素,没有的话就是body(可以把b的relative改成static试试)
+    -> 此时和 fixed 的区别是 fixed 不会跟着滚动， absolute 会
+** float + clear:[left,right,both]
+   参考例子
+
+   .box{
+       border:2px solid lightblue;
+       width: 200px;
+       height: 200px;
+       margin: 1em;
+       float: left;
+   }
+   .section{
+       border:2px solid pink;
+       width: 200px;
+       height: 200px;
+   }
+   此时 box 是在 section 后边的(即 float 对 section 无效)
+   可以在 section 中添加 clear:left (left对应box中的float:left) 来使其有效
+** float + overflow:auto; zoom:1;
+   参考例子:
+   .box{
+      border:2px solid lightblue;
+      width: 200px;
+      height: 200px;
+  	  margin: 1em;
+      /*
+      overflow: auto;
+      zoom: 1;
+      */
+   }
+   .inside-box{
+      border:2px solid pink;
+      width: 100px;
+      height: 300px;
+	  float:right
+   }
+   由于 inside-box 高度 300px 比 box 200px 高
+   会直接溢出
+   此处使用注释中的 overflow 和 zoom 即可改善
+   由于固定了高度 200px 会多出一个滚动条在右边
+   没固定高度的话 box 就会直接被撑大
+** float 用来实现 card 的时候 在这之后的元素全部要加 clear:both,否则会重叠
+** display: inline-block; 实现上边的 card 不需要加 clear:both 二者区别在最后一行没填满的时候, float可以往左右靠边, inline-block 居中
+** display: flex 比较新,但是竖直方向居中很方便
+.vertical-container {
+  height: 300px;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+** flex + absolute 来在整个页面中居中(密码验证框等)
+
+.guard-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 2px solid lightskyblue;
+}
+.guard {
+  border: 2px solid pink;
+}
