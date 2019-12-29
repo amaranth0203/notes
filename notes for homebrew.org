@@ -1,0 +1,23 @@
+* 替换国内源(没太大效果,依赖还是用原来的东西,还是biw+ss好用)
+  https://www.jianshu.com/p/6a6555fbc4f1
+  替换现有上游
+  - update
+      cd "$(brew --repo)"
+      git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+      cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+      git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+      brew update
+  - homebrew-bottles
+      临时替换
+      export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+      长期替换
+      echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
+      source ~/.bash_profile
+  - 还原
+      cd "$(brew --repo)"
+      git remote set-url origin https://github.com/Homebrew/brew.git
+      cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+      git remote set-url origin https://github.com/Homebrew/homebrew-core
+      brew update
+
+  
